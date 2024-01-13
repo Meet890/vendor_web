@@ -2,11 +2,13 @@ body{margin-top:20px;
 color: #011a3e;}
 .deneb_footer{
     background-color: #212529;
+    width: 100%;
 }
 .deneb_footer .widget_wrapper {
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 150px;
+    padding-top: 50px;
+    margin-top: 20px;
     padding-bottom: 0px;
     color: #edecf0;
 }
@@ -106,11 +108,10 @@ color: #011a3e;}
     color: #feb000;
 }
 .deneb_cta .cta_wrapper {
-    padding: 45px 50px 42px;
+    padding: 20px 50px 20px;
     max-width: 970px;
     border-radius: 15px;
     margin: auto;
-    margin-bottom: -135px;
     position: relative;
     background-image: -moz-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
     background-image: -webkit-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);

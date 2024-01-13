@@ -115,10 +115,10 @@
   <div class="container mt-2">
       <div class="row">
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4  col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card text-white">
-                   <img src="img/decoration.jpg" class="card-img img1" alt="...">
+                   <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">decorators</h3>
                    <p class="title">Creativity at its finest.</p>
                  </div>
@@ -127,7 +127,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2 text-white">
-                   <img src="img/photo.jpg" class="card-img img1" alt="...">
+                   <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">photographers</h3>
                    <p class="title">Preserve your memories.</p>
                  </div>
@@ -136,7 +136,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/vedio.jpg" class="card-img img1" alt="...">
+                   <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">videographers</h3>
                    <p class="title">Moments well Shared.</p>
                  </div>
@@ -145,7 +145,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/cake.jpg" class="card-img img1" alt="...">
+                   <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">cake</h3>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
@@ -154,7 +154,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/flowers.jpg" class="card-img img1" alt="...">
+                   <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">flowers</h3>
                    <p class="title">Make your life colorful.</p>
                  </div>
@@ -163,7 +163,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2   text-white">
-                   <img src="img/cloth.jpg" class="card-img img1" alt="...">
+                   <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">wedding wear</h3>
                    <p class="title">Dress Your Dreams, Feel the Love.</p>
                  </div>
@@ -172,7 +172,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
-                   <img src="img/jwellery.jpg" class="card-img img1" alt="...">
+                   <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">jewellery</h3>
                    <p class="title">Jewelryize me.</p>
                  </div>
@@ -181,7 +181,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/printing.jpg" class="card-img img1" alt="...">
+                   <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">invitation cards</h3>
                    <p class="title">Invite in style.</p>
                  </div>
@@ -190,7 +190,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
-                   <img src="img/sound.jpg" class="card-img img1" alt="...">
+                   <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">sound</h3>
                    <p class="title">Audio you can rely on.</p>
                  </div>
@@ -200,7 +200,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
-                   <img src="img/makeup.jpg" class="card-img img1" alt="...">
+                   <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">makeup artist</h3>
                    <p class="title">Ready, Set, Glow!.</p>
                  </div>
@@ -209,7 +209,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card text-white">
-                   <img src="img/vanue.jpg" class="card-img img1" alt="...">
+                   <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">venues</h3>
                    <p class="title">	Where memories are made.</p>
                  </div>
@@ -218,7 +218,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card text-white">
-                   <img src="img/gift.jpg" class="card-img img1" alt="...">
+                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>
@@ -229,6 +229,16 @@
 </section>   
 
 <!-- registration section ....-->
+
+
+
+
+
+
+</body>
+
+<script src="project/js/bootstrap.min.js"></script>  
+</html>
 <section class="footer" id="footer">
 <?php 
     include("footer.php");
@@ -237,11 +247,3 @@
 
 </section>
 
-
-
-
-
-
-<script src="project/js/bootstrap.min.js"></script>  
-</body>
-</html>

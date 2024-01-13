@@ -44,8 +44,8 @@
 					<div class="widget widegt_about">
 						<div class="widget_title">
 						<div class="container">
-    <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
-  </a>
+						<a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> <span class="text-light">PARTNERS</span>
+ 						 </a>
 						</div>
 						<p> The client can easilly find his choise vendors.</p>
             <p class="mb-5 fw-bold">We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
@@ -57,7 +57,7 @@
 						</ul>
 					</div>
 				</div>
-				
+				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12">
 					<div class="widget widget_contact">
 						<div class="widget_title">
@@ -92,7 +92,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			
 		</div>
 	</div>
 	

@@ -7,15 +7,15 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/vendor_profile.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="MDB/css/mdb.min.css">
-    <link href='css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./vendor_web/css/vendor_profile.css">
+    <link rel="stylesheet" href="./vendor_web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor_web/MDB/css/mdb.min.css">
+    <link href='./css/boxicons.min.css' rel='stylesheet'>
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     rel="stylesheet"
     />
-    <link rel="stylesheet" href="font/css/all.css">
+    <link rel="stylesheet" href="./vendor_web/font/css/all.min.css">
     <link rel="stylesheet" href="vendor_style.css">
     <style>
       
@@ -324,56 +324,6 @@ textarea {
       </section>
 </div>
 </div>
-<script>
-  const allStar = document.querySelectorAll('.rating .star')
-const ratingValue = document.querySelector('.rating input')
-
-allStar.forEach((item, idx)=> {
-	item.addEventListener('click', function () {
-		let click = 0
-		ratingValue.value = idx + 1
-
-		allStar.forEach(i=> {
-			i.classList.replace('fa-solid fa-star', 'fa-regular fa-star')
-			i.classList.remove('active')
-		})
-		for(let i=0; i<allStar.length; i++) {
-			if(i <= idx) {
-				allStar[i].classList.replace('fa-regular fa-star', 'fa-solid fa-star')
-				allStar[i].classList.add('active')
-			} else {
-				allStar[i].style.setProperty('--i', click)
-				click++
-			}
-		}
-	})
-})
-</script>
-<!-- popup -->
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-</script>
-
-
 
 <script>
         document.getElementById('button').addEventListener("click", function() {
@@ -395,12 +345,12 @@ allStar.forEach((item, idx)=> {
 		ratingValue.value = idx + 1
 
 		allStar.forEach(i=> {
-			i.classList.replace('bxs-star', 'bx-star')
+			i.classList.replace('bxs-star', 'fa-regular fa-star')
 			i.classList.remove('active')
 		})
 		for(let i=0; i<allStar.length; i++) {
 			if(i <= idx) {
-				allStar[i].classList.replace('bx-star', 'bxs-star')
+				allStar[i].classList.replace('fa-regular fa-star', 'bxs-star')
 				allStar[i].classList.add('active')
 			} else {
 				allStar[i].style.setProperty('--i', click)
