@@ -115,7 +115,7 @@ color: #011a3e;}
     background-image: -moz-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
     background-image: -webkit-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
     background-image: -ms-linear-gradient(0deg, #ffbd27 0%, #feb000 100%);
-    box-shadow: 2.5px 4.33px 15px 0px rgba(254, 176, 0, 0.4);
+    box-shadow: 2.5px 4.33px 15px 0px rgba(163, 154, 133, 0.925);
     z-index: 1;
 }
 .deneb_cta .cta_wrapper:after {
@@ -129,7 +129,7 @@ color: #011a3e;}
     z-index: -1;
 }
 .deneb_cta .cta_wrapper .cta_content h3 {
-    color: #fff;
+    color: #000000;
     font-weight: bold;
 }
 @media (max-width: 767px) {

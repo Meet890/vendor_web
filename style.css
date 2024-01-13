@@ -57,7 +57,7 @@ body{
 /* navbar */
 
 .bg-dark {
-  background-color: #15273b!important;
+  background-color: #000203!important;
 }
 .text-warning {
   color: #94d9f5!important;
@@ -143,12 +143,12 @@ border-radius: 5%;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  color: gold;
+  color: rgb(0, 0, 0);
 }
 .title{
   text-align: center;
   font-weight: 200;
-  color: rgb(240, 238, 228);
+  color: rgb(0, 0, 0);
   font-family: 'Courier New', Courier, monospace  ;
 }
 
@@ -164,7 +164,7 @@ bottom: 0;
 left: 0;
 transform: scale3d(0, 0, 1);
 transition: transform .3s ease-out 0s;
-background: rgba(255, 255, 255, 0.1);
+background: rgba(134, 130, 130, 0.1);
 content: '';
 pointer-events: none;
 }

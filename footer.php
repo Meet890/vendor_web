@@ -29,7 +29,7 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="button_box">
-						<a href="vendor_reg2.php" class="btn btn-warning">Registration</a>
+						<a href="vendor_reg2.php" class="btn btn-dark">Registration</a>
 					</div>
 				</div>
 			</div>
