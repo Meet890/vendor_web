@@ -11,7 +11,10 @@
     <!--extranal css file-->
     <link href="font/fontawesome.min.css" rel="stylesheet">
 	<link href="footer.css" rel="stylesheet">
-	<link rel="stylesheet" href="font/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+	<link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
     
   
 </head>
@@ -40,10 +43,10 @@
 	<div class="widget_wrapper" >
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-12">
+				<div class="col-lg-6 col-md-6 col-12 pb-0">
 					<div class="widget widegt_about">
 						<div class="widget_title">
-						<div class="container">
+						<div class="container mb-2 p-0 justify-content-center ">
 						<a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> <span class="text-light">PARTNERS</span>
  						 </a>
 						</div>
@@ -86,7 +89,7 @@
 									<i class="fas fa-map-marker-alt"></i>
 								</div>
 								<div class="info">
-									<p>SGJ college,mandvi<span>kutch.</span></p>
+									<p>SGJ College, Mandvi<span>Kachchh</span></p>
 								</div>
 							</div>
 						</div>
