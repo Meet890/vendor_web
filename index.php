@@ -111,18 +111,25 @@
 <section class="event" id="event">
 
         <div class="title mt-5">
-            <h1 class="heding"><span>S</span>ervice</h1>
+            <h1 class="heding">Services</h1>
         </div>
   <div class="container mt-2">
       <div class="row">
 
-            <div class="col-md-4  col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card text-white">
+            <div class="col-md-4  col-sm-6 ">
+            <a href="profile_card_getdata.php" id="decorators" class="a1">
+              
+                  <div class="card text-white">
+                  <div class="row">
+                   <div class="col12">
                    <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
+                  <div class="col12">
                    <h3 class="titleh3">decorators</h3>
                    <p class="title">Creativity at its finest.</p>
+                  </div>
                  </div>
+              </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
