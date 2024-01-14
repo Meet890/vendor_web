@@ -15,108 +15,15 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     rel="stylesheet"
     />
-    <link rel="stylesheet" href="./vendor_web/font/css/all.min.css">
+    <link rel="stylesheet" href="../vendor_web/font/css/all.min.css">
     <link rel="stylesheet" href="vendor_style.css">
-    <style>
-      
-
-.wrapper {
-  background: var(--white);
-  padding: 2rem;
-  max-width: 576px;
-  width: 100%;
-  border-radius: .75rem;
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-.wrapper h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.rating {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-gap: .5rem;
-  font-size: 2rem;
-  color: var(--yellow);
-  margin-bottom: 2rem;
-}
-.rating .star {
-  cursor: pointer;
-}
-.rating .star.active {
-  opacity: 0;
-  animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
-}
-
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-.rating .star:hover {
-  transform: scale(1.1);
-}
-textarea {
-  width: 100%;
-  background: var(--light);
-  padding: 1rem;
-  border-radius: .5rem;
-  border: none;
-  outline: none;
-  resize: none;
-  margin-bottom: .5rem;
-}
-.btn-group {
-  display: flex;
-  grid-gap: .5rem;
-  align-items: center;
-}
-.btn-group .btn {
-  padding: .75rem 1rem;
-  border-radius: .5rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-size: .875rem;
-  font-weight: 500;
-}
-.btn-group .btn.submit {
-  background: var(--blue);
-  color: var(--white);
-}
-.btn-group .btn.submit:hover {
-  background: var(--blue-d-1);
-}
-.btn-group .btn.cancel {
-  background: var(--white);
-  color: var(--blue);
-}
-.btn-group .btn.cancel:hover {
-  background: var(--light);
-}
-
-
-      </style>
+   
     
     <title>Vendor</title>
   </head>
   <body style="background-color: rgb(205, 213, 214);">
   <?php 
-    include("header.php");
+    include("../header.php");
 ?>
  <div class="container-fluid px-0">
       <section class="h-100 gradient-custom-2 .bg-modal ">
@@ -314,7 +221,7 @@ textarea {
 
 </div>
 <?php 
-    include("footer.php");
+    include("../footer.php");
 
     ?>
 </div>
