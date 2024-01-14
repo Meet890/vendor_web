@@ -20,25 +20,6 @@
 </head>
 <body>
 
-<section class="deneb_cta">
-	<div class="container mar">
-		<div class="cta_wrapper">
-			<div class="row align-items-center">
-				<div class="col-lg-7">
-					<div class="cta_content">
-						<h3>Registration as a vendor </h3>
-						<p>We help vendor to grow up his business. We provide the pletform for a vendor for grow his business.</p>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<div class="button_box">
-						<a href="vendor_reg2.php" class="btn btn-dark">Registration</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
 <footer class="deneb_footer">
 	<div class="widget_wrapper" >
 		<div class="container">
@@ -72,8 +53,8 @@
 									<i class="fas fa-phone-alt"></i>
 								</div>
 								<div class="info">
-									<p><a href="tel:+919246147999">1800-121-3637</a></p>
-									<p><a href="tel:+919246147999">+91 924-614-7999</a></p>
+									<p><a href="tel:+919246147999">+91 6355008608</a></p>
+									
 								</div>
 							</div>
 							<div class="single_info">
