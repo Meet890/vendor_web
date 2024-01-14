@@ -40,8 +40,9 @@
         <button type="button" class="btn btn-outline-secondary btn-close-white"><a href="login/index.php">login</button></div>
         </li> -->
 
+
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >
             Login
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -110,103 +111,142 @@
 <section class="event" id="event">
 
         <div class="title mt-5">
-            <h1 class="heding"><span>S</span>ervice</h1>
+            <h1 class="heding">Services</h1>
         </div>
   <div class="container mt-2">
       <div class="row">
 
-            <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" class="a1">
-                 <div class="card bg-dark text-white">
-                   <img src="img/decoration.jpg" class="card-img img1" alt="...">
+            <div class="col-md-4  col-sm-6 ">
+            <a href="profile_card_getdata.php" id="decorators" class="a1">
+              
+                  <div class="card text-white">
+                  <div class="row">
+                   <div class="col12">
+                   <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
+                  <div class="col12">
                    <h3 class="titleh3">decorators</h3>
                    <p class="title">Creativity at its finest.</p>
+                  </div>
+                 </div>
+              </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card b-2 text-white">
+                   <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
+                   <h3 class="titleh3">photographers</h3>
+                   <p class="title">Preserve your memories.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/photo.jpg" class="card-img img1" alt="...">
-                   <h3 class="titleh3">photographers</h3>
-                   <p class="title">Preserve your memories.</p>
-                 </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/vedio.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card b-2  text-white">
+                   <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">videographers</h3>
                    <p class="title">Moments well Shared.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/cake.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card b-2  text-white">
+                   <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">cake</h3>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/flowers.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card b-2  text-white">
+                   <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">flowers</h3>
                    <p class="title">Make your life colorful.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/cloth.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card b-2   text-white">
+                   <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">wedding wear</h3>
                    <p class="title">Dress Your Dreams, Feel the Love.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/jwellery.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card  b-2 text-white">
+                   <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">jewellery</h3>
                    <p class="title">Jewelryize me.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/printing.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card b-2  text-white">
+                   <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">invitation cards</h3>
                    <p class="title">Invite in style.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/sound.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card  b-2 text-white">
+                   <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">sound</h3>
                    <p class="title">Audio you can rely on.</p>
                  </div>
+              </a>
             </div>
             
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/makeup.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card  b-2 text-white">
+                   <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">makeup artist</h3>
                    <p class="title">Ready, Set, Glow!.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/vanue.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card text-white">
+                   <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">venues</h3>
                    <p class="title">	Where memories are made.</p>
                  </div>
+              </a>
             </div>
             <div class="col-md-4 col-sm-6">
-                 <div class="card bg-dark text-white">
-                   <img src="img/gift.jpg" class="card-img img1" alt="...">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
+                 <div class="card text-white">
+                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>
+              </a>
             </div> 
     </div>      
   </div>
 </section>   
 
 <!-- registration section ....-->
+
+
+
+
+
+
+</body>
+
+<script src="project/js/bootstrap.min.js"></script>  
+</html>
 <section class="footer" id="footer">
 <?php 
     include("footer.php");
@@ -215,11 +255,3 @@
 
 </section>
 
-
-
-
-
-
-<script src="project/js/bootstrap.min.js"></script>  
-</body>
-</html>
