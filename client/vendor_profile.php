@@ -7,10 +7,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./vendor_web/css/vendor_profile.css">
-    <link rel="stylesheet" href="./vendor_web/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vendor_web/MDB/css/mdb.min.css">
-    <link href='./css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../vendor_web/css/vendor_profile.css">
+    <link rel="stylesheet" href="../vendor_web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendor_web/MDB/css/mdb.min.css">
+    <link href='../css/boxicons.min.css' rel='stylesheet'>
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     rel="stylesheet"
@@ -23,7 +23,7 @@
   </head>
   <body style="background-color: rgb(205, 213, 214);">
   <?php 
-    include("../header.php");
+    include("header.php");
 ?>
  <div class="container-fluid px-0">
       <section class="h-100 gradient-custom-2 .bg-modal ">
@@ -34,7 +34,7 @@
               <div class="card">
                 <div class="rounded-top text-white d-flex flex-row" style="background-color:rgb(66, 80, 145); height:230px;">
                   <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                    <img src="img/img1.jpeg" alt="Generic placeholder image" class="img-fluid border border-dark img-thumbnail mt-4 bg-dark mb-2 p-0" style="width: 150px; z-index: 1">
+                    <img src="../img/img1.jpeg" alt="Generic placeholder image" class="img-fluid border border-dark img-thumbnail mt-4 bg-dark mb-2 p-0" style="width: 150px; z-index: 1">
                   </div>
                   <div class="ms-3" style="margin-top: 130px;">
                     <h5>Rathod Meet</h5>
@@ -78,7 +78,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Boat on Calm Water"
       /></a>-->
-            <img id="myImg" src="img/annie-spratt-ogDort6vKuE-unsplash.jpg"  style="width:100%;max-width:300px"class="mt-2">
+            <img id="myImg" src="../img/annie-spratt-ogDort6vKuE-unsplash.jpg"  style="width:100%;max-width:300px"class="mt-2">
       <!-- The Modal -->
       <div id="myModal" class="modal">
         <span class="close">&times;</span>
@@ -92,7 +92,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Wintry Mountain Landscape"
       /></a> -->
-      <img id="myImg" src="img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
+      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
       <div id="myModal" class="modal">
          <span class="close">&times;</span>
         <img class="modal-content mt-2" id="img01">
@@ -107,7 +107,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Mountains in the Clouds"
       /></a> -->
-      <img id="myImg" src="img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
+      <img id="myImg" src="../img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
     <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
@@ -119,7 +119,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Boat on Calm Water"
       /></a> -->
-      <img id="myImg" src="img/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
+      <img id="myImg" src="../img/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
     <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
@@ -133,7 +133,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Waves at Sea"
       /></a> -->
-      <img id="myImg" src="img/drew-coffman-llWjwo200fo-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
+      <img id="myImg" src="../img/drew-coffman-llWjwo200fo-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
      <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
@@ -145,7 +145,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Yosemite National Park"
       /></a> -->
-      <img id="myImg" src="img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
+      <img id="myImg" src="../img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
     <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
@@ -156,7 +156,7 @@
       class="w-100 shadow-1-strong rounded mb-1"
       alt="Yosemite National Park"
       /> -->
-      <img id="myImg" src="img/nyegi-Tzu3Qsww1tQ-unsplash (1).jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
+      <img id="myImg" src="../img/nyegi-Tzu3Qsww1tQ-unsplash (1).jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
       <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
@@ -221,7 +221,7 @@
 
 </div>
 <?php 
-    include("../footer.php");
+    include("footer.php");
 
     ?>
 </div>
@@ -270,5 +270,5 @@ allStar.forEach((item, idx)=> {
     
   </body>
   
-  <script src="js/bootstrap.min.js" ></script>
+  <script src="../js/bootstrap.min.js" ></script>
 </html>

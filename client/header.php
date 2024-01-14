@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+  
+    
     <!--extranal css file-->
-    <link href="style.css" rel="stylesheet">
+    
   
     
     
 </head>
 <body>
 <!--navbar-->
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
@@ -53,13 +54,25 @@
 						<li><a class="dropdown-item"  href="#">gifts</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-        <button type="button" class="btn btn-outline-secondary btn-close-white">login</button>
+        
+        <li>
+        <div class="dropdown text-end ms-2">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small show" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
         </li>
         </ul>
       </div>
   </div>
 </nav>
-<script src="js/bootstrap.min.js"></script>  
+<script src="../js/bootstrap.min.js"></script>  
 </body>
 </html>

@@ -7,8 +7,8 @@
     <!-- Bootstrap CSS online -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <!--Bootstrap CSS ofline-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/R_style.css">
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/R_style.css">
     <title>Bootstrap Registration Form - Pagefist</title>
   </head>
  
@@ -143,8 +143,8 @@
 </section>
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/multiselect-dropdown.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/multiselect-dropdown.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

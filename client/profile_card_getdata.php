@@ -15,7 +15,7 @@
 </head>
 <body>
 <?php 
-    include("../header.php");
+    include("header.php");
 
 ?>
 
@@ -84,7 +84,7 @@ if (mysqli_num_rows($result) > 0) {
   mysqli_close($conn);
   ?>
   <?php 
-    include("../footer.php");
+    include("footer.php");
 
 ?>
 
