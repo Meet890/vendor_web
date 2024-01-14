@@ -42,7 +42,7 @@
 					</div>
 				</div>
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="col-lg-3 col-md-6 col-sm-12 ms-auto ps-5">
 					<div class="widget widget_contact">
 						<div class="widget_title">
 							<h4>Contact Us</h4>
