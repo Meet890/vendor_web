@@ -159,7 +159,7 @@ function test_input($data) {
 
             <div class="form-group password">
                 <label>Password</label>
-                <input type="password" name="password" id="myInput1" class="form-control onclick="myFunction() <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <input type="password" name="password" id="myInput1" class="form-control" onclick="myFunction() <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
@@ -167,7 +167,7 @@ function test_input($data) {
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" id="myInput2" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                 <img src="eye-close.png" onclick="pass2()" class="pass-icon" id="pass-icon2">
-                <!-- <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span> -->
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
                 <!-- <input type="checkbox" onclick="myFunction()" class="mt-2">Show Password -->
             </div>
             <div class="form-group">
