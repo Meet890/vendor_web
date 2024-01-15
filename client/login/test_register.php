@@ -38,44 +38,53 @@ function test_input($data) {
                          // check if e-mail address is well-formed
                          if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                             $email = test_input($_POST["email"]);
+                            
+                            //password
+                            $uppercase = preg_match('@[A-Z]@', $password);
+                            $lowercase = preg_match('@[a-z]@', $password);
+                            $number    = preg_match('@[0-9]@', $password);
+                            $specialChars = preg_match('@[^\w]@', $password);
 
-                            if(!empty(trim($_POST["password"]))){
+                            if($uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+
+                                echo $password;
                                 $password = trim($_POST["password"]);
 
-                                if(!empty(trim($_POST["confirm_password"]))){
-                                    $confirm_password = trim($_POST["confirm_password"]);
-                                    if(empty($password_err) && ($password != $confirm_password)){
-                                        $confirm_password_err = "Password did not match.";
-                                        
-                                    }
-                                    else{
-                                      if(empty($username_err)  && empty($fname_err) && empty($lname_err)&& empty($email_err) && empty($password_err) && empty($confirm_password_err)){
-     
-                                          $sql = "INSERT INTO client (c_username,c_fname,c_lname, c_password,c_email) VALUES ('$username','$fname','$lname','$password','$email')";
-                                  
-                                          if(mysqli_query($conn, $sql)==true){
-                                              // Redirect to login page
-                                              header("location: login.php");
-                                          } else{
-                                              echo "Oops! Something went wrong. Please try again later.";
-                                          }
-                                      
-                                          
-                                      }
-                                   
-                                      // Close connection
-                                      mysqli_close($conn);
-                                    }
+                                if(empty(trim($_POST["confirm_password"]))){
+                                    $confirm_password_err = "Please confirm password.";
                                     
                                   } else{
-                                       $confirm_password_err = "Please confirm password.";
+                                     
+                                       $confirm_password = trim($_POST["confirm_password"]);
+                                       if(empty($password_err) && ($password != $confirm_password)){
+                                           $confirm_password_err = "Password did not match.";
+                                           
+                                       }
+                                       else{
+                                         if(empty($username_err)  && empty($fname_err) && empty($lname_err)&& empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+        
+                                             $sql = "INSERT INTO client (c_username,c_fname,c_lname, c_password,c_email) VALUES ('$username','$fname','$lname','$password','$email')";
+                                     
+                                             if(mysqli_query($conn, $sql)==true){
+                                                 // Redirect to login page
+                                                 header("location: login.php");
+                                             } else{
+                                                 echo "Oops! Something went wrong. Please try again later.";
+                                             }
+                                         
+                                             
+                                         }
+                                      
+                                         // Close connection
+                                         mysqli_close($conn);
+                                       }
                                   }
                                 
-                            } elseif(strlen(trim($_POST["password"])) < 6){
-                                $password_err = "Password must have atleast 6 characters.";
-                            } else{
-                                $password_err = "Please enter a password.";
-                            }
+                            
+                        }
+                        else{
+                            $password_err = 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+                        }
                          }
                          else{
                             $email_err = "Invalid email format";    
@@ -147,7 +156,7 @@ function test_input($data) {
 
             <div class="form-group password">
                 <label>Password</label>
-                <input type="password" name="password" id="myInput1" class="form-control onclick="myFunction() <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <input type="password" name="password" id="myInput1" class="form-control onclick="myFunction() <?php echo (!empty($password_err)) ? 'is-invalid' : ""; ?>" value="<?php echo $password; ?>">
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>

@@ -18,7 +18,7 @@
 <body>
 <!--navbar-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
     <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
   </a>

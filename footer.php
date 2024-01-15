@@ -61,7 +61,7 @@
 					</div>
 				</div>
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="col-lg-3 col-md-6 col-sm-12 ms-auto ps-5">
 					<div class="widget widget_contact">
 						<div class="widget_title">
 							<h4>Contact Us</h4>
@@ -72,8 +72,8 @@
 									<i class="fas fa-phone-alt"></i>
 								</div>
 								<div class="info">
-									<p><a href="tel:+919246147999">1800-121-3637</a></p>
-									<p><a href="tel:+919246147999">+91 924-614-7999</a></p>
+									<p><a href="tel:+919246147999">+91 6355008608</a></p>
+									
 								</div>
 							</div>
 							<div class="single_info">
@@ -92,6 +92,7 @@
 									<p>SGJ College, Mandvi<span>Kachchh</span></p>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 				</div>
