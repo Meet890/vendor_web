@@ -13,100 +13,88 @@ function test_input($data) {
   }
 // Processing form data when form is submitted
 {
-       // Validate username
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming you get the username from a form
-    $username = $_POST['username'];
-    // Check if the username is set and meets criteria
-    if (isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)) {
-        //$useranme= "Valid username: " . htmlspecialchars($username);
-    } else {
-        $username_err="Invalid Username";
-        //echo "Invalid username. Usernames must be at least 5 characters long and can only contain letters, numbers, and underscores.";
-    }
-}
-      //fname valiadte
-      if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming you get the username from a form
-    $fname = $_POST['fname'];
-    
-    // Check if the fname is set and contains only letters
-    if (isset($fname) && preg_match("/^[a-zA-Z]*$/", $fname)) {
-       // echo "Valid fname: " . htmlspecialchars($fname);
-        //$cfname =$fname;
-        
-    } else {
-        $fname_err = "Invalide fname.";
-        //echo "Invalid fname. fnames must contain only letters.";
-    }
-}
-
-    //lname valiadte
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming you get the username from a form
-    $lname = $_POST['lname'];
-    $clname ="";
-    // Check if the lname is set and contains only letters
-    if (isset($lname) && preg_match("/^[a-zA-Z]+$/", $lname)) {
-        //echo "Valid lname: " . htmlspecialchars($lname);
-        
-
-        //$clname =$lname;
-    } else {
-        $lname_err = "invalid lname.";
-        //echo "Invalid lname. lnames must contain only letters.";
-    }
-}
-
-       //email validate
-       if (empty($_POST["email"])) {
-       $email_err = "Email is required";
-       } else {
-       $email = test_input($_POST["email"]);
-       // check if e-mail address is well-formed
-       if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-       $email_err = "Invalid email format";
-       }
-       $email = $_POST["email"];
-       }
-
-
-      // Validate password
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    // Validate confirm password
-    if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = "Please confirm password.";
-    } else{
-        $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($password_err) && ($password != $confirm_password)){
-            $confirm_password_err = "Password did not match.";
-        }
-    }
-
-
-  // Check input errors before inserting in database
-    if(empty($username_err)  && empty($fname_err) && empty($lname_err)&& empty($email_err) && empty($password_err) && empty($confirm_password_err)){
-       
-        $sql = "INSERT INTO client (c_username,c_fname,c_lname, c_password,c_email) VALUES ('$username','$fname','$lname','$password','$email')";
-
-        if(mysqli_query($conn, $sql)==true){
-            // Redirect to login page
-            header("location: login.php");
-        } else{
-            echo "Oops! Something went wrong. Please try again later.";
-        }
-    
-        
-    }
  
-    // Close connection
-    mysqli_close($conn);
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $username = $_POST['username'];
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = test_input($_POST["email"]);
+        $password = trim($_POST["password"]);
+        $confirm_password = trim($_POST["confirm_password"]);
+
+
+        if (isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)) {
+            //$useranme= "Valid username: " . htmlspecialchars($username);
+            if (isset($fname) && preg_match("/^[a-zA-Z]{2,}$/", $fname)) {
+                // echo "Valid fname: " . htmlspecialchars($fname);
+                 //$cfname =$fname;
+                 if (isset($lname) && preg_match("/^[a-zA-Z]{2,}$/", $lname)) {
+                    //echo "Valid lname: " . htmlspecialchars($lname);
+                    //$clname =$lname;
+                        if (empty($_POST["email"])) {
+                        $email_err = "Email is required";
+                         } else {
+                        
+                         // check if e-mail address is well-formed
+                         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                            $email = test_input($_POST["email"]);
+
+                            if(!empty(trim($_POST["password"]))){
+                                $password = trim($_POST["password"]);
+
+                                if(!empty(trim($_POST["confirm_password"]))){
+                                    $confirm_password = trim($_POST["confirm_password"]);
+                                    if(empty($password_err) && ($password != $confirm_password)){
+                                        $confirm_password_err = "Password did not match.";
+                                        
+                                    }
+                                    else{
+                                      if(empty($username_err)  && empty($fname_err) && empty($lname_err)&& empty($email_err) && empty($password_err) && empty($confirm_password_err)){
+     
+                                          $sql = "INSERT INTO client (c_username,c_fname,c_lname, c_password,c_email) VALUES ('$username','$fname','$lname','$password','$email')";
+                                  
+                                          if(mysqli_query($conn, $sql)==true){
+                                              // Redirect to login page
+                                              header("location: login.php");
+                                          } else{
+                                              echo "Oops! Something went wrong. Please try again later.";
+                                          }
+                                      
+                                          
+                                      }
+                                   
+                                      // Close connection
+                                      mysqli_close($conn);
+                                    }
+                                    
+                                  } else{
+                                       $confirm_password_err = "Please confirm password.";
+                                  }
+                                $password_err = "Please enter a password.";
+                            } elseif(strlen(trim($_POST["password"])) < 6){
+                                $password_err = "Password must have atleast 6 characters.";
+                            } else{
+                                $password_err = "Please enter a password.";
+                            }
+                         }
+                         else{
+                            $email_err = "Invalid email format";    
+                         }
+                         
+                         }
+                } else {
+                    $lname_err = "invalid lname.";
+                  //  echo "Invalid lname. lnames must contain only letters.";
+                }
+             } else {
+                 $fname_err = "Invalide fname.";
+                // echo "Invalid fname. fnames must contain only letters.";
+             }
+        } else {
+            $username_err="Invalid Username";
+           // echo "Invalid username. Usernames must be at least 5 characters long and can only contain letters, numbers, and underscores.";
+        }
+    }
     
     
 }
