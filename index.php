@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
@@ -41,7 +41,7 @@
         </li> -->
 
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >
             Login
           </a>
@@ -49,8 +49,16 @@
             <li><a class="dropdown-item" href="#">Decorators</a></li>
             <li><a class="dropdown-item" href="#">photographers</a></li>
           </ul>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Login as Client</a></li>
+            <li><a class="dropdown-item" href="#">Login as Vendor</a></li>
+          </ul>
         </li>
-
       </ul>
       </div>
   </div>
@@ -245,7 +253,7 @@
 
 </body>
 
-<script src="project/js/bootstrap.min.js"></script>  
+<script src="../js/bootstrap.min.js"></script>  
 </html>
 <section class="footer" id="footer">
 <?php 
