@@ -218,10 +218,10 @@ function test_input($data) {
 				    <input type="text" class="form-control rounded-pill <?php echo (!empty($username)) ? 'is-invalid' : ''; ?>"  name="v_username" id="enterlastname" value="<?php echo $username; ?>" required>
                     <span class="invalid-feedback"><?php echo $username_err; ?></span>
 				</div>
-				<div class="form-outline mb-2">
+				<div class="form-outline mb-2 password">
 				    <label class="form-label" for="form3Example1cg">Password</label>
-				    <input type="password" class="form-control rounded-pill <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" name="v_password" id="selectusername" aria-describedby="inputGroupPrepend" required>
-                    <!-- <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon"> -->
+				    <input type="password" class="form-control rounded-pill <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" name="v_password" id="myinput" aria-describedby="inputGroupPrepend" required>
+                    <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                     <span class="invalid-feedback"><?php echo $password_err; ?></span>
 			    </div>
 				<div class="form-outline mb-2">
@@ -322,15 +322,33 @@ function test_input($data) {
 </div>
 </div>
 </section>
-    <!-- Optional JavaScript; choose one of the two! -->
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/multiselect-dropdown.js"></script>
+<script>
+    var a;
+    function pass()
+    {
+        if(a==1)
+        {
+            document.getElementById('myinput').type='password';
+            document.getElementById('pass-icon').src='eye-close.png';
+            a=0;
+        }
+        else
+        {
+            document.getElementById('myinput').type='text';
+            document.getElementById('pass-icon').src='eye-open.png';
+            a=1;
+            
+        }
+    }
+//     Optional JavaScript; choose one of the two! 
+//    Option 1: Bootstrap Bundle with Popper 
+//     <script src="../js/bootstrap.bundle.js"></script>
+	 <script src="../js/multiselect-dropdown.js"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+      <!-- Option 2: Separate Popper and Bootstrap JS  -->
+     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+     -->
     </body>
 </html>
 	
