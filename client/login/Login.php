@@ -84,6 +84,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--BS 5 css link-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--BS 5 js link-->
+    <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body{ font: 14px sans-serif; }
@@ -105,31 +109,49 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>
-            <div class="form-group">
+            <div class=" form-group password-container password">
                 <label>Password</label>
-                <input type="password" name="password" id="myInput" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                <input type="checkbox" onclick="myFunction()" class="mt-2">Show Password
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                <input type="password" name="password"  class="form-control" id ="password" <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
+                <!-- <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span> -->
             </div>
+
+
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
     <script>
-        function myFunction() {
-        var x = document.getElementById("myInput");
-        
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
 
-           if (x.type === "password") {
-           x.type = "text";
-           } else {
-           x.type = "password";
-          
-         
-         }
-     }
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
    </script>
+   <script>
+    var a;
+    function pass()
+    {
+        if(a==1)
+        {
+            document.getElementById('password').type='password';
+            document.getElementById('pass-icon').src='eye-close.png';
+            a=0;
+        }
+        else
+        {
+            document.getElementById('password').type='text';
+            document.getElementById('pass-icon').src='eye-open.png';
+            a=1;
+            
+        }
+    }
+    </script>
     </div>
 </body>
 </html>
