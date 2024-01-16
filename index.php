@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body>
 <!--navbar-->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
     <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
   </a>
@@ -29,10 +29,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.php#event">Services</a>
+          <a class="nav-link" href="#event">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php#footer">About us</a>
+          <a class="nav-link" href="#footer">About us</a>
         </li>
         
         <!-- <li class="nav-item">
@@ -41,7 +41,7 @@
         </li> -->
 
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >
             Login
           </a>
@@ -49,8 +49,16 @@
             <li><a class="dropdown-item" href="#">Decorators</a></li>
             <li><a class="dropdown-item" href="#">photographers</a></li>
           </ul>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Login as Client</a></li>
+            <li><a class="dropdown-item" href="#">Login as Vendor</a></li>
+          </ul>
         </li>
-
       </ul>
       </div>
   </div>
@@ -66,7 +74,7 @@
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" id="event"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -100,7 +108,7 @@
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden" >Next</span>
   </button>
 </div>
 </div>
@@ -108,9 +116,9 @@
 
 </div>
 <!-- card -->
-<section class="event" id="event">
+<section class="event" >
 
-        <div class="title mt-5">
+        <div class="title mt-5" >
             <h1 class="heding">Services</h1>
         </div>
   <div class="container mt-2">
@@ -245,7 +253,7 @@
 
 </body>
 
-<script src="project/js/bootstrap.min.js"></script>  
+<script src="../js/bootstrap.min.js"></script>  
 </html>
 <section class="footer" id="footer">
 <?php 
