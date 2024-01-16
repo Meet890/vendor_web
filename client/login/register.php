@@ -60,7 +60,7 @@ function test_input($data) {
 
        //email validate
        if (empty($_POST["email"])) {
-       $email_err = "Email is required";
+        $email_err = "Email is required";
        } else {
        $email = test_input($_POST["email"]);
        // check if e-mail address is well-formed
