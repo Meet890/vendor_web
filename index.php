@@ -55,8 +55,8 @@
             Login
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Login as Client</a></li>
-            <li><a class="dropdown-item" href="#">Login as Vendor</a></li>
+            <li><a class="dropdown-item" href="client/login/login.php">Login as Client</a></li>
+            <li><a class="dropdown-item" href="vendor/vendor_reg3.php">Login as Vendor</a></li>
           </ul>
         </li>
       </ul>
@@ -125,7 +125,7 @@
       <div class="row">
 
             <div class="col-md-4  col-sm-6 ">
-            <a href="profile_card_getdata.php" id="decorators" class="a1">
+            <a href="client/profile_card_getdata.php" id="decorators" class="a1">
               
                   <div class="card text-white">
                   <div class="row">
@@ -141,7 +141,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2 text-white">
                    <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">photographers</h3>
@@ -150,7 +150,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">videographers</h3>
@@ -159,7 +159,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">cake</h3>
@@ -168,7 +168,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">flowers</h3>
@@ -177,7 +177,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2   text-white">
                    <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">wedding wear</h3>
@@ -186,7 +186,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
                    <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">jewellery</h3>
@@ -195,7 +195,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">invitation cards</h3>
@@ -204,7 +204,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
                    <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">sound</h3>
@@ -214,7 +214,7 @@
             </div>
             
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
                    <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">makeup artist</h3>
@@ -223,7 +223,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card text-white">
                    <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">venues</h3>
@@ -232,7 +232,8 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+                
                  <div class="card text-white">
                    <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">gifts</h3>
