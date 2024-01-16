@@ -227,7 +227,7 @@ function test_input($data) {
 				<div class="form-outline mb-2 password">
 				    <label class="form-label" for="form3Example1cg">Password</label>
 				    <input type="password" class="form-control rounded-pill <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" name="v_password" id="myinput" aria-describedby="inputGroupPrepend" required>
-                    <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
+                    <img src="../eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                     <span class="invalid-feedback"><?php echo $password_err; ?></span>
 			    </div>
 				<div class="form-outline mb-2">
@@ -348,7 +348,7 @@ function test_input($data) {
     }
 //     Optional JavaScript; choose one of the two! 
 //    Option 1: Bootstrap Bundle with Popper 
-//     <script src="../js/bootstrap.bundle.js"></script>
+	 <script src="../js/bootstrap.bundle.js"></script>
 	 <script src="../js/multiselect-dropdown.js"></script>
 
       <!-- Option 2: Separate Popper and Bootstrap JS  -->
