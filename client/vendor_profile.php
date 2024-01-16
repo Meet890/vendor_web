@@ -220,10 +220,12 @@
 
 
 </div>
+<section class="footer" id="footer">
 <?php 
     include("footer.php");
 
     ?>
+    </section>
 </div>
 
 </div>
