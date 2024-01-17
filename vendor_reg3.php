@@ -80,13 +80,13 @@ function test_input($data) {
  // Validate password
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Assuming you get the password from a form
-    $password = $_POST['v_password'];
+    $password = $_POST['password'];
 
     // Validate password
     if (preg_match('/^\d{6}$/', $password)) {
-        echo "Valid password: " . htmlspecialchars($password);
+       // echo "Valid password: " . htmlspecialchars($password);
     } else {
-        echo "Invalid password. Please enter a password consisting of exactly 4 digits.";
+        $password_err= "Invalid password. Please enter a password consisting of exactly 6 digits.";
     }
 }
       
@@ -99,7 +99,7 @@ function test_input($data) {
     if (is_numeric($experience)  && strlen($experience) == 2) {
 		$experience_err="invalid number.";
         } else {
-			$experience=$_POST["v_experience"];
+			$experience=$_POST["experience"];
 		//echo "Valid experience: " . htmlspecialchars($experience) . " years";
        // echo "Invalid experience. Please enter a valid positive integer for the experience field.";
     }
@@ -107,7 +107,7 @@ function test_input($data) {
 
 
 // Check input errors before inserting in database
- if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty($mobileno_err)&& empty($address_err) &&($gender_err)&&empty($services_err)){
+ if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($mobileno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err)){
     
      $sql = "INSERT INTO vendor (v_name, v_username, v_password, v_email, v_phoneno, v_address, v_gender  ,v_ser_places ,v_profession ,v_experience)  VALUES ('$name','$username','$password','$email','$mobileno','$address','$gender','$services','$profession','$experience')";
 
