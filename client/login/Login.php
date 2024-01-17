@@ -83,18 +83,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
     </style>
 </head>
-<body>   
+<body background="ss.png">   
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>

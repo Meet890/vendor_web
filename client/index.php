@@ -11,7 +11,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     
     
     
@@ -34,7 +34,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/decoration2.jpg" class="d-block w-100" alt="img1">
+      <img src="../img/decoration2.jpg" class="d-block w-100" alt="img1">
       <div class="carousel-caption a2">
         <h5>FIND THE BEST DECORATION</h5>
         <p>Your Choise Your Budget.</p>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/catring2.jpg" class="d-block w-100" alt="img2">
+      <img src="../img/catring2.jpg" class="d-block w-100" alt="img2">
       <div class="carousel-caption a2">
         <h5>FIND BEST CATRING SERVICES</h5>
         <p>Your Choise Your Budget.</p>
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/SOUND2.jpg" class="d-block w-100" alt="img3">
+      <img src="../img/SOUND2.jpg" class="d-block w-100" alt="img3">
       <div class="carousel-caption a2">
         <h5>FIND BEST SOUND</h5>
         <p>Your Choise Your Budget.</p>
@@ -86,7 +86,7 @@
                   <div class="card text-white">
                   <div class="row">
                    <div class="col12">
-                   <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/decoration.jpg" class="card-img img1 p-2" alt="...">
                   </div>
                   <div class="col12">
                    <h3 class="titleh3">decorators</h3>
@@ -97,72 +97,72 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2 text-white">
-                   <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/photo.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">photographers</h3>
                    <p class="title">Preserve your memories.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/vedio.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">videographers</h3>
                    <p class="title">Moments well Shared.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/cake.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">cake</h3>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/flowers.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">flowers</h3>
                    <p class="title">Make your life colorful.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2   text-white">
-                   <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/cloth.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">wedding wear</h3>
                    <p class="title">Dress Your Dreams, Feel the Love.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
-                   <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/jwellery.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">jewellery</h3>
                    <p class="title">Jewelryize me.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/printing.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">invitation cards</h3>
                    <p class="title">Invite in style.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
-                   <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/sound.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">sound</h3>
                    <p class="title">Audio you can rely on.</p>
                  </div>
@@ -170,28 +170,28 @@
             </div>
             
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
-                   <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/makeup.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">makeup artist</h3>
                    <p class="title">Ready, Set, Glow!.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card text-white">
-                   <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/vanue.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">venues</h3>
                    <p class="title">	Where memories are made.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                 
                  <div class="card text-white">
-                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/gift.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>

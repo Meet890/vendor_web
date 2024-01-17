@@ -6,14 +6,21 @@
 body{
 	
     width:100%;
-    background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+    height: 68.4vh;
+    /* background: linear-gradient(40deg, #2096ff, #05ffa3) !important; */
+
+    justify-content: center;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
 
 }
 .wrapper {
     background: #9cb7d5;
+    
     margin: auto;
-    margin-top: 5%;
-    border-radius: 8px;
+    margin-top: 15% ;
+    border-radius: 5px;
     box-shadow: -2px 5px 22px 3px rgb(0 0 0 / 50%);
 }
 .showpass{
@@ -65,3 +72,8 @@ body{
             width: 24px;
             cursor: pointer;
         }
+
+
+
+
+        
