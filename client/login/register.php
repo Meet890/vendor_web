@@ -129,15 +129,15 @@ function test_input($data) {
             </div>
 
              <div class="form-group">
-                <label>Firstname</label>
-                <input type="text" name="fname" class="form-control <?php echo (!empty($fname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $fname; ?>">
-                <span class="invalid-feedback"><?php echo $fname_err; ?></span>
+                <label>Name</label>
+                <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
+                <span class="invalid-feedback"><?php echo $name_err; ?></span>
             </div>
 
              <div class="form-group">
-                <label>Lastname</label>
-                <input type="text" name="lname" class="form-control <?php echo (!empty($lname_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $lname; ?>">
-                <span class="invalid-feedback"><?php echo $lname_err; ?></span>
+                <label>City</label>
+                <input type="text" name="city" class="form-control <?php echo (!empty($city_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $city; ?>">
+                <span class="invalid-feedback"><?php echo $city_err; ?></span>
             </div>
 
             <div class="form-group">
@@ -148,13 +148,13 @@ function test_input($data) {
 
             <div class="form-group password">
                 <label>Password</label>
-                <input type="password" name="password" id="myInput1" class="form-control <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <input type="password" name="password" id="myInput1" class="form-control " value="<?php echo $password; ?>">
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group password">
                 <label>Confirm Password</label>
-                <input type="password" name="confirm_password" id="myInput2" class="form-control <?php echo (empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+                <input type="password" name="confirm_password" id="myInput2" class="form-control " value="<?php echo $confirm_password; ?>">
                 <img src="eye-close.png" onclick="pass2()" class="pass-icon" id="pass-icon2">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
                 <!-- <input type="checkbox" onclick="myFunction()" class="mt-2">Show Password -->

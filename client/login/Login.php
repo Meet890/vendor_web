@@ -85,9 +85,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body{ font: 14px sans-serif; }
