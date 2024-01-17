@@ -38,7 +38,7 @@
                   </div>
                   <div class="ms-3 text-white" style="margin-top: 130px;">
                     <h5>Rathod Meet</h5>
-                    <p>Bhuj</p>
+                    <p>Mandvi</p>
                     <div class="container ps-0 text-yellow ">
                    
                     <i class='fa-solid fa-star star1' style="--i: 0;"></i>
