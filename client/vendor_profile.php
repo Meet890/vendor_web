@@ -41,7 +41,7 @@
                     <p>Mandvi</p>
                     <div class="container ps-0 text-yellow ">
                    
-                    <i class='fa-solid fa-star star1' style="--i: 0;"></i>
+                    <i class='fa-solid fa-star ' style="--i: 0;"></i>
                     <i class='fa-solid fa-star' style="--i: 1;"></i>
                     <i class='fa-regular fa-star-half-stroke' style="--i: 2;"></i>
                     <i class='fa-regular fa-star' style="--i: 3;"></i>
