@@ -159,7 +159,7 @@ function test_input($data) {
             </div>
             <div class="form-group">
                 <label>confirm password</label>
-                <input type="text" name="confirm_password" class="form-control <?php echo (!empty($confirm_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $; ?>">
+                <input type="text" name="confirm_password" class="form-control <?php echo (!empty($confirm_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_err; ?>">
                 <span class="invalid-feedback"><?php echo $email_err; ?></span>
             </div>
 <!-- 
