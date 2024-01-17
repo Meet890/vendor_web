@@ -2,8 +2,8 @@
 // Include config file
 require_once "config.php";
 // Define variables and initialize with empty values
-$username = $name = $email =$city = $password = $confirm_password = "";
-$username_err = $name_err = $email_err = $city_err =  $password_err = $confirm_password_err = "";
+$username = $name = $city = $email = $password = $confirm_password = "";
+$username_err = $name_err = $city_err = $email_err = $password_err = $confirm_password_err = "";
 //validation
 function test_input($data) {
     $data = trim($data);
@@ -16,19 +16,22 @@ function test_input($data) {
  
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $username = $_POST['username'];
-        $name = $_POST['name'];
+        $fname = $_POST['name'];
+        $lname = $_POST['city'];
         $email = test_input($_POST["email"]);
-        $city = $_POST['city'];
-        $password = trim($_POST["password"]);
-        $confirm_password = trim($_POST["confirm_password"]);
+        $password = $_POST["password"];
+        $confirm_password = $_POST["confirm_password"];
 
 
         if (isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)) {
             //$useranme= "Valid username: " . htmlspecialchars($username);
-            if (isset($name) && preg_match("/^[a-zA-Z]{2,}$/", $name)) {
+            if (isset($fname) && preg_match("/^[a-zA-Z]{2,}$/", $fname)) {
                 // echo "Valid fname: " . htmlspecialchars($fname);
                  //$cfname =$fname;
-                    if (empty($_POST["email"])) {
+                 if (isset($lname) && preg_match("/^[a-zA-Z]{2,}$/", $lname)) {
+                    //echo "Valid lname: " . htmlspecialchars($lname);
+                    //$clname =$lname;
+                        if (empty($_POST["email"])) {
                         $email_err = "Email is required";
                          } else {
                         
@@ -36,34 +39,25 @@ function test_input($data) {
                          if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                             $email = test_input($_POST["email"]);
 
-                            
-                            
-                            
-                            
-                            if(empty(trim($_POST["password"]))){
-                                $password_err = "Please enter a password.";
-                            } elseif(strlen(trim($_POST["password"])) < 6){
-                                $password_err = "Password must have atleast 6 characters.";
-                            } else{
-                                $password = trim($_POST["password"]);
-                                $password_err ="password shoud be contain  6 charater.";
+                            if(preg_match('/[!@#$%*a-zA-Z0-9]{8,}/',$password)){
+                               
+   
+
                                 if(!empty(trim($_POST["confirm_password"]))){
                                     $confirm_password = trim($_POST["confirm_password"]);
                                     if(empty($password_err) && ($password != $confirm_password)){
+                                        echo "pass  not match ";
                                         $confirm_password_err = "Password did not match.";
                                         
                                     }
-                                    
-                                    
-                                    
-                                    
                                     else{
-                                      if(empty($username_err)  && empty($name_err) && empty($email_err) && empty($city_err) && empty($password_err) && empty($confirm_password_err)){
+                                      if(empty($username_err)  && empty($name_err) && empty($city_err)&& empty($email_err) && empty($password_err) && empty($confirm_password_err)){
      
-                                          $sql = "INSERT INTO client (c_username,c_name, c_city, c_password,c_email) VALUES ('$username','$name','$city','$password','$email')";
+                                          $sql = "INSERT INTO client (c_username,c_name,c_city, c_password,c_email) VALUES ('$username','$name','$city','$password','$email')";
                                   
                                           if(mysqli_query($conn, $sql)==true){
                                               // Redirect to login page
+                                              mysqli_close($conn);
                                               header("location: login.php");
                                           } else{
                                             
@@ -73,17 +67,22 @@ function test_input($data) {
                                           
                                       }
                                       
-                                      
-                                      
-                                      
-                                      $password_err ="password shoud be contain  6 charater.";
                                       // Close connection
-                                      mysqli_close($conn);
+                                      
                                     }
                                     
                                   } else{
+                                        //echo "invalid con pass ..";
                                        $confirm_password_err = "Please confirm password.";
+                                       echo $confirm_password_err;
                                   }
+
+
+                        
+                            } else{
+                                echo "invalid password fild";
+                                $password_err = "invalid password";
+
                             }
                          }
                          else{
@@ -91,9 +90,12 @@ function test_input($data) {
                          }
                          
                          }
-                } 
+                } else {
+                    $lname_err = "invalid lname.";
+                  //  echo "Invalid lname. lnames must contain only letters.";
+                }
              } else {
-                 $name_err = "Invalide fname.";
+                 $fname_err = "Invalide fname.";
                 // echo "Invalid fname. fnames must contain only letters.";
              }
         } else {
@@ -103,19 +105,19 @@ function test_input($data) {
     }
     
     
-
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
      <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body{ font: 14px sans-serif; }
@@ -139,40 +141,27 @@ function test_input($data) {
                 <span class="invalid-feedback"><?php echo $name_err; ?></span>
             </div>
 
-             
+             <div class="form-group">
+                <label>City</label>
+                <input type="text" name="city" class="form-control <?php echo (!empty($city_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $city; ?>">
+                <span class="invalid-feedback"><?php echo $city_err; ?></span>
+            </div>
+
             <div class="form-group">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
                 <span class="invalid-feedback"><?php echo $email_err; ?></span>
             </div>
 
-            <div class="form-outline mb-2">
-				    <label for="validationCustom04" class="form-label">City</label>
-				    <select class="form-select rounded-pill" name="v_city" id="validationCustom04" required>
-				      <option selected disabled value="">Choose...</option>
-				      <option value="Bhuj">Bhuj</option>
-				      <option value="Gandhidham">Gandhidham</option>
-				      <option value="Anjar">Anjar</option>
-				      <option value="Mandvi">Mandvi</option>
-				      <option value="Mundra">Mundra</option>
-				      <option value="Bhachau">Bhachau</option>
-                      <option value="Anjar">Anjar</option>
-					  <option value="Naliya">Naliya</option>
-					  <option value="Lakhpat">Lakhpat</option>
-					  <option value="Khavda">Khavda</option>
-				    
-				    </select>
-			     </div>
-
             <div class="form-group password">
                 <label>Password</label>
-                <input type="password" name="password" id="myInput1" class="form-control <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <input type="password" name="password" id="myInput1" class="form-control " value="<?php echo $password; ?>">
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group password">
                 <label>Confirm Password</label>
-                <input type="password" name="confirm_password" id="myInput2" class="form-control <?php echo (empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+                <input type="password" name="confirm_password" id="myInput2" class="form-control " value="<?php echo $confirm_password; ?>">
                 <img src="eye-close.png" onclick="pass2()" class="pass-icon" id="pass-icon2">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
                 <!-- <input type="checkbox" onclick="myFunction()" class="mt-2">Show Password -->
