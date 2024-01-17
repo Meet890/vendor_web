@@ -54,8 +54,18 @@
 						<li><a class="dropdown-item"  href="#">gifts</a></li>
           </ul>
         </li>
-        
-        <li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+           
+          </ul>
+        </li>
+        <!-- <li>
         <div class="dropdown text-end ms-2">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
@@ -67,7 +77,7 @@
             <li><a class="dropdown-item" href="#">Sign out</a></li>
           </ul>
         </div>
-        </li>
+        </li> -->
         </ul>
       </div>
   </div>
