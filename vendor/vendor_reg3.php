@@ -140,7 +140,7 @@ function test_input($data) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <!--Bootstrap CSS ofline-->
 <link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/R_style.css">
+<link rel="stylesheet" href="v_style">
     <title>Bootstrap Registration Form - Pagefist</title>
   </head>
  <body>
