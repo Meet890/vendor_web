@@ -8,6 +8,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
 // Include config file
 require_once "config.php";
+require_once "../css/bootstrap.min.css";
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -83,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->

@@ -8,7 +8,7 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="../js/bootstrap.min.js"></script>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
