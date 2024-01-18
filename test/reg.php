@@ -159,8 +159,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
 
                     <div class="field">
-                    <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
-                        <input type="password" id="create-pass" required placeholder=" " autocomplete="on">
+                    <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
+                        <input type="password" id="pass" required placeholder=" " autocomplete="on">
                         <label for="create-pass">Password</label>
                         <!-- <i class="fa fa-lock"></i> -->
                     </div>
@@ -225,7 +225,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
 
                     <div class="field">
-                        <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
+                        <img src="eye-close.png" onclick="pass2()" class="pass-icon" id="pass-icon1">
                         <input type="password" name="password" id="password" required placeholder=" " autocomplete="off">
                         <label for="password">Password</label>
                         
@@ -233,7 +233,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
 
                     <div class="field">
-                    <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
+                    <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon2">
                         <input type="password" name="confirm_password" id="confirm-pass" required placeholder=" " autocomplete="off">
                         
                         <label for="confirm-pass">Confirm Password</label>
@@ -271,23 +271,58 @@ function setFocus() {
     signupForm.classList.toggle('above')
     document.querySelectorAll('.signup-form')[0].focus();
 } 
+var b;
+    function pass2()
+    {
+        if(b==1)
+        {
+            document.getElementById('password').type='password';
+            document.getElementById('pass-icon1').src='eye-close.png';
+            b=0;
+        }
+        else
+        {
+            document.getElementById('password').type='text';
+            document.getElementById('pass-icon1').src='eye-open.png';
+            b=1;
+            
+        }
+    }
 var a;
     function pass()
     {
         if(a==1)
         {
             document.getElementById('confirm-pass').type='password';
-            document.getElementById('pass-icon').src='eye-close.png';
+            document.getElementById('pass-icon2').src='eye-close.png';
             a=0;
         }
         else
         {
             document.getElementById('confirm-pass').type='text';
-            document.getElementById('pass-icon').src='eye-open.png';
+            document.getElementById('pass-icon2').src='eye-open.png';
             a=1;
             
         }
     }
+    var c;
+    function pass3()
+    {
+        if(c==1)
+        {
+            document.getElementById('pass').type='password';
+            document.getElementById('pass-icon3').src='eye-close.png';
+            c=0;
+        }
+        else
+        {
+            document.getElementById('pass').type='text';
+            document.getElementById('pass-icon3').src='eye-open.png';
+            c=1;
+            
+        }
+    }
+    
     </script>
 
 
