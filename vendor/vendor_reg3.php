@@ -1,3 +1,4 @@
+
 <?php
  
  // servername => localhost
@@ -69,12 +70,13 @@ function test_input($data) {
 
 	//VALIDATION PHONE NO
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$mobileno_err="phone no is required";
 		// Assuming you get the mobile number from a form
 		$mobileno = $_POST['mobileno'];
 	   if (is_numeric($mobileno) && strlen($mobileno) == 10) {
 			//echo "Valid mobile number: " . htmlspecialchars($mobileno);
 		} else {
-			$mobileno_err= "Invalid mobile number.";
+			//$mobileno_err= "Invalid mobile number.";
 		}
 	}
  // Validate password
@@ -84,16 +86,18 @@ function test_input($data) {
 
     // Validate password
     if (preg_match('/^\d{6}$/', $password)) {
-       // echo "Valid password: " . htmlspecialchars($password);
+		$password_err="Invalid password. Please enter a password consisting of exactly 6 digits.";
+        
     } else {
-        $password_err= "Invalid password. Please enter a password consisting of exactly 6 digits.";
+		$password="Valid password: " . htmlspecialchars($password);
+        
     }
 }
       
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Assuming you get the experience from a form
 	//$experience = $_POST['v_experience'];
-	$experience_err="experience is required";
+	//$experience_err="experience is required";
 
     // Validate experience field
     if (is_numeric($experience)  && strlen($experience) == 2) {
@@ -107,7 +111,7 @@ function test_input($data) {
 
 
 // Check input errors before inserting in database
- if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($mobileno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err)){
+ if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty($mobileno_err)&& empty($address_err) &&($gender_err)&&empty($services_err)){
     
      $sql = "INSERT INTO vendor (v_name, v_username, v_password, v_email, v_phoneno, v_address, v_gender  ,v_ser_places ,v_profession ,v_experience)  VALUES ('$name','$username','$password','$email','$mobileno','$address','$gender','$services','$profession','$experience')";
 
@@ -140,7 +144,28 @@ function test_input($data) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 <!--Bootstrap CSS ofline-->
 <link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="v_style">
+<link rel="stylesheet" href="../css/R_style.css">
+<style>
+	.password{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            /* border: 1px solid #000; */
+
+        }
+        .password input{
+            /* padding: 10px 5px; */
+            /* outline: none; */
+            /* border: 0; */
+        } 
+        .password .pass-icon{
+            position: absolute;
+            top:39px ;
+            right: 10px;
+            width: 24px;
+            cursor: pointer;
+        }
+	</style>
     <title>Bootstrap Registration Form - Pagefist</title>
   </head>
  <body>
@@ -170,10 +195,11 @@ function test_input($data) {
                     <span class="invalid-feedback"><?php echo $username_err; ?></span>
 				</div>
 
-				<div class=" form-group password-container password">
-                <label>Password</label>
-                <input type="password" name="password"  class="form-control rounded-pill" id ="password" <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>">
+				<div class=" form-outline mb-2 password-container password">
+                <label class="form-label ">Password</label>
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
+
+                <input type="password" name="password"  class="form-control rounded-pill" id ="password" <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <!-- <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span> -->
             </div>
 			<!--	<div class="form-outline mb-2 password">
@@ -184,12 +210,12 @@ function test_input($data) {
 			    </div>-->
 				<div class="form-outline mb-2">
 				    <label for="enteremail" class="form-label ">Email</label>
-				    <input type="email" class="form-control rounded-pill <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" name="v_email" id="enteremail" aria-describedby="inputGroupPrepend" required>
+				    <input type="email" class="form-control rounded-pill <?php echo (!empty($email_err)) ?  : ''; ?>" value="<?php echo $email; ?>" name="v_email" id="enteremail" aria-describedby="inputGroupPrepend" required>
                     <span class="invalid-feedback"><?php echo $email_err; ?></span>
 				</div>
 
-				<div class="form-group">
-                <label>Mobile Number</label>
+				<div class="form-outline mb-2">
+                <label class ="form-label">Mobile Number</label>
                 <input type="text" name="mobileno" class="form-control rounded-pill <?php echo (!empty($mobileno_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $mobileno; ?>" name="v_phoneno" id="enterphoneno" aria-describedby="inputGroupPrepend" required>
                 <span class="invalid-feedback"><?php echo $mobileno_err; ?></span>
             </div>
@@ -212,29 +238,29 @@ function test_input($data) {
 				      <option value="f">Female</option>
                      </select>
 				</div>	 
-				<div class="form-outline mb-1">
+				<div class="form-outline mb-2">
 					<div class="row">
-						<div class="col-10">
-                  <label for="enter_place" class="form-label">Select service area</label>
-				  </div>
-				  <div class="col-12">
-				  <select style="width: 100%;"; multiple multiselect-select-all="true" class="mb-3 align-text-center form-select rounded-pill " name="v_ser_places" placeholder="select city" required >
-        					<option value="Bhuj">Bhuj</option>
+						<div class="col-12">
+                  <label for="enter_place" class="form-label">Taluka</label>
+				  
+				  <select style="width: 100%;";  class=" align-text-center form-select rounded-pill " name="v_ser_places" placeholder="select city" required >
+				  <option value="All area of Kachchh">All area of Kachchh</option>			
+				  <option value="Bhuj">Bhuj</option>
         					<option value="Gandhidham">Gandhidham</option>
          					<option value="Anjar">Anjar</option>
           					<option value="Mandvi">Mandvi</option>
           					<option value="Mundra">Mundra</option>
 							<option value="Bhachau">Bhachau</option>
-							<option value="Anjar">Anjar</option>
-							<option value="Naliya">Naliya</option>
+					        <option value="Naliya">Abadasa</option>
 							<option value="Lakhpat">Lakhpat</option>
-							<option value="Khavda">Khavda</option>
-				   </select>
+							<option value="Khavda">Rapar</option>
+							<option value="Nakhatrana">Nakhatrana</option>
+ </select>
 				   </div>
 				   </div>
 				</div>   
 				
-				<div class="form-outline mb-3">
+				<div class="form-outline mb-2">
 				    <label for="validationCustom04" class="form-label">Profession</label>
 				    <select class="form-select rounded-pill" name="v_profession" id="validationCustom04" <?php echo (!empty($profession_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $profession; ?>"required>
 					<span class="invalid-feedback"><?php echo $profession_err; ?></span>
@@ -251,8 +277,8 @@ function test_input($data) {
 				    </select>
 			     </div>
 
-				 <div class="form-group">
-                <label>Experience</label>
+				 <div class="form-outline mb-2">
+                <label class="form-label">Experience</label>
                 <input type="text" name="experience" class="form-control rounded-pill <?php echo (!empty($experience_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $experience; ?>" required>
                 <span class="invalid-feedback"><?php echo $experience_err; ?></span>
             </div>
