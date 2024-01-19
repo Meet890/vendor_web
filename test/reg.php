@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         // echo '<script> alert("Welcome");  </script>';
         if (isset($city) && preg_match("/^[a-zA-Z]{2,}$/", $city)){
            // echo '<script> alert("Welcome");  </script>';
+           if( strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') != false){
            if (filter_var($email, FILTER_VALIDATE_EMAIL)){
             $email = test_input($_POST["email"]);
           //  echo '<script> alert("Welcome");  </script>';
@@ -59,11 +60,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                             else{
                                 echo '<script>  alert("check box"); setFocus();</script>';
                             }
-                        }
-                        else{
+
+                        }else{
                             echo '<script>  alert("both password shoud be same"); setFocus();</script>';
                         }
-
 
                     }else{
                         echo '<script>  alert("conf_password"); setFocus();</script>';
@@ -74,11 +74,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Invalid password
                     echo '<script>  alert("password"); setFocus();</script>';
                 }
+
             }
+            else{
+                echo '<script>  alert("username"); setFocus();</script>';
+            }
+
            }
            else{
                 echo '<script>  alert("email"); setFocus();</script>';
            }
+           
+        }
+           else{
+            echo '<script>  alert("enter valid domain name"); setFocus();</script>'; 
+           }
+
         }
         else{
             echo '<script>  alert("city"); setFocus();</script>';
@@ -91,20 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
 
 ?>
 
@@ -267,10 +265,10 @@ function swapPos() {
     signupForm.classList.toggle('below')
 
 }
-function setFocus() { 
-    signupForm.classList.toggle('above')
-    document.querySelectorAll('.signup-form')[0].focus();
-} 
+// function setFocus() { 
+//     signupForm.classList.toggle('above')
+//     document.querySelectorAll('.signup-form')[0].focus();
+// } 
 var b;
     function pass2()
     {
