@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
           //  echo '<script> alert("Welcome");  </script>';
             if (isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)){
                 //  echo '<script> alert("Welcome");  </script>';
-                if (strlen($password) >= 8 && preg_match("/[a-zA-Z_]/", $password) && preg_match("/\d/", $password) && preg_match("/\w/", $password)&& !preg_match("/\s/", $password)) {
+                if (strlen($password) >= 6 && preg_match("/[a-zA-Z_]/", $password) && preg_match("/\d/", $password) && preg_match("/\w/", $password)&& !preg_match("/\s/", $password)) {
                     //  echo '<script> alert("Welcome");  </script>';
                     if(!empty(trim($_POST["confirm_password"]))){
                         $confirm_password = trim($confirm_password);
@@ -90,43 +90,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
