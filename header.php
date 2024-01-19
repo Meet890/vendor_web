@@ -38,8 +38,8 @@
             vendor
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Decorators</a></li>
-            <li><a class="dropdown-item" href="#">photographers</a></li>
+            <li><a class="dropdown-item"  href="#">Decorators</a></li>
+            <li><a class="dropdown-item"  href="#">photographers</a></li>
             <li><a class="dropdown-item"  href="#">vediographers</a></li>
 						<li><a class="dropdown-item"  href="#">cake</a></li>
 						<li><a class="dropdown-item"  href="#">flowers</a></li>

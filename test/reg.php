@@ -2,8 +2,9 @@
 // Include config file
 require_once "config.php";
 // Define variables and initialize with empty values
-$username = $name = $city = $email = $password = $confirm_password =$checkbox= "";
+$username = $name = $city = $email = $password = $confirm_password = "";
 $username_err = $name_err = $city_err = $email_err = $password_err = $confirm_password_err = "";
+$checkbox="OFF";
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -72,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 } else {
                     // Invalid password
-                    echo '<script>  alert("password"); setFocus();</script>';
+                    echo '<script>  alert("password must contain 8 characters with special symbols and number"); setFocus();</script>';
                 }
 
             }
@@ -123,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="bg-img"></div>
     <div id="main-container">
         <div class="form-container">
-            <div class="login-form above">
+            <div class="login-form below">
                 <div class="image">
                     
                 </div>
@@ -163,7 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-            <div class="signup-form below">
+            <div class="signup-form above">
                 <div class="title">Sign-up as client</div>
                 <form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">

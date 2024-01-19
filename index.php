@@ -8,7 +8,7 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
@@ -108,7 +108,7 @@
             <div class="col-md-4 col-sm-6">
               <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
-                   <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/pexels-knelstrom-ltd-67654.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">videographers</h3>
                    <p class="title">Moments well Shared.</p>
                  </div>
@@ -206,11 +206,11 @@
 
 
 
-
+<script defer src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>  
 
 </body>
 
-<script src="../js/bootstrap.min.js"></script>  
 </html>
 <section class="footer" id="footer">
 <?php 

@@ -18,6 +18,7 @@
 </head>
 <body>
 <!--navbar-->
+
 <?php include 'header.php' ?>
 
 <!--slider-->
