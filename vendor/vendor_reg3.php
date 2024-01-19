@@ -1,4 +1,3 @@
-
 <?php
  
  // servername => localhost
@@ -16,107 +15,116 @@
 $name = $username = $password = $address  = $gender = $email = $services = $profession = $mobileno = $experience = "";
 $name_err = $username_err =  $email_err = $password_err =  $address_err= $gender_err = $services_err = $profession_err = $mobileno_err= $experience_err="";
 //validation
-function test_input($data) {
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+	$name=test_input($_POST["name"]);
+	$username=test_input($_POST["username"]);
+	$password=test_input($_POST["password"]);
+	$address=test_input($_POST["address"]);
+	$gender=test_input($_POST["gender"]);
+	$email=test_input($_POST["email"]);
+	$services=test_input($_POST["services"]);
+	$profession=test_input($_POST["profession"]);
+	$mobileno=test_input($_POST["mobileno"]);
+	$experience=test_input($_POST["experience"]);
+}
+
+    function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
-  }
-// Processing form data when form is submitted
-{
-
-    //name valiadte
-   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming you get the username from a form
-    $name = $_POST['v_name'];
-    
-    // Check if the fname is set and contains only letters
-    if (isset($name) && preg_match("/^[a-zA-Z]*$/", $name)) {
-       // echo "Valid fname: " . htmlspecialchars($fname);
-        //$cfname =$fname;
-        
-    } else {
-        $name_err = "Invalide fname.";
-        //echo "Invalid fname. fnames must contain only letters.";
-    }
+     }
+   // Processing form data when form is submitted
+   //name validation
+   if($_SERVER["REQUEST_METHOD"]=="POST")
+   {
+	   if(empty($_POST["name"]))
+	   {
+		   $name_err="please enter a valid name";
+	   }
+	   else
+	   {
+		   $name=test_input($_POST["name"]);
+		   if(!preg_match("/^[a-zA-Z_'])*$/",$name))
+		   {
+			   $name_err="only letters and white spaces allowed";
+		   }
+	   }
+   }
+  //username validation
+   if($_SERVER["REQUEST_METHOD"]=="POST")
+   {
+	   if(empty($_POST["username"]))
+	   {
+		   $username_err="please enter a valid name";
+	   }
+	   else
+	   {
+		   $username=test_input($_POST["username"]);
+		   if(!preg_match("/^[a-zA-Z0-9_'])*$/",$username))
+		   {
+			   $name_err="only letters and whitespaces and number allowed";
+		   }
+	   }
    }
 
-    // Validate username
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
- // Assuming you get the username from a form
- $username = $_POST['v_username'];
- // Check if the username is set and meets criteria
- if (isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)) {
-     //$useranme= "Valid username: " . htmlspecialchars($username);
- } else {
-     $username_err="Invalid Username";
-     //echo "Invalid username. Usernames must be at least 5 characters long and can only contain letters, numbers, and underscores.";
- }
-}
-
-
-    //email validate
-    if (empty($_POST["v_email"])) 
-    {
-    $email_err = "Email is required";
-    } else
-     {
-    $email = test_input($_POST["v_email"]);
-     }
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL))
-     {
-		$email_err = "Invalid email format";
-		}else
-    {
-		$email = $_POST["v_email"];
+     //Email validation
+        if(empty($_POST["email"]))
+       {
+	    $email_err="valid Email address ";
+       }
+       else
+       { 
+		$email=test_input($_POST["email"]);
+		{
+			if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email));
+			$email_err="the email address is incorrect";
 		}
-	
+	 }
+       //password validation
+	 if (empty($_POST)["password"]))
+	 {
+		$password_err = "invalid password";
+	 }
+	 else
+	 {
+		 $password=test_input($_POST["password"])
+		 {
+		 if (strlen($password) >= 8 && preg_match('/[A-Za-z]/', $password) && preg_match('/\d/', $password)) 
+		  $password_err="password is incorrect";
+		 }
+	}
 
-	//VALIDATION PHONE NO
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$mobileno_err="phone no is required";
-		// Assuming you get the mobile number from a form
-		$mobileno = $_POST['mobileno'];
-	   if (is_numeric($mobileno) && strlen($mobileno) == 10) {
-			//echo "Valid mobile number: " . htmlspecialchars($mobileno);
-		} else {
-			//$mobileno_err= "Invalid mobile number.";
+     //mobileno validation
+	if (empty($_POST["mobileno"])) 
+	{
+		$mobileno_err="phoneno is required";
+	}else
+	{
+		$mobileno=test_input($_POST["mobileno"])
+		{
+		 if (is_numeric($mobileno) && strlen($mobileno) == 10) 
+		  $mobileno_err= "Invalid mobile number.";
 		}
 	}
- // Validate password
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming you get the password from a form
-    $password = $_POST['password'];
 
-    // Validate password
-    if (preg_match('/^\d{6}$/', $password)) {
-		$password_err="Invalid password. Please enter a password consisting of exactly 6 digits.";
-        
-    } else {
-		$password="Valid password: " . htmlspecialchars($password);
-        
-    }
-}
-      
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Assuming you get the experience from a form
-	//$experience = $_POST['v_experience'];
-	//$experience_err="experience is required";
+	if (empty( $_POST["experience"]))
+	{
+		$experience_err="experience is required";
+	}else
+	{
+		$experience= test_input($_POST["experience"])
+		{
+		if (is_numeric($experience) && $experience >= 0 && intval($experience) == $experience)
+		$experience_err="invalid number...please enter number";
+		}
+	 }
 
-    // Validate experience field
-    if (is_numeric($experience)  && strlen($experience) == 2) {
-		$experience_err="invalid number.";
-        } else {
-			$experience=$_POST["experience"];
-		//echo "Valid experience: " . htmlspecialchars($experience) . " years";
-       // echo "Invalid experience. Please enter a valid positive integer for the experience field.";
-    }
- }
 
 
 // Check input errors before inserting in database
- if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty($mobileno_err)&& empty($address_err) &&($gender_err)&&empty($services_err)){
+ if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($mobileno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err)){
     
      $sql = "INSERT INTO vendor (v_name, v_username, v_password, v_email, v_phoneno, v_address, v_gender  ,v_ser_places ,v_profession ,v_experience)  VALUES ('$name','$username','$password','$email','$mobileno','$address','$gender','$services','$profession','$experience')";
 
@@ -150,27 +158,6 @@ function test_input($data) {
 <!--Bootstrap CSS ofline-->
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/R_style.css">
-<style>
-	.password{
-            display: inline-block;
-            position: relative;
-            width: 100%;
-            /* border: 1px solid #000; */
-
-        }
-        .password input{
-            /* padding: 10px 5px; */
-            /* outline: none; */
-            /* border: 0; */
-        } 
-        .password .pass-icon{
-            position: absolute;
-            top:39px ;
-            right: 10px;
-            width: 24px;
-            cursor: pointer;
-        }
-	</style>
     <title>Bootstrap Registration Form - Pagefist</title>
   </head>
  <body>
@@ -184,7 +171,7 @@ function test_input($data) {
               <h2 class="text-uppercase text-center mb-5">Register As Vendor</h2>
  				<div class="row">
 					<div class="col-6 p-1 ">
-				<form class="g-2  needs-validation" action="" method="post" novalidate>
+				<form class="g-2  needs-validation"  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 
 				  <div class="form-outline mb-2">
@@ -200,11 +187,10 @@ function test_input($data) {
                     <span class="invalid-feedback"><?php echo $username_err; ?></span>
 				</div>
 
-				<div class=" form-outline mb-2 password-container password">
-                <label class="form-label ">Password</label>
-                <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
-
+				<div class=" form-group password-container password">
+                <label>Password</label>
                 <input type="password" name="password"  class="form-control rounded-pill" id ="password" <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <!-- <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span> -->
             </div>
 			<!--	<div class="form-outline mb-2 password">
@@ -215,12 +201,12 @@ function test_input($data) {
 			    </div>-->
 				<div class="form-outline mb-2">
 				    <label for="enteremail" class="form-label ">Email</label>
-				    <input type="email" class="form-control rounded-pill <?php echo (!empty($email_err)) ?  : ''; ?>" value="<?php echo $email; ?>" name="v_email" id="enteremail" aria-describedby="inputGroupPrepend" required>
+				    <input type="email" class="form-control rounded-pill <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>" name="v_email" id="enteremail" aria-describedby="inputGroupPrepend" required>
                     <span class="invalid-feedback"><?php echo $email_err; ?></span>
 				</div>
 
-				<div class="form-outline mb-2">
-                <label class ="form-label">Mobile Number</label>
+				<div class="form-group">
+                <label>Mobile Number</label>
                 <input type="text" name="mobileno" class="form-control rounded-pill <?php echo (!empty($mobileno_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $mobileno; ?>" name="v_phoneno" id="enterphoneno" aria-describedby="inputGroupPrepend" required>
                 <span class="invalid-feedback"><?php echo $mobileno_err; ?></span>
             </div>
@@ -243,29 +229,29 @@ function test_input($data) {
 				      <option value="f">Female</option>
                      </select>
 				</div>	 
-				<div class="form-outline mb-2">
+				<div class="form-outline mb-1">
 					<div class="row">
-						<div class="col-12">
-                  <label for="enter_place" class="form-label">Taluka</label>
-				  
-				  <select style="width: 100%;";  class=" align-text-center form-select rounded-pill " name="v_ser_places" placeholder="select city" required >
-				  <option value="All area of Kachchh">All area of Kachchh</option>			
-				  <option value="Bhuj">Bhuj</option>
-        	<option value="Gandhidham">Gandhidham</option>
-          <option value="Mandvi">Mandvi</option>
-          <option value="Anjar">Anjar</option>
-          <option value="Mundra">Mundra</option>
-          <option value="Bhachau">Bhachau</option>
-          <option value="Naliya">Abadasa</option>
-          <option value="Lakhpat">Lakhpat</option>
-          <option value="Khavda">Rapar</option>
-          <option value="Nakhatrana">Nakhatrana</option>
- </select>
+						<div class="col-10">
+                  <label for="enter_place" class="form-label">Select service area</label>
+				  </div>
+				  <div class="col-12">
+				  <select style="width: 100%;"; multiple multiselect-select-all="true" class="mb-3 align-text-center form-select rounded-pill " name="v_ser_places" placeholder="select city" required >
+        					<option value="Bhuj">Bhuj</option>
+        					<option value="Gandhidham">Gandhidham</option>
+         					<option value="Anjar">Anjar</option>
+          					<option value="Mandvi">Mandvi</option>
+          					<option value="Mundra">Mundra</option>
+							<option value="Bhachau">Bhachau</option>
+							<option value="Anjar">Anjar</option>
+							<option value="Naliya">Naliya</option>
+							<option value="Lakhpat">Lakhpat</option>
+							<option value="Khavda">Khavda</option>
+				   </select>
 				   </div>
 				   </div>
 				</div>   
 				
-				<div class="form-outline mb-2">
+				<div class="form-outline mb-3">
 				    <label for="validationCustom04" class="form-label">Profession</label>
 				    <select class="form-select rounded-pill" name="v_profession" id="validationCustom04" <?php echo (!empty($profession_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $profession; ?>"required>
 					<span class="invalid-feedback"><?php echo $profession_err; ?></span>
@@ -282,8 +268,8 @@ function test_input($data) {
 				    </select>
 			     </div>
 
-				 <div class="form-outline mb-2">
-                <label class="form-label">Experience</label>
+				 <div class="form-group">
+                <label>Experience</label>
                 <input type="text" name="experience" class="form-control rounded-pill <?php echo (!empty($experience_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $experience; ?>" required>
                 <span class="invalid-feedback"><?php echo $experience_err; ?></span>
             </div>
@@ -294,7 +280,7 @@ function test_input($data) {
 				      Please provide a valid Experience.
 				    </div>-->
 				  </div>
-</div>
+              </div>
 				  </div>
 					
 						<div class="col-12">
