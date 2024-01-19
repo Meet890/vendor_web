@@ -56,17 +56,22 @@ function test_input($data) {
 
 
     //email validate
-    if (empty($_POST["v_email"])) {
+    if (empty($_POST["v_email"])) 
+    {
     $email_err = "Email is required";
-    } else {
+    } else
+     {
     $email = test_input($_POST["v_email"]);
+     }
     // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+     {
 		$email_err = "Invalid email format";
-		}else{
+		}else
+    {
 		$email = $_POST["v_email"];
 		}
-	}
+	
 
 	//VALIDATION PHONE NO
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -246,15 +251,15 @@ function test_input($data) {
 				  <select style="width: 100%;";  class=" align-text-center form-select rounded-pill " name="v_ser_places" placeholder="select city" required >
 				  <option value="All area of Kachchh">All area of Kachchh</option>			
 				  <option value="Bhuj">Bhuj</option>
-        					<option value="Gandhidham">Gandhidham</option>
-         					<option value="Anjar">Anjar</option>
-          					<option value="Mandvi">Mandvi</option>
-          					<option value="Mundra">Mundra</option>
-							<option value="Bhachau">Bhachau</option>
-					        <option value="Naliya">Abadasa</option>
-							<option value="Lakhpat">Lakhpat</option>
-							<option value="Khavda">Rapar</option>
-							<option value="Nakhatrana">Nakhatrana</option>
+        	<option value="Gandhidham">Gandhidham</option>
+          <option value="Mandvi">Mandvi</option>
+          <option value="Anjar">Anjar</option>
+          <option value="Mundra">Mundra</option>
+          <option value="Bhachau">Bhachau</option>
+          <option value="Naliya">Abadasa</option>
+          <option value="Lakhpat">Lakhpat</option>
+          <option value="Khavda">Rapar</option>
+          <option value="Nakhatrana">Nakhatrana</option>
  </select>
 				   </div>
 				   </div>
