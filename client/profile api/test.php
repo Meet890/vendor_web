@@ -57,15 +57,37 @@
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery">
-            <img src="f1.jpg" alt="Gallery Image 1">
-            <img src="f2.jpg" alt="Gallery Image 2">
-            <img src="f3.jpg" alt="Gallery Image 3">
-            <img src="f1.jpg" alt="Gallery Image 1">
-            <img src="f2.jpg" alt="Gallery Image 2">
-            <img src="f3.jpg" alt="Gallery Image 3">
+            <img src="f1.jpg" onclick="openModal('f1.jpg')" alt="Gallery Image 1">
+            <img src="f2.jpg" onclick="openModal('f2.jpg')" alt="Gallery Image 2">
+            <img src="f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
+            <img src="f1.jpg" onclick="openModal('f1.jpg')" alt="Gallery Image 1">
+            <img src="f2.jpg" onclick="openModal('f2.jpg')" alt="Gallery Image 2">
+            <img src="f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
+            <img src="unnamed.jpg" onclick="openModal('unnamed.jpg')" alt="Gallery Image 3">
+            <img src="f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
+            <img src="f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
             <!-- Add more images as needed -->
         </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+
     </section>
+    <script>
+        function openModal(imageSrc) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+         var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        }
+    </script>
 
 </body>
 </html>
