@@ -13,21 +13,21 @@
 		 . mysqli_connect_error());
  }
  // Define variables and initialize with empty values
-$name = $username = $password = $address  = $gender = $email = $services = $profession = $mobileno = $experience = "";
-$name_err = $username_err =  $email_err = $password_err =  $address_err= $gender_err = $services_err = $profession_err = $mobileno_err= $experience_err="";
+$name = $username = $password = $address  = $gender = $email = $services = $profession = $phoneno = $experience = "";
+$name_err = $username_err =  $email_err = $password_err =  $address_err = $gender_err = $services_err = $profession_err = $phoneno_err= $experience_err="";
 //validation
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
-	$name=test_input($_POST["name"]);
-	$username=test_input($_POST["username"]);
-	$password=test_input($_POST["password"]);
-	$address=test_input($_POST["address"]);
-	$gender=test_input($_POST["gender"]);
-	$email=test_input($_POST["email"]);
-	$services=test_input($_POST["services"]);
-	$profession=test_input($_POST["profession"]);
-	$mobileno=test_input($_POST["mobileno"]);
-	$experience=test_input($_POST["experience"]);
+	$name=$_POST["v_name"];
+	$username=test_input($_POST["v_username"]);
+	$password=$_POST["v_password"];
+	$address=test_input($_POST["v_address"]);
+	$gender=test_input($_POST["v_gender"]);
+	$email=test_input($_POST["v_email"]);
+	$services=test_input($_POST["v_ser_places"]);
+	$profession=test_input($_POST["v_profession"]);
+	$mobileno=isset($_POST["v_phoneno"]);
+	$experience=isset($_POST["v_experience"]);
 }
 
     function test_input($data) {
@@ -40,113 +40,95 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
    //name validation
    if($_SERVER["REQUEST_METHOD"]=="POST")
    {
-	   if(empty($_POST["name"]))
+	   if(empty($_POST["v_name"]))
 	   {
-		   $name_err="please enter a valid name";
-	   }
-	   else
-	   {
-		   $name=test_input($_POST["name"]);
-		   if(!preg_match("/^[a-zA-Z_'])*$/",$name))
-		   {
-			   $name_err="only letters and white spaces allowed";
-		   }
-	   }
-   }
-  //username validation
-   if($_SERVER["REQUEST_METHOD"]=="POST")
-   {
-	   if(empty($_POST["username"]))
-	   {
-		   $username_err="please enter a valid name";
-	   }
-	   else
-	   {
-		   $username=test_input($_POST["username"]);
-		   if(!preg_match("/^[a-zA-Z0-9_'])*$/",$username))
-		   {
-			   $name_err="only letters and whitespaces and number allowed";
-		   }
-	   }
-   }
+	        $name=test_input($_POST["v_name"]);
+			 if(!preg_match("/^([a-zA-Z_'])*$/",$name))
+			 {
+				if(empty($_POST["v_username"]))
+				 {
+					$username=test_input($_POST["v_username"]);
+				    if(!preg_match("/^([a-zA-Z0-9_'])*$/",$username))
+					{
+						if(empty($_POST["v_email"]))
+						{
+							$email=test_input($_POST["v_email"]);
+		                  if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email))
+                            {
+								if (empty($_POST["v_password"]))
+								{
+									$password=$_POST["v_password"];
+		                            if (strlen($password) >= 8 && preg_match('/[A-Za-z0-9]/', $password) && preg_match('/\d/', $password)) 
+									{
 
-     //Email validation
-        if(empty($_POST["email"]))
-       {
-	   $email_err="Invalid Email address ";
-       }
-       else
-       { 
-		$email=test_input($_POST["email"]);
-		{
-			if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email))
-			{
-			$email_err="the email address is incorrect";
-			}
-		}
-	 }
-       //password validation
-	 if (empty($_POST["password"]))
-	 {
-		$password_err = "invalid password";
-	 }
-	 else
-	 {
-		 $password=test_input($_POST["password"]);
-		 
-		 if (strlen($password) >= 8 && preg_match('/[A-Za-z0-9]/', $password) && preg_match('/\d/', $password)) 
-		 {
-		  $password_err="password is incorrect";
-		 }
-		
-	}
-
-     //mobileno validation
-	if (empty($_POST["mobileno"])) 
-	{
-		$mobileno_err="phoneno is required";
-	}else
-	{
-		$mobileno=test_input($_POST["mobileno"]);
-		{
-		 if (is_numeric($mobileno) && strlen($mobileno) == 10) 
-		 {
-		  $mobileno_err= "Invalid mobile number.";
-		 }
-		}
-	}
-
-	if (empty( $_POST["experience"]))
-	{
-		$experience_err="experience is required";
-	}else
-	{
-		$experience= test_input($_POST["experience"]);
-		{
-		if (is_numeric($experience) && $experience >= 0 && intval($experience) == $experience)
-		{
-		$experience_err="invalid number...please enter number";
-		}
-		}
-	 }
-
-
-
-// Check input errors before inserting in database
- if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($mobileno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err))
- {
+										if (empty($_POST["v_phoneno"])) 
+										 {
+											$mobileno=isset($_POST["v_phoneno"]);
+										     if (is_numeric($phoneno) && strlen($phoneno) == 10) 
+											   {
+												if (empty( $_POST["v_experience"]))
+	                                               { 
+													$experience= isset($_POST["v_experience"]);
+													if (is_numeric($experience) && $experience >= 0 && intval($experience) == $experience)
+													{
+														if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($phoneno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err))
+                                                            {
     
-     $sql = "INSERT INTO vendor (v_name, v_username, v_password, v_email, v_phoneno, v_address, v_gender  ,v_ser_places ,v_profession ,v_experience)  VALUES ('$name','$username','$password','$email','$mobileno','$address','$gender','$services','$profession','$experience')";
+                                                     $sql = "INSERT INTO vendor (v_name, v_username, v_password, v_email, v_phoneno, v_address, v_gender  ,v_ser_places ,v_profession ,v_experience)  VALUES ('$name','$username','$password','$email','$phoneno','$address','$gender','$services','$profession','$experience')";
+															}
+													} 
+												}
+													if(mysqli_query($conn, $sql)==true)
+													{
+                                                    // Redirect to login page
+													header("location: login.php");
+													}
+													
+													
+												}else
+												
+													{
+													 echo "Oops! Something went wrong. Please try again later.";
+													}
+												 } else
+												 {
+												$name_err="only letters and white spaces allowed";
+												 }
+												 
+												}else
+							           {
+										$username_err="only letters and whitespaces and number allowed";
+									   }
 
-     if(mysqli_query($conn, $sql)==true){
-         // Redirect to login page
-         header("location: login.php");
-     } else{
-         echo "Oops! Something went wrong. Please try again later.";
-     }
- 
-     
- }
+										
+									 } else
+								 {
+								  $email_err="the email address is incorrect";
+								 }
+
+								 
+									}	else
+						{
+						 $password_err="password is incorrect";
+						}
+
+						 
+					 } else
+				 {
+					$phoneno_err= "Invalid mobile number.";
+				 }
+													
+				 
+				 } else
+	       {
+			 $experience_err="invalid number...please enter number";
+		   }
+		    
+	 
+	   }
+    }
+  }
+}
 
  // Close connection
  mysqli_close($conn);
@@ -205,20 +187,20 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 				  <div class="form-outline mb-2">
 				  <label class="form-label" for="form3Example1cg">Name</label>
-				    <input type="text" class="form-control rounded-pill <?php echo (!empty($fname_err)) ? 'is-invalid' : ''; ?>" name="v_name" id="enterfirstname" value="<?php echo $name; ?>" required>
+				    <input type="text" class="form-control rounded-pill <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" name="v_name" id="entername" value="<?php echo $name; ?>" required>
                     <span class="invalid-feedback"><?php echo $name_err; ?></span>
 				</div>
 
 
 				<div class="form-outline mb-2">
 				    <label class="form-label " value="" for="form3Example1cg" >Username</label>
-				    <input type="text" class="form-control rounded-pill <?php echo (!empty($username)) ? 'is-invalid' : ''; ?>"  name="v_username" id="enterlastname" value="<?php echo $username; ?>" required>
+				    <input type="text" class="form-control rounded-pill <?php echo (!empty($username)) ? 'is-invalid' : ''; ?>"  name="v_username" id="enterusername" value="<?php echo $username; ?>"required> 
                     <span class="invalid-feedback"><?php echo $username_err; ?></span>
 				</div>
 
 				<div class=" form-group password-container password">
                 <label>Password</label>
-                <input type="password" name="password"  class="form-control rounded-pill" id ="password" <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="v_password"  class="form-control rounded-pill" id ="password <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <!-- <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span> -->
             </div>
@@ -236,8 +218,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 				<div class="form-group">
                 <label>Mobile Number</label>
-                <input type="text" name="mobileno" class="form-control rounded-pill <?php echo (!empty($mobileno_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $mobileno; ?>" name="v_phoneno" id="enterphoneno" aria-describedby="inputGroupPrepend" required>
-                <span class="invalid-feedback"><?php echo $mobileno_err; ?></span>
+                <input type="text" name="v_phoneno" class="form-control rounded-pill <?php echo (!empty($phoneno_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $phoneno; ?>" name="v_phoneno" id="enterphoneno" aria-describedby="inputGroupPrepend" required>
+                <span class="invalid-feedback"><?php echo $phoneno_err; ?></span>
             </div>
 				<!--<div class="form-outline mb-2">
 				    <label for="enterphone" class="form-label">Mobile Number</label>
@@ -264,7 +246,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                   <label for="enter_place" class="form-label">Select service area</label>
 				  </div>
 				  <div class="col-12">
-                  <select id="example-getting-started" multiple="multiple"  class="mb-3 align-text-center form-select rounded-pill tyle="width: 100%;">
+                  <select id="example-getting-started" multiple="multiple" name="v_ser_places" class="mb-3 align-text-center form-select rounded-pill tyle="width: 100%;">
                <!-- <select style="width: 100%;"  id="mySelect" multiple="" class="mb-3 align-text-center form-select rounded-pill " name="v_ser_places[]" placeholder="select city" required -->
         					<option value="Bhuj">Bhuj</option>
         					<option value="Gandhidham">Gandhidham</option>
@@ -279,9 +261,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 				   </select>
 				   
 				     <script>type="text/javascript">
-    $(document).ready(function() {
-        $('#example-getting-started').multiselect();
-    });
+                     $(document).ready(function() {
+                      $('#example-getting-started').multiselect();
+                          });
                       
                    </script>
 
@@ -311,7 +293,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 				 <div class="form-group">
                 <label>Experience</label>
-                <input type="text" name="experience" class="form-control rounded-pill <?php echo (!empty($experience_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $experience; ?>" required>
+                <input type="text" name="v_experience" class="form-control rounded-pill <?php echo (!empty($experience_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $experience; ?>" required>
                 <span class="invalid-feedback"><?php echo $experience_err; ?></span>
             </div>
 				  <!--<div class="col-md-12 mb-2">
@@ -392,15 +374,16 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             right: 10px;
             width: 24px;
             cursor: pointer;
+		}
 	</style>
-				/*</div>
+				</div>
 			</div>		
 		</div>
 </div>
 </div>	
 </div>
-</div>*/
-     /*<script src="../js/bootstrap.bundle.js"></script>*/
+</div>
+     <script src="../js/bootstrap.bundle.js"></script>
 	 <script src="../js/multiselect-dropdown.js"></script>
 
       <!-- Option 2: Separate Popper and Bootstrap JS  -->
