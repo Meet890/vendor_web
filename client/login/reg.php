@@ -5,6 +5,8 @@ require_once "config.php";
 $username = $name = $city = $email = $password = $confirm_password = "";
 $username_err = $name_err = $city_err = $email_err = $password_err = $confirm_password_err = "";
 $checkbox="OFF";
+$above ="below";
+$below ="above";
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -14,6 +16,7 @@ function test_input($data) {
   
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if (isset($_POST["signup"])){
     $username = $_POST['username'];
     $name = $_POST['name'];
     $city = $_POST['select'];
@@ -102,7 +105,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         
 
     }
-
+}
+else{
+    if(isset($_POST["login"])){
+        
+    }
+}
 }
 
 ?>
@@ -116,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Login Form</title>
   
     <link rel="stylesheet" href="reg.css">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
 
 </head>
 
@@ -126,11 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="form-container">
             <div class="login-form below">
                 <div class="image">
-                    
+                    <!-- image insert by css -->
                 </div>
                 <div class="title">LOGIN</div>
 
-                <form class="form">
+                <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> >
                     <div class="field">
                         <input type="Username" id="Username" placeholder=" " required autocomplete="on">
                         <label for="Username">Username</label>
@@ -146,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         <br>
                    
 
-                    <button class="login-btn">Login</button>
+                    <button class="login-btn" name="login">Login</button>
                 </form>
                 
                 <div class="bottom">
@@ -224,7 +232,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                         <label for="agree"><input type="checkbox" name="checkbox" id="agree">I agree to all&nbsp;<a href="#">Terms &
                                 Conditions</a></label>
                     </section>
-                    <button class="signup-btn">Register</button>
+                    <button class="signup-btn" name="signup">Register</button>
                 </form>
 
                 <div class="bottom">
