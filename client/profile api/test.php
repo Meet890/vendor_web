@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-    
+    <?php
+    $v_id = $_GET["v_id"];
+    echo $v_id;
+    ?>
 
     <section>
         <img src="f1.jpg" alt="User Profile Picture" class="pro_img">

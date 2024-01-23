@@ -15,7 +15,7 @@
 </head>
 <body>
 <?php 
-    include("header.php");
+    // include("header.php");
 
 ?>
 
@@ -43,7 +43,7 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT v_name, v_profession, v_ser_places FROM vendor";
+$sql = "SELECT v_name, v_profession, v_ser_places, v_id FROM vendor";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -53,6 +53,7 @@ if (mysqli_num_rows($result) > 0) {
       $name= $row["v_name"];
       $services=$row["v_profession"];
       $city=$row["v_ser_places"];
+      $id=$row["v_id"];
 
       ?>
 
@@ -60,7 +61,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="../img/pro.jpg" class="img-fluid" alt="team1">
+                <img src="pro.jpg" class="img-fluid" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>
@@ -70,10 +71,11 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
-                <button class="btn btn-primary mt-2" type="button"><a href="profile api/test.php?v_id">More Info</a></button>
+                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='test.php?v_id=<?php echo $id ?>'>More Info</a></button>
                 </div>
         </div>   
       </div>
+      
 
       <?php
     }
@@ -91,6 +93,11 @@ if (mysqli_num_rows($result) > 0) {
 
     <!--BS 5 js link-->
 <script src="project/js/bootstrap.min.js"></script>
+<script>
+  function redirect($test){
+    
+  }
+</script>
 </body>   
 
 
