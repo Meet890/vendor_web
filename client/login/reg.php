@@ -106,11 +106,7 @@ if (isset($_POST["signup"])){
 
     }
 }
-else{
-    if(isset($_POST["login"])){
-        
-    }
-}
+
 }
 
 ?>
