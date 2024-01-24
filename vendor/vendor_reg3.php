@@ -1,4 +1,5 @@
 <?php
+
  
  // servername => localhost
  // username => root
@@ -15,19 +16,18 @@
 $name = $username = $password = $address  = $gender = $email = $services = $profession = $mobileno = $experience = "";
 $name_err = $username_err =  $email_err = $password_err =  $address_err= $gender_err = $services_err = $profession_err = $mobileno_err= $experience_err="";
 //validation
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-	$name=test_input($_POST["name"]);
-	$username=test_input($_POST["username"]);
-	$password=test_input($_POST["password"]);
-	$address=test_input($_POST["address"]);
-	$gender=test_input($_POST["gender"]);
-	$email=test_input($_POST["email"]);
-	$services=test_input($_POST["services"]);
-	$profession=test_input($_POST["profession"]);
-	$mobileno=test_input($_POST["mobileno"]);
-	$experience=test_input($_POST["experience"]);
-}
+
+	$name=$_POST["v_name"];
+	$username=test_input($_POST['v_username']);
+	$password=test_input($_POST["v_password"]);
+	$address=test_input($_POST["v_address"]);
+	$gender=test_input($_POST["v_gender"]);
+	$email=test_input($_POST["v_email"]);
+	$services=test_input($_POST["v_services"]);
+	$profession=test_input($_POST["v_profession"]);
+	$mobileno=test_input($_POST["v_mobileno"]);
+	$experience=test_input($_POST["v_experience"]);
+
 
     function test_input($data) {
     $data = trim($data);
@@ -39,13 +39,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
    //name validation
    if($_SERVER["REQUEST_METHOD"]=="POST")
    {
-	   if(empty($_POST["name"]))
+	   if(empty($name))
 	   {
 		   $name_err="please enter a valid name";
 	   }
 	   else
 	   {
-		   $name=test_input($_POST["name"]);
+		//    $name=test_input($_POST["name"]);
 		   if(!preg_match("/^[a-zA-Z_'])*$/",$name))
 		   {
 			   $name_err="only letters and white spaces allowed";
@@ -55,13 +55,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
   //username validation
    if($_SERVER["REQUEST_METHOD"]=="POST")
    {
-	   if(empty($_POST["username"]))
+	   if(empty($username))
 	   {
 		   $username_err="please enter a valid name";
 	   }
 	   else
 	   {
-		   $username=test_input($_POST["username"]);
+		  // $username=test_input($_POST["username"]);
 		   if(!preg_match("/^[a-zA-Z0-9_'])*$/",$username))
 		   {
 			   $name_err="only letters and whitespaces and number allowed";
@@ -70,61 +70,70 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
    }
 
      //Email validation
-        if(empty($_POST["email"]))
+        if(empty($email))
        {
-	    $email_err="valid Email address ";
+	   $email_err="Invalid Email address ";
        }
        else
        { 
-		$email=test_input($_POST["email"]);
+		//$email=test_input($_POST["email"]);
 		{
-			if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email));
+			if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email))
+			{
 			$email_err="the email address is incorrect";
+			}
 		}
 	 }
        //password validation
-	 if (empty($_POST)["password"]))
+	 if (empty($password))
 	 {
 		$password_err = "invalid password";
 	 }
 	 else
 	 {
-		 $password=test_input($_POST["password"])
+		//  $password=test_input($password);
+		 
+		 if (strlen($password) >= 8 && preg_match('/[A-Za-z0-9]/', $password) && preg_match('/\d/', $password)) 
 		 {
-		 if (strlen($password) >= 8 && preg_match('/[A-Za-z]/', $password) && preg_match('/\d/', $password)) 
 		  $password_err="password is incorrect";
 		 }
+		
 	}
 
      //mobileno validation
-	if (empty($_POST["mobileno"])) 
+	if (empty($mobileno)) 
 	{
 		$mobileno_err="phoneno is required";
 	}else
 	{
-		$mobileno=test_input($_POST["mobileno"])
+		//$mobileno=test_input($_POST["mobileno"]);
 		{
 		 if (is_numeric($mobileno) && strlen($mobileno) == 10) 
+		 {
 		  $mobileno_err= "Invalid mobile number.";
+		 }
 		}
 	}
 
-	if (empty( $_POST["experience"]))
+	if (empty($experience))
 	{
 		$experience_err="experience is required";
 	}else
 	{
-		$experience= test_input($_POST["experience"])
+		//$experience= test_input($_POST["experience"]);
 		{
 		if (is_numeric($experience) && $experience >= 0 && intval($experience) == $experience)
+		{
 		$experience_err="invalid number...please enter number";
+		}
 		}
 	 }
 
 
 
 // Check input errors before inserting in database
- if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($mobileno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err)){
+ if(empty($name_err)  && empty($username_err) && empty($email_err) && empty($password_err) && empty($profession_err) && empty ($experience_err) && empty ($mobileno_err)&& empty ($address_err) && empty($gender_err) &&empty($services_err))
+ {
     
      $sql = "INSERT INTO vendor (v_name, v_username, v_password, v_email, v_phoneno, v_address, v_gender  ,v_ser_places ,v_profession ,v_experience)  VALUES ('$name','$username','$password','$email','$mobileno','$address','$gender','$services','$profession','$experience')";
 
@@ -140,24 +149,43 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
  // Close connection
  mysqli_close($conn);
- 
- 
-}
-
-  
-
  ?>
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+	
     <!-- Bootstrap CSS online -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<!--Bootstrap CSS ofline-->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+ <!-- Include Twitter Bootstrap and jQuery: -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+ 
+<!-- Include the plugin's CSS and JS: -->
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<!--Bootstrap CSS ofline
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/R_style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap Multiselect CSS 
+<link rel="stylesheet" href="css/bootstrap-multiselect.css">
+<!-- Bootstrap Multiselect JS 
+<script data-main="dist/js/" src="js/require.min.js"></script>-->
+
     <title>Bootstrap Registration Form - Pagefist</title>
   </head>
  <body>
@@ -189,7 +217,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 				<div class=" form-group password-container password">
                 <label>Password</label>
-                <input type="password" name="password"  class="form-control rounded-pill" id ="password" <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="v_password"  class="form-control rounded-pill <?php echo (empty($password_err)) ? 'is-invalid' : ''; ?>" id ="password" >
                 <img src="eye-close.png" onclick="pass()" class="pass-icon" id="pass-icon">
                 <!-- <span class="eye-icon" onclick="togglePasswordVisibility()">👁️</span> -->
             </div>
@@ -235,7 +263,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
                   <label for="enter_place" class="form-label">Select service area</label>
 				  </div>
 				  <div class="col-12">
-				  <select style="width: 100%;"; multiple multiselect-select-all="true" class="mb-3 align-text-center form-select rounded-pill " name="v_ser_places" placeholder="select city" required >
+                  <select id="example-getting-started" name="v_services" multiple="multiple"  class="mb-3 align-text-center form-select rounded-pill" tyle="width: 100%;">
+               <!-- <select style="width: 100%;"  id="mySelect" multiple="" class="mb-3 align-text-center form-select rounded-pill " name="v_ser_places[]" placeholder="select city" required -->
         					<option value="Bhuj">Bhuj</option>
         					<option value="Gandhidham">Gandhidham</option>
          					<option value="Anjar">Anjar</option>
@@ -247,6 +276,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 							<option value="Lakhpat">Lakhpat</option>
 							<option value="Khavda">Khavda</option>
 				   </select>
+				   
+				     <script>type="text/javascript">
+    $(document).ready(function() {
+        $('#example-getting-started').multiselect();
+    });
+                      
+                   </script>
+
+
+
+				   
 				   </div>
 				   </div>
 				</div>   
@@ -332,6 +372,27 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
         }
     }
     </script>
+	<style>
+	 .password{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            /* border: 1px solid #000; */
+
+        }
+        .password input{
+            /* padding: 10px 5px; */
+            /* outline: none; */
+            /* border: 0; */
+        } 
+        .pass-icon{
+            position: absolute;
+            top:34px ;
+            right: 10px;
+            width: 24px;
+            cursor: pointer;
+		}
+	</style>
 				</div>
 			</div>		
 		</div>
@@ -339,16 +400,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 </div>	
 </div>
 </div>
-</section>
-<script>
-
-//     Optional JavaScript; choose one of the two! 
-//    Option 1: Bootstrap Bundle with Popper 
-//     <script src="../js/bootstrap.bundle.js"></script>
-	 <script src="../js/multiselect-dropdown.js"></script>
+     <script src="../js/bootstrap.bundle.js"></script>
+	 <script src="js/multiselect-dropdown.js"></script>
 
       <!-- Option 2: Separate Popper and Bootstrap JS  -->
-     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
      -->
     </body>

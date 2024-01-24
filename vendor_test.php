@@ -13,21 +13,21 @@
 		 . mysqli_connect_error());
  }
  // Define variables and initialize with empty values
-$name = $username = $password = $address  = $gender = $email = $services = $profession = $mobileno = $experience = "";
+$name = $username = $password = $address  = $gender = $email = $services = $profession = $mobilenos = $experience = "";
 $name_err = $username_err =  $email_err = $password_err =  $address_err= $gender_err = $services_err = $profession_err = $mobileno_err= $experience_err="";
 //validation
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
-	$name=test_input($_POST["name"]);
-	$username=test_input($_POST["username"]);
-	$password=test_input($_POST["password"]);
-	$address=test_input($_POST["address"]);
-	$gender=test_input($_POST["gender"]);
-	$email=test_input($_POST["email"]);
-	$services=test_input($_POST["services"]);
-	$profession=test_input($_POST["profession"]);
-	$mobileno=test_input($_POST["mobileno"]);
-	$experience=test_input($_POST["experience"]);
+	@$name=$_POST["v_name"];
+	@$username=$_POST["v_username"];
+	@$password=$_POST['v_password'];
+	@$address=$_POST["v_address"];
+	$gender=$_POST["v_gender"];
+	$email=$_POST["v_email"];
+	@$services=$_POST["v_services"];
+	@$profession=$_POST["v_profession"];
+	@$mobileno=$_POST["v_mobileno"];
+	@$experience = $_POST["v_experience"];
 }
 
     function test_input($data) {
@@ -40,14 +40,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
    //name validation
    if($_SERVER["REQUEST_METHOD"]=="POST")
    {
-	   if(empty($_POST["name"]))
+	   if(empty($_POST["v_name"]))
 	   {
 		   $name_err="please enter a valid name";
 	   }
 	   else
 	   {
-		   $name=test_input($_POST["name"]);
-		   if(!preg_match("/^[a-zA-Z_'])*$/",$name))
+		   $name=test_input($_POST["v_name"]);
+		   if(preg_match("/^([a-zA-Z_'])*$/",$name))
 		   {
 			   $name_err="only letters and white spaces allowed";
 		   }
@@ -56,14 +56,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
   //username validation
    if($_SERVER["REQUEST_METHOD"]=="POST")
    {
-	   if(empty($_POST["username"]))
+	   if(empty($_POST["v_username"]))
 	   {
 		   $username_err="please enter a valid name";
 	   }
 	   else
 	   {
-		   $username=test_input($_POST["username"]);
-		   if(!preg_match("/^[a-zA-Z0-9_'])*$/",$username))
+		   $username=$_POST["v_username"];
+		   if(!preg_match("/^([a-zA-Z0-9_'])*$/",$username))
 		   {
 			   $name_err="only letters and whitespaces and number allowed";
 		   }
@@ -71,13 +71,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
    }
 
      //Email validation
-        if(empty($_POST["email"]))
+        if(empty($_POST["v_email"]))
        {
 	   $email_err="Invalid Email address ";
        }
        else
        { 
-		$email=test_input($_POST["email"]);
+		$email=test_input($_POST["v_email"]);
 		{
 			if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email))
 			{
@@ -86,13 +86,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 		}
 	 }
        //password validation
-	 if (empty($_POST["password"]))
+	 if (empty($_POST["v_password"]))
 	 {
 		$password_err = "invalid password";
 	 }
 	 else
 	 {
-		 $password=test_input($_POST["password"]);
+		 $password=test_input($_POST["v_password"]);
 		 
 		 if (strlen($password) >= 8 && preg_match('/[A-Za-z0-9]/', $password) && preg_match('/\d/', $password)) 
 		 {
@@ -102,12 +102,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	}
 
      //mobileno validation
-	if (empty($_POST["mobileno"])) 
+	if (empty($_POST["v_phoneno"])) 
 	{
 		$mobileno_err="phoneno is required";
 	}else
 	{
-		$mobileno=test_input($_POST["mobileno"]);
+		$mobileno=test_input($_POST["v_phoneno"]);
 		{
 		 if (is_numeric($mobileno) && strlen($mobileno) == 10) 
 		 {
@@ -116,12 +116,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 		}
 	}
 
-	if (empty( $_POST["experience"]))
+	if (empty( $_POST["v_experience"]))
 	{
 		$experience_err="experience is required";
 	}else
 	{
-		$experience= test_input($_POST["experience"]);
+		$experience= test_input($_POST["v_experience"]);
 		{
 		if (is_numeric($experience) && $experience >= 0 && intval($experience) == $experience)
 		{
