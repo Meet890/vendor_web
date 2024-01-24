@@ -20,11 +20,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 {
 	$name=$_POST["v_name"];
 	$username=test_input($_POST["v_username"]);
-	$password=$_POST["v_password"];
+	$password=isset($_POST["v_password"]);
 	$address=test_input($_POST["v_address"]);
 	$gender=test_input($_POST["v_gender"]);
 	$email=test_input($_POST["v_email"]);
-	$services=test_input($_POST["v_ser_places"]);
+	$services=isset($_POST["v_ser_places"]);
 	$profession=test_input($_POST["v_profession"]);
 	$mobileno=isset($_POST["v_phoneno"]);
 	$experience=isset($_POST["v_experience"]);
@@ -43,19 +43,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	   if(empty($_POST["v_name"]))
 	   {
 	        $name=test_input($_POST["v_name"]);
-			 if(!preg_match("/^([a-zA-Z_'])*$/",$name))
+			 if(preg_match("/^([a-zA-Z_'])*$/",$name))
 			 {
 				if(empty($_POST["v_username"]))
 				 {
 					$username=test_input($_POST["v_username"]);
-				    if(!preg_match("/^([a-zA-Z0-9_'])*$/",$username))
+				    if(preg_match("/^([a-zA-Z0-9_'])*$/",$username))
 					{
 						if(empty($_POST["v_email"]))
 						{
 							$email=test_input($_POST["v_email"]);
 		                  if(filter_var($email,FILTER_VALIDATE_EMAIL) && preg_match('/@gmail\.com$/',$email))
                             {
-								if (empty($_POST["v_password"]))
+								if (empty(isset($_POST["v_password"])))
 								{
 									$password=$_POST["v_password"];
 		                            if (strlen($password) >= 8 && preg_match('/[A-Za-z0-9]/', $password) && preg_match('/\d/', $password)) 
@@ -88,16 +88,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 												}else
 												
 													{
-													 echo "Oops! Something went wrong. Please try again later.";
+													 echo "<script> alert("experiance");</script>";
 													}
 												 } else
 												 {
-												$name_err="only letters and white spaces allowed";
+												// $name_err="only letters and white spaces allowed";
+												echo "<script> alert("only letters and white spaces allowed");</script>";
 												 }
 												 
 												}else
 							           {
 										$username_err="only letters and whitespaces and number allowed";
+										only letters and white spaces allowed
 									   }
 
 										
