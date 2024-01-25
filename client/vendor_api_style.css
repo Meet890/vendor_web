@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: black; */
+    /* background: linear-gradient(120deg,#190019, #2b124c, #522b5b, #854f6c, #dfb6b2); */
+    background-image: url('../img/pro.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+h2,p,h5{
+    color: aliceblue;
+    font-weight: bold;
+    padding: 0px 30px;
+}
+
+.profile img{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+.main{
+    height: 550px;
+    width: 500px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-rows: 120px;
+    grid-template-columns: 120px 120px 120px;
+    border: 5px solid gray;
+    column-gap: 10px;
+    position: relative;
+    /* background-color: black; */
+    margin-top: 100px;
+
+}
+.detail{
+    display: grid;
+    grid-template-rows: 150px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
+}
+.profile img{
+    margin: 20px;
+}
+h3{
+    color: aliceblue;
+    font-weight: bold;
+}
+.info{
+    margin: 10px;
+    width: 400px;
+}
+.edit button{
+        width: 115%;
+        margin: 0px auto;
+        height: 30px;
+        background-color: black;
+        color: azure;
+        font-weight: bold;
+}
+.links button:hover,.edit button:hover{
+    background-color: gray;
+    /* color: black; */
+}
+.button button{
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.links button{
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 0px 8px;
+    margin-left: 14px;
+}
+.gellery{
+    align-items: center;
+}
+.center{
+    margin-left: 170px;
+}
+.g_img{
+    height: 200px;
+    width: 150px;
+}
