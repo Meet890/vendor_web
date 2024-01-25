@@ -73,7 +73,7 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
-                <button class="btn btn-primary mt-2" type="button"><a href="vendor_profile.php">More Info</a></button>
+                <button class="btn btn-primary mt-2" type="button"><a href="profile api/test.php?v_id">More Info</a></button>
                 </div>
         </div>   
       </div>
