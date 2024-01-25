@@ -1,6 +1,3 @@
-<?php // Initialize the session
-// Check if the user is already logged in, if yes then redirect him to welcome page
- include 'login/session.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +60,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="../img/pro.jpg" class="img-fluid" alt="team1">
+                <img src="pro.jpg" class="img-fluid" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>
@@ -73,7 +70,7 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
-                <button class="btn btn-primary mt-2" type="button"><a href="profile api/test.php?v_id">More Info</a></button>
+                <button class="btn btn-secondary mt-2" type="button"><a href="vendor_profile.php">More Info</a></button>
                 </div>
         </div>   
       </div>
