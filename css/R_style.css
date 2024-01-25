@@ -17,9 +17,7 @@
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
-    } 
-
-    /* ......eye....... */
+    }
     .password{
         display: inline-block;
         position: relative;
@@ -30,21 +28,12 @@
     .password input{
         /* padding: 10px 5px; */
         /* outline: none; */
-        border: 0; 
-    }
+         border: 1; 
+    } 
     .pass-icon{
         position: absolute;
-        top:39px ;
+        top: 39px;
         right: 10px;
         width: 24px;
         cursor: pointer;
     }
-
-   
-    
-    /* body{
-       
-        background: linear-gradient(120deg,#190019, #2b124c, #522b5b, #854f6c, #dfb6b2);
-        height: 100vh;
-        overflow: hidden;
-    } */

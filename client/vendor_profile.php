@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../vendor_web/css/vendor_profile.css">
     <link rel="stylesheet" href="../vendor_web/css/bootstrap.min.css">
     <link rel="stylesheet" href="../vendor_web/MDB/css/mdb.min.css">
@@ -32,21 +32,13 @@
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-10 m-3">
               <div class="card">
-                <div class="rounded-top  d-flex flex-row" style="background-color:rgb(66, 80, 145); height:230px;">
+                <div class="rounded-top text-white d-flex flex-row" style="background-color:rgb(66, 80, 145); height:230px;">
                   <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
                     <img src="../img/img1.jpeg" alt="Generic placeholder image" class="img-fluid border border-dark img-thumbnail mt-4 bg-dark mb-2 p-0" style="width: 150px; z-index: 1">
                   </div>
-                  <div class="ms-3 text-white" style="margin-top: 130px;">
+                  <div class="ms-3" style="margin-top: 130px;">
                     <h5>Rathod Meet</h5>
-                    <p>Mandvi</p>
-                    <div class="container ps-0 text-yellow ">
-                   
-                    <i class='fa-solid fa-star ' style="--i: 0;"></i>
-                    <i class='fa-solid fa-star' style="--i: 1;"></i>
-                    <i class='fa-regular fa-star-half-stroke' style="--i: 2;"></i>
-                    <i class='fa-regular fa-star' style="--i: 3;"></i>
-                    <i class='fa-regular fa-star' style="--i: 4;"></i>
-                    </div>
+                    <p>Bhuj</p>
                   </div>
                 </div>
                 <div class="p-2 pe-4">
@@ -228,12 +220,10 @@
 
 
 </div>
-<section class="footer" id="footer">
 <?php 
     include("footer.php");
 
     ?>
-    </section>
 </div>
 
 </div>
