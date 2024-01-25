@@ -10,7 +10,6 @@ require_once "loginphp.php"
     <title>Login Form</title>
   
     <link rel="stylesheet" href="reg.css">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
 </head>
 

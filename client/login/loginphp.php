@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "SELECT c_id, c_username, c_password FROM client WHERE c_username = ?";
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            mysqli_stmt_bind_param($stmt, "s",$param_username);
             // Set parameters
             $param_username = $username;
             // Attempt to execute the prepared statement
@@ -44,6 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $password);
+                    
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify( $_POST["password"],$password)){
                             // Password is correct, so start a new session
@@ -56,6 +57,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: ./client/index.php");
                         } else{
                             // Password is not valid, display a generic error message
+                            $_SESSION["password"] =$password;
+                            echo $_SESSION["password"];
                             echo '<script>  alert("varify pass"); </script>';
                         }
                     }
