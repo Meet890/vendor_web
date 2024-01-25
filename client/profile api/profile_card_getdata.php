@@ -25,6 +25,9 @@
         <h2>Vendors</h2>
         <p>Find the best services</p>
      </div>
+
+     <form method="post" action="test.php">
+
      <div class="row">
      
 
@@ -43,15 +46,19 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
+
 $sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_id FROM vendor";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
+
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
       
       $name= $row["v_name"];
+
       $username= $row["v_username"];
+
       $services=$row["v_profession"];
       $city=$row["v_ser_places"];
       $id=$row["v_id"];
@@ -72,7 +79,9 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
+
                 <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='test.php?username=<?php echo $username ?>'>More Info</a></button>
+
                 </div>
         </div>   
       </div>
@@ -80,20 +89,26 @@ if (mysqli_num_rows($result) > 0) {
 
       <?php
     }
+
   } else {
+
     echo "0 results";
   }
   
   mysqli_close($conn);
   ?>
   <?php 
-    include("footer.php");
+
+    include("../footer.php");
+
 
 ?>
 
 
     <!--BS 5 js link-->
-<script src="project/js/bootstrap.min.js"></script>
+
+<script src="/js/bootstrap.min.js"></script>
+
 <script>
   function redirect($test){
     

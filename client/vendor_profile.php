@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="../vendor_web/css/vendor_profile.css">
     <link rel="stylesheet" href="../vendor_web/css/bootstrap.min.css">
     <link rel="stylesheet" href="../vendor_web/MDB/css/mdb.min.css">
@@ -41,7 +41,7 @@
                     <p>Mandvi</p>
                     <div class="container ps-0 text-yellow ">
                    
-                    <i class='fa-solid fa-star star1' style="--i: 0;"></i>
+                    <i class='fa-solid fa-star ' style="--i: 0;"></i>
                     <i class='fa-solid fa-star' style="--i: 1;"></i>
                     <i class='fa-regular fa-star-half-stroke' style="--i: 2;"></i>
                     <i class='fa-regular fa-star' style="--i: 3;"></i>
