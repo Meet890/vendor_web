@@ -12,7 +12,7 @@ body{
 .wrapper {
     background: #9cb7d5;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%; 
     border-radius: 8px;
     box-shadow: -2px 5px 22px 3px rgb(0 0 0 / 50%);
 }
