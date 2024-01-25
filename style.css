@@ -1,0 +1,480 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    /*background-image: url("background6.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;*/
+  background: linear-gradient(180deg, rgba(195,142,180,1) 0%, rgba(225,203,215,1) 36%, rgba(134,168,207,1) 70%, rgba(38,66,90,1) 98%);
+}
+.section-padding{
+    padding:150px 0 ;
+}
+
+/* slider*/
+.carousel {
+  position: relative;
+  padding-top: 75px;
+}
+.slider{
+  margin-top: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.carousel-item{
+    height: 80vh;
+    min-height: 3 00px;
+}
+.carousel-caption{
+  top: 190px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+/* navbar */
+
+/* .bg-dark {
+  background-color: #000203!important;
+}
+.text-warning {
+  color: #94d9f5!important;
+}
+
+.log_btn{
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+.navbar-nav a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar-dark .navbar-brand{
+
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    
+}
+.navbar-dark .navbar-brand:focus,
+.navbar-brand:hover{
+    color: rgb(16, 193, 206);
+}
+.navbar-dark .navbar-nav .navbar-link{
+    color: rgb(147, 223, 236);
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(116, 189, 192);
+}
+.w-100{
+    height: 100vh;
+} */
+
+/*.....card....*/
+.a1{
+  text-decoration: none;
+  color: black;
+}
+.a2{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+a:hover{
+  text-decoration:none;
+}
+span{
+  color: #ffffff;
+}
+.heding{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #0e1213;
+  font-size: 60px;
+}
+.img1{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.imgholder{
+  height: 200px;
+  width: auto;
+}
+
+div [class^="col-"]{
+  padding-left: 45px;
+  padding-right: 10px;
+  padding-bottom: 28px;
+  padding-top: 9px;
+
+}
+.card-img{
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-radius: 5%;
+}
+.card{
+transition:0.5s;
+cursor:pointer;
+border-radius: 5%;
+}
+.titleh3{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.title{
+  text-align: center;
+  font-weight: 200;
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace  ;
+}
+
+.card:hover{
+transform: scale(1.05);
+box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card::before, .card::after {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+transform: scale3d(0, 0, 1);
+transition: transform .3s ease-out 0s;
+background: rgba(134, 130, 130, 0.1);
+content: '';
+pointer-events: none;
+}
+.card::before {
+transform-origin: left top;
+}
+.card::after {
+transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+transform: scale3d(1, 1, 1);
+}
+
+/*......about us.....*/
+/*.img2{
+  height: 435px;
+  width: 500px;
+  border-color: black;
+  border-width: 2px;
+}
+
+.font{
+  font-weight: 400;
+}
+.img-fluid_about{
+    padding-left: 17px;
+    padding-right: 0px;
+    padding-bottom: 28px;
+    padding-top: 9px;
+    border-color: black;
+  border-width: 2px;
+}
+.fw-bold {
+  font-weight: 700!important;
+  color: #aacce2;
+}
+.font {
+  font-weight: 400;
+  color: #caccc9;
+}
+.text-secondary {
+  color: #a3d0ec!important;
+}*/
+
+/*........registration....
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin-top: 91px;
+  height: 216px;
+  width: 360px;
+}
+*/
+
+/*.....responsive css for slider ....*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  /*......slider......*/
+  .carousel-item > img {
+    height: 350px;
+}
+
+.carousel-caption-overlay {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    top:0%;
+    left:0%;
+}   
+  .carousel-caption{
+        bottom: 180px;
+    }
+    .carousel-caption p{
+        width: 100%;
+
+    }
+
+    /*......card.....*/
+
+    div [class^="col-"]{
+      padding-left:30px;
+      padding-right:30px;
+      padding-bottom: 14px;
+      padding-top: 15px;
+    }
+   
+    .imgholder{
+      height: 150px;
+      width: auto;
+    }
+
+  .titleh3{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  font-size: 21px;
+  }
+  .title{
+      text-align: center;
+      font-weight: 200;
+      color: rgb(0, 0, 0);
+      font-family: 'Courier New', Courier, monospace  ;
+    }
+    .card{
+      height: 250px;
+      width: 220px;
+    }
+  /*.....registration.*/
+
+    .abouth1{
+      margin-top: -55px;
+    }
+    
+
+}
+@media only screen and (max-width: 765px){
+
+  /*.....navbar.....*/
+
+    .navbar-nav{
+        text-align: center;
+    }
+    
+
+   /*.....slider....*/
+
+    .carousel-caption{
+        bottom: 200px;
+    }
+    .carousel-caption h5{
+        font-weight: 900;
+        font-size: 29px;
+        margin-bottom: 1.5rem;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 18px;
+    }
+
+    /*.....card....*/
+    .imgholder{
+      height: 170px;
+      width: auto;
+    }
+
+    div [class^="col-"]{
+      padding-left:40px;
+      padding-right:40px;
+      padding-bottom: 4px;
+      padding-top: 15px;
+    }
+
+    .titleh3{
+     text-align: center;
+     text-transform: uppercase;
+     font-weight: 400;
+     color: rgb(0, 0, 0);   
+     }
+    .title{
+      text-align: center;
+      font-weight: 200;
+      color: rgb(0, 0, 0);
+      font-family: 'Courier New', Courier, monospace  ;
+      font-size: 13px;
+     }
+     .card{
+      height: 250px;
+      width: 250px;
+    }
+
+
+     /*......about.....*/
+    img{
+          height: 150px;
+      }
+
+      .abouth1{
+        margin-top: -14px;
+      }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .carousel-item > img {
+      height: 600px;
+  }
+
+  .nav-item:hover > .nav-link {
+      border-bottom: solid 2px #ffffff;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .carousel-item > img {
+      height: 800px;
+  }
+}
+
+
+ /* meet */
+
+
+
+
+
+
+ 
+ .wrapper {
+  background: var(--white);
+  padding: 2rem;
+  max-width: 576px;
+  width: 100%;
+  border-radius: .75rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.wrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: .5rem;
+  font-size: 2rem;
+  color: var(--yellow);
+  margin-bottom: 2rem;
+}
+.rating .star {
+  cursor: pointer;
+}
+.rating .star.active {
+  opacity: 0;
+  animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.rating .star:hover {
+  transform: scale(1.1);
+}
+textarea {
+  width: 100%;
+  background: var(--light);
+  padding: 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  resize: none;
+  margin-bottom: .5rem;
+}
+.btn-group {
+  display: flex;
+  grid-gap: .5rem;
+  align-items: center;
+}
+.btn-group .btn {
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: .875rem;
+  font-weight: 500;
+}
+.btn-group .btn.submit {
+  background: var(--blue);
+  color: var(--white);
+}
+.btn-group .btn.submit:hover {
+  background: var(--blue-d-1);
+}
+.btn-group .btn.cancel {
+  background: var(--white);
+  color: var(--blue);
+}
+.btn-group .btn.cancel:hover {
+  background: var(--light);
+}
