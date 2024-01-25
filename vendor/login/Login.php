@@ -120,7 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Login">
             </div>
-            <p>Don't have an account? <a href="vendor_reg3.php">Sign up as Vendor</a>.</p>
+            <p>Don't have an account? <a href="../vendor_reg3.php">Sign up as Vendor</a>.</p>
         </form>
     <script>
         function togglePasswordVisibility() {
