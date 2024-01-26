@@ -1,6 +1,6 @@
 <div class="logo-header">
-				<a href="index.html" class="logo">
-					Ready Dashboard
+				<a href="index.php" class="logo">
+					Vendor Partners
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
 										<div class="u-text">
 											<h4>Hizrian</h4>
 											
-									<a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
+									
 									<div class="dropdown-divider"></div>
 									<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
 								</ul>

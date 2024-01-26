@@ -1,6 +1,6 @@
-<div class="scrollbar-inner sidebar-wrapper">
+<div class="scrollbar-inner sidebar-wrapper text-black">
 					
-					<ul class="nav text-dark">
+					<ul class="nav">
 						<li class="nav-item ">
 							<a href="index.php">
 								<i class="la la-dashboard"></i>
@@ -41,6 +41,13 @@
 							<a href="icons.php">
 								<i class="la la-fonticons"></i>
 								<p>Icons</p>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a href="vendor.php">
+								<i class="la la-table"></i>
+								<p>Vendor</p>
+								<span class="badge badge-count"></span>
 							</a>
 						</li>
 						

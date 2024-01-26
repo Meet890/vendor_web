@@ -1,3 +1,9 @@
+<?php
+require 'config.php';
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,45 +45,170 @@
 											<table class="table table-bordered">
 												<thead>
 													<tr>
-														<th>#</th>
-														<th>Table heading</th>
-														<th>Table heading</th>
-														<th>Table heading</th>
-														<th>Table heading</th>
-														<th>Table heading</th>
-														<th>Table heading</th>
+														<th>id</th>
+														<th>Client Name</th>
+														<th>Client Username</th>
+														<th>Client Password</th>
+														<th>Client Email</th>
+														<th>Client City</th>
+														<th>Client Joined Time</th>
+														<th>Edit or delete</th>
 
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-														<th scope="row">1</th>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-													</tr>
-													<tr>
-														<th scope="row">2</th>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-													</tr>
-													<tr>
-														<th scope="row">3</th>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-														<td>Table cell</td>
-													</tr>
+													<?php
+														
 
+														$sql = "SELECT * FROM client";
+														$result = mysqli_query($conn, $sql);
+
+														if (mysqli_num_rows($result) > 0) {
+														
+														    // output data of each row
+														    while($row = mysqli_fetch_assoc($result)) {
+															  $id=$row["c_id"];
+														      $name= $row["c_name"];
+														      $username= $row["c_username"];
+															  $password=$row["c_password"];
+														      $email=$row["c_email"];
+														      $city=$row["c_city"];
+														      $time =$row["c_time"];
+
+															
+														      ?>
+
+													<tr>
+														<th scope="row"><?php echo $id ?></th>
+														<td><?php echo $name  ?></td>
+														<td><?php echo $username  ?></td>
+														<td><?php echo $password  ?></td>
+														<td><?php echo $email  ?></td>
+														<td><?php echo $city  ?></td>
+														<td><?php echo $time  ?></td>	
+														<td>
+														<div class="icon-big text-center">
+														<i class="la la-edit" class="m-4">Edit</i>
+														
+														</div>
+														
+														</td>	
+													</tr>
+															
+															
+														      <?php
+														    }
+														
+														  } else {
+														
+														    echo "0 results";
+														  }
+
+														  
+														  ?>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+
+
+
+
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">Vendor record table</div>
+									</div>
+									<div class="card-body">
+										
+										<div class="table-responsive">
+											<table class="table table-bordered">
+											<thead>
+													<tr>
+														<th>id</th>
+														<th>Vendor Name</th>
+														<th>Vendor Username</th>
+														<th>Vendor Password</th>
+														<th>Vendor Email</th>
+														<th>Vendor City</th>
+														<th>Vendor Gender</th>
+														<th>Vendor Service places</th>
+														<th>Vendor Profession</th>
+														<th>Vendor Experience</th>
+														<th>Instagram Link</th>
+														<th>Facebook Link</th>
+														<th>Whatsapp Link</th>
+														<th>Vendor Joined Time</th>
+
+
+														<th>Edit or delete</th>
+
+													</tr>
+												</thead>
+												<tbody>
+													<?php
+														
+
+														$sql = "SELECT * FROM vendor";
+														$result = mysqli_query($conn, $sql);
+
+														if (mysqli_num_rows($result) > 0) {
+														
+														    // output data of each row
+														    while($row = mysqli_fetch_assoc($result)) {
+															  $id=$row["v_id"];
+														      $name= $row["v_name"];
+														      $username= $row["v_username"];
+															  $password=$row["v_password"];
+														      $email=$row["v_email"];
+														      $city=$row["v_address"];
+															  $gender=$row["v_gender"];
+															  $serplc=$row["v_ser_places"];
+															  $profession=$row["v_profession"];
+															  $experience=$row["v_experience"];
+															  $ig=$row["v_iglink"];
+															  $fb=$row["v_fblink"];
+															  $wa=$row["v_walink"];
+															  $dis=$row["v_discription"];
+														      
+
+															
+														      ?>
+
+													<tr>
+														<th scope="row"><?php echo $id ?></th>
+														<td><?php echo $name  ?></td>
+														<td><?php echo $username  ?></td>
+														<td><?php echo $password  ?></td>
+														<td><?php echo $email  ?></td>
+														<td><?php echo $city  ?></td>
+														<td><?php echo $gender  ?></td>
+														<td><?php echo $serplc  ?></td>
+														<td><?php echo $profession  ?></td>	
+														<td><?php echo $experience  ?></td>
+														<td><?php echo $ig  ?></td>
+														<td><?php echo $fb  ?></td>
+														<td><?php echo $wa  ?></td>
+														<td><?php echo $dis  ?></td>												
+														<td>
+														<div class="icon-big text-center">
+														<i class="la la-edit" class="m-4"> Edit	</i>													
+														</div>
+														
+														</td>	
+													</tr>
+															
+															
+														      <?php
+														    }
+														
+														  } else {
+														
+														    echo "0 results";
+														  }
+
+														  mysqli_close($conn);
+														  ?>
 												</tbody>
 											</table>
 										</div>
