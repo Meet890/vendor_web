@@ -13,4 +13,14 @@ if($conn === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
+function redirect($location=Null){
+    if($location!=Null){
+        echo "<script>
+                window.location='{$location}'
+            </script>";	
+    }else{
+        echo 'error location';
+    }
+     
+}
 ?> 
