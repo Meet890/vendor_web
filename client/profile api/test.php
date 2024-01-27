@@ -9,24 +9,10 @@
 </head>
 <body>
     <?php
-
+require '../login/config.php';
     $v_username = $_GET["username"];
     echo $v_username;
 
-    $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vendor";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if($conn){
-    echo"<br>";
-}
-else{
-  die("Connection failed: " . mysqli_connect_error());
-}
 $sql = "SELECT * FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
