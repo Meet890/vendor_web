@@ -45,7 +45,7 @@ require_once "loginphp.php"
                         <br>
                    
 
-                    <button class="login-btn">Login</button>
+                    <button class="login-btn" name="submit">Login</button>
                 </form>
                 
                 <div class="bottom">
