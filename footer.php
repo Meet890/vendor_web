@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!--BS 5 css link-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+
     <!--extranal css file-->
     <link href="font/fontawesome.min.css" rel="stylesheet">
 	<link href="footer.css" rel="stylesheet">
@@ -16,10 +7,6 @@
     rel="stylesheet"
     />
     
-  
-</head>
-<body>
-
 <section class="deneb_cta">
 	<div class="container mar">
 		<div class="cta_wrapper">
@@ -99,7 +86,3 @@
 			
 		</div>
 	</div>
-	
-</footer>
-</body>
-</html>

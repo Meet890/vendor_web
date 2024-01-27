@@ -56,7 +56,7 @@ body{
 
 /* navbar */
 
-.bg-dark {
+/* .bg-dark {
   background-color: #000203!important;
 }
 .text-warning {
@@ -93,7 +93,7 @@ body{
 }
 .w-100{
     height: 100vh;
-}
+} */
 
 /*.....card....*/
 .a1{
@@ -118,8 +118,12 @@ span{
 }
 .img1{
   width: 100%;
-  height: 15vw;
+  height: 100%;
   object-fit: cover;
+}
+.imgholder{
+  height: 200px;
+  width: auto;
 }
 
 div [class^="col-"]{
@@ -223,7 +227,20 @@ transform: scale3d(1, 1, 1);
 
 @media only screen and (min-width: 768px) and (max-width: 991px){
   /*......slider......*/
+  .carousel-item > img {
+    height: 350px;
+}
 
+.carousel-caption-overlay {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+    top:0%;
+    left:0%;
+}   
   .carousel-caption{
         bottom: 180px;
     }
@@ -240,8 +257,10 @@ transform: scale3d(1, 1, 1);
       padding-bottom: 14px;
       padding-top: 15px;
     }
-    img{
-      height: 120px;
+   
+    .imgholder{
+      height: 150px;
+      width: auto;
     }
 
   .titleh3{
@@ -298,6 +317,10 @@ transform: scale3d(1, 1, 1);
     }
 
     /*.....card....*/
+    .imgholder{
+      height: 170px;
+      width: auto;
+    }
 
     div [class^="col-"]{
       padding-left:40px;
@@ -333,6 +356,29 @@ transform: scale3d(1, 1, 1);
       .abouth1{
         margin-top: -14px;
       }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .carousel-item > img {
+      height: 600px;
+  }
+
+  .nav-item:hover > .nav-link {
+      border-bottom: solid 2px #ffffff;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .carousel-item > img {
+      height: 800px;
+  }
 }
 
 

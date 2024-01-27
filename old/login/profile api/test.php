@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php
+
     $v_username = $_GET["username"];
     echo $v_username;
 
@@ -37,6 +38,7 @@ if ($result->num_rows > 0) {
 } else {
   echo "0 results";
 }
+
 
     ?>
 
