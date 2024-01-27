@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 													}
 												 } else
 												 {
-												$name_err="only letters and white spaces allowed";
+													$phoneno_err= "Invalid mobile number.";
 												 }
 												 
 												}else
@@ -115,8 +115,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 						 
 					 } else
 				 {
-					$phoneno_err= "Invalid mobile number.";
-				 }
+					$name_err="only letters and white spaces allowed";
+-				 }
 													
 				 
 				 } else

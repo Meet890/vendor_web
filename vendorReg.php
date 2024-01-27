@@ -17,16 +17,16 @@ $name_err = $username_err =  $email_err = $password_err =  $address_err= $gender
 //validation
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
-	$name=test_input($_POST["v_name"]);
-	$username=test_input($_POST["v_username"]);
-	$password=isset($_POST["v_password"]);
-	$address=test_input($_POST["v_address"]);
-	$gender=test_input($_POST["v_gender"]);
-	$email=test_input($_POST["v_email"]);
-	$services=test_input($_POST["v_ser_places"]);
-	$profession=test_input($_POST["v_profession"]);
-	$phoneno=isset($_POST["v_phoneno"]);
-	$experience=isset($_POST["v_experience"]);
+	$name= $_POST["v_name"];
+	$username=$_POST["v_username"];
+	$password=$_POST["v_password"];
+	$address= $_POST["v_address"];
+	$gender=$_POST["v_gender"];
+	$email=$_POST["v_email"];
+	$services=$_POST["v_ser_places"];
+	$profession=$_POST["v_profession"];
+	$phoneno=$_POST["v_phoneno"];
+	$experience=$_POST["v_experience"];
 }
 
     function test_input($data) {
@@ -48,7 +48,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 		   $name=test_input($_POST["v_name"]);
 		   if(!preg_match("/^([a-zA-Z_'])*$/",$name))
 		   {
-			   $name_err="only letters and white spaces allowed";
+			//    $name_err="only letters and white spaces allowed";
+			echo"invalid username";
 		   }
 	   }
    }
