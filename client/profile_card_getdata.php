@@ -43,7 +43,7 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT v_name, v_profession, v_ser_places FROM vendor";
+$sql = "SELECT v_name,v_username, v_profession, v_ser_places FROM vendor";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
       $name= $row["v_name"];
       $services=$row["v_profession"];
       $city=$row["v_ser_places"];
-
+      $username =$row["v_username"];
       ?>
 
 <div class="col-lg-6 mt-4">
@@ -70,7 +70,7 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
-                <button class="btn btn-primary mt-2" type="button"><a href="profile api/test.php?v_id">More Info</a></button>
+                <button class="btn btn-primary mt-2" type="button"><a href="profile api/test.php?username=<?php echo $username ?>">More Info</a></button>
                 </div>
         </div>   
       </div>
