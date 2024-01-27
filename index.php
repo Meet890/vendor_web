@@ -2,20 +2,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< Updated upstream
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" constant="IE-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home page</title>
-  <!--BS 5 css link-->
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-
-  <!--extranal css file-->
-  <link href="style.css" rel="stylesheet">
-
-
-
-=======
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" constant="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,61 +16,12 @@
     
     
     
->>>>>>> Stashed changes
 </head>
 
 <body>
   <!--navbar-->
   <?php include 'header.php' ?>
 
-<<<<<<< Updated upstream
-  <!--slider-->
-  <div class="row justify-content-center ">
-
-    <section class="slider mt-90 col-11 " id="slider">
-
-      <div class="hight">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" id="event"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/decoration2.jpg" class="d-block w-100" alt="img1">
-              <div class="carousel-caption a2">
-                <h5>FIND THE BEST DECORATION</h5>
-                <p>Your Choise Your Budget.</p>
-                <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/catring2.jpg" class="d-block w-100" alt="img2">
-              <div class="carousel-caption a2">
-                <h5>FIND BEST CATRING SERVICES</h5>
-                <p>Your Choise Your Budget.</p>
-                <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/SOUND2.jpg" class="d-block w-100" alt="img3">
-              <div class="carousel-caption a2">
-                <h5>FIND BEST SOUND</h5>
-                <p>Your Choise Your Budget.</p>
-                <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-=======
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
     <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
@@ -170,7 +107,6 @@
 
         <div class="title mt-5" >
             <h1 class="heding">Services</h1>
->>>>>>> Stashed changes
         </div>
       </div>
     </section>
