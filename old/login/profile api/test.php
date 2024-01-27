@@ -13,9 +13,9 @@
     echo $v_username;
 
     $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vendor";
+    $username = "root";
+    $password = "";
+    $dbname = "vendor";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
