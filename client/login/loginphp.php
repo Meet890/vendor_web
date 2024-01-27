@@ -1,12 +1,6 @@
 
 <?php
-// Initialize the session
-session_start();
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["c_username"]) &&( $_SESSION["loggedin"] === true)){
-    header("location: index.php");
-    exit;
-}
+
 // Include config file
 require_once "config.php";
 
@@ -51,10 +45,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_start();
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
+                            $_SESSION["c_id"] = $id;
+                            $_SESSION["c_username"] = $username;
                             echo '<script>  alert("connected"); </script>';
-                            header("location: ./client/index.php");
+                            header("location: ./index.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $_SESSION["password"] =$password;
