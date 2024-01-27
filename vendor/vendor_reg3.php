@@ -96,6 +96,8 @@ function test_input($data) {
     }
     $email = $_POST["v_email"];
     } 
+
+	
 	$m_no =$_POST["v_phoneno"];
 	if(preg_match('/^[0-9]{10}+$/', $m_no)) {
 		
