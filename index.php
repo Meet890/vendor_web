@@ -20,7 +20,9 @@
 
 <body>
   <!--navbar-->
-  <?php include 'header.php' ?>
+  <?php include 'header.php';
+         
+  ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
