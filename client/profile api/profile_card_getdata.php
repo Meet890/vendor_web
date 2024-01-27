@@ -46,8 +46,8 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
-
-$sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_id FROM vendor";
+$service = $_GET["service"];
+$sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_id FROM vendor where v_profession = '$service'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

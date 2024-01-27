@@ -82,7 +82,7 @@
       <div class="row">
 
             <div class="col-md-4  col-sm-6 ">
-            <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <a href="profile api/profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
               
                   <div class="card text-white">
                   <div class="row">
