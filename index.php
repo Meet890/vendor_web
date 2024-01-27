@@ -103,16 +103,7 @@
 
 </div>
 <!-- card -->
-<section class="event" >
 
-        <div class="title mt-5" >
-            <h1 class="heding">Services</h1>
-        </div>
-      </div>
-    </section>
-
-  </div>
-  <!-- card -->
   <section class="event">
 
     <div class="title mt-5">
@@ -121,96 +112,6 @@
     <div class="container mt-2">
       <div class="row">
 
-<<<<<<< Updated upstream
-        <div class="col-md-4  col-sm-6 ">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-
-            <div class="card text-white">
-              <div class="row">
-                <div class="col12">
-                  <img src="img/decoration.jpg" class="card-img img1 p-2 h-100" alt="...">
-                </div>
-                <div class="col12">
-                  <h3 class="titleh3">decorators</h3>
-                  <p class="title">Creativity at its finest.</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card b-2 text-white">
-              <img src="img/photo.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">photographers</h3>
-              <p class="title">Preserve your memories.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card b-2  text-white">
-              <img src="img/pexels-knelstrom-ltd-67654.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">videographers</h3>
-              <p class="title">Moments well Shared.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card b-2  text-white">
-              <img src="img/cake.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">cake</h3>
-              <p class="title">Sweetness Readfined.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card b-2  text-white">
-              <img src="img/flowers.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">flowers</h3>
-              <p class="title">Make your life colorful.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card b-2   text-white">
-              <img src="img/cloth.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">wedding wear</h3>
-              <p class="title">Dress Your Dreams, Feel the Love.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card  b-2 text-white">
-              <img src="img/jwellery.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">jewellery</h3>
-              <p class="title">Jewelryize me.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card b-2  text-white">
-              <img src="img/printing.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">invitation cards</h3>
-              <p class="title">Invite in style.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card  b-2 text-white">
-              <img src="img/sound.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">sound</h3>
-              <p class="title">Audio you can rely on.</p>
-            </div>
-          </a>
-        </div>
-=======
             <div class="col-md-4  col-sm-6  ">
             <a href="client/profile_card_getdata.php" id="decorators" class="a1">
                 <div class="card text-white">
@@ -351,7 +252,6 @@
 </section>   
 
 <!-- registration section ....-->
->>>>>>> Stashed changes
 
         <div class="col-md-4 col-sm-6">
           <a href="client/profile_card_getdata.php" id="decorators" class="a1">
