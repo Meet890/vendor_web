@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["c_id"] = $id;
                             $_SESSION["c_username"] = $username;
                             echo '<script>  alert("connected"); </script>';
-                            header("location: ./index.php");
+                            header("location: ./client/index.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $_SESSION["password"] =$password;

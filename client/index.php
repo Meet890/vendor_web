@@ -1,3 +1,4 @@
+<?php include 'session.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +9,10 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <!--extranal css file-->
     
-    <link href="../style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     
     
     
@@ -19,7 +20,9 @@
 <body>
 <!--navbar-->
 
-<?php include 'header.php' ?>
+<?php include 'header.php';
+    
+?>
 
 <!--slider-->
   <div class="row justify-content-center " >
@@ -192,7 +195,7 @@
               <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
                 
                  <div class="card text-white">
-                   <img src="../img/gift.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>
