@@ -251,39 +251,6 @@
   </div>
 </section>   
 
-<!-- registration section ....-->
-
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card  b-2 text-white">
-              <img src="img/makeup.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">makeup artist</h3>
-              <p class="title">Ready, Set, Glow!.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-            <div class="card text-white">
-              <img src="img/vanue.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">venues</h3>
-              <p class="title"> Where memories are made.</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-
-            <div class="card text-white">
-              <img src="img/gift.jpg" class="card-img img1 p-2 h-100" alt="...">
-              <h3 class="titleh3">gifts</h3>
-              <p class="title">More than just a gift.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- registration section ....-->
 
