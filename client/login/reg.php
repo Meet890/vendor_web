@@ -1,5 +1,114 @@
 <?php
-require_once "registerphp.php"
+// Include config file
+require_once "config.php";
+// Define variables and initialize with empty values
+$username = $name = $city = $email = $password = $confirm_password = "";
+$username_err = $name_err = $city_err = $email_err = $password_err = $confirm_password_err = "";
+$checkbox="OFF";
+$above ="below";
+$below ="above";
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+  
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if (isset($_POST["signup"])){
+    $username = $_POST['username'];
+    $name = $_POST['name'];
+    $city = $_POST['select'];
+    $email = test_input($_POST["email"]);
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
+    $checkbox = $_POST["checkbox"];
+    //echo $checkbox; ON 
+// testing values
+    // echo $name;
+    // echo $city;
+    // echo $email;
+    // echo $username;
+    // echo $password;
+    // echo $confirm_password;
+    
+    if (isset($name) && preg_match("/^[a-zA-Z]{2,}$/", $name)){
+        // echo '<script> alert("Welcome");  </script>';
+        if (isset($city) && preg_match("/^[a-zA-Z]{2,}$/", $city)){
+           // echo '<script> alert("Welcome");  </script>';
+           if( strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') != false){
+           if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $email = test_input($_POST["email"]);
+          //  echo '<script> alert("Welcome");  </script>';
+            if (isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)){
+                //  echo '<script> alert("Welcome");  </script>';
+                if (strlen($password) >= 6 && preg_match("/[a-zA-Z_]/", $password) && preg_match("/\d/", $password) && preg_match("/\w/", $password)&& !preg_match("/\s/", $password)) {
+                    //  echo '<script> alert("Welcome");  </script>';
+                    if(!empty(trim($_POST["confirm_password"]))){
+                        $confirm_password = trim($confirm_password);
+                        if($password == $confirm_password){
+                            if($checkbox = "ON"){
+                                $sql = "INSERT INTO client (c_username,c_name,c_city, c_password,c_email) VALUES ('$username','$name','$city','$password','$email')";
+                                  
+                                          if(mysqli_query($conn, $sql)==true){
+                                              // Redirect to login page
+                                              mysqli_close($conn);
+                                              echo '<script>  alert("connected"); </script>';
+                                              header("location: ");
+                                          } else{
+                                            
+                                              echo "Oops! Something went wrong. Please try again later." .mysqli_error($conn);
+                                          }
+                            }
+                            else{
+                                echo '<script>  alert("check box"); setFocus();</script>';
+                            }
+
+                        }else{
+                            echo '<script>  alert("both password shoud be same"); setFocus();</script>';
+                        }
+
+                    }else{
+                        echo '<script>  alert("conf_password"); setFocus();</script>';
+                    }
+                    
+
+                } else {
+                    // Invalid password
+                    echo '<script>  alert("password must contain 8 characters with special symbols and number"); setFocus();</script>';
+                }
+
+            }
+            else{
+                echo '<script>  alert("username"); setFocus();</script>';
+            }
+
+           }
+           else{
+                echo '<script>  alert("email"); setFocus();</script>';
+           }
+           
+        }
+           else{
+            echo '<script>  alert("enter valid domain name"); setFocus();</script>'; 
+           }
+
+        }
+        else{
+            echo '<script>  alert("city"); setFocus();</script>';
+        }
+
+    }
+    else{
+        echo '<script>  alert("name"); setFocus();</script>';
+        
+
+    }
+}
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +120,7 @@ require_once "registerphp.php"
     <title>Login Form</title>
   
     <link rel="stylesheet" href="reg.css">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"> -->
 
 </head>
 
@@ -19,8 +128,47 @@ require_once "registerphp.php"
     <div class="bg-img"></div>
     <div id="main-container">
         <div class="form-container">
-           
-            <div class="signup-form">
+            <div class="login-form below">
+                <div class="image">
+                    <!-- image insert by css -->
+                </div>
+                <div class="title">LOGIN</div>
+
+                <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> >
+                    <div class="field">
+                        <input type="Username" id="Username" placeholder=" " required autocomplete="on">
+                        <label for="Username">Username</label>
+                        <!-- <i class="fa fa-envelope"></i> -->
+                    </div>
+
+                    <div class="field">
+                    <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
+                        <input type="password" id="pass" required placeholder=" " autocomplete="on">
+                        <label for="create-pass">Password</label>
+                        <!-- <i class="fa fa-lock"></i> -->
+                    </div>
+                        <br>
+                   
+
+                    <button class="login-btn" name="login">Login</button>
+                </form>
+                
+                <div class="bottom">
+                    <div class="other">
+                        <div class="or">
+                            <span></span>Or<span></span>
+                        </div>
+
+                        
+                    </div>
+                    <div>Don't have an Account?&nbsp;<a class="signup-switch" onclick="swapPos()">Sign up</a></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="signup-form above">
                 <div class="title">Sign-up as client</div>
                 <form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
@@ -80,11 +228,11 @@ require_once "registerphp.php"
                         <label for="agree"><input type="checkbox" name="checkbox" id="agree">I agree to all&nbsp;<a href="#">Terms &
                                 Conditions</a></label>
                     </section>
-                    <button class="signup-btn">Register</button>
+                    <button class="signup-btn" name="signup">Register</button>
                 </form>
 
                 <div class="bottom">
-                    <span>Already Registered?&nbsp;<a class="login-switch" href="login.php">Login</a></span>
+                    <span>Already Registered?&nbsp;<a class="login-switch" onclick="swapPos()">Login</a></span>
                 </div>
             </div>
         </div>

@@ -1,4 +1,3 @@
-<?php include 'session.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +8,10 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     
     
     
@@ -20,9 +19,7 @@
 <body>
 <!--navbar-->
 
-<?php include 'header.php';
-    
-?>
+<?php include 'header.php' ?>
 
 <!--slider-->
   <div class="row justify-content-center " >
@@ -85,7 +82,7 @@
       <div class="row">
 
             <div class="col-md-4  col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+            <a href="client/profile_card_getdata.php" id="decorators" class="a1">
               
                   <div class="card text-white">
                   <div class="row">
@@ -101,7 +98,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2 text-white">
                    <img src="../img/photo.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">photographers</h3>
@@ -110,7 +107,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="../img/vedio.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">videographers</h3>
@@ -119,7 +116,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="../img/cake.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">cake</h3>
@@ -128,7 +125,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="../img/flowers.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">flowers</h3>
@@ -137,7 +134,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2   text-white">
                    <img src="../img/cloth.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">wedding wear</h3>
@@ -146,7 +143,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
                    <img src="../img/jwellery.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">jewellery</h3>
@@ -155,7 +152,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card b-2  text-white">
                    <img src="../img/printing.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">invitation cards</h3>
@@ -164,7 +161,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
                    <img src="../img/sound.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">sound</h3>
@@ -174,7 +171,7 @@
             </div>
             
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card  b-2 text-white">
                    <img src="../img/makeup.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">makeup artist</h3>
@@ -183,7 +180,7 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                  <div class="card text-white">
                    <img src="../img/vanue.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">venues</h3>
@@ -192,10 +189,10 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+              <a href="profile_card_getdata.php" id="decorators" class="a1">
                 
                  <div class="card text-white">
-                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="../img/gift.jpg" class="card-img img1 p-2" alt="...">
                    <h3 class="titleh3">gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>
