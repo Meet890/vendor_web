@@ -1,4 +1,5 @@
 
+
 * {
 margin: 0;
 padding: 0;
@@ -82,13 +83,7 @@ font-size: 35px;
 margin-top: 15px;
 }
 
-.above {
-animation: above .8s ease-in-out forwards;
-}
 
-.below {
-animation: below .8s ease-in-out forwards;
-}
 
 button {
 position: absolute;
@@ -379,33 +374,7 @@ justify-content: space-between;
 justify-content: flex-end;
 }
 
-@keyframes above {
-0% {
-transform: translate3d(0, 0, -500px);
-}
 
-50% {
-transform: translate3d(70%, 0, -100px);
-}
-
-100% {
-transform: translate3d(0px, 0, 0px);
-}
-}
-
-@keyframes below {
-0% {
-transform: translate3d(0, 0, 0);
-}
-
-50% {
-transform: translate3d(-70%, 0, 0px);
-}
-
-100% {
-transform: translate3d(0px, 0, -200px);
-}
-}
 .pass-icon{
     position: absolute;
     

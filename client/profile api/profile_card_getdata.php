@@ -7,9 +7,9 @@
     <title>Booking Card</title>
 
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!--extranal css file-->
     <link href="profile_card.css" rel="stylesheet">
 </head>
@@ -69,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="img/f1.jpg" class="img-fluid" alt="team1">
+                <img src="pro.jpg" class="img-fluid" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>

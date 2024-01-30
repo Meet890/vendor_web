@@ -11,7 +11,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     
-    <link href="../style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     
     
     
@@ -82,13 +82,13 @@
       <div class="row">
 
             <div class="col-md-4  col-sm-6 ">
-            <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
               
                   <div class="card text-white">
                   <div class="row">
-                   <div class="col12">
+                   <div class="imgholder">
                    <img src="../img/decoration.jpg" class="card-img img1 p-2" alt="...">
-                  </div>
+                   </div>
                   <div class="col12">
                    <h3 class="titleh3">decorators</h3>
                    <p class="title">Creativity at its finest.</p>
@@ -98,72 +98,88 @@
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "photographer";?>" id="photographer" class="a1">
                  <div class="card b-2 text-white">
+                  <div class="imgholder">
                    <img src="../img/photo.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">photographers</h3>
                    <p class="title">Preserve your memories.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "videographer";?>" id="vieographer" class="a1">
                  <div class="card b-2  text-white">
+                  <div class="imgholder">
                    <img src="../img/vedio.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">videographers</h3>
                    <p class="title">Moments well Shared.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "Bakery";?>" id="bakery" class="a1">
                  <div class="card b-2  text-white">
+                  <div class="imgholder">
                    <img src="../img/cake.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">cake</h3>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "flowers";?>" id="flowers" class="a1">
                  <div class="card b-2  text-white">
+                  <div class="imgholder">
                    <img src="../img/flowers.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">flowers</h3>
                    <p class="title">Make your life colorful.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "wedding wear";?>" id="wedding wear" class="a1">
                  <div class="card b-2   text-white">
+                  <div class="imgholder">
                    <img src="../img/cloth.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">wedding wear</h3>
                    <p class="title">Dress Your Dreams, Feel the Love.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "jewellery";?>" id="jewellery" class="a1">
                  <div class="card  b-2 text-white">
+                  <div class="imgholder">
                    <img src="../img/jwellery.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">jewellery</h3>
                    <p class="title">Jewelryize me.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "invitation card";?>" id="invitation card" class="a1">
                  <div class="card b-2  text-white">
+                  <div class="imgholder">
                    <img src="../img/printing.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">invitation cards</h3>
                    <p class="title">Invite in style.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "sound";?>" id="sound" class="a1">
                  <div class="card  b-2 text-white">
+                  <div class="imgholder">
                    <img src="../img/sound.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">sound</h3>
                    <p class="title">Audio you can rely on.</p>
                  </div>
@@ -171,33 +187,40 @@
             </div>
             
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "makeup artist";?>" id="makeup artist" class="a1">
                  <div class="card  b-2 text-white">
+                  <div class="imgholder">
                    <img src="../img/makeup.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">makeup artist</h3>
                    <p class="title">Ready, Set, Glow!.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "venues";?>" id="venues" class="a1">
                  <div class="card text-white">
+                  <div class="imgholder">
                    <img src="../img/vanue.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">venues</h3>
                    <p class="title">	Where memories are made.</p>
                  </div>
               </a>
             </div>
             <div class="col-md-4 col-sm-6">
-              <a href="profile_card_getdata.php" id="decorators" class="a1">
+              <a href="profile_card_getdata.php?service=<?php echo "gifts";?>" id="gifts" class="a1">
                 
                  <div class="card text-white">
+                  <div class="imgholder">
                    <img src="../img/gift.jpg" class="card-img img1 p-2" alt="...">
+                  </div>
                    <h3 class="titleh3">gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>
               </a>
             </div> 
+            
     </div>      
   </div>
 </section>   
