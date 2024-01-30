@@ -34,7 +34,7 @@ header {
 }
 section {
     max-width: 800px;
-    margin: 7em auto;
+    margin: 2% auto 2% ;
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
@@ -46,7 +46,7 @@ section {
 svg{
     margin-top: -8px;
     margin-bottom: 0px;
-}
+
 }
 
 .star{
