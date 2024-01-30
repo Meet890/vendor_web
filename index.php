@@ -9,7 +9,7 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
@@ -19,52 +19,8 @@
 </head>
 
 <body>
-<!--navbar-->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-  <div class="container">
-    <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
-  </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#event">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#footer">About us</a>
-        </li>
-        
-        <!-- <li class="nav-item">
-          <div class="log_btn">
-        <button type="button" class="btn btn-outline-secondary btn-close-white"><a href="login/index.php">login</button></div>
-        </li> -->
-
-
-        <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >
-            Login
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Decorators</a></li>
-            <li><a class="dropdown-item" href="#">photographers</a></li>
-          </ul>
-        </li> -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Login
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="client/login/login.php">Login as Client</a></li>
-            <li><a class="dropdown-item" href="vendor/vendor_reg3.php">Login as Vendor</a></li>
-          </ul>
-        </li>
-      </ul>
-      </div>
-  </div>
-</nav>
+  <!--navbar-->
+  <?php include 'header.php' ?>
 
   <!--slider-->
   <div class="row justify-content-center ">
@@ -116,9 +72,9 @@
       </div>
     </section>
 
-</div>
-<!-- card -->
-<section class="event" >
+  </div>
+  <!-- card -->
+  <section class="event">
 
     <div class="title mt-5">
       <h1 class="heding">Services</h1>
@@ -126,137 +82,136 @@
     <div class="container mt-2">
       <div class="row">
 
-            <div class="col-md-4  col-sm-6 ">
-            <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-              
-                  <div class="card text-white">
-                  <div class="row">
-                   <div class="col12">
-                   <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
-                  </div>
-                  <div class="col12">
-                   <h3 class="titleh3">decorators</h3>
-                   <p class="title">Creativity at its finest.</p>
-                  </div>
-                 </div>
+        <div class="col-md-4  col-sm-6 ">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+
+            <div class="card text-white">
+              <div class="row">
+                <div class="col12">
+                  <img src="img/decoration.jpg" class="card-img img1 p-2 h-100" alt="...">
+                </div>
+                <div class="col12">
+                  <h3 class="titleh3">decorators</h3>
+                  <p class="title">Creativity at its finest.</p>
+                </div>
               </div>
-              </a>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card b-2 text-white">
-                   <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">photographers</h3>
-                   <p class="title">Preserve your memories.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card b-2 text-white">
+              <img src="img/photo.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">photographers</h3>
+              <p class="title">Preserve your memories.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card b-2  text-white">
-                   <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">videographers</h3>
-                   <p class="title">Moments well Shared.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card b-2  text-white">
+              <img src="img/pexels-knelstrom-ltd-67654.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">videographers</h3>
+              <p class="title">Moments well Shared.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card b-2  text-white">
-                   <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">cake</h3>
-                   <p class="title">Sweetness Readfined.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card b-2  text-white">
+              <img src="img/cake.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">cake</h3>
+              <p class="title">Sweetness Readfined.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card b-2  text-white">
-                   <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">flowers</h3>
-                   <p class="title">Make your life colorful.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card b-2  text-white">
+              <img src="img/flowers.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">flowers</h3>
+              <p class="title">Make your life colorful.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card b-2   text-white">
-                   <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">wedding wear</h3>
-                   <p class="title">Dress Your Dreams, Feel the Love.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card b-2   text-white">
+              <img src="img/cloth.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">wedding wear</h3>
+              <p class="title">Dress Your Dreams, Feel the Love.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card  b-2 text-white">
-                   <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">jewellery</h3>
-                   <p class="title">Jewelryize me.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card  b-2 text-white">
+              <img src="img/jwellery.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">jewellery</h3>
+              <p class="title">Jewelryize me.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card b-2  text-white">
-                   <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">invitation cards</h3>
-                   <p class="title">Invite in style.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card b-2  text-white">
+              <img src="img/printing.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">invitation cards</h3>
+              <p class="title">Invite in style.</p>
             </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card  b-2 text-white">
-                   <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">sound</h3>
-                   <p class="title">Audio you can rely on.</p>
-                 </div>
-              </a>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card  b-2 text-white">
+              <img src="img/sound.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">sound</h3>
+              <p class="title">Audio you can rely on.</p>
             </div>
-            
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card  b-2 text-white">
-                   <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">makeup artist</h3>
-                   <p class="title">Ready, Set, Glow!.</p>
-                 </div>
-              </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                 <div class="card text-white">
-                   <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">venues</h3>
-                   <p class="title">	Where memories are made.</p>
-                 </div>
-              </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <a href="client/profile_card_getdata.php" id="decorators" class="a1">
-                
-                 <div class="card text-white">
-                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
-                   <h3 class="titleh3">gifts</h3>
-                   <p class="title">More than just a gift.</p>
-                 </div>
-              </a>
-            </div> 
-    </div>      
-  </div>
-</section>   
+          </a>
+        </div>
 
-<!-- registration section ....-->
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card  b-2 text-white">
+              <img src="img/makeup.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">makeup artist</h3>
+              <p class="title">Ready, Set, Glow!.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
+            <div class="card text-white">
+              <img src="img/vanue.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">venues</h3>
+              <p class="title"> Where memories are made.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="client/profile_card_getdata.php" id="decorators" class="a1">
 
+            <div class="card text-white">
+              <img src="img/gift.jpg" class="card-img img1 p-2 h-100" alt="...">
+              <h3 class="titleh3">gifts</h3>
+              <p class="title">More than just a gift.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
+  <!-- registration section ....-->
 
 
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
 
 </body>
 
-<script src="js/bootstrap.min.js"></script>  
 </html>
 <section class="footer" id="footer">
   <?php
@@ -265,4 +220,3 @@
   ?>
 
 </section>
-
