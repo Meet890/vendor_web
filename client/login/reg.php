@@ -31,7 +31,7 @@ require_once "registerphp.php"
                     </div>
 
                     <div class="field">
-                    <label for="city" class="city">Select city near you</label>
+                    <label for="city" class="city"> city </label>
                         <select name="select" id="" >
                             
                             <option value="Bhuj">Bhuj</option>

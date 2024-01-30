@@ -10,7 +10,6 @@ require_once "loginphp.php"
     <title>Login Form</title>
   
     <link rel="stylesheet" href="reg.css">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
 </head>
 
@@ -46,7 +45,7 @@ require_once "loginphp.php"
                         <br>
                    
 
-                    <button class="login-btn">Login</button>
+                    <button class="login-btn" name="submit">Login</button>
                 </form>
                 
                 <div class="bottom">

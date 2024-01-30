@@ -78,12 +78,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
             }
             else{
-                echo '<script>  alert("username"); setFocus();</script>';
+                echo '<script>  alert("username invalid"); setFocus();</script>';
             }
 
            }
            else{
-                echo '<script>  alert("email"); setFocus();</script>';
+                echo '<script>  alert("email invalid"); setFocus();</script>';
            }
            
         }
@@ -93,12 +93,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         }
         else{
-            echo '<script>  alert("city"); setFocus();</script>';
+            echo '<script>  alert("city Required"); setFocus();</script>';
         }
 
     }
     else{
-        echo '<script>  alert("name"); setFocus();</script>';
+        echo '<script>  alert("name invalid"); setFocus();</script>';
         
 
     }
