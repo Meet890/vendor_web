@@ -14,9 +14,9 @@
     echo $v_username;
 
     $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vendor";
+    $username = "root";
+    $password = "";
+    $dbname = "vendor";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -27,15 +27,21 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM vendor where v_username = '$v_username'";
+
+$sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo $row["v_id"] ."    ".$row["v_email"];
-  }
-} else {
+        $name= $row["v_name"];
+        $username= $row["v_username"];
+        $services=$row["v_profession"];
+        $city=$row["v_ser_places"];
+        $phone=$row["v_phoneno"];
+        $about=$row["v_discription"];
+    }
+  } else {
   echo "0 results";
 }
 
@@ -61,15 +67,15 @@ if ($result->num_rows > 0) {
 <p>1 Review</p>
             </div>
 </div>    
-        <h2 class="mt-3">Services & Events</h2>
+        <h2 class="mt-3"><?php echo $name ?></h2>
         <div class="about">
-        <h4>Web Developer<h4>
+        <h4><?php echo $services ?><h4>
         </div>
 
         <ul>
             <li>
                 <img src="img/location.png" alt="Location Icon" class="png">
-                <h5 class="city">City, Country</h5>
+                <h5 class="city"><?php echo $city ?></h5>
             </li>
             <!-- <li>
                 <img src="email-icon.png" alt="Email Icon">
@@ -77,12 +83,12 @@ if ($result->num_rows > 0) {
             </li> -->
             <li>
                 <img src="img/calling.png" alt="Phone Icon" class="png">
-                <h5 class="call">(123) 456-7890</h5>
+                <h5 class="call"><?php echo $phone ?></h5>
             </li>
         </ul>
         <div class="about center">
             <h3 class="mt-4">About us</h3>
-            <p>ukgb dbxs wdwkhdndsd hkns hksn k ukgb dbxs wdwkhdndsd hkns hksn k ukgb dbxs wdwkhdndsd hkns hksn k ukgb dbxs wdwkhdndsd hkns hksn kukgb dbxs wdwkhdndsd hkns hksn k</p>
+            <p><?php echo $about ?></p>
             <span></span>
         </div>
         <div class="heading">
