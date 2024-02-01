@@ -47,7 +47,7 @@ else{
   die("Connection failed: " . mysqli_connect_error());
 }
 $service = $_GET["service"];
-$sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_id FROM vendor where v_profession = '$service'";
+$sql = "SELECT v_name, v_photo, v_profession, v_ser_places, v_id FROM vendor where v_profession = '$service'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -57,8 +57,8 @@ if (mysqli_num_rows($result) > 0) {
       
       $name= $row["v_name"];
 
-      $username= $row["v_username"];
-
+      // $username= $row["v_username"];
+      $image = $row["v_photo"];
       $services=$row["v_profession"];
       $city=$row["v_ser_places"];
       $id=$row["v_id"];
@@ -69,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="img/f1.jpg" class="img-fluid" alt="team1">
+                <img src="<?php echo $image ?>" class="img-fluid" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>
