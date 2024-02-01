@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 } else {
                     // Invalid password
-                    echo '<script>  alert("password must contain 8 characters with special symbols and number"); setFocus();</script>';
+                    echo '<script>  alert("password must contain 6 characters with special symbols and number"); setFocus();</script>';
                 }
 
             }
