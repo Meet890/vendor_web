@@ -60,20 +60,7 @@
 								<span class="badge badge-count">6</span>
 							</a>
 						</li>
-						<li class="nav-item">
-							<a href="notifications.php">
-								<i class="la la-bell"></i>
-								<p>Notifications</p>
-								<span class="badge badge-success">3</span>
-							</a>
-						</li>
 						
-						<li class="nav-item">
-							<a href="icons.php">
-								<i class="la la-fonticons"></i>
-								<p>Icons</p>
-							</a>
-						</li>
                         <li class="nav-item">
 							<a href="vendor.php">
 								<i class="la la-table"></i>
@@ -83,4 +70,6 @@
 						</li>
 						
 					</ul>
+</div>
+</div>
 </div>
