@@ -11,8 +11,6 @@
     <?php
 
     $v_username = $_GET["username"];
-    echo $v_username;
-
     $servername = "localhost";
     $username = "root";
     $password = "";
