@@ -47,7 +47,7 @@ svg{
     margin-top: -8px;
     margin-bottom: 0px;
 }
-}
+
 
 .star{
     max-width: 50%;
@@ -192,7 +192,7 @@ li img {
 }
   /* retating */
 
-  body {
+  /* body {
     font-family: Arial, sans-serif;
     background-color: #0000FF;
     margin: 0;
@@ -200,7 +200,7 @@ li img {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  }
+  } */
   
   .container {
     margin-top: 40px;
