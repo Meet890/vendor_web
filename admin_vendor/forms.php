@@ -207,41 +207,59 @@
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Forms</h4>
+						<!-- <h4 class="page-title">Forms</h4> -->
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Base Form Control</div>
+										<div class="card-title">Create Profile
+											
+										</div>
 									</div>
 									<div class="card-body">
 										<div class="form-group">
-											<label for="email">Email Address</label>
-											<input type="email" class="form-control" id="email" placeholder="Enter Email">
-											<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+											<label for="Compony name">Compony name</label>
+											<input type="email" class="form-control" id="email" placeholder="Enter Compony name">
+											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
 										<div class="form-group">
+											<label for="exampleFormControlSelect1">select service</label>
+											<select class="form-control" id="exampleFormControlSelect1">
+											 <option selected disabled value="">Choose...</option>
+				      						 <option value="Decoration">Decoration</option>
+				                             <option value="Sound system">Sound system</option>
+				                             <option value="Catering">Catering</option>
+				                             <option value="Bakery">Bakery</option>
+				                             <option value="Photographer">Photographer</option>
+				                             <option value="Videographer">Videographer</option>
+				                             <option value="Flowers">Flowers</option>
+					                         <option value="Venue">Venue</option>
+					                         <option value="Invitation">Invitation Card</option>
+											</select>
+										</div>
+									
+										<div class="form-group">
+											<label for="email">Email Address</label>
+											<input type="email" class="form-control" id="email" placeholder="Enter Email">
+											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+										</div>
+										<!-- <div class="form-group">
 											<label for="password">Password</label>
 											<input type="password" class="form-control" id="password" placeholder="Password">
-										</div>
-										<div class="form-group form-inline">
+										</div> -->
+										<!-- <div class="form-group form-inline">
 											<label for="inlineinput" class="col-md-3 col-form-label">Inline Input</label>
 											<div class="col-md-9 p-0">
 												<input type="text" class="form-control input-full" id="inlineinput" placeholder="Enter Input">
 											</div>
-										</div>
-										<div class="form-group has-success">
-											<label for="successInput">Success Input</label>
-											<input type="text" id="successInput" value="Success" class="form-control">
-										</div>
-										<div class="form-group has-error has-feedback">
-											<label for="errorInput">Error Input</label>
-											<input type="text" id="errorInput" value="Error" class="form-control">
-											<small id="emailHelp" class="form-text text-muted">Please provide a valid informations.</small>
+										</div> -->
+										<div class="form-group ">
+											<label for="successInput">Address</label>
+											<input type="text" id="Address" value="" class="form-control">
 										</div>
 										<div class="form-group">
-											<label for="disableinput">Disable Input</label>
-											<input type="text" class="form-control" id="disableinput" placeholder="Enter Input" disabled>
+											<label for="errorInput">Phone no.</label>
+											<input type="text" id="Phone no" value="" class="form-control">
 										</div>
 										<div class="form-check">
 											<label>Gender</label><br/>
@@ -254,39 +272,27 @@
 												<span class="form-radio-sign">Female</span>
 											</label>
 										</div>
-										<div class="form-group">
-											<label class="control-label">
-												Static
-											</label> <!----> <p class="form-control-static">hello@themekita.com</p> <!---->  <!----></div>
+										
+											
 											<div class="form-group">
-												<label for="exampleFormControlSelect1">Example select</label>
-												<select class="form-control" id="exampleFormControlSelect1">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-												</select>
-											</div>
-											<div class="form-group">
-												<label for="exampleFormControlSelect2">Example multiple select</label>
-												<select multiple class="form-control" id="exampleFormControlSelect2">
-													<option>1</option>
-													<option>2</option>
-													<option>3</option>
-													<option>4</option>
-													<option>5</option>
-												</select>
-											</div>
-											<div class="form-group">
-												<label for="exampleFormControlFile1">Example file input</label>
+												<label for="exampleFormControlFile1">Choose profile photo</label>
 												<input type="file" class="form-control-file" id="exampleFormControlFile1">
 											</div>
 											<div class="form-group">
-												<label for="comment">Comment</label>
+												<label for="comment">About us</label>
 												<textarea class="form-control" id="comment" rows="5">
 
 												</textarea>
+											</div>
+											<div class="form-group">
+												<label for="email">Instagram Id link</label>
+												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id">
+												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+											</div>
+											<div class="form-group">
+												<label for="email">Face book Id link</label>
+												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id">
+												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 											<div class="form-check">
 												<label class="form-check-label">
