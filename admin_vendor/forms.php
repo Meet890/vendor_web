@@ -1,3 +1,14 @@
+<?php
+ 
+
+ $conn = mysqli_connect("localhost", "root", "", "vendor");
+  
+ // Check connection
+ if($conn === false){
+	 die("ERROR: Could not connect. "
+		 . mysqli_connect_error());
+ }
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
