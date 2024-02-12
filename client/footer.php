@@ -53,7 +53,7 @@
 									<i class="fas fa-phone-alt"></i>
 								</div>
 								<div class="info">
-									<p><a href="tel:+919246147999">+91 6355008608</a></p>
+									<p><a href="tel:+91 6355008608">+91 6355008608</a></p>
 									
 								</div>
 							</div>
@@ -62,7 +62,7 @@
 									<i class="fas fa-envelope"></i>
 								</div>
 								<div class="info">
-									<p><a href="mailto:info@deneb.com">vendorpartners@gmail.com</a></p>
+									<p><a href="mailto:vendorpartners@gmail.com">vendorpartners@gmail.com</a></p>
 								</div>
 							</div>
 							<div class="single_info">
