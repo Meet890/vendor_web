@@ -8,7 +8,7 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
   
-    
+    <script src="./js/bootstrap.bundle.js"></script> 
     <!--extranal css file-->
     
   
@@ -59,12 +59,24 @@
         <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="<?php if(isset($_SESSION["user"])){echo "profile.php";}else{ echo "register.php";} ?>">
+            <?php if(isset($_SESSION["user"])){echo "profile";}else{echo"Register";} ?></a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="<?php if(isset($_SESSION["user"])){echo "logout.php";}else{ echo "login.php";} ?>">
+            <?php if(isset($_SESSION["user"])){echo "logout";}else{echo"login";} ?></a></li>
            
           </ul>
         </li>
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
         <!-- <li>
         <div class="dropdown text-end ms-2">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,10 +90,12 @@
           </ul>
         </div>
         </li> -->
+
         </ul>
       </div>
   </div>
 </nav>
 <script src="../js/bootstrap.min.js"></script>  
+<script src="../js/bootstrap.bundle.js"></script>  
 </body>
 </html>
