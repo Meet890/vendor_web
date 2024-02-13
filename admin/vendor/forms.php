@@ -40,16 +40,22 @@
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Create Profile
-											
-										</div>
+										<div class="card-title">Create Profile</div>
 									</div>
+									<p class="text-success text-center"><?php echo $valid; ?></p> <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+
 									<div class="card-body">
+
+ 										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
 											<input type="email" class="form-control" id="email" placeholder="Enter Compony name">
-											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+											<p class="err-msg">
+                							<?php if($fnameErr!=1){ echo $fnameErr; }?>
+                                            </p>
 										</div>
+
+										<!-- services-->
 										<div class="form-group">
 											<label for="exampleFormControlSelect1">select service</label>
 											<select class="form-control" id="exampleFormControlSelect1">
