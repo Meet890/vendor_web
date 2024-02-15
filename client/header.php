@@ -11,9 +11,6 @@
     <script src="./js/bootstrap.bundle.js"></script> 
     <!--extranal css file-->
     
-  
-    
-    
 </head>
 <body>
 <!--navbar-->
