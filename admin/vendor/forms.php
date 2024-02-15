@@ -1,14 +1,3 @@
-<?php
- 
-
- $conn = mysqli_connect("localhost", "root", "", "vendor");
-  
- // Check connection
- if($conn === false){
-	 die("ERROR: Could not connect. "
-		 . mysqli_connect_error());
- }
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,23 +31,23 @@
 									<div class="card-header">
 										<div class="card-title">Create Profile</div>
 									</div>
-									<p class="text-success text-center"><?php echo $valid; ?></p> <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+									<p class="text-success text-center"></p> <form method="post">
 
 									<div class="card-body">
 
  										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
-											<input type="email" class="form-control" id="email" placeholder="Enter Compony name">
-											<p class="err-msg">
-                							<?php if($fnameErr!=1){ echo $fnameErr; }?>
-                                            </p>
+											<input type="text" class="form-control" id="email" placeholder="Enter Compony name" name="p_compony_name">
+											<!-- <p class="err-msg">
+                							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
+                                            </p> -->
 										</div>
 
 										<!-- services-->
-										<div class="form-group">
+										<div class="form-group" >
 											<label for="exampleFormControlSelect1">select service</label>
-											<select class="form-control" id="exampleFormControlSelect1">
+											<select class="form-control" id="exampleFormControlSelect1" name="p_services">
 											 <option selected disabled value="">Choose...</option>
 				      						 <option value="Decoration">Decoration</option>
 				                             <option value="Sound system">Sound system</option>
@@ -72,9 +61,10 @@
 											</select>
 										</div>
 									
+										<!-- email -->
 										<div class="form-group">
 											<label for="email">Email Address</label>
-											<input type="email" class="form-control" id="email" placeholder="Enter Email">
+											<input type="email" class="form-control" id="email" placeholder="Enter Email" name="p_email">
 											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
 										<!-- <div class="form-group">
@@ -87,47 +77,71 @@
 												<input type="text" class="form-control input-full" id="inlineinput" placeholder="Enter Input">
 											</div>
 										</div> -->
+
+										<!-- address -->
 										<div class="form-group ">
 											<label for="successInput">Address</label>
-											<input type="text" id="Address" value="" class="form-control">
+											<input type="text" id="Address" value="" class="form-control" name="p_address">
+											<!-- <p class="err-msg">
+                								<?php if($AddErr!=1){ echo $AddErr; }?>
+               								</p> -->
 										</div>
+
+										<!-- phone no -->
 										<div class="form-group">
 											<label for="errorInput">Phone no.</label>
-											<input type="text" id="Phone no" value="" class="form-control">
+											<input type="text" id="Phone no" value="" class="form-control" name="p_phoneno">
+											 <!-- <p class="err-msg"> 
+                 								 <?php if($phoneErr!=1){ echo $phoneErr; } ?> 
+                							</p> -->
 										</div>
+
+										<!-- gender -->
 										<div class="form-check">
 											<label>Gender</label><br/>
 											<label class="form-radio-label">
-												<input class="form-radio-input" type="radio" name="optionsRadios" value=""  checked="">
+												<input class="form-radio-input" type="radio" name="p_gender" value="m"  checked="">
 												<span class="form-radio-sign">Male</span>
 											</label>
 											<label class="form-radio-label ml-3">
-												<input class="form-radio-input" type="radio" name="optionsRadios" value="">
+												<input class="form-radio-input" type="radio" name="p_gender" value="f">
 												<span class="form-radio-sign">Female</span>
 											</label>
+											<!-- 
+												
+						
+											 -->
 										</div>
 										
-											
+											<!-- profile photo -->
 											<div class="form-group">
 												<label for="exampleFormControlFile1">Choose profile photo</label>
-												<input type="file" class="form-control-file" id="exampleFormControlFile1">
+												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="p_photo">
 											</div>
+
+											<!-- about -->
 											<div class="form-group">
 												<label for="comment">About us</label>
-												<textarea class="form-control" id="comment" rows="5">
+												<textarea class="form-control" id="comment" rows="5" name="p_about">
 
 												</textarea>
 											</div>
+
+											<!-- ig id -->
 											<div class="form-group">
 												<label for="email">Instagram Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id">
+												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id" name="p_IG_id">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
+
+											<!-- fb id -->
 											<div class="form-group">
 												<label for="email">Face book Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id">
+												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id" name="p_FB_id">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
+
+
 											<div class="form-check">
 												<label class="form-check-label">
 													<input class="form-check-input" type="checkbox" value="">
@@ -136,7 +150,7 @@
 											</div>
 										</div>
 										<div class="card-action">
-											<button class="btn btn-success">Submit</button>
+											<button class="btn btn-success" name="reg_user">Submit</button>
 											<button class="btn btn-danger">Cancel</button>
 										</div>
 									</div>
@@ -157,3 +171,55 @@
 <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 <script src="assets/js/ready.min.js"></script>
 </html>
+
+<?php
+ 
+
+ $conn = mysqli_connect("localhost", "root", "", "vendor");
+  
+ // Check connection
+ if($conn === false){
+	 die("ERROR: Could not connect. "
+		 . mysqli_connect_error());
+ }
+
+ if(isset($_POST['reg_user']))
+ {
+ $compony_name =  $_POST['p_compony_name'];
+ $servicse = $_POST['p_services'];
+ $email = $_POST['p_email'];
+ $address = $_POST['p_address'];
+ $m_no = $_POST['p_phoneno'];
+ $gender= $_POST['p_gender'];
+ $photo=$_POST['p_photo'];
+ $about=$_POST['p_about'];
+ $IG = $_POST['p_IG_id'];
+ $FB = $_POST['p_FB_id'];
+//  echo $compony_name;
+//  echo $servicse;
+//  echo $email;
+//  $services = $_POST['p_ser_places'];
+//  $profession = $_POST['p_profession'];
+ 
+//  $experience = $_POST['p_experience'];
+  
+ // Performing insert query execution
+ // here our table name is college
+ $sql = "INSERT INTO create_profile(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
+  
+ $result = mysqli_query($conn, $sql);
+ if ($result) {
+    echo "";
+
+	 //echo nl2br("\n$name\n $username\n "
+		// . "$pass\n $address\n $gender \n $email\n $services\n $profession\n $m_no\n $experience");
+   } 
+ else{
+	 echo "ERROR: Hush! Sorry $sql. "
+		 . mysqli_error($conn);
+   }
+}
+  
+ // Close connection
+ mysqli_close($conn);
+ ?>

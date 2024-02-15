@@ -23,7 +23,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#edit">
+										<a href="forms.php">
 											<span class="link-collapse">Edit Profile</span>
 										</a>
 									</li>
@@ -43,28 +43,28 @@
 							<a href="components.php">
 								<i class="la la-table"></i>
 								<p>Components</p>
-								<span class="badge badge-count">14</span>
+								
 							</a>
 						</li>
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="forms.php">
 								<i class="la la-keyboard-o"></i>
-								<p>Forms</p>
-								<span class="badge badge-count">50</span>
+								<p> Edit Profile</p>
+								
 							</a>
-						</li>
+						</li> -->
 						<li class="nav-item">
 							<a href="tables.php">
 								<i class="la la-th"></i>
 								<p>Tables</p>
-								<span class="badge badge-count">6</span>
+								
 							</a>
 						</li>
 						
                         <li class="nav-item">
-							<a href="vendor.php">
+							<a href="gallery.php">
 								<i class="la la-table"></i>
-								<p>Vendor</p>
+								<p>gallery</p>
 								<span class="badge badge-count"></span>
 							</a>
 						</li>
