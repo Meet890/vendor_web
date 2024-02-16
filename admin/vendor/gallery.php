@@ -1,6 +1,12 @@
 <?php
 require 'config.php';
-session_start();
+
+require '../session.php';
+if(!isset($_SESSION["username"])){
+	header("location:../login.php");
+}
+
+
 
 
 if(isset($_POST["submit"])){
@@ -40,7 +46,7 @@ if(isset($_POST["submit"])){
   
 		move_uploaded_file($tmpName, 'img/' . $newImageName);
 		$v_id = $_SESSION["id"];
-		$query = "INSERT INTO gallary(v_id,g_photo) values ('$v_id','$newImageName') ";
+		$query = "INSERT INTO gallery(v_id,g_photo) values ('$v_id','$newImageName') ";
 		// $query = "INSERT INTO gallary VALUES('', '$newImageName')";
 		mysqli_query($conn, $query);
 		echo

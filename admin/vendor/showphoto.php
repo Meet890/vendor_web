@@ -4,7 +4,7 @@
       $i = 1;
       $ID= $_SESSION["id"];
       
-        $rows = mysqli_query($conn, "SELECT * FROM gallary WHERE v_id = $ID ORDER BY g_id DESC")
+        $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $ID ORDER BY g_id DESC")
 ?>
 
       <?php foreach ($rows as $row) : ?>

@@ -1,3 +1,13 @@
+<?php
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(!isset($_SESSION["c_username"])){
+	header("location:login/login.php");
+ 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +25,7 @@
 </head>
 <body>
 <?php 
-    // include("header.php");
+    include("header.php");
 
 ?>
 
@@ -85,7 +95,8 @@ if (mysqli_num_rows($result) > 0) {
                 </div>
         </div>   
       </div>
-      
+     
+
 
       <?php
     }
@@ -97,13 +108,17 @@ if (mysqli_num_rows($result) > 0) {
   
   mysqli_close($conn);
   ?>
-  <?php 
+     </div>
+     </form>
+    </div>
+</div>
 
-    include("../footer.php");
+<?php 
+
+include("../footer.php");
 
 
 ?>
-
 
     <!--BS 5 js link-->
 
@@ -114,7 +129,9 @@ if (mysqli_num_rows($result) > 0) {
     
   }
 </script>
+
 </body>   
+
 
 
 

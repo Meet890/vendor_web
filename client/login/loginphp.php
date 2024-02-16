@@ -4,7 +4,7 @@
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["c_username"]) &&( $_SESSION["loggedin"] === true)){
-    header("location: index.php");
+    header("location: ./index.php");
     exit;
 }
 // Include config file
@@ -46,15 +46,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $password);
                     
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify( $_POST["password"],$password)){
+                        if( $_POST["password"]= $password){
                             // Password is correct, so start a new session
-                            session_start();
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
+                            
+                              $sql = "SELECT * FROM client where c_username = '$uname'" ;
+                              $result = mysqli_query($conn, $sql);
+
+                              if ($result) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    $_SESSION["c_id"] = "$row[c_id]";
+                                    $_SESSION["c_username"] = "$row[c_username]";
+                                    $_SESSION["c_name"] = "$row[c_name]";
+                                    $_SESSION["c_city"] = "$row[c_city]";
+                                    $_SESSION["c_email"] = "$row[c_email]";  
+                                    $_SESSION["loggedin"] = "true";  
+                                    ?>
+                                    <script type="text/javascript">
+                                        alert ="session is created";
+                                        </script>
+                                    <?php
+
+                                }
+                            }
                             echo '<script>  alert("connected"); </script>';
-                            header("location: ./client/index.php");
+                            header("location: ../index.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $_SESSION["password"] =$password;
@@ -95,7 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             alert ="session is created";
             </script>
         <?php
-        header("Location: index.php");
+       
     }
 }
     else{
