@@ -8,7 +8,7 @@
 						<div class="info">
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Hizrian
+								<?php echo $_SESSION["username"]; ?>
 									<span class="user-level">Administrator</span>
 									<span class="caret"></span>
 								</span>

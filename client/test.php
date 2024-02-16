@@ -93,15 +93,15 @@ if ($result->num_rows > 0) {
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery">
-            <img src="img/f2.jpg" onclick="openModal('f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f1.jpg" onclick="openModal('f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f1.jpg" onclick="openModal('f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f2.jpg" onclick="openModal('f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
-            <img src="img/unnamed.jpg" onclick="openModal('unnamed.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('f3.jpg')" alt="Gallery Image 3">
+            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
+            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
+            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
+            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
+            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
+            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
+            <img src="img/unnamed.jpg" onclick="openModal('img/unnamed.jpg')" alt="Gallery Image 3">
+            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
+            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
             <!-- Add more images as needed -->
         </div>
 

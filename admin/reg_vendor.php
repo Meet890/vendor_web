@@ -27,6 +27,17 @@ include('reg_vendor_php.php');
     } */
 
      /* Add some basic styling for better visibility */
+     body, html {
+height: 100%;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-image: url("ss.png");
+background-size: fill;
+background-position: center;
+background-repeat: no-repeat;
+background-color: rgba(0,0,0, 1);
+
+}
      .dropdown {
             position: relative;
             display: inline-block;
@@ -48,6 +59,10 @@ include('reg_vendor_php.php');
         }
         P{
           color:red;
+        }
+        .row{
+          background: linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,.4),rgba(0,0,0,.8));
+
         }
   </style>
 </head>
