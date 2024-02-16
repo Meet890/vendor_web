@@ -61,7 +61,7 @@ include('reg_vendor_php.php');
     
     <!--====registration form====-->
     <div class="registration-form">
-      <h4 class="text-center">Create a New Account</h4>
+      <h4 class="text-center mt-2">Create a New Account</h4>
       
 <p class="text-success text-center"><?php echo $valid; ?></p> <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 
@@ -151,13 +151,13 @@ include('reg_vendor_php.php');
                </p>
         </div>
         
-        <div class=""></div>
+        <div class="col-12">
         <button type="submit" class="btn btn-danger my-1" value="Register" name="register">Register Now</button>
+        </div>
       </form>
     </div>
    </div>
-   <div class="col-sm-4">
-   </div>
+ 
  </div>
   
 </div>
