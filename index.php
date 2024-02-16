@@ -43,7 +43,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="client/login/login.php">Login as Client</a></li>
-            <li><a class="dropdown-item" href="vendor/vendor_reg3.php">Login as Vendor</a></li>
+            <li><a class="dropdown-item" href="admin/login.php">Login as Vendor</a></li>
           </ul>
         </li>
       </ul>
