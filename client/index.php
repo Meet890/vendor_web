@@ -24,7 +24,7 @@
 <!--slider-->
   <div class="row justify-content-center " >
   
-  <section class="slider mt-90 col-11 " id="slider">
+  <section class="slider mt-5 col-11 " id="slider">
 
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
