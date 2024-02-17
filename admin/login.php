@@ -1,5 +1,6 @@
 <?php
-require_once "loginphp.php"
+require_once "loginphp.php";
+include "../header2.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@ require_once "loginphp.php"
     <title>Login Form</title>
   
     <link rel="stylesheet" href="reg.css">    
-
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 
 <body>
@@ -85,6 +86,8 @@ require_once "loginphp.php"
         }
     }
         </script>
-
+        
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
