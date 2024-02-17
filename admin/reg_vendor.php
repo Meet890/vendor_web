@@ -83,19 +83,19 @@ background-color: rgba(0,0,0, 1);
 
         <!--//first name//-->
         <div class="form-group">
-           <label for="email">First Name</label>
-               <input type="text" class="form-control" placeholder="Enter First Name" name="first_name" value="<?php echo $set_firstName;?>">
+           <label>Name</label>
+               <input type="text" class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_Name;?>">
                <p class="err-msg">
-                <?php if($fnameErr!=1){ echo $fnameErr; }?>
+                <?php if($nameErr!=1){ echo $nameErr; }?>
                </p>
         </div>
 
         <!--//last name//-->
         <div class="form-group">
-           <label for="email">Last Name</label>
-               <input type="text" class="form-control" placeholder="Enter Last Name" name="last_name" value="<?php echo $set_lastName;?>">
+           <label >username</label>
+               <input type="text" class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
                <p class="err-msg">
-                <?php if($lnameErr!=1){ echo $lnameErr; }?>
+                <?php if($usernameErr!=1){ echo $usernameErr; }?>
                </p>
         </div>
 

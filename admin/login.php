@@ -29,7 +29,7 @@ require_once "loginphp.php"
                 ?>
                 <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
-                        <input type="Username" id="Username" name="username" placeholder=" " required autocomplete="on">
+                        <input type="Username" id="Username" name="username" placeholder=" " value="" required autocomplete="on">
                         <label for="Username">Username</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
                         <!-- <i class="fa fa-envelope"></i> -->
