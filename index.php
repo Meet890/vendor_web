@@ -20,9 +20,9 @@
 
 <body>
   <!--navbar-->
-  <?php include 'header.php' ?>
+  <?php include 'header2.php' ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
     <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
   </a>
@@ -50,7 +50,7 @@
       </div>
   </div>
 </nav>
-
+ -->
 <!--slider-->
   <div class="row justify-content-center " >
   
@@ -69,7 +69,7 @@
       <div class="carousel-caption a2">
         <h5>FIND THE BEST DECORATION</h5>
         <p>Your Choise Your Budget.</p>
-        <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
+        <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
       </div>
     </div>
     <div class="carousel-item">
@@ -77,7 +77,7 @@
       <div class="carousel-caption a2">
         <h5>FIND BEST CATRING SERVICES</h5>
         <p>Your Choise Your Budget.</p>
-        <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
+        <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
       </div>
     </div>
     <div class="carousel-item">
@@ -85,7 +85,7 @@
       <div class="carousel-caption a2">
         <h5>FIND BEST SOUND</h5>
         <p>Your Choise Your Budget.</p>
-        <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
+        <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
       </div>
     </div>
   </div>
