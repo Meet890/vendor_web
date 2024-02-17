@@ -4,8 +4,11 @@
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["c_username"]) &&( $_SESSION["loggedin"] === true)){
-    header("location: ./index.php");
+    header("location: ../index.php");
     exit;
+}
+else if(isset($_SESSION["username"])){
+  header("location:../../admin/vendor/index.php");
 }
 // Include config file
 require_once "config.php";

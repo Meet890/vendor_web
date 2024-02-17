@@ -1,5 +1,6 @@
 <?php
-require_once "loginphp.php"
+require_once "loginphp.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
