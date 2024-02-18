@@ -53,13 +53,13 @@
 								
 							</a>
 						</li> -->
-						<!-- <li class="nav-item">
-							<a href="tables.php">
+						<li class="nav-item">
+							<a href="about.php">
 								<i class="la la-th"></i>
-								<p>Tables</p>
+								<p>about</p>
 								
 							</a>
-						</li> -->
+						</li>
 						
                         <li class="nav-item">
 							<a href="gallery.php">
