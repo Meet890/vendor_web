@@ -29,6 +29,9 @@
           <a class="nav-link" href="../client/">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#event">Services</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#footer">About us</a>
         </li>
         <li class="nav-item dropdown">
@@ -36,13 +39,13 @@
             vendor
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Decorators</a></li>
-            <li><a class="dropdown-item" href="#">photographers</a></li>
-            <li><a class="dropdown-item"  href="#">vediographers</a></li>
-						<li><a class="dropdown-item"  href="#">cake</a></li>
-						<li><a class="dropdown-item"  href="#">flowers</a></li>
-						<li><a class="dropdown-item"  href="#">wedding wear</a></li>
-						<li><a class="dropdown-item"  href="#">jewellery</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "decorator";?>">Decorators</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "photographer";?>">photographers</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "videographer";?>">vediographers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">cake</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "flowers";?>">flowers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "wedding wear";?>">wedding wear</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "jewellery";?>">jewellery</a></li>
 						<li><a class="dropdown-item"  href="#">invitation cards</a></li>
 						<li><a class="dropdown-item"  href="#">sound</a></li>
 						<li><a class="dropdown-item"  href="#">planners</a></li>

@@ -437,3 +437,12 @@ textarea {
 .btn-group .btn.cancel:hover {
   background: var(--light);
 }
+
+
+:root {
+  --meet-color: #ffff00;
+}
+
+.btn-group .btn.cancel:hover {
+  background: var(--meet-color);
+}

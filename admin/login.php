@@ -1,5 +1,6 @@
 <?php
-require_once "loginphp.php"
+require_once "loginphp.php";
+include "../header2.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +11,7 @@ require_once "loginphp.php"
     <title>Login Form</title>
   
     <link rel="stylesheet" href="reg.css">    
-
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@ require_once "loginphp.php"
                 ?>
                 <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
-                        <input type="Username" id="Username" name="username" placeholder=" " required autocomplete="on">
+                        <input type="Username" id="Username" name="username" placeholder=" " value="" required autocomplete="on">
                         <label for="Username">Username</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
                         <!-- <i class="fa fa-envelope"></i> -->
@@ -85,6 +86,8 @@ require_once "loginphp.php"
         }
     }
         </script>
-
+        
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>

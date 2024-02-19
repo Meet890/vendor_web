@@ -56,7 +56,7 @@
 						<div class="contact_info">
 							<div class="single_info">
 								<div class="icon">
-									<i class="fas fa-phone-alt"></i>
+									<i class="fas fa-phone"></i>
 								</div>
 								<div class="info">
 									<p><a href="tel:+919246147999">+91 6355008608</a></p>

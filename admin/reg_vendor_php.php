@@ -1,7 +1,7 @@
 <?php
 
 $conn = mysqli_connect("localhost", "root", "", "vendor");
-  
+session_start();
  // Check connection
  if($conn === false){
 	 die("ERROR: Could not connect. "
@@ -9,10 +9,10 @@ $conn = mysqli_connect("localhost", "root", "", "vendor");
  }
 
 // by default, error messages are empty
-$valid=$fnameErr=$lnameErr=$phoneErr=$emailErr=$passErr=$cpassErr=$AddErr=$GenErr=$cnameErr='';
+$valid=$nameErr=$usernameErr=$phoneErr=$emailErr=$passErr=$cpassErr=$AddErr=$GenErr=$cnameErr='';
 
 // by default,set input values are empty
-$set_firstName=$set_lastName=$set_PhoneNo=$set_email=$set_pass=$set_cpass=$set_add=$set_Gender=$set_ComName='';    
+$set_Name=$set_username=$set_PhoneNo=$set_email=$set_pass=$set_cpass=$set_add=$set_Gender=$set_ComName='';    
  extract($_POST);
 
 if(isset($_POST['register']))
@@ -20,6 +20,7 @@ if(isset($_POST['register']))
    
    //input fields are Validated with regular expression
    $validName="/^[a-zA-Z ]*$/";
+   $validUserName="/^[A-Za-z0-9]+$/";
    $validEmail="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
    $uppercasePassword = "/(?=.*?[A-Z])/";
    $lowercasePassword = "/(?=.*?[a-z])/";
@@ -30,23 +31,23 @@ if(isset($_POST['register']))
    $phoneNo="/^[0-9]{10}+$/";
 
   //  First Name Validation
-if(empty($first_name)){
+if(empty($name)){
    $fnameErr="First Name is Required"; 
 }
-else if (!preg_match($validName,$first_name)) {
-   $fnameErr="Digits are not allowed";
+else if (!preg_match($validName,$name)) {
+   $nameErr="Digits are not allowed";
 }else{
-   $fnameErr=true;
+   $nameErr=true;
 }
 
 //  last Name Validation
-if(empty($last_name)){
-   $lnameErr="last Name is Required"; 
+if(empty($username)){
+   $usernameErr="username is Required"; 
 }
-else if (!preg_match($validName,$last_name)) {
-   $lnameErr="Digits are not allowed";
+else if (!preg_match($validUserName,$username)) {
+   $usernameErr="Only characters and digits are allowed";
 }else{
-   $lnameErr=true;
+   $usernameErr=true;
 }
 
 //  phone no Validation
@@ -112,7 +113,7 @@ else{
 if(empty($compony_name)){
    $cnameErr="Compony Name is Required"; 
 }
-else if (!preg_match($validName,$first_name)) {
+else if (!preg_match($validName,$name)) {
    $cnameErr="Digits are not allowed";
 }else{
    $cnameErr=true;
@@ -120,12 +121,15 @@ else if (!preg_match($validName,$first_name)) {
  
 
 // check all fields are valid or not
-if($fnameErr==1 && $lnameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )
+if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )
 {
    
- //legal input values
-   $firstName= legal_input($first_name);
-   $lastName= legal_input($last_name);
+
+   
+   
+   //legal input values
+   $name= legal_input($name);
+   $username= legal_input($username);
    $phoneNo=  legal_input($Phone_no);
 
    $email=     legal_input($email);
@@ -133,10 +137,11 @@ if($fnameErr==1 && $lnameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 &
    $address=  legal_input($Address);
    $gender=   legal_input($v_gender);
    $comname= legal_input($compony_name);
-   $sql = "INSERT INTO registration (r_fname, r_lname, r_phone, r_email, r_pass, r_add, r_gen, r_com)  VALUES ('$firstName','$lastName','$phoneNo','$email','$password','$address','$gender','$comname')";
+   $sql = "INSERT INTO registration (reg_name, reg_username, reg_phone, reg_email, reg_pass, reg_add, reg_gen, reg_com)  VALUES ('$name','$username','$phoneNo','$email','$password','$address','$gender','$comname')";
    if(mysqli_query($conn, $sql)==true){
       // Redirect to login page
-      header("location: login.php");
+      $_SESSION["test_username"]=$username;
+      header("location: scanner.php");
   } else{
       echo "Oops! Something went wrong. Please try again later.";
   }
@@ -144,8 +149,8 @@ if($fnameErr==1 && $lnameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 &
    // here you can write Sql Query to insert user data into database table
 }else{
      // set input values is empty until input field is invalid
-    $set_firstName=$first_name;
-    $set_lastName=$last_name;
+    $set_name=$name;
+    $set_username=$username;
     $set_PhoneNo=$Phone_no;
    //  $set_lastName= $last_name;
     $set_email=$email;
