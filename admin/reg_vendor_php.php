@@ -123,10 +123,7 @@ else if (!preg_match($validName,$first_name)) {
 if($fnameErr==1 && $lnameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )
 {
    
-
-   
-   
-   //legal input values
+ //legal input values
    $firstName= legal_input($first_name);
    $lastName= legal_input($last_name);
    $phoneNo=  legal_input($Phone_no);
@@ -169,5 +166,6 @@ function legal_input($value) {
   $value = stripslashes($value);
   $value = htmlspecialchars($value);
   return $value;
+
 }
 ?>

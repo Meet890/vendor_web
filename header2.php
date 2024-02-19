@@ -17,6 +17,7 @@
     
 </head>
 <body>
+
 <!--navbar-->
 
 
@@ -43,9 +44,9 @@
         <img src="images/download.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="<?php if(isset($_SESSION["user"])){ echo "profile.php";}else{ echo "register.php";} ?>"><?php if(isset($_SESSION["user"])){ echo "Profile";}else{ echo "Register";} ?></a></li>
+            <!-- <li><a class="dropdown-item" href="<?php if(isset($_SESSION["user"])){ echo "profile.php";}else{ echo "register.php";} ?>"><?php if(isset($_SESSION["user"])){ echo "Profile";}else{ echo "Register";} ?></a></li> -->
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?php if(isset($_SESSION["user"])){ echo "logout.php";}else{ echo "login.php";} ?>"><?php if(isset($_SESSION["user"])){ echo "Logout";}else{ echo "Login";} ?></a></li>
+            <li><a class="dropdown-item" href="<?php if(isset($_SESSION["user"])){ echo "client/login/logout.php";}else{ echo "client/login/login.php";} ?>"><?php if(isset($_SESSION["user"])){ echo "Logout";}else{ echo "Login";} ?></a></li>
            <li></li>
           </ul>
         </li>
