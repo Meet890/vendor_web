@@ -187,46 +187,6 @@ transform-origin: right bottom;
 transform: scale3d(1, 1, 1);
 }
 
-/*......about us.....*/
-/*.img2{
-  height: 435px;
-  width: 500px;
-  border-color: black;
-  border-width: 2px;
-}
-
-.font{
-  font-weight: 400;
-}
-.img-fluid_about{
-    padding-left: 17px;
-    padding-right: 0px;
-    padding-bottom: 28px;
-    padding-top: 9px;
-    border-color: black;
-  border-width: 2px;
-}
-.fw-bold {
-  font-weight: 700!important;
-  color: #aacce2;
-}
-.font {
-  font-weight: 400;
-  color: #caccc9;
-}
-.text-secondary {
-  color: #a3d0ec!important;
-}*/
-
-/*........registration....
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  margin-top: 91px;
-  height: 216px;
-  width: 360px;
-}
-*/
 
 /*.....responsive css for slider ....*/
 
@@ -389,13 +349,7 @@ transform: scale3d(1, 1, 1);
 
  /* meet */
 
-
-
-
-
-
- 
- .wrapper {
+.wrapper {
   background: var(--white);
   padding: 2rem;
   max-width: 576px;

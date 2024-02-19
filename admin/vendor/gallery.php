@@ -1,43 +1,65 @@
 <?php
 require 'config.php';
-session_start();
+
+require '../session.php';
+if(!isset($_SESSION["username"])){
+	header("location:../login.php");
+}
 
 
+
+
+if(isset($_POST["submit"])){
+	
+	if($_FILES["image"]["error"] == 4){
+	  echo
+	  "<script> alert('Image Does Not Exist'); </script>"
+	  ;
+	}
+	else{
+	  $fileName = $_FILES["image"]["name"];
+	  $fileSize = $_FILES["image"]["size"];
+	  $tmpName = $_FILES["image"]["tmp_name"];
+  
+	  $validImageExtension = ['jpg', 'jpeg', 'png'];
+	  $imageExtension = explode('.', $fileName);
+	  $imageExtension = strtolower(end($imageExtension));
+	  if ( !in_array($imageExtension, $validImageExtension) ){
+		echo
+		"
+		<script>
+		  alert('Invalid Image Extension');
+		</script>
+		";
+	  }
+	  else if($fileSize > 20000000){
+		echo
+		"
+		<script>
+		  alert('Image Size Is Too Large');
+		</script>
+		";
+	  }
+	  else{
+		$newImageName = uniqid();
+		$newImageName .= '.' . $imageExtension;
+  
+		move_uploaded_file($tmpName, 'img/' . $newImageName);
+		$v_id = $_SESSION["id"];
+		$query = "INSERT INTO gallery(v_id,g_photo) values ('$v_id','$newImageName') ";
+		// $query = "INSERT INTO gallary VALUES('', '$newImageName')";
+		mysqli_query($conn, $query);
+		echo
+		"
+		<script>
+		  alert('Successfully Added');
+		  
+		</script>
+		";
+	  }
+	}
+  }
  
-if(isset($_POST["submit"])){ 
-    if(!empty($_FILES["file"]["name"])){ 
-        $fileName = basename($_FILES["file"]["name"]); 
-        $targetFilePath =  $fileName; 
-        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION); 
-     
-		
-        // Allow certain file formats 
-        $allowTypes = array('jpg','png','jpeg','gif'); 
-        if(in_array($fileType, $allowTypes)){ 
-            // Upload file to server 
-            if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){ 
-                // Insert image file name into database 
-                $insert = $conn->query("INSERT INTO gallery(g_photo) VALUES ('".$fileName."', NOW())"); 
-                if($insert){ 
-                    $statusMsg = "The file ".$fileName. " has been uploaded successfully."; 
-                }else{ 
-                    $statusMsg = "File upload failed, please try again."; 
-                }  
-            }else{ 
-                $statusMsg = "Sorry, there was an error uploading your file."; 
-            } 
-        }else{ 
-            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
-        } 
-    }else{ 
-        $statusMsg = 'Please select a file to upload.'; 
-    } 
-} 
- 
-// Display status message 
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,6 +71,20 @@ if(isset($_POST["submit"])){
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="assets/css/ready.css">
 	<link rel="stylesheet" href="assets/css/demo.css">
+	<style>
+		.img1{
+			align-self: center;
+		width: auto;
+		height: 100%;
+		
+		}
+		.imgholder{
+			height: 240px;
+			width: auto;
+			overflow: hidden;
+			
+		}
+	</style>
 </head>
 <body>
 	<div class="wrapper">
@@ -69,29 +105,16 @@ if(isset($_POST["submit"])){
                         
 						<div class="row">
 								<div class="col-12">
-									<form action="" method="post" enctype="multipart/form-data">
-										Select Image File to Upload:
-										<input type="file" name="file">
-										<input type="submit" name="submit" value="Upload">
-									</form>
-
+								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
+							      <label for="image">Image : </label>
+							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""> <br> <br>
+							      <button type = "submit" name = "submit">Submit</button>
+							    </form>
 								</div>
 								<div class="col-12">
 								<?php
-										
-
-										// Get images from the database
-										$query = $conn->query("SELECT * FROM gallery ORDER BY g_uploadtime DESC");
-
-										if($query->num_rows > 0){
-										    while($row = $query->fetch_assoc()){
-										        $imageURL = 'uploads/'.$row["file_name"];
-										?>
-										    <img src="<?php echo $imageURL; ?>" alt="" />
-										<?php }
-										}else{ ?>
-										    <p>No image(s) found...</p>
-										<?php } ?>
+									include 'showphoto.php';
+								?>
 								</div>
 						</div>
 						

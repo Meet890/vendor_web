@@ -39,13 +39,13 @@
 								<span class="badge badge-count"></span>
 							</a>
 						</li>
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="components.php">
 								<i class="la la-table"></i>
 								<p>Components</p>
 								
 							</a>
-						</li>
+						</li> -->
 						<!-- <li class="nav-item">
 							<a href="forms.php">
 								<i class="la la-keyboard-o"></i>
@@ -53,13 +53,13 @@
 								
 							</a>
 						</li> -->
-						<li class="nav-item">
+						<!-- <li class="nav-item">
 							<a href="tables.php">
 								<i class="la la-th"></i>
 								<p>Tables</p>
 								
 							</a>
-						</li>
+						</li> -->
 						
                         <li class="nav-item">
 							<a href="gallery.php">

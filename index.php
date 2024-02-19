@@ -1,3 +1,19 @@
+<?php
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(isset($_SESSION["c_username"])){
+	header("location:client/index.php");
+ 
+}
+elseif(isset($_SESSION["username"])){
+	header("location:admin/vendor/");
+}
+else{
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +70,7 @@
 <!--slider-->
   <div class="row justify-content-center " >
   
-  <section class="slider col-11 " id="slider">
+  <section class="slider col-11 mt-5 " id="slider">
 
 <div class="hight">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -256,6 +272,7 @@
 
 
 <script src="js/bootstrap.min.js"></script>  
+<script src="js/bootstrap.bundle.min.js"></script> 
 </html>
 <section class="footer" id="footer">
   <?php

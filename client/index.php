@@ -1,3 +1,15 @@
+<?php
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
+	header("location:login/login.php");
+ 
+}
+else if(isset($_SESSION["username"])){
+  header("location:.././admin/vendor/index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,9 +36,8 @@
 <!--slider-->
   <div class="row justify-content-center " >
   
-  <section class="slider mt-90 col-11 " id="slider">
+  <section class="slider mt-5 col-11 " id="slider">
 
-<div class="hight">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -35,7 +46,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../img/decoration2.jpg" class="d-block w-100" alt="img1">
+      <img src="../img/decoration2.jpg" class="d-block w-100 h-100" alt="img1">
       <div class="carousel-caption a2">
         <h5>FIND THE BEST DECORATION</h5>
         <p>Your Choise Your Budget.</p>
@@ -43,7 +54,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/catring2.jpg" class="d-block w-100" alt="img2">
+      <img src="../img/catring2.jpg" class="d-block w-100 h-100" alt="img2">
       <div class="carousel-caption a2">
         <h5>FIND BEST CATRING SERVICES</h5>
         <p>Your Choise Your Budget.</p>
@@ -51,7 +62,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/SOUND2.jpg" class="d-block w-100" alt="img3">
+      <img src="../img/SOUND2.jpg" class="d-block w-100 h-100" alt="img3">
       <div class="carousel-caption a2">
         <h5>FIND BEST SOUND</h5>
         <p>Your Choise Your Budget.</p>
@@ -68,7 +79,7 @@
     <span class="visually-hidden" >Next</span>
   </button>
 </div>
-</div>
+
 </section>
 
 </div>

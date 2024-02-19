@@ -1,3 +1,17 @@
+<?php
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
+	header("location:login/login.php");
+ 
+}
+else if(isset($_SESSION["username"])){
+  header("location:.././admin/vendor/index.php");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +29,7 @@
 </head>
 <body>
 <?php 
-    // include("header.php");
+    include("header.php");
 
 ?>
 
@@ -80,12 +94,13 @@ if (mysqli_num_rows($result) > 0) {
          </div>
                 <div class="d-grid gap-2">
 
-                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='test.php?username=<?php echo $username ?>'>More Info</a></button>
+                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='profile.php?username=<?php echo $username ?>'>More Info</a></button>
 
                 </div>
         </div>   
       </div>
-      
+     
+
 
       <?php
     }
@@ -97,13 +112,17 @@ if (mysqli_num_rows($result) > 0) {
   
   mysqli_close($conn);
   ?>
-  <?php 
+     </div>
+     </form>
+    </div>
+</div>
 
-    include("../footer.php");
+<?php 
+
+include("../footer.php");
 
 
 ?>
-
 
     <!--BS 5 js link-->
 
@@ -114,7 +133,9 @@ if (mysqli_num_rows($result) > 0) {
     
   }
 </script>
+
 </body>   
+
 
 
 
