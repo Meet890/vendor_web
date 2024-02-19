@@ -2,13 +2,11 @@
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
 
-if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
-	header("location:login/login.php");
+if(!isset($_SESSION["username"])&& $_SESSION["loggedin"] = "false"){
+	header("location:../login.php");
  
 }
-else if(isset($_SESSION["username"])){
-  header("location:.././admin/vendor/index.php");
-}
+
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -22,7 +20,7 @@ else if(isset($_SESSION["username"])){
 <body>
     <?php
 
-    $v_username = $_GET["username"];
+    $v_username = $_SESSION["username"];
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -122,16 +120,12 @@ if ($result->num_rows > 0) {
             <img class="modal-content" id="modalImg">
         </div>
 
-
-        <!-- rateinggg -->
-
-
         <div class="container">
         <h1>Give your reating..</h1>
         <div class="rating">
-            <span id="rating" name="r_star">0</span>/5
+            <span id="rating">0</span>/5
         </div>
-        <div class="stars" id="stars" name="">
+        <div class="stars" id="stars">
             <span class="star" data-value="1">★</span>
             <span class="star" data-value="2">★</span>
             <span class="star" data-value="3">★</span>
@@ -140,9 +134,9 @@ if ($result->num_rows > 0) {
         </div>
         <p>Share your review:</p>
         <textarea id="review"
-                  placeholder="Write your review here" name="r_discription">
+                  placeholder="Write your review here">
           </textarea>
-        <button id="submit" name="submit">Submit</button>
+        <button id="submit">Submit</button>
         <div class="reviews" id="reviews">
         </div>
     </div>
@@ -247,27 +241,3 @@ if ($result->num_rows > 0) {
 
 </body>
 </html>
-<?php
-
-    require 'config.php';
-    
-    
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $discription=$_POST["r_discription"];
-        $rating= $_POST["r_star"];
-        echo $rating;
-        // $sql="insert into rating(r_discription,r_star) values($name,$rating)";
-
-        // if($conn->query($sql) === TRUE)
-        // {
-        //     echo"successfully";
-        // }
-        // else{
-        //     echo"error";
-        // }
-    }
-        mysqli_close($conn);
-    
-
-?>

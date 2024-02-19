@@ -134,7 +134,6 @@ require 'config.php';
 														<th>Vendor Gender</th>
 														<th>Vendor Service places</th>
 														<th>Vendor Profession</th>
-														<th>Vendor Experience</th>
 														<th>Instagram Link</th>
 														<th>Facebook Link</th>
 														<th>Whatsapp Link</th>
@@ -165,7 +164,7 @@ require 'config.php';
 															  $gender=$row["v_gender"];
 															  $serplc=$row["v_ser_places"];
 															  $profession=$row["v_profession"];
-															  $experience=$row["v_experience"];
+															 
 															  $ig=$row["v_iglink"];
 															  $fb=$row["v_fblink"];
 															  $wa=$row["v_walink"];
@@ -185,7 +184,7 @@ require 'config.php';
 														<td><?php echo $gender  ?></td>
 														<td><?php echo $serplc  ?></td>
 														<td><?php echo $profession  ?></td>	
-														<td><?php echo $experience  ?></td>
+														
 														<td><?php echo $ig  ?></td>
 														<td><?php echo $fb  ?></td>
 														<td><?php echo $wa  ?></td>
