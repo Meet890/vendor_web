@@ -8,11 +8,8 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
   
-    
+    <script src="./js/bootstrap.bundle.js"></script> 
     <!--extranal css file-->
-    
-  
-    
     
 </head>
 <body>
@@ -29,7 +26,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="../index.php">Home</a>
+          <a class="nav-link" href="../client/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#event">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#footer">About us</a>
@@ -39,13 +39,13 @@
             vendor
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Decorators</a></li>
-            <li><a class="dropdown-item" href="#">photographers</a></li>
-            <li><a class="dropdown-item"  href="#">vediographers</a></li>
-						<li><a class="dropdown-item"  href="#">cake</a></li>
-						<li><a class="dropdown-item"  href="#">flowers</a></li>
-						<li><a class="dropdown-item"  href="#">wedding wear</a></li>
-						<li><a class="dropdown-item"  href="#">jewellery</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "decorator";?>">Decorators</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "photographer";?>">photographers</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "videographer";?>">vediographers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">cake</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "flowers";?>">flowers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "wedding wear";?>">wedding wear</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "jewellery";?>">jewellery</a></li>
 						<li><a class="dropdown-item"  href="#">invitation cards</a></li>
 						<li><a class="dropdown-item"  href="#">sound</a></li>
 						<li><a class="dropdown-item"  href="#">planners</a></li>
@@ -54,34 +54,26 @@
 						<li><a class="dropdown-item"  href="#">gifts</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-           
-          </ul>
-        </li>
-        <!-- <li>
+       
+        <li>
         <div class="dropdown text-end ms-2">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
-          <ul class="dropdown-menu text-small show" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
             <li><a class="dropdown-item" href="#">Profile</a></li>
             
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
+            <li><a class="dropdown-item" href="login/Logout.php">Sign out</a></li>
           </ul>
         </div>
-        </li> -->
+        </li>
+
         </ul>
       </div>
   </div>
 </nav>
 <script src="../js/bootstrap.min.js"></script>  
+<script src="../js/bootstrap.bundle.js"></script>  
 </body>
 </html>

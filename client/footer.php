@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <!--extranal css file-->
-    <link href="/font/fontawesome.min.css" rel="stylesheet">
+    <link href="../font/fontawesome.min.css" rel="stylesheet">
 	<link href="footer.css" rel="stylesheet">
-	<link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    rel="stylesheet"
-    />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     
   
 </head>
@@ -53,7 +50,7 @@
 									<i class="fas fa-phone-alt"></i>
 								</div>
 								<div class="info">
-									<p><a href="tel:+919246147999">+91 6355008608</a></p>
+									<p><a href="tel:+91 6355008608">+91 6355008608</a></p>
 									
 								</div>
 							</div>
@@ -62,7 +59,7 @@
 									<i class="fas fa-envelope"></i>
 								</div>
 								<div class="info">
-									<p><a href="mailto:info@deneb.com">vendorpartners@gmail.com</a></p>
+									<p><a href="mailto:vendorpartners@gmail.com">vendorpartners@gmail.com</a></p>
 								</div>
 							</div>
 							<div class="single_info">

@@ -19,7 +19,7 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="button_box">
-						<a href="vendor/vendor_reg3.php" class="btn btn-dark">Registration</a>
+						<a href="vendor/reg_vendor.php" class="btn btn-dark">Registration</a>
 					</div>
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 						<div class="contact_info">
 							<div class="single_info">
 								<div class="icon">
-									<i class="fas fa-phone-alt"></i>
+									<i class="fas fa-phone"></i>
 								</div>
 								<div class="info">
 									<p><a href="tel:+919246147999">+91 6355008608</a></p>

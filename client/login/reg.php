@@ -1,5 +1,6 @@
 <?php
-require_once "registerphp.php"
+require_once "registerphp.php";
+
 ?>
 
 <!DOCTYPE html>

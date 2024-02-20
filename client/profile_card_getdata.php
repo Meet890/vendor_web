@@ -1,6 +1,17 @@
-<?php // Initialize the session
-// Check if the user is already logged in, if yes then redirect him to welcome page
- include 'login/session.php'; ?>
+<?php
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
+	header("location:login/login.php");
+ 
+}
+else if(isset($_SESSION["username"])){
+  header("location:.././admin/vendor/index.php");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +21,9 @@
     <title>Booking Card</title>
 
     <!--BS 5 css link-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     <link href="profile_card.css" rel="stylesheet">
 </head>
@@ -28,6 +39,9 @@
         <h2>Vendors</h2>
         <p>Find the best services</p>
      </div>
+
+     <form method="post" action="test.php">
+
      <div class="row">
      
 
@@ -46,16 +60,22 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT v_name, v_profession, v_ser_places FROM vendor";
+$service = $_GET["service"];
+$sql = "SELECT v_name, v_username, v_photo, v_profession, v_ser_places, v_id FROM vendor where v_profession = '$service'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
+
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
       
       $name= $row["v_name"];
+
+      $username= $row["v_username"];
+      $image = $row["v_photo"];
       $services=$row["v_profession"];
       $city=$row["v_ser_places"];
+      $id=$row["v_id"];
 
       ?>
 
@@ -63,7 +83,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="../img/pro.jpg" class="img-fluid" alt="team1">
+                <img src="<?php echo $image ?>" class="img-fluid" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>
@@ -73,28 +93,49 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
-                <button class="btn btn-primary mt-2" type="button"><a href="profile api/test.php?v_id">More Info</a></button>
+
+                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='profile.php?username=<?php echo $username ?>'>More Info</a></button>
+
                 </div>
         </div>   
       </div>
+     
+
 
       <?php
     }
+
   } else {
+
     echo "0 results";
   }
   
   mysqli_close($conn);
   ?>
-  <?php 
-    include("footer.php");
+     </div>
+     </form>
+    </div>
+</div>
+
+<?php 
+
+include("../footer.php");
+
 
 ?>
 
-
     <!--BS 5 js link-->
-<script src="project/js/bootstrap.min.js"></script>
+
+<script src="/js/bootstrap.min.js"></script>
+
+<script>
+  function redirect($test){
+    
+  }
+</script>
+
 </body>   
+
 
 
 
