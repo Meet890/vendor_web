@@ -42,7 +42,7 @@ else if(isset($_SESSION["username"])){
 
      <form method="post" action="test.php">
 
-     <div class="row">
+     <div class="row ">
      
 
 <?php

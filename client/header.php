@@ -58,7 +58,7 @@
         <li>
         <div class="dropdown text-end ms-2">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
+            <img src="../user.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
             <li><a class="dropdown-item" href="#">Profile</a></li>
