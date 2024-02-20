@@ -52,7 +52,8 @@ require 'config.php';
 														<th>Client Email</th>
 														<th>Client City</th>
 														<th>Client Joined Time</th>
-														<th>Edit or delete</th>
+														<th>Edit</th>
+														<th>delete</th>
 
 													</tr>
 												</thead>
@@ -87,12 +88,12 @@ require 'config.php';
 														<td><?php echo $city  ?></td>
 														<td><?php echo $time  ?></td>	
 														<td>
-														<div class="icon-big text-center">
-														<i class="la la-edit" class="m-4">Edit</i>
-														
-														</div>
-														
-														</td>	
+														  <a href = 'update.php?rn=$row[c_name] & un=$row[c_username] & em=$row[c_email] & $cy=$row[c_city]'>Edit
+														</td>
+														<td>
+														  <a href = 'delete.php?rn=$result[name]'onclick='return
+														  checkdelete()'>Delete
+														</td>
 													</tr>
 															
 															
@@ -138,9 +139,8 @@ require 'config.php';
 														<th>Facebook Link</th>
 														<th>Whatsapp Link</th>
 														<th>Vendor Joined Time</th>
-
-
-														<th>Edit or delete</th>
+														<th>Edit</th>
+														<th>delete</th>
 
 													</tr>
 												</thead>
@@ -190,11 +190,13 @@ require 'config.php';
 														<td><?php echo $wa  ?></td>
 														<td><?php echo $dis  ?></td>												
 														<td>
-														<div class="icon-big text-center">
-														<i class="la la-edit" class="m-4"> Edit	</i>													
-														</div>
-														
-														</td>	
+														  <a href = 'update.php?rn=$result[name]'onclick='return
+														  checkdelete()'>Edit
+														</td>
+														<td>
+														  <a href = 'update.php?rn=$result[name]'onclick='return
+														  checkdelete()'>Delete
+														</td>
 													</tr>
 															
 															
