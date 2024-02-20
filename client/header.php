@@ -16,8 +16,8 @@
 <!--navbar-->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-5">
+ 
     <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
   </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
           <a class="nav-link" href="../client/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#event">Services</a>
+          <a class="nav-link" href="index.php#event">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#footer">About us</a>
+          <a class="nav-link" href="index.php#footer">About us</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,7 +71,7 @@
 
         </ul>
       </div>
-  </div>
+
 </nav>
 <script src="../js/bootstrap.min.js"></script>  
 <script src="../js/bootstrap.bundle.js"></script>  

@@ -19,7 +19,7 @@
 								<ul class="nav">
 									<li>
 										<a href="profile.php">
-											<span class="link-collapse">My Profile</span>
+											<span class="link-collapse">Show My Profile</span>
 										</a>
 									</li>
 									<li>
