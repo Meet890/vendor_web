@@ -23,7 +23,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="forms.php">
+										<a href="Profile_edit_form.php">
 											<span class="link-collapse">Edit Profile</span>
 										</a>
 									</li>
