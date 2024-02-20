@@ -68,8 +68,19 @@
     margin-top: 10px;
     border: 1px solid #dddddd;
     padding: 20px;
-    height: 50vh;
+    height: 55vh;
   }
   .active {
     background-color: #e0e9ff;
+  }
+
+  .submit{
+    width:auto;
+    height: auto;
+    margin-top: 5px;
+    font-size: larger;
+    font-weight: bold;
+    background-color: #153ce6;
+    border: 4px;
+    border-radius: 3px;
   }

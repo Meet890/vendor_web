@@ -1,7 +1,22 @@
 <?php
 require 'config.php';
-
 require '../session.php';
+$about ="";
+    $username =$_SESSION["username"];
+    $sql ="SELECT v_discription FROM vendor WHERE v_username= '$username' ";
+    $result = mysqli_query($conn, $sql); 
+     if($row=mysqli_query($conn,$sql)){ 
+        while ($res = mysqli_fetch_array($row)) {
+       $about =$res['v_discription'];  
+       
+       mysqli_close($conn);
+        }
+     }
+     else{
+        echo "Oops! Something went wrong. Please try again later." .mysqli_error($conn);
+     }
+require 'aboutphp.php';
+
 if(!isset($_SESSION["username"])){
 	header("location:../login.php");
 }
@@ -11,7 +26,7 @@ if(!isset($_SESSION["username"])){
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rich Text Editor</title>
+    <title>About</title>
     <!-- FontAwesome Icons -->
     <link
       rel="stylesheet"
@@ -46,7 +61,8 @@ if(!isset($_SESSION["username"])){
 			</div>
 			<div class="main-panel">
                
-            <div class="container shadowed">
+            <div class="container shadowed mt-5 p-2">
+              <form action="aboutphp.php"></form>
       <div class="options">
         <!-- Text Format -->
         <button id="bold" class="option-button format">
@@ -136,7 +152,11 @@ if(!isset($_SESSION["username"])){
           <label for="backColor">Highlight Color</label>
         </div>
       </div>
-      <div id="text-input" contenteditable="true"></div>
+      
+      <form action="aboutphp.php" method="post">
+      <div id="text-input" contenteditable="true" name="about" ><?php echo $about;?></div>
+          <button class="btn rounded submit" name="submit">Submit</button>
+      </form>
     </div>
 	</div>
 </div>
