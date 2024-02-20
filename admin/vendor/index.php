@@ -1,4 +1,5 @@
 <?php
+require '../config.php';
 require '../session.php';
 if(!isset($_SESSION["username"])){
 	header("location:../login.php");
@@ -57,7 +58,7 @@ if(!isset($_SESSION["username"])){
                                                         }
                                                     ?>
 													<p class="card-category">Earning</p>
-													<h4 class="card-title"><?php echo $a ?></h4>
+													<h4 class="card-title"><?php echo $a*150 ?></h4>
                                                     <?php
                                                     } else {
                                                         ?>

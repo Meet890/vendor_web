@@ -38,12 +38,13 @@ else{
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
+        $id =$row["v_id"];
         $name= $row["v_name"];
         $username= $row["v_username"];
         $services=$row["v_profession"];
@@ -105,17 +106,25 @@ if ($result->num_rows > 0) {
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery">
-            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
+        <?php
+            
+              $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
+        
+        
+         foreach ($rows as $row) : ?>
+                <img src="../admin/vendor/img/65cf8b638c496.jpg"> onclick="openModal('../admin/vendor/img/<?php echo $rows['g_photo']; ?>')" alt="Gallery Image 2">
+                
+            <?php endforeach; ?>   
+            <!-- <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
             <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
             <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
             <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
             <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
             <img src="img/unnamed.jpg" onclick="openModal('img/unnamed.jpg')" alt="Gallery Image 3">
             <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
+            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3"> -->
             <!-- Add more images as needed -->
-        </div>
+            </div>
 
         <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>

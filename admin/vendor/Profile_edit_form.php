@@ -20,7 +20,10 @@ require 'profile_update.php';
 </head>
 <body>
 	<div class="wrapper">
-		<div class="main-header">
+
+
+
+	<div class="main-header">
 			<?php
                 include 'header.php';
             ?>

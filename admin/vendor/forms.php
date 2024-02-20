@@ -44,7 +44,7 @@ if(!isset($_SESSION["username"])){
  										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
-											<input type="text" class="form-control" id="email" placeholder="Enter Compony name" name="p_compony_name">
+											<input type="text" class="form-control" id="email" placeholder="Enter Compony name" name="v_name">
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->
@@ -53,7 +53,7 @@ if(!isset($_SESSION["username"])){
 										<!-- services-->
 										<div class="form-group" >
 											<label for="exampleFormControlSelect1">select service</label>
-											<select class="form-control" id="exampleFormControlSelect1" name="p_services">
+											<select class="form-control" id="exampleFormControlSelect1" name="v_services">
 											 <option selected disabled value="">Choose...</option>
 				      						 <option value="Decoration">Decoration</option>
 				                             <option value="Sound system">Sound system</option>
@@ -70,7 +70,7 @@ if(!isset($_SESSION["username"])){
 										<!-- email -->
 										<div class="form-group">
 											<label for="email">Email Address</label>
-											<input type="email" class="form-control" id="email" placeholder="Enter Email" name="p_email">
+											<input type="email" class="form-control" id="v_email" placeholder="Enter Email" name="p_email">
 											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
 										<!-- <div class="form-group">
@@ -87,7 +87,7 @@ if(!isset($_SESSION["username"])){
 										<!-- address -->
 										<div class="form-group ">
 											<label for="successInput">Address</label>
-											<input type="text" id="Address" value="" class="form-control" name="p_address">
+											<input type="text" id="Address" value="" class="form-control" name="v_address">
 											<!-- <p class="err-msg">
                 								<?php if($AddErr!=1){ echo $AddErr; }?>
                								</p> -->
@@ -96,7 +96,7 @@ if(!isset($_SESSION["username"])){
 										<!-- phone no -->
 										<div class="form-group">
 											<label for="errorInput">Phone no.</label>
-											<input type="text" id="Phone no" value="" class="form-control" name="p_phoneno">
+											<input type="text" id="Phone no" value="" class="form-control" name="v_phoneno">
 											 <!-- <p class="err-msg"> 
                  								 <?php if($phoneErr!=1){ echo $phoneErr; } ?> 
                 							</p> -->
@@ -106,11 +106,11 @@ if(!isset($_SESSION["username"])){
 										<div class="form-check">
 											<label>Gender</label><br/>
 											<label class="form-radio-label">
-												<input class="form-radio-input" type="radio" name="p_gender" value="m"  checked="">
+												<input class="form-radio-input" type="radio" name="v_gender" value="m"  checked="">
 												<span class="form-radio-sign">Male</span>
 											</label>
 											<label class="form-radio-label ml-3">
-												<input class="form-radio-input" type="radio" name="p_gender" value="f">
+												<input class="form-radio-input" type="radio" name="v_gender" value="f">
 												<span class="form-radio-sign">Female</span>
 											</label>
 											<!-- 
@@ -122,13 +122,13 @@ if(!isset($_SESSION["username"])){
 											<!-- profile photo -->
 											<div class="form-group">
 												<label for="exampleFormControlFile1">Choose profile photo</label>
-												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="p_photo">
+												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo">
 											</div>
 
 											<!-- about -->
 											<div class="form-group">
 												<label for="comment">About us</label>
-												<textarea class="form-control" id="comment" rows="5" name="p_about">
+												<textarea class="form-control" id="comment" rows="5" name="v_about">
 
 												</textarea>
 											</div>
@@ -136,14 +136,14 @@ if(!isset($_SESSION["username"])){
 											<!-- ig id -->
 											<div class="form-group">
 												<label for="email">Instagram Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id" name="p_IG_id">
+												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id" name="v_iglink">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
 											<!-- fb id -->
 											<div class="form-group">
 												<label for="email">Face book Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id" name="p_FB_id">
+												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id" name="v_fblink">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
@@ -191,16 +191,16 @@ if(!isset($_SESSION["username"])){
 
  if(isset($_POST['reg_user']))
  {
- $compony_name =  $_POST['p_compony_name'];
- $servicse = $_POST['p_services'];
- $email = $_POST['p_email'];
- $address = $_POST['p_address'];
- $m_no = $_POST['p_phoneno'];
- $gender= $_POST['p_gender'];
- $photo=$_POST['p_photo'];
- $about=$_POST['p_about'];
- $IG = $_POST['p_IG_id'];
- $FB = $_POST['p_FB_id'];
+ $compony_name =  $_POST['v_name'];
+ $servicse = $_POST['v_services'];
+ $email = $_POST['v_email'];
+ $address = $_POST['v_address'];
+ $m_no = $_POST['v_phoneno'];
+ $gender= $_POST['v_gender'];
+ $photo=$_POST['v_photo'];
+//  $about=$_POST['p_about'];
+ $IG = $_POST['v_iglink'];
+ $FB = $_POST['v_fblink'];
 //  echo $compony_name;
 //  echo $servicse;
 //  echo $email;
@@ -211,7 +211,7 @@ if(!isset($_SESSION["username"])){
   
  // Performing insert query execution
  // here our table name is college
- $sql = "INSERT INTO create_profile(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
+ $sql = "INSERT INTO vendor(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
   
  $result = mysqli_query($conn, $sql);
  if ($result) {
