@@ -1,6 +1,6 @@
 <?php
 require_once "loginphp.php";
-
+require 'header2.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@ require_once "loginphp.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-  
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="reg.css">    
 
 </head>
@@ -22,7 +22,7 @@ require_once "loginphp.php";
                 <div class="image">
                     
                 </div>
-                <div class="title">LOGIN</div>
+                <div class="title">LOGIN AS USER</div>
                 <?php
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -87,5 +87,7 @@ require_once "loginphp.php";
     }
         </script>
 
+<script src="../../js/bootstrap.min.js"></script> 
+<script src="../../js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
