@@ -137,7 +137,7 @@ require 'config.php';
 														<th>Instagram Link</th>
 														<th>Facebook Link</th>
 														<th>Whatsapp Link</th>
-														<th>Vendor Joined Time</th>
+														<th>Vendor discription</th>
 
 
 														<th>Edit or delete</th>
