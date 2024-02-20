@@ -112,7 +112,7 @@ if ($result->num_rows > 0) {
         
         
          foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/65cf8b638c496.jpg"> onclick="openModal('../admin/vendor/img/<?php echo $rows['g_photo']; ?>')" alt="Gallery Image 2">
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
                 
             <?php endforeach; ?>   
             <!-- <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
@@ -128,7 +128,7 @@ if ($result->num_rows > 0) {
 
         <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImg">
+            <img class="modal-content" id="modalImg ">
         </div>
 
 
