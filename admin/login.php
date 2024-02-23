@@ -1,6 +1,6 @@
 <?php
 require_once "loginphp.php";
-include "../header2.php";
+// include "../header2.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

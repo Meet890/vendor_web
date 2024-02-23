@@ -47,7 +47,7 @@ if(isset($_POST["submit"])){
 		move_uploaded_file($tmpName, 'img/' . $newImageName);
 		$v_id = $_SESSION["id"];
 		$query = "INSERT INTO gallery(v_id,g_photo) values ('$v_id','$newImageName') ";
-		// $query = "INSERT INTO gallary VALUES('', '$newImageName')";
+		
 		mysqli_query($conn, $query);
 		echo
 		"

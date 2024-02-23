@@ -76,8 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: ../index.php");
                         } else{
                             // Password is not valid, display a generic error message
-                            $_SESSION["password"] =$password;
-                            echo $_SESSION["password"];
+                            
                             echo '<script>  alert("varify pass"); </script>';
                         }
                     }
