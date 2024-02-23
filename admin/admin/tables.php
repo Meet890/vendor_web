@@ -78,7 +78,6 @@ require 'config.php';
 
 															
 														      ?>
-
 													<tr>
 														<th scope="row"><?php echo $id ?></th>
 														<td><?php echo $name  ?></td>
@@ -88,7 +87,7 @@ require 'config.php';
 														<td><?php echo $city  ?></td>
 														<td><?php echo $time  ?></td>	
 														<td>
-														  <a href = 'update.php?rn=$row[c_name] & un=$row[c_username] & em=$row[c_email] & $cy=$row[c_city]'>Edit
+														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
 														</td>
 														<td>
 														  <a href = 'delete.php?rn=$result[name]'onclick='return
