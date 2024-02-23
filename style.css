@@ -7,7 +7,7 @@ body{
     background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;*/
-  background: linear-gradient(180deg, rgba(195,142,180,1) 0%, rgba(225,203,215,1) 36%, rgba(134,168,207,1) 70%, rgba(38,66,90,1) 98%);
+  /* background: linear-gradient(180deg, rgba(195,142,180,1) 0%, rgba(225,203,215,1) 36%, rgba(134,168,207,1) 70%, rgba(38,66,90,1) 98%); */
 }
 .section-padding{
     padding:150px 0 ;

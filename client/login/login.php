@@ -1,6 +1,6 @@
 <?php
 require_once "loginphp.php";
-require 'header2.php';
+//require 'header2.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +18,8 @@ require 'header2.php';
     <div class="bg-img"></div>
     <div id="main-container">
         <div class="form-container">
+        
+
             <div class="login-form">
                 <div class="image">
                     
@@ -25,7 +27,7 @@ require 'header2.php';
                 <div class="title">LOGIN AS USER</div>
                 <?php
                   if(!empty($login_err)){
-                         echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                         echo '<div class="alert alert-danger mb-0">' . $login_err . '</div>';
                      }
                 ?>
                 <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
@@ -66,6 +68,9 @@ require 'header2.php';
 
             
         </div>
+        
+        <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close"></button>
+                  
     </div>
     <script>
         var c;

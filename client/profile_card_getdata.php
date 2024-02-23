@@ -119,7 +119,7 @@ if (mysqli_num_rows($result) > 0) {
 
 <?php 
 
-include("../footer.php");
+include("footer.php");
 
 
 ?>
