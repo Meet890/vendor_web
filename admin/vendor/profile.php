@@ -1,63 +1,81 @@
 <?php
-session_start();
-// Check if the user is logged in, if not then redirect him to login page
-
-if(!isset($_SESSION["username"])&& $_SESSION["loggedin"] = "false"){
+require '../config.php';
+require '../session.php';
+if(!isset($_SESSION["username"])){
 	header("location:../login.php");
- 
 }
+?>
+  
 
-
-?><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Admin Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
     <link href="test.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
 </head>
 <body>
-    <?php
+	<div class="wrapper">
+		<div class="main-header">
+			<?php
+                include 'header.php';
+            ?>
+			</div>
+			<div class="sidebar">
+                <?php
+                include 'slidebar.php';
+                ?>
+			</div>
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">Dashboard</h4>
+                        <?php
 
-    $v_username = $_SESSION["username"];
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "vendor";
+$v_username = $_SESSION["username"];
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "vendor";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
 if($conn){
-    echo"<br>";
+echo"<br>";
 }
 else{
-  die("Connection failed: " . mysqli_connect_error());
+die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-        $name= $row["v_name"];
-        $username= $row["v_username"];
-        $services=$row["v_profession"];
-        $city=$row["v_ser_places"];
-        $phone=$row["v_phoneno"];
-        $about=$row["v_discription"];
-    }
-  } else {
-  echo "0 results";
+// output data of each row
+while($row = $result->fetch_assoc()) {
+    $id = $row['v_id'];
+    $name= $row["v_name"];
+    $username= $row["v_username"];
+    $services=$row["v_profession"];
+    $city=$row["v_ser_places"];
+    $phone=$row["v_phoneno"];
+    $about=$row["v_discription"];
+}
+} else {
+echo "0 results";
 }
 
 
-    ?>
-
-    <section>
-        <img src="img/f1.jpg" alt="User Profile Picture" class="pro_img">
+?>
+						<section>
+        <img src="assets/img/f1.jpg" alt="User Profile Picture" class="pro_img">
         <div class="detail">
             <div class="post">
               <!-- <h2>14</h2>
@@ -82,7 +100,7 @@ if ($result->num_rows > 0) {
 
         <ul>
             <li>
-                <img src="img/location.png" alt="Location Icon" class="png">
+                <img src="assets/img/location.png" alt="Location Icon" class="png">
                 <h5 class="city"><?php echo $city ?></h5>
             </li>
             <!-- <li>
@@ -90,7 +108,7 @@ if ($result->num_rows > 0) {
                 <p>john.doe@example.com</p>
             </li> -->
             <li>
-                <img src="img/calling.png" alt="Phone Icon" class="png">
+                <img src="assets/img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
             </li>
         </ul>
@@ -103,21 +121,20 @@ if ($result->num_rows > 0) {
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery">
-            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/unnamed.jpg" onclick="openModal('img/unnamed.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <!-- Add more images as needed -->
+        <?php
+            
+            $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
+      
+      
+       foreach ($rows as $row) : ?>
+              <img src="img/<?php echo $row['g_photo']; ?>" onclick="openModal('img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+              
+          <?php endforeach; ?>
         </div>
 
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImg">
+        <div id="myModal" class="modal" onclick="closeModal()">
+            
+            <img class="w-auto modal-content "  id="modalImg">
         </div>
 
         <div class="container">
@@ -142,6 +159,45 @@ if ($result->num_rows > 0) {
     </div>
 
     </section>
+						
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	
+
+<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<!-- <script src="assets/js/plugin/chartist/chartist.min.js"></script> -->
+<!-- <script src="assets/js/plugin/chartist/plugin/chartist-plugin-tooltip.min.js"></script> -->
+<!-- <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script> -->
+<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<!-- <script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script> -->
+<!-- <script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script> -->
+<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+<!-- <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script> -->
+<script src="assets/js/ready.min.js"></script>
+<script src="assets/js/demo.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <script>
         function openModal(imageSrc) {
         var modal = document.getElementById("myModal");

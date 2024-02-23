@@ -3,7 +3,7 @@
 				<div class="scrollbar-inner sidebar-wrapper">
 					<div class="user">
 						<div class="photo">
-							<img src="assets/img/profile.jpg">
+							<img src="../../user2.png">
 						</div>
 						<div class="info">
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -19,7 +19,7 @@
 								<ul class="nav">
 									<li>
 										<a href="profile.php">
-											<span class="link-collapse">My Profile</span>
+											<span class="link-collapse">Show My Profile</span>
 										</a>
 									</li>
 									<li>

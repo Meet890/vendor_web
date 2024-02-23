@@ -14,7 +14,7 @@
 				<div class="col-lg-7">
 					<div class="cta_content">
 						<h3>Registration as a vendor </h3>
-						<p>We help vendor to grow up his business. We provide the pletform for a vendor for grow his business.</p>
+						<p>We help to vendor for grow up his business. We provide the platform for a vendor for grow his business.</p>
 					</div>
 				</div>
 				<div class="col-lg-5">

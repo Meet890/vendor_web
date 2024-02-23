@@ -20,8 +20,12 @@ else if(isset($_SESSION["username"])){
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
-    <?php
+<?php 
+    include("header.php");
 
+?>
+    <?php
+    
     $v_username = $_GET["username"];
     $servername = "localhost";
     $username = "root";
