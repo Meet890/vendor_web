@@ -31,6 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
         $sql = "SELECT v_id, v_username, v_password FROM vendor WHERE v_username = ?";
+
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s",$param_username);
@@ -56,13 +57,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                            
                             echo '<script>  alert("connected"); </script>';
                             header("location: vendor/index.php");
-                        } else{
+                        }else{
                             // Password is not valid, display a generic error message
                           
                             echo '<script>  alert("varify pass"); </script>';
                         }
                     }
-                } else{
+                }elseif($_POST["username"] == "admin" ){
+                    // && $_POST[ "password" ] == "Kutchi@vent00" 
+                    $sql = "SELECT * FROM admin_tbl WHERE a_password = $password";
+                    $result = mysqli_query($conn, $sql);
+                    if (isset($result)) {
+                                  
+                       
+                        echo $result;
+                        
+                        
+                        $_SESSION["a_id"]= $id;
+                        $_SESSION["a_username"] = $username;
+                        
+                        // header("location: admin/index.php");
+                        
+                }  
+                else{
                     // Username doesn't exist, display a generic error message
                     $login_err = "Invalid username or password.";
                     
@@ -73,36 +90,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 
- if(isset($_POST['submit'])){
 
-  $uname = trim($_POST['username']);
-  $pass  = trim($_POST['password']);
-
-  $sql = "SELECT * FROM client where c_username = '$uname'" ;
-  $result = mysqli_query($conn, $sql);
-  
-  if ($result) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        $_SESSION["c_id"] = "$row[c_id]";
-        $_SESSION["c_username"] = "$row[c_username]";
-        $_SESSION["c_name"] = "$row[c_name]";
-        $_SESSION["c_city"] = "$row[c_city]";
-        $_SESSION["c_email"] = "$row[c_email]";  
-        $_SESSION["loggedin"] = "true";  
-        ?>
-        <script type="text/javascript">
-            alert ="session is created";
-            </script>
-        <?php
-        header("Location: index.php");
-    }
-}
-    else{
-        echo "no user found";
-        $login_err = "No account found for that username.";
-
-    }
+    
 }
 
 ?>
