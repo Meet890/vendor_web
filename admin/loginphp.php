@@ -18,7 +18,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
-    } else{
+    }elseif($_POST["username"] == "admin" ){
+        $pass = $_POST["password"];
+        $query = "SELECT * FROM admin WHERE a_password = $pass ";
+        
+    } 
+    else{
         $username = trim($_POST["username"]);
     }
     // Check if password is empty
