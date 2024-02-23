@@ -100,6 +100,15 @@ if ($result->num_rows > 0) {
                 <img src="img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
             </li>
+            <li>
+                <img src="img/calling.png" alt="Phone Icon" class="png">
+                <h5 class="call"><?php echo $phone ?></h5>
+            </li>
+            <li>
+                <img src="img/calling.png" alt="Phone Icon" class="png">
+                <h5 class="call"><?php echo $phone ?></h5>
+            </li>
+            
         </ul>
         <div class="about center">
             <h3 class="mt-4">About us</h3>

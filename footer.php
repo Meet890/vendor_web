@@ -19,7 +19,7 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="button_box">
-						<a href="vendor/reg_vendor.php" class="btn btn-dark">Registration</a>
+						<a href="admin/reg_vendor.php" class="btn btn-dark">Registration</a>
 					</div>
 				</div>
 			</div>

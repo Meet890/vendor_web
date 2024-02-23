@@ -107,7 +107,7 @@ else{
                   <div class="imgholder">
                    <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">decorators</h3>
+                   <h4 class="titleh3">decorators</h4>
                    <p class="title">Creativity at its finest.</p>
                   
                  </div>
@@ -120,7 +120,7 @@ else{
                  <div class="imgholder">
                    <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
                  </div>
-                   <h3 class="titleh3">photographers</h3>
+                   <h4 class="titleh3">photographers</h4>
                    <p class="title">Preserve your memories.</p>
                  </div>
               </a>
@@ -131,7 +131,7 @@ else{
                   <div class="imgholder">
                    <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
                    </div>
-                   <h3 class="titleh3">videographers</h3>
+                   <h4 class="titleh3">videographers</h4>
                    <p class="title">Moments well Shared.</p>
                  </div>
               </a>
@@ -142,7 +142,7 @@ else{
                   <div class="imgholder">
                    <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
                    </div>
-                   <h3 class="titleh3">cake</h3>
+                   <h4 class="titleh3">cake</h4>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
               </a>
@@ -153,7 +153,7 @@ else{
                  <div class="imgholder"> 
                  <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
                  </div> 
-                 <h3 class="titleh3">flowers</h3>
+                 <h4 class="titleh3">flowers</h4>
                    <p class="title">Make your life colorful.</p>
                  </div>
               </a>
@@ -164,8 +164,8 @@ else{
                  <div class="imgholder">
                    <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
                  </div>
-                   <h3 class="titleh3">wedding wear</h3>
-                   <p class="title">Dress Your Dreams, Feel the Love.</p>
+                   <h4 class="titleh3">wedding wear</h4>
+                   <p class="title">Dress Your Dreams,Feel the Love.</p>
                  </div>
               </a>
             </div>
@@ -175,7 +175,7 @@ else{
                   <div class="imgholder">
                    <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">jewellery</h3>
+                   <h4 class="titleh3">jewellery</h4>
                    <p class="title">Jewelryize me.</p>
                  </div>
               </a>
@@ -186,7 +186,7 @@ else{
                   <div class="imgholder">
                    <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">invitation cards</h3>
+                   <h4 class="titleh3">invitation cards</h4>
                    <p class="title">Invite in style.</p>
                  </div>
               </a>
@@ -197,7 +197,7 @@ else{
                   <div class="imgholder">
                    <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">sound</h3>
+                   <h4 class="titleh3">sound</h4>
                    <p class="title">Audio you can rely on.</p>
                  </div>
               </a>
@@ -208,7 +208,7 @@ else{
                   <div class="imgholder">
                    <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">makeup artist</h3>
+                   <h4 class="titleh3">makeup artist</h4>
                    <p class="title">Ready, Set, Glow!.</p>
                  </div>
               </a>
@@ -219,7 +219,7 @@ else{
                   <div class="imgholder">
                    <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">venues</h3>
+                   <h4 class="titleh3">venues</h4>
                    <p class="title">	Where memories are made.</p>
                  </div>
               </a>
@@ -231,7 +231,7 @@ else{
                   <div class="imgholder">
                    <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">gifts</h3>
+                   <h4 class="titleh3">gifts</h4>
                    <p class="title">More than just a gift.</p>
                  </div>
               </a>
