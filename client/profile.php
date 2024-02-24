@@ -42,6 +42,7 @@ else{
   die("Connection failed: " . mysqli_connect_error());
 }
 
+
 $sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 

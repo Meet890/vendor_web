@@ -21,7 +21,7 @@ if(isset($_POST['register']))
    //input fields are Validated with regular expression
    $validName="/^[a-zA-Z ]*$/";
    $validUserName="/^[A-Za-z0-9]+$/";
-  
+   // $validEmail=; //@gmail.com @yahoo.com @hotmail.com @aol.com @outlook.com;
    $uppercasePassword = "/(?=.*?[A-Z])/";
    $lowercasePassword = "/(?=.*?[a-z])/";
    $digitPassword = "/(?=.*?[0-9])/";
@@ -65,7 +65,7 @@ else{
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-else if (strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') == false) { 
+else if (!preg_match($validEmail,$email)) { 
    $emailErr="Invalid Email Address";
 }
 else{
@@ -161,6 +161,7 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
     $set_ComName=$compony_name;
 
 }
+
 }
 
 

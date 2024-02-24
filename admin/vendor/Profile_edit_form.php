@@ -40,13 +40,7 @@ require 'profile_update.php';
 						<div class="row">
 							<div class="col-10">
 							<form action="Profile_update.php" method="post">
-
-
-								
-
-										
-
-										<!-- email -->
+									<!-- email -->
 										<div class="form-group">
 											<label for="email">Email</label>
 											<input type="email" class="form-control" id="email" placeholder="Enter Email" name="v_email">
