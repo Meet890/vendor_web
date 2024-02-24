@@ -7,6 +7,10 @@ if(isset($_SESSION["v_username"]) &&( $_SESSION["loggedin"] === true)){
     header("location: vendor/");
     exit;
 }
+if(isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
+    header("location: admin/");
+    exit;
+}
 // Include config file
 require_once "config.php";
 
@@ -70,13 +74,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if (isset($result)) {
                                   
                        
-                        echo $result;
                         
-                        
+                        $id = $result['a_id'];
+                        echo $id;
                         $_SESSION["a_id"]= $id;
                         $_SESSION["a_username"] = $username;
-                        
-                        // header("location: admin/index.php");
+                        $_SESSION["loggedin"] = true;
+                        //header("location: admin/index.php");
                         
                 }  
                 else{
