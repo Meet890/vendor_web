@@ -50,7 +50,7 @@ else if(isset($_SESSION["username"])){
       <div class="carousel-caption a2">
         <h5>FIND THE BEST DECORATION</h5>
         <p>Your Choise Your Budget.</p>
-        <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
+        
       </div>
     </div>
     <div class="carousel-item">
@@ -58,7 +58,7 @@ else if(isset($_SESSION["username"])){
       <div class="carousel-caption a2">
         <h5>FIND BEST CATRING SERVICES</h5>
         <p>Your Choise Your Budget.</p>
-        <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
+       
       </div>
     </div>
     <div class="carousel-item">
@@ -66,7 +66,7 @@ else if(isset($_SESSION["username"])){
       <div class="carousel-caption a2">
         <h5>FIND BEST SOUND</h5>
         <p>Your Choise Your Budget.</p>
-        <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p>
+        
       </div>
     </div>
   </div>
