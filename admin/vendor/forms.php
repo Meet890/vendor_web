@@ -4,6 +4,58 @@ if(!isset($_SESSION["username"])){
 	header("location:../login.php");
 }
 ?>
+<?php
+ 
+
+ $conn = mysqli_connect("localhost", "root", "", "vendor");
+  
+ // Check connection
+ if($conn === false){
+	 die("ERROR: Could not connect. "
+		 . mysqli_connect_error());
+ }
+
+ if(isset($_POST['reg_user']))
+ {
+ $compony_name =  $_POST['v_name'];
+ $servicse = $_POST['v_services'];
+ $email = $_POST['v_email'];
+ $address = $_POST['v_address'];
+ $m_no = $_POST['v_phoneno'];
+ $gender= $_POST['v_gender'];
+ $photo=$_POST['v_photo'];
+//  $about=$_POST['p_about'];
+ $IG = $_POST['v_iglink'];
+ $FB = $_POST['v_fblink'];
+//  echo $compony_name;
+//  echo $servicse;
+//  echo $email;
+//  $services = $_POST['p_ser_places'];
+//  $profession = $_POST['p_profession'];
+ 
+//  $experience = $_POST['p_experience'];
+  
+ // Performing insert query execution
+ // here our table name is college
+ $sql = "INSERT INTO vendor(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
+  
+ $result = mysqli_query($conn, $sql);
+ if ($result) {
+    echo "";
+
+	 //echo nl2br("\n$name\n $username\n "
+		// . "$pass\n $address\n $gender \n $email\n $services\n $profession\n $m_no\n $experience");
+   } 
+ else{
+	 echo "ERROR: Hush! Sorry $sql. "
+		 . mysqli_error($conn);
+   }
+}
+  
+ // Close connection
+ mysqli_close($conn);
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -125,13 +177,7 @@ if(!isset($_SESSION["username"])){
 												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo">
 											</div>
 
-											<!-- about -->
-											<div class="form-group">
-												<label for="comment">About us</label>
-												<textarea class="form-control" id="comment" rows="5" name="v_about">
-
-												</textarea>
-											</div>
+											
 
 											<!-- ig id -->
 											<div class="form-group">
@@ -178,54 +224,3 @@ if(!isset($_SESSION["username"])){
 <script src="assets/js/ready.min.js"></script>
 </html>
 
-<?php
- 
-
- $conn = mysqli_connect("localhost", "root", "", "vendor");
-  
- // Check connection
- if($conn === false){
-	 die("ERROR: Could not connect. "
-		 . mysqli_connect_error());
- }
-
- if(isset($_POST['reg_user']))
- {
- $compony_name =  $_POST['v_name'];
- $servicse = $_POST['v_services'];
- $email = $_POST['v_email'];
- $address = $_POST['v_address'];
- $m_no = $_POST['v_phoneno'];
- $gender= $_POST['v_gender'];
- $photo=$_POST['v_photo'];
-//  $about=$_POST['p_about'];
- $IG = $_POST['v_iglink'];
- $FB = $_POST['v_fblink'];
-//  echo $compony_name;
-//  echo $servicse;
-//  echo $email;
-//  $services = $_POST['p_ser_places'];
-//  $profession = $_POST['p_profession'];
- 
-//  $experience = $_POST['p_experience'];
-  
- // Performing insert query execution
- // here our table name is college
- $sql = "INSERT INTO vendor(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
-  
- $result = mysqli_query($conn, $sql);
- if ($result) {
-    echo "";
-
-	 //echo nl2br("\n$name\n $username\n "
-		// . "$pass\n $address\n $gender \n $email\n $services\n $profession\n $m_no\n $experience");
-   } 
- else{
-	 echo "ERROR: Hush! Sorry $sql. "
-		 . mysqli_error($conn);
-   }
-}
-  
- // Close connection
- mysqli_close($conn);
- ?>

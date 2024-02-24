@@ -21,7 +21,7 @@ if(isset($_POST['register']))
    //input fields are Validated with regular expression
    $validName="/^[a-zA-Z ]*$/";
    $validUserName="/^[A-Za-z0-9]+$/";
-   $validEmail="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+   $validEmail="strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') != false";
    $uppercasePassword = "/(?=.*?[A-Z])/";
    $lowercasePassword = "/(?=.*?[a-z])/";
    $digitPassword = "/(?=.*?[0-9])/";
@@ -65,7 +65,7 @@ else{
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-else if (!preg_match($validEmail,$email)) {
+else if ($validEmail) {  
   $emailErr="Invalid Email Address";
 }
 else{

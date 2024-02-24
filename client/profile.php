@@ -71,22 +71,23 @@ if ($result->num_rows > 0) {
               <p>post</p> -->
             </div>
             <div class="followers">
-                <h2>30</h2>
-                <p>Post</p>
+                <h4>30</h4>
+                <p class="p1">Post</p>
             </div>
             <div class="following">
-               <!-- <img src="rating.png" alt="Location Icon" class="star"> -->
-                <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+            <h4><img src="img/star.jpg" alt="Location Icon" class="star">30</h4>
+                <!-- <h4><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill star" viewBox="0 0 16 16">
                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>4.3</h2>
-                <p>1 Review</p>
+                </svg>4.3</h4> -->
+                <p class="p1">1 Review</p>
             </div>
         </div>    
         <h2 class="mt-3"><?php echo $name ?></h2>
         <div class="about">
         <h4><?php echo $services ?><h4>
         </div>
-
+        <div class="row">
+            <div class="col-9">
         <ul>
             <li>
                 <img src="img/location.png" alt="Location Icon" class="png">
@@ -100,16 +101,20 @@ if ($result->num_rows > 0) {
                 <img src="img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
             </li>
-            <li>
-                <img src="img/calling.png" alt="Phone Icon" class="png">
-                <h5 class="call"><?php echo $phone ?></h5>
-            </li>
-            <li>
-                <img src="img/calling.png" alt="Phone Icon" class="png">
-                <h5 class="call"><?php echo $phone ?></h5>
-            </li>
             
         </ul>
+        </div>
+        <div class="col-3">
+        <ul>
+            <li> <br></li>
+            <li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="img/insta.jpg" alt="Location Icon" class="png">
+                <img src="img/Facebook.png" alt="Phone Icon" class="png">
+            </li>
+        </ul>
+        </div>
+        </div>
         <div class="about center">
             <h3 class="mt-4">About us</h3>
             <p><?php echo $about ?></p>
