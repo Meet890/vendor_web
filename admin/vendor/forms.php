@@ -5,7 +5,7 @@ require '../session.php';
 if(!isset($_SESSION["username"])){
 	header("location:../login.php");
 }
-$username = $_GET["reg_username"];
+$username = $_SESSION["username"];
 $sql="select reg_id,reg_name,reg_username,reg_phone,reg_email,reg_pass,reg_add,reg_gen,reg_com from registration where reg_username='$username'";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -59,7 +59,7 @@ if ($result->num_rows > 0) {
 // 		 . mysqli_error($conn);
 //    }
 // }
-echo $id;
+
  // Close connection
 //  mysqli_close($conn);
  ?>

@@ -7,10 +7,7 @@ if(isset($_SESSION["v_username"]) &&( $_SESSION["loggedin"] === true)){
     header("location: vendor/");
     exit;
 }
-if(isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
-    header("location: admin/");
-    exit;
-}
+
 // Include config file
 require_once "config.php";
 
@@ -67,28 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             echo '<script>  alert("varify pass"); </script>';
                         }
                     }
-                }elseif($_POST["username"] == "admin" ){
-                    // && $_POST[ "password" ] == "Kutchi@vent00" 
-                    $sql = "SELECT * FROM admin_tbl WHERE a_password = $password";
-                    $result = mysqli_query($conn, $sql);
-                    if (isset($result)) {
-                                  
-                       
-                        
-                        $id = $result['a_id'];
-                        echo $id;
-                        $_SESSION["a_id"]= $id;
-                        $_SESSION["a_username"] = $username;
-                        $_SESSION["loggedin"] = true;
-                        //header("location: admin/index.php");
-                        
-                }  
-                else{
-                    // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username or password.";
-                    
                 }
-            }
         }
     }
 }
