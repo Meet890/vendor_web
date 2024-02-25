@@ -5,10 +5,10 @@
         
          echo $id;
          echo $table;
-        $sql ="DELETE FROM admin_tbl WHERE a_id='$id'";
+        $sql ="DELETE FROM client WHERE c_id='$id'";
         $res =mysqli_query($conn , $sql );
         if ($res == true) {
-            header("Location: add.php");
+            header("Location: tables.php");
         }
 
 
