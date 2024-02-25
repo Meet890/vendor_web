@@ -1,9 +1,25 @@
+<?php
+$ID= $_SESSION["id"];
+      
+$result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $ID ");
+while($row = $result->fetch_assoc()) {
+	if($row['v_photo']==""){
+		$img ="../../user2.png";
+		//echo '<script>  alert("hello"); </script>';
+	}
+	else{
+		$img = "img/".$row["v_photo"];
+		echo $img;
+		//echo '<script>  alert("1"); </script>';
+	}
+}
+?>
 <div class="scrollbar-inner sidebar-wrapper text-black">
 <div class="sidebar">
 				<div class="scrollbar-inner sidebar-wrapper">
 					<div class="user">
 						<div class="photo">
-							<img src="../../user2.png">
+							<img src="<?php echo  $img; ?>"/>
 						</div>
 						<div class="info">
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">

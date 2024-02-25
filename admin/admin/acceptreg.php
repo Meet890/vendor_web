@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     if(isset($_POST['add']))
     {
-    echo '<script>  alert("hello"); </script>';
+   
            
             $set_name= $_POST['name'];
             $set_username= $_POST['username'];

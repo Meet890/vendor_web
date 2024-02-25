@@ -11,19 +11,21 @@ if(!isset($_SESSION["username"])){
 
 if(isset($_POST["submit"])){
 	
-	if($_FILES["image"]["error"] == 4){
+	if($_FILES["image"]["error"] >1){
 	  echo
 	  "<script> alert('Image Does Not Exist'); </script>"
 	  ;
 	}
 	else{
 	  $fileName = $_FILES["image"]["name"];
+	  echo "    1   ".$fileName;
 	  $fileSize = $_FILES["image"]["size"];
+	  echo "    1   ".$fileSize;
 	  $tmpName = $_FILES["image"]["tmp_name"];
-  
+	  echo "    1   ".$tmpName;
 	  $validImageExtension = ['jpg', 'jpeg', 'png'];
-	  $imageExtension = explode('.', $fileName);
 	  $imageExtension = strtolower(end($imageExtension));
+	  echo "    1   ".$imageExtension;
 	  if ( !in_array($imageExtension, $validImageExtension) ){
 		echo
 		"
@@ -56,6 +58,58 @@ if(isset($_POST["submit"])){
 	  }
 	}
   }
+  
+  
+if(isset($_POST["submit2"])){
+	
+	if($_FILES["image2"]["error"] >1){
+	  echo
+	  "<script> alert('Image Does Not Exist'); </script>"
+	  ;
+	}
+	else{
+	  $fileName = $_FILES["image2"]["name"];
+	  echo "    1   ".$fileName;
+	  $fileSize = $_FILES["image2"]["size"];
+	  echo "    1   ".$fileSize;
+	  $tmpName = $_FILES["image2"]["tmp_name"];
+	  echo "    1   ".$tmpName;
+	  $validImageExtension = ['jpg', 'jpeg', 'png'];
+	  $imageExtension = strtolower(end($imageExtension));
+	  echo "    1   ".$imageExtension;
+	  if ( !in_array($imageExtension, $validImageExtension) ){
+		echo
+		"
+		<script>
+		  alert('Invalid Image Extension');
+		</script>
+		";
+	  }
+	  else if($fileSize > 20000000){
+		echo
+		"
+		<script>
+		  alert('Image Size Is Too Large');
+		</script>
+		";
+	  }
+	  else{
+		$newImageName = uniqid();
+		$newImageName .= '.' . $imageExtension;
+  
+		move_uploaded_file($tmpName, 'img/' . $newImageName);
+		$v_id = $_SESSION["id"];
+		$query = " INTO (v_id,g_photo) values '$fileName') ";
+		
+		mysqli_query($conn, $query);
+		echo
+		"
+		
+		";
+	  }
+	}
+  }
+  
  
 ?>
 <!DOCTYPE html>
@@ -98,9 +152,19 @@ if(isset($_POST["submit"])){
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Add new photo</h4>
+					<h4 class="page-title">Change Profile Photo</h4>
                         
-						<div class="row">
+						<div class="row ">
+								<div class="col-12">
+								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
+							      <label for="image2">Image : </label>
+							      <input type="file" name="image2" id = "image2" accept=".jpg, .jpeg, .png" value=""> <br> <br>
+							      <button type = "submit2" name = "photo">Submit</button>
+							    </form>
+								</div>
+						<h4 class="page-title mt-5">Add new photo</h4>
+                        
+						<div class="row ">
 								<div class="col-12">
 								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
 							      <label for="image">Image : </label>
