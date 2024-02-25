@@ -65,9 +65,7 @@ else{
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-else if (!preg_match($validEmail,$email)) { 
-   $emailErr="Invalid Email Address";
-}
+
 else{
   $emailErr=true;
 }
@@ -119,7 +117,8 @@ else if (!preg_match($validName,$name)) {
    $cnameErr=true;
 }
  
-
+if(strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') != false)
+{
 // check all fields are valid or not
 if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )
 {
@@ -149,18 +148,32 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
    // here you can write Sql Query to insert user data into database table
 }else{
      // set input values is empty until input field is invalid
-    $set_name=$name;
-    $set_username=$username;
-    $set_PhoneNo=$Phone_no;
-   //  $set_lastName= $last_name;
-    $set_email=$email;
-    $set_pass=$password;
-    $set_cpass=$cpassword;
-    $set_add=$Address;
-    $set_Gender=$v_gender;
-    $set_ComName=$compony_name;
+     $set_name=$name;
+     $set_username=$username;
+     $set_PhoneNo=$Phone_no;
+    //  $set_lastName= $last_name;
+     $set_email=$email;
+     $set_pass=$password;
+     $set_cpass=$cpassword;
+     $set_add=$Address;
+     $set_Gender=$v_gender;
+     $set_ComName=$compony_name;
+}
+}else{
+   $emailErr="Invalid Email Address";
+   $set_name=$name;
+   $set_username=$username;
+   $set_PhoneNo=$Phone_no;
+  //  $set_lastName= $last_name;
+   $set_email=$email;
+   $set_pass=$password;
+   $set_cpass=$cpassword;
+   $set_add=$Address;
+   $set_Gender=$v_gender;
+   $set_ComName=$compony_name;
 
 }
+
 
 }
 
