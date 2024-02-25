@@ -64,8 +64,7 @@ $result = $conn->query($sql);
 
 }
 
- 
-//  mysqli_close($conn);
+// mysqli_close($conn);
  ?>
 
 <!DOCTYPE html>
@@ -187,11 +186,8 @@ $result = $conn->query($sql);
                 							</p> -->
 										</div>
 										
-											<!-- profile photo -->
-											<div class="form-group">
-												<label for="exampleFormControlFile1">Choose profile photo</label>
-												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo" value="<?php echo $photo; ?>">
-											</div>
+											
+											
 
 											
 
@@ -214,7 +210,7 @@ $result = $conn->query($sql);
 										</div>
 										<div class="card-action">
 											<button class="btn btn-success" name="reg_user">Submit</button>
-											<button class="btn btn-danger">Cancel</button>
+											
 										</div>
 									</div>
 								</div>

@@ -1,4 +1,21 @@
+<?php
+$ID= $_SESSION["id"];
+      
+$result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $ID ");
 
+while($row = $result->fetch_assoc()) {
+	if($row['v_photo']==""){
+		$img ="<?php echo  $img; ?>";
+		//echo '<script>  alert("hello"); </script>';
+	}
+	else{
+		$img = "img/".$row["v_photo"];
+		//echo $img;
+		//echo '<script>  alert("1"); </script>';
+	}
+}
+
+?>
 <div class="logo-header">
 				<a href="index.php" class="logo">
 					Vendor Partners
@@ -15,11 +32,11 @@
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="../../user2.png" alt="user-img" width="36" class="img-circle"><span ><?php echo $_SESSION["username"]; ?> </span></span> </a>
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="<?php echo  $img; ?>" alt="user-img" width="36" height="36" class="img-circle"><span ><?php echo $_SESSION["username"]; ?> </span></span> </a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
-										<div class="u-img"><img src="../../user2.png" alt="user"></div>
+										<div class="u-img"><img src="<?php echo  $img; ?>" alt="user"></div>
 										<div class="u-text">
 											<h4><?php echo $_SESSION["username"]; ?> </h4>
 											
