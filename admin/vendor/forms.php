@@ -6,23 +6,28 @@ if(!isset($_SESSION["username"])){
 	header("location:../login.php");
 }
 $username = $_SESSION["username"];
-$sql="select reg_id,reg_name,reg_username,reg_phone,reg_email,reg_pass,reg_add,reg_gen,reg_com from registration where reg_username='$username'";
+
+$sql="select v_id,v_name,v_username,v_phoneno,v_email,v_photo,v_address,v_gender,v_comp,v_iglink,v_fblink from vendor where v_username='$username'";
 $result = $conn->query($sql);
-if ($result->num_rows > 0) {
+
     // output data of each row
     while($row = $result->fetch_assoc()) {
-          $id =$row["reg_id"];
-          $name= $row["reg_name"];
-		  $username= $row["reg_username"];
-		  $phone= $row["reg_phone"];
-		  $email=$row["reg_email"];
-		  $pass=$row["reg_pass"];
-          $city=$row["reg_add"];
-		  $gender=$row["reg_gen"];
-		  $compony=$row["reg_com"];
-        }
-	}		
+         // $id =$row["v_id"];
+          $name= $row["v_name"];
+		  $username= $row["v_username"];
+		  $phone= $row["v_phoneno"];
+		  $email=$row["v_email"];
+		  $photo=$row["v_photo"];
+		 // $pass=$row["v_pass"];
+          $city=$row["v_address"];
+		  $gender=$row["v_gender"];
+		  $compony=$row["v_comp"];
+		  $ig=$row["v_iglink"];
+		  $fb=$row["v_fblink"];
 
+        }
+		
+           
 //   if(isset($_POST['reg_user']))
 //  {
 //  $compony_name =  $_POST['v_name'];
@@ -104,7 +109,7 @@ if ($result->num_rows > 0) {
  										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
-											<input type="text" class="form-control" id="email" placeholder="Enter Compony name" name="v_name">
+											<input type="text" class="form-control" id="email" name="v_name" value="<?php echo $compony; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->
@@ -130,7 +135,7 @@ if ($result->num_rows > 0) {
 										<!-- email -->
 										<div class="form-group">
 											<label for="email">Email Address</label>
-											<input type="email" class="form-control" id="v_email" placeholder="Enter Email" name="p_email">
+											<input type="email" class="form-control" id="v_email" value="<?php echo $email; ?>" name="p_email">
 											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
 										<!-- <div class="form-group">
@@ -147,7 +152,7 @@ if ($result->num_rows > 0) {
 										<!-- address -->
 										<div class="form-group ">
 											<label for="successInput">Address</label>
-											<input type="text" id="Address" value="" class="form-control" name="v_address">
+											<input type="text" id="Address" value="<?php echo $city; ?>" class="form-control" name="v_address">
 											<!-- <p class="err-msg">
                 								<?php if($AddErr!=1){ echo $AddErr; }?>
                								</p> -->
@@ -156,33 +161,16 @@ if ($result->num_rows > 0) {
 										<!-- phone no -->
 										<div class="form-group">
 											<label for="errorInput">Phone no.</label>
-											<input type="text" id="Phone no" value="" class="form-control" name="v_phoneno">
+											<input type="text" id="Phone no" value="<?php echo $phone; ?>" class="form-control" name="v_phoneno">
 											 <!-- <p class="err-msg"> 
                  								 <?php if($phoneErr!=1){ echo $phoneErr; } ?> 
                 							</p> -->
-										</div>
-
-										<!-- gender -->
-										<div class="form-check">
-											<label>Gender</label><br/>
-											<label class="form-radio-label">
-												<input class="form-radio-input" type="radio" name="v_gender" value="m"  checked="">
-												<span class="form-radio-sign">Male</span>
-											</label>
-											<label class="form-radio-label ml-3">
-												<input class="form-radio-input" type="radio" name="v_gender" value="f">
-												<span class="form-radio-sign">Female</span>
-											</label>
-											<!-- 
-												
-						
-											 -->
 										</div>
 										
 											<!-- profile photo -->
 											<div class="form-group">
 												<label for="exampleFormControlFile1">Choose profile photo</label>
-												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo">
+												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo" value="<?php echo $photo; ?>">
 											</div>
 
 											
@@ -190,14 +178,14 @@ if ($result->num_rows > 0) {
 											<!-- ig id -->
 											<div class="form-group">
 												<label for="email">Instagram Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id" name="v_iglink">
+												<input type="email" class="form-control" id="email"  name="v_iglink" value="<?php echo $ig; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
 											<!-- fb id -->
 											<div class="form-group">
 												<label for="email">Face book Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id" name="v_fblink">
+												<input type="email" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
