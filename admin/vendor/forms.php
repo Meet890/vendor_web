@@ -5,6 +5,7 @@ require '../session.php';
 if(!isset($_SESSION["username"])){
 	header("location:../login.php");
 }
+error_reporting(0);
 $username = $_SESSION["username"];
 
 $sql="select v_id,v_name,v_username,v_phoneno,v_email,v_photo,v_address,v_gender,v_comp,v_iglink,v_fblink from vendor where v_username='$username'";
@@ -13,7 +14,7 @@ $result = $conn->query($sql);
     // output data of each row
     while($row = $result->fetch_assoc()) {
          // $id =$row["v_id"];
-          $name= $row["v_name"];
+          $com_name= $row["v_comp"];
 		  $username= $row["v_username"];
 		  $phone= $row["v_phoneno"];
 		  $email=$row["v_email"];
@@ -21,51 +22,43 @@ $result = $conn->query($sql);
 		 // $pass=$row["v_pass"];
           $city=$row["v_address"];
 		  $gender=$row["v_gender"];
-		  $compony=$row["v_comp"];
+		  //$compony=$row["v_comp"];
 		  $ig=$row["v_iglink"];
 		  $fb=$row["v_fblink"];
 
         }
 		
            
-//   if(isset($_POST['reg_user']))
-//  {
-//  $compony_name =  $_POST['v_name'];
-//  $servicse = $_POST['v_services'];
-//  $email = $_POST['v_email'];
-//  $address = $_POST['v_address'];
-//  $m_no = $_POST['v_phoneno'];
-//  $gender= $_POST['v_gender'];
-//  $photo=$_POST['v_photo'];
-// //  $about=$_POST['p_about'];
-//  $IG = $_POST['v_iglink'];
-//  $FB = $_POST['v_fblink'];
-//  echo $compony_name;
-//  echo $servicse;
-//  echo $email;
-//  $services = $_POST['p_ser_places'];
-//  $profession = $_POST['p_profession'];
+  if(isset($_POST['reg_user']))
+  {
+  	$compony_name =  $_POST['v_comp'];
+  	$profession = $_POST['v_profession'];
+  	$email = $_POST['v_email'];
+  	$address = $_POST['v_address'];
+ 	$m_no = $_POST['v_phoneno'];
+ 	//$gender= $_POST['v_gender'];
+ 	$photo=$_POST['v_photo'];
+//  $about=$_POST['p_about'];
+ 	$IG = $_POST['v_iglink'];
+ 	$FB = $_POST['v_fblink'];
+ 	//$services = $_POST['p_ser_places'];
+ 	
  
-//  $experience = $_POST['p_experience'];
+   
+	$sql = "UPDATE vendor SET v_comp = '$compony_name' , v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
   
- // Performing insert query execution
- // here our table name is college
-//  $sql = "INSERT INTO vendor(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
-  
-//  $result = mysqli_query($conn, $sql);
-//  if ($result) {
-//     echo "";
+   $result = mysqli_query($conn, $sql);
+  if (isset($result)) {
+     echo "";
 
-// 	 //echo nl2br("\n$name\n $username\n "
-// 		// . "$pass\n $address\n $gender \n $email\n $services\n $profession\n $m_no\n $experience");
-//    } 
-//  else{
-// 	 echo "ERROR: Hush! Sorry $sql. "
-// 		 . mysqli_error($conn);
-//    }
-// }
+  }
+ else{
+	 echo "ERROR: Hush! Sorry $sql. "
+		 . mysqli_error($conn);
+   }
+}
 
- // Close connection
+ 
 //  mysqli_close($conn);
  ?>
 
@@ -109,7 +102,7 @@ $result = $conn->query($sql);
  										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
-											<input type="text" class="form-control" id="email" name="v_name" value="<?php echo $compony; ?>" placeholder=" " required>
+											<input type="text" class="form-control" id="email" name="v_comp" value="<?php echo $com_name; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->
@@ -118,7 +111,7 @@ $result = $conn->query($sql);
 										<!-- services-->
 										<div class="form-group" >
 											<label for="exampleFormControlSelect1">select service</label>
-											<select class="form-control" id="exampleFormControlSelect1" name="v_services">
+											<select class="form-control" id="exampleFormControlSelect1" name="v_profession">
 											 <option selected disabled value="">Choose...</option>
 				      						 <option value="Decoration">Decoration</option>
 				                             <option value="Sound system">Sound system</option>
@@ -135,7 +128,7 @@ $result = $conn->query($sql);
 										<!-- email -->
 										<div class="form-group">
 											<label for="email">Email Address</label>
-											<input type="email" class="form-control" id="v_email" value="<?php echo $email; ?>" name="p_email">
+											<input type="email" class="form-control" id="v_email" value="<?php echo $email; ?>" name="v_email">
 											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
 										<!-- <div class="form-group">
@@ -178,14 +171,14 @@ $result = $conn->query($sql);
 											<!-- ig id -->
 											<div class="form-group">
 												<label for="email">Instagram Id link</label>
-												<input type="email" class="form-control" id="email"  name="v_iglink" value="<?php echo $ig; ?>">
+												<input type="text" class="form-control" id="email"  name="v_iglink" value="<?php echo $ig; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
 											<!-- fb id -->
 											<div class="form-group">
 												<label for="email">Face book Id link</label>
-												<input type="email" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
+												<input type="text" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
