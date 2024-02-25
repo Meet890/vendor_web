@@ -90,8 +90,7 @@ require 'config.php';
 														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
 														</td>
 														<td>
-														  <a href = 'delete.php?rn=$result[name]'onclick='return
-														  checkdelete()'>Delete
+														  <a href = 'delete.php?id=<?php echo $id ;?>?client'>Delete
 														</td>
 													</tr>
 															
@@ -193,8 +192,7 @@ require 'config.php';
 														  checkdelete()'>Edit
 														</td>
 														<td>
-														  <a href = 'update.php?rn=$result[name]'onclick='return
-														  checkdelete()'>Delete
+														  <a href = 'delete.php?id=<?php echo $id ;?><?php echo 'vendor'; ?>'>Delete
 														</td>
 													</tr>
 															

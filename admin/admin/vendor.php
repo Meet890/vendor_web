@@ -28,8 +28,8 @@ require 'config.php';
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Vendor edit page</h4>
-                        
+						<h4 class="page-title">Vendor page</h4>
+						
 						<div class="row">
 								
 						</div>
