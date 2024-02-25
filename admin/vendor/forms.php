@@ -39,20 +39,18 @@ $result = $conn->query($sql);
 	}else{
 		$profession = $_POST['v_profession'];
 	}
-  	
+  	$username=$_POST['v_username'];
   	$email = $_POST['v_email'];
   	$address = $_POST['v_address'];
  	$m_no = $_POST['v_phoneno'];
- 	
  	$photo=$_POST['v_photo'];
-
- 	$IG = $_POST['v_iglink'];
+    $IG = $_POST['v_iglink'];
  	$FB = $_POST['v_fblink'];
  	
  	
  
    
-	$sql = "UPDATE vendor SET v_comp = '$compony_name' , v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
+	$sql = "UPDATE vendor SET v_comp = '$compony_name' v_username= '$username', v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
   
    $result = mysqli_query($conn, $sql);
   if (isset($result)) {
@@ -110,6 +108,14 @@ $result = $conn->query($sql);
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
 											<input type="text" class="form-control" id="email" name="v_comp" value="<?php echo $comp_name; ?>" placeholder=" " required>
+											<!-- <p class="err-msg">
+                							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
+                                            </p> -->
+										</div>
+                                        <!-- user name -->
+										<div class="form-group">
+											<label for="user name">User name</label>
+											<input type="text" class="form-control" id="username" name="v_username" value="<?php echo $username; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->

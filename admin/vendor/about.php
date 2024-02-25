@@ -15,6 +15,12 @@ $about ="";
      else{
         echo "Oops! Something went wrong. Please try again later." .mysqli_error($conn);
      }
+
+     if(isset($_POST['submit']))
+     {
+      $about=$_POST['about'];
+      
+     }
 require 'aboutphp.php';
 
 if(!isset($_SESSION["username"])){
