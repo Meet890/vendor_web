@@ -153,6 +153,7 @@ require 'config.php';
 														
 														    // output data of each row
 														    while($row = mysqli_fetch_assoc($result)) {
+																$table= "vendor";
 															  $id=$row["v_id"];
 														      $name= $row["v_name"];
 														      $username= $row["v_username"];
@@ -192,7 +193,7 @@ require 'config.php';
 														  checkdelete()'>Edit
 														</td>
 														<td>
-														  <a href = 'delete.php?id=<?php echo $id ;?><?php echo 'vendor'; ?>'>Delete
+														  <a href = 'delete.php?id=<?php echo $id?>?table=<?php echo $table; ?>'>Delete
 														</td>
 													</tr>
 															
