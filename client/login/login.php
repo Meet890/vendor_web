@@ -69,7 +69,7 @@ require_once "loginphp.php";
             
         </div>
         
-        <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white m-2  cencel" aria-label="Close" onclick="redirect()"></button>
                   
     </div>
     <script>
@@ -89,6 +89,11 @@ require_once "loginphp.php";
             c=1;
             
         }
+    }
+
+    function redirect()
+    {
+        window.location.href = "../../index.php";
     }
         </script>
 

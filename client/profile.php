@@ -134,15 +134,6 @@ if ($result->num_rows > 0) {
                 <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
                 
             <?php endforeach; ?>   
-            <!-- <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/unnamed.jpg" onclick="openModal('img/unnamed.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3"> -->
-            <!-- Add more images as needed -->
             </div>
 
         <div id="myModal" class="modal">
