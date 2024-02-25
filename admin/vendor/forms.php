@@ -8,7 +8,7 @@ if(!isset($_SESSION["username"])){
 error_reporting(0);
 $username = $_SESSION["username"];
 
-$sql="select v_id,v_name,v_username,v_phoneno,v_email,v_photo,v_address,v_gender,v_comp,v_iglink,v_fblink from vendor where v_username='$username'";
+$sql="select v_id,v_name,v_username,v_password,v_phoneno,v_email,v_photo,v_address,v_gender,v_comp,v_iglink,v_fblink from vendor where v_username='$username'";
 $result = $conn->query($sql);
 
     // output data of each row
@@ -16,13 +16,12 @@ $result = $conn->query($sql);
          // $id =$row["v_id"];
           $comp_name= $row["v_comp"];
 		  $username= $row["v_username"];
+		  $pass=$row["v_password"];
 		  $phone= $row["v_phoneno"];
 		  $email=$row["v_email"];
 		  $photo=$row["v_photo"];
-		 // $pass=$row["v_pass"];
           $city=$row["v_address"];
 		  $gender=$row["v_gender"];
-		  //$compony=$row["v_comp"];
 		  $ig=$row["v_iglink"];
 		  $fb=$row["v_fblink"];
 
@@ -38,19 +37,19 @@ $result = $conn->query($sql);
 		
 	}else{
 		$profession = $_POST['v_profession'];
-	
-  	
-  	$email = $_POST['v_email'];
-  	$address = $_POST['v_address'];
- 	$m_no = $_POST['v_phoneno'];
- 	$photo=$_POST['v_photo'];
-    $IG = $_POST['v_iglink'];
- 	$FB = $_POST['v_fblink'];
+		$username=$_POST['v_username'];
+		$pass=$_POST['v_password'];
+  		$email = $_POST['v_email'];
+  		$address = $_POST['v_address'];
+ 		$m_no = $_POST['v_phoneno'];
+ 		$photo=$_POST['v_photo'];
+    	$IG = $_POST['v_iglink'];
+ 		$FB = $_POST['v_fblink'];
  	
  	
  
    
-	$sql = "UPDATE vendor SET v_comp = '$compony_name' v_username= '$username', v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
+	$sql = "UPDATE vendor SET v_comp = '$compony_name' v_username= '$username',v_password='$pass', v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
   
    $result = mysqli_query($conn, $sql);
   if (isset($result)) {
@@ -124,6 +123,16 @@ $result = $conn->query($sql);
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->
 										</div>
+										
+										<!-- password -->
+										<div class="form-group">
+											<label for="pass">Password</label>
+											<input type="text" class="form-control" id="username" name="v_password" value="<?php echo $pass; ?>" placeholder=" " required>
+											<!-- <p class="err-msg">
+                							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
+                                            </p> -->
+										</div>
+
 
 										<!-- services-->
 										<div class="form-group" >
