@@ -38,8 +38,8 @@ $result = $conn->query($sql);
 		
 	}else{
 		$profession = $_POST['v_profession'];
-	}
-  	$username=$_POST['v_username'];
+	
+  	
   	$email = $_POST['v_email'];
   	$address = $_POST['v_address'];
  	$m_no = $_POST['v_phoneno'];
@@ -61,6 +61,8 @@ $result = $conn->query($sql);
 	 echo "ERROR: Hush! Sorry $sql. "
 		 . mysqli_error($conn);
    }
+}
+
 }
 
  
@@ -103,7 +105,9 @@ $result = $conn->query($sql);
 									<p class="text-success text-center"></p> <form method="post">
 
 									<div class="card-body">
-
+										<h4><p class="err-msg">
+                								<?php if($pro!=1){ echo $pro; }?>
+               								</p> </h4>
  										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
@@ -136,9 +140,7 @@ $result = $conn->query($sql);
 					                         <option value="Venue">Venue</option>
 					                         <option value="Invitation">Invitation Card</option>
 											</select>
-											<p class="err-msg">
-                								<?php if($pro!=1){ echo $pro; }?>
-               								</p> 
+											
 										</div>
 									
 										<!-- email -->
