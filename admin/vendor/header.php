@@ -5,7 +5,7 @@ $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $ID ");
 
 while($row = $result->fetch_assoc()) {
 	if($row['v_photo']==""){
-		$img ="<?php echo  $img; ?>";
+		$img ="../../user2.png";
 		//echo '<script>  alert("hello"); </script>';
 	}
 	else{

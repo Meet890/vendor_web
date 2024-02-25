@@ -53,6 +53,19 @@ echo"<br>";
 else{
 die("Connection failed: " . mysqli_connect_error());
 }
+$result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_username ='$v_username' ");
+
+while($row = $result->fetch_assoc()) {
+    if($row['v_photo']==""){
+        $img ="../../user2.png";
+        //echo '<script>  alert("hello"); </script>';
+    }
+    else{
+        $img = "img/".$row["v_photo"];
+        //echo $img;
+        //echo '<script>  alert("1"); </script>';
+    }
+}
 
 $sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
@@ -75,7 +88,7 @@ echo "0 results";
 
 ?>
 						<section>
-        <img src="assets/img/f1.jpg" alt="User Profile Picture" class="pro_img">
+        <img src="<?php echo  $img; ?>" alt="User Profile Picture" class="pro_img">
         <div class="detail">
             <div class="post">
               <!-- <h2>14</h2>

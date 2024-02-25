@@ -9,6 +9,7 @@ if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
 else if(isset($_SESSION["username"])){
   header("location:.././admin/vendor/index.php");
 }
+      
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -26,24 +27,38 @@ else if(isset($_SESSION["username"])){
 ?>
     <?php
     
-    $v_username = $_GET["username"];
+    $id = $_GET["id"];
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "vendor";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if($conn){
-    echo"<br>";
-}
-else{
-  die("Connection failed: " . mysqli_connect_error());
-}
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    if($conn){
+        echo"<br>";
+    }
+    else{
+      die("Connection failed: " . mysqli_connect_error());
+    }
 
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
+
+    $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $id ");
+
+    while($row = $result->fetch_assoc()) {
+        if($row['v_photo']==""){
+            $img ="../user2.png";
+            //echo '<script>  alert("hello"); </script>';
+        }
+        else{
+            $img = "../admin/vendor/img/".$row["v_photo"];
+            //echo $img;
+            //echo '<script>  alert("1"); </script>';
+        }
+    }
+
+
+
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_id = '$id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -62,10 +77,12 @@ if ($result->num_rows > 0) {
 }
 
 
+
+
     ?>
 
     <section>
-        <img src="img/f1.jpg" alt="User Profile Picture" class="pro_img">
+        <img src="<?php echo  $img; ?>" alt="User Profile Picture" class="pro_img">
         <div class="detail">
             <div class="post">
               <!-- <h2>14</h2>
@@ -109,15 +126,47 @@ if ($result->num_rows > 0) {
         <ul>
             <li> <br></li>
             <li>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <img src="img/insta.jpg" alt="Location Icon" class="png">
                 <img src="img/Facebook.png" alt="Phone Icon" class="png">
             </li>
         </ul>
-        </div>
-        </div>
-        <div class="about center">
-            <h3 class="mt-4">About us</h3>
+        <form action="report.php?id=<?php echo $id; ?>" method="post"> 
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                report
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content px-3 py-1 m-4">
+                            <div class="row">
+                                <div class="col-11">
+                            <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
+                            
+                        
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dis" class="form-label">Discription</label>
+                                <textarea class="form-control" id="dis" rows="3" name="dis"></textarea>
+                            </div>
+                        
+                        
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" name="Submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="about center">
+        <h3 class="mt-4">About us</h3>
             <p><?php echo $about ?></p>
             <span></span>
         </div>
@@ -261,6 +310,12 @@ if ($result->num_rows > 0) {
 	    }
     }
 
+    var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
     </script>
 
 
