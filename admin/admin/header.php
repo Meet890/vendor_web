@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
+    header("location: ../login.php");
+    exit;
+}
+?>
 <div class="logo-header">
 				<a href="index.php" class="logo">
 					Vendor Partners
@@ -14,13 +21,13 @@
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >Hizrian</span></span> </a>
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span ><?php echo $_SESSION['a_username'];?></span></span> </a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
 										<div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
 										<div class="u-text">
-											<h4>Hizrian</h4>
+											<h4><?php echo $_SESSION['a_username'];?></h4>
 											
 									
 									<div class="dropdown-divider"></div>
