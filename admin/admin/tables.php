@@ -90,7 +90,7 @@ require 'config.php';
 														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
 														</td>
 														<td>
-														  <a href = 'deletec.php?id=<?php echo $id ;?>'>Delete
+														  <a href = 'delete.php?id=<?php echo $id ;?>?client'>Delete
 														</td>
 													</tr>
 															
@@ -183,7 +183,6 @@ require 'config.php';
 														<td><?php echo $gender  ?></td>
 														<td><?php echo $serplc  ?></td>
 														<td><?php echo $profession  ?></td>	
-														
 														<td><?php echo $ig  ?></td>
 														<td><?php echo $fb  ?></td>
 														<td><?php echo $wa  ?></td>
@@ -193,7 +192,7 @@ require 'config.php';
 														  checkdelete()'>Edit
 														</td>
 														<td>
-														  <a href = 'deletev.php?id= <?php echo $id ?> '>Delete
+														  <a href = 'delete.php?id=<?php echo $id?>?table=<?php echo $table; ?>'>Delete
 														</td>
 													</tr>
 															

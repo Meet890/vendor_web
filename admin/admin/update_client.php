@@ -15,12 +15,25 @@ $result = $conn->query($sql);
           $username= $row["c_username"];
           
       }
-    // echo $id;
-    // echo $name;
-    // echo $city;
-    // echo $email;
-    // echo $username;
-  
+    
+if(isset($_POST['update']))
+{
+  $name=$_POST['name'];
+  $city=$_POST['city'];
+  $email=$_POST['email'];
+  $username=$_POST['username'];
+
+  $sql = "UPDATE client SET c_username = '$username', c_name = '$name', c_city = '$city', c_email = '$email' WHERE c_id = '$id'";
+  $data = mysqli_query($conn,$sql);
+  if(isset($data))
+  {
+      echo "record updated";
+      echo $name;
+    ////header("location:tables.php");
+  }
+}
+
+
 
 
 ?> 
@@ -47,7 +60,7 @@ $result = $conn->query($sql);
                 <div class="title">changes in client</div>
                 <form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
-                        <input type="text" id="name" name="name" value="<?php echo $id; ?>" placeholder=" " required>
+                        <input type="text" id="name" name="name" value="<?php echo $name; ?>" placeholder=" " required>
                         <label for="name">Name</label>
                     </div>
                     
@@ -70,25 +83,12 @@ $result = $conn->query($sql);
                         <!-- <i class="fa fa-envelope"></i> -->
                     </div>
 
-                    <button class="signup-btn">submit</button>
+                    <button class="signup-btn" name="update">submit</button>
                 </form>
 
                 
             </div>
         </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
-
 </html>
