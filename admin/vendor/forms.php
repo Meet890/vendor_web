@@ -14,7 +14,7 @@ $result = $conn->query($sql);
     // output data of each row
     while($row = $result->fetch_assoc()) {
          // $id =$row["v_id"];
-          $com_name= $row["v_comp"];
+          $comp_name= $row["v_comp"];
 		  $username= $row["v_username"];
 		  $phone= $row["v_phoneno"];
 		  $email=$row["v_email"];
@@ -32,16 +32,23 @@ $result = $conn->query($sql);
   if(isset($_POST['reg_user']))
   {
   	$compony_name =  $_POST['v_comp'];
-  	$profession = $_POST['v_profession'];
+	if($_POST['v_profession']=="")
+	{
+		$pro ="Enter valid input";
+		
+	}else{
+		$profession = $_POST['v_profession'];
+	}
+  	
   	$email = $_POST['v_email'];
   	$address = $_POST['v_address'];
  	$m_no = $_POST['v_phoneno'];
- 	//$gender= $_POST['v_gender'];
+ 	
  	$photo=$_POST['v_photo'];
-//  $about=$_POST['p_about'];
+
  	$IG = $_POST['v_iglink'];
  	$FB = $_POST['v_fblink'];
- 	//$services = $_POST['p_ser_places'];
+ 	
  	
  
    
@@ -102,7 +109,7 @@ $result = $conn->query($sql);
  										<!-- compony name -->
 										<div class="form-group">
 											<label for="Compony name">Compony name</label>
-											<input type="text" class="form-control" id="email" name="v_comp" value="<?php echo $com_name; ?>" placeholder=" " required>
+											<input type="text" class="form-control" id="email" name="v_comp" value="<?php echo $comp_name; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->
@@ -123,6 +130,9 @@ $result = $conn->query($sql);
 					                         <option value="Venue">Venue</option>
 					                         <option value="Invitation">Invitation Card</option>
 											</select>
+											<p class="err-msg">
+                								<?php if($pro!=1){ echo $pro; }?>
+               								</p> 
 										</div>
 									
 										<!-- email -->
@@ -146,9 +156,9 @@ $result = $conn->query($sql);
 										<div class="form-group ">
 											<label for="successInput">Address</label>
 											<input type="text" id="Address" value="<?php echo $city; ?>" class="form-control" name="v_address">
-											<!-- <p class="err-msg">
+											 <p class="err-msg">
                 								<?php if($AddErr!=1){ echo $AddErr; }?>
-               								</p> -->
+               								</p> 
 										</div>
 
 										<!-- phone no -->
@@ -183,12 +193,7 @@ $result = $conn->query($sql);
 											</div>
 
 
-											<div class="form-check">
-												<label class="form-check-label">
-													<input class="form-check-input" type="checkbox" value="">
-													<span class="form-check-sign">Agree with terms and conditions</span>
-												</label>
-											</div>
+											
 										</div>
 										<div class="card-action">
 											<button class="btn btn-success" name="reg_user">Submit</button>
