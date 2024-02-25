@@ -38,7 +38,7 @@ $result = $conn->query($sql);
 		
 	}else{
 		$profession = $_POST['v_profession'];
-	}
+	
   	
   	$email = $_POST['v_email'];
   	$address = $_POST['v_address'];
@@ -63,6 +63,7 @@ $result = $conn->query($sql);
 	 echo "ERROR: Hush! Sorry $sql. "
 		 . mysqli_error($conn);
    }
+}
 }
 
  
