@@ -3,18 +3,7 @@ include("config.php");
 // error_reporting(0);
 
 $id= $_GET['id'];
-$sql="select c_id,c_name,c_username,c_email,c_city from client where c_id='$id'";
-$result = $conn->query($sql);
 
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-          $id =$row["c_id"];
-          $name= $row["c_name"];
-          $city=$row["c_city"];
-          $email=$row["c_email"];
-          $username= $row["c_username"];
-          
-      }
     
 if(isset($_POST['update']))
 {
@@ -32,7 +21,18 @@ if(isset($_POST['update']))
     ////header("location:tables.php");
   }
 }
+$sql="select c_id,c_name,c_username,c_email,c_city from client where c_id='$id'";
+$result = $conn->query($sql);
 
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+          $id =$row["c_id"];
+          $name= $row["c_name"];
+          $city=$row["c_city"];
+          $email=$row["c_email"];
+          $username= $row["c_username"];
+          
+      }
 
 
 
