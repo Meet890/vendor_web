@@ -17,7 +17,7 @@ if(isset($_POST['update']))
   if(isset($data))
   {
       echo "record updated";
-      echo $name;
+      //echo $name;
     ////header("location:tables.php");
   }
 }
