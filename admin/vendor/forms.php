@@ -176,6 +176,9 @@ $result = $conn->query($sql);
 											<div class="form-group">
 												<label for="exampleFormControlFile1">Choose profile photo</label>
 												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo" value="<?php echo $photo; ?>">
+												<form action=""></form>
+
+												<button class="btn btn-success mt-2" name="photosubmit">Submit</button>
 											</div>
 
 											
