@@ -57,10 +57,19 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
 											<table class="table table-bordered">
 												<thead>
 													<tr>
-														<th>id</th>
+														<th>Id</th>
+														<th>Name</th>
+														<th>Username</th>
+														<th>Password</th>
+														<th>Phone</th>
+														<th>Email</th>
+														<th>Address</th>
+														<th>Gender</th>
+														<th>Company</th>
+														<th>Transaction id</th>
+														<th>accepted or not</th>
+														<th>accept </th>
 														
-														<th>Admin Username</th>
-														<th>Admin Password</th>
 														<th>delete</th>
 
 													</tr>
@@ -69,25 +78,43 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
 													<?php
 														
 
-														$sql = "SELECT * FROM register";
+														$sql = "SELECT * FROM registration";
 														$result = mysqli_query($conn, $sql);
 
 														if (mysqli_num_rows($result) > 0) {
 														
 														    // output data of each row
 														    while($row = mysqli_fetch_assoc($result)) {
-                                                              $id = $row["a_id"];
-														      $username= $row["a_username"];
-															  $password=$row["a_password"];
+                                                              $id = $row["reg_id"];
+															  $name = $row["reg_name"];
+														      $username= $row["reg_username"];
+															  $password=$row["reg_pass"];
+															  $phone =$row["reg_phone"];
+															  $email = $row["reg_email"];
+															  $add = $row["reg_add"];
+															  $gender = $row["reg_gen"];
+															  $comp = $row["reg_com"];
+															  $tra_id = $row['reg_tra_id'];
+															  $accept = $row['reg_accept'];
+															  
 														      ?>
 													<tr>
 														<th scope="row"><?php echo $id ?></th>
-														
+														<td> <?php echo $name;?> </td>
 														<td><?php echo $username  ?></td>
 														<td><?php echo $password  ?></td>
-														
+														<td><?php echo $phone ?></td>	
+														<td><?php echo $email ?></td>
+														<td><?php echo $add ?></td>
+														<td><?php echo $gender ?></td>
+														<td><?php echo $comp ?></td>
+														<td><?php echo $tra_id ?></td>
+														<td><?php echo $accept ?></td>
 														<td>
-														  <a href="delete.php?id=<?php echo $id ;?>">Delete</a>
+														  <a href="acceptreg.php?id=<?php echo $id ;?>">Accept</a>
+														</td>
+														<td>
+														  <a href="deletereg.php?id=<?php echo $id ;?>">Delete</a>
 														</td>
 													</tr>
 															
@@ -128,7 +155,7 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
 <!-- <script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script> -->
 <!-- <script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script> -->
 <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
-<!-- <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script> -->
+<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 <script src="assets/js/ready.min.js"></script>
 <script src="assets/js/demo.js"></script>
 </html>
