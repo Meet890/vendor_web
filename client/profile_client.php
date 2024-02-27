@@ -52,7 +52,7 @@ img {
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-9 col-md-6 col-sm-6 col-lg-3">
+    <div class="col-8 col-md-6 col-sm-6 col-lg-3">
       <div class="row mt-5">
         <div class="col bg-white text-dark rounded shadow p-3">
           <img src="img/pro.jpg" alt="Avatar" style="width:100%">
