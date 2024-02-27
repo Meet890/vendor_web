@@ -1,7 +1,7 @@
 <?php
 require 'config.php';
 $id = $_GET['id'];
-$sql = "SELECT * FROM registration WHERE reg_id =$id ORDER BY " ;
+$sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
     $query = mysqli_query($conn, $sql);
      if($query){
         while ($row=mysqli_fetch_array($query)) { 
@@ -12,7 +12,11 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id ORDER BY " ;
             $set_PhoneNo= $row['reg_phone'];
             $set_email= $row['reg_email'];
             $set_add= $row['reg_add'];
-            $set_Gender= $row['reg_gen'];
+            if($row['reg_gen']=='m'){
+            $set_Gender= "Male";
+            }else{
+                $set_Gender="Female";  
+            }
             $set_ComName= $row['reg_com'];
             $set_traid= $row['reg_tra_id'];
             $set_accept= $row['reg_accept'];
@@ -35,7 +39,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $set_PhoneNo= $_POST['Phone_no'];
             $set_email= $_POST['email'];
             $set_add= $_POST['Address'];
-            $set_Gender= $_POST['gender'];
+            if($_POST['gender']=='Male'){
+                $set_Gender= "m";
+                }else{
+                    $set_Gender="f";  
+                }
+             
             $set_ComName= $_POST['comp'];
             $set_traid= $_POST['tra_id'];
             $set_accept= '1';
@@ -59,7 +68,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         $set_days= $_POST['days'];
         // Add 30 days to the current date
         $newdate = date("Y-m-d", strtotime($currentdate . " +$set_days days"));
-        
+        $id = $_GET['id'];
         $sql = "INSERT INTO vendor(reg_id,v_name,v_username,v_password,v_email,v_phoneno,v_address,v_gender,v_comp,v_reg_end_time) VALUES ('$id','$set_name','$set_username','$set_pass','$set_email','$set_PhoneNo','$set_add','$set_Gender','$set_ComName','$newdate')";
         $result = mysqli_query($conn,$sql);      
         if($result==1)
@@ -67,6 +76,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
             
           
             echo '<script>  alert("Added New vendor successfully!"); </script>'; 
+            header('Location: Register.php');
         }
 
 
