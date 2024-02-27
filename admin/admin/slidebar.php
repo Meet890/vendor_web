@@ -1,6 +1,6 @@
 <?php 
 
-if(!isset($_SESSION["a_id"]) ||( $_SESSION["loggedin"] === true)){
+if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
     header("location: ../login.php");
     exit;
 }

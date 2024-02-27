@@ -1,6 +1,48 @@
 <?php
-require_once "loginphp.php";
-// include "../header2.php";
+require 'config.php';
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $username = $_POST["username"];
+    echo $username;
+    if(isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)){
+        $sql = "SELECT v_username FROM vendor WHERE v_username = ?";
+
+        if($stmt = mysqli_prepare($conn, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s",$param_username);
+            // Set parameters
+            $param_username = $username;
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Store result
+                mysqli_stmt_store_result($stmt);
+                // Check if username exists, if yes then verify password
+                if(mysqli_stmt_num_rows($stmt) == 1){
+                    // Bind result variables
+                    mysqli_stmt_bind_result($stmt, $username);
+                    
+                    if(mysqli_stmt_fetch($stmt)){
+                        if($password = $c_password){
+                        }
+                    }
+                    else{
+                        echo '<script>  alert("1"); </script>';
+                    }
+                }else{
+                    echo '<script>  alert("This username dose not  exist."); </script>';
+                }
+            }else{
+                echo '<script>  alert("3"); </script>';
+            }
+        }else{
+            echo '<script>  alert("4"); </script>';
+        }
+    
+
+}
+else{
+    $username_err = "Enter valid Username";
+}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,18 +83,19 @@ require_once "loginphp.php";
                     <button class="login-btn" name="submit">Next</button>
                 </form>
                 
-                <div class="bottom">
+                    
                     
                 </div>
+                
+                </div>
+                <button type="button" class="btn-close bg-white m-2 background cencel mt-5" aria-label="Close" onclick="redirect()"></button>
             </div>
 
 
 
 
             
-        </div>
-        <button type="button" class="btn-close bg-white m-2 background cencel mt-5" aria-label="Close" onclick="redirect()"></button>
-    </div>
+        
     <script>
         var c;
     function pass3()

@@ -20,7 +20,7 @@ if(isset($_POST['register']))
    
    //input fields are Validated with regular expression
    $validName="/^[a-zA-Z ]*$/";
-   $validUserName="/^[A-Za-z0-9]+$/";
+   $validUserName="/^[A-Za-z0-9_]+$/";
    // $validEmail=; //@gmail.com @yahoo.com @hotmail.com @aol.com @outlook.com;
    $uppercasePassword = "/(?=.*?[A-Z])/";
    $lowercasePassword = "/(?=.*?[a-z])/";
