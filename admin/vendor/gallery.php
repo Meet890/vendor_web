@@ -146,7 +146,7 @@ if(isset($_POST["submit2"])){
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-					<h4 class="page-title">Add new photo</h4>
+					<h4 class="page-title">Update Profile Photo</h4>
                         
 						<div class="row">
 								<div class="col-12">

@@ -14,8 +14,9 @@ if(isset($_POST["Submit"]))
     if($result)
     {
         echo "<script> alert('done'); </script>";
-        header("Location:profile.php?id=".$v_id);
+        
     }
+    header("Location:profile.php?id=".$v_id);
 }
 
 

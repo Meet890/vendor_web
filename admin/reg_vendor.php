@@ -168,6 +168,8 @@ background-color: rgba(0,0,0, 1);
         <div class="col-12">
         <button type="submit" class="btn btn-danger my-1" value="Register" name="register">Register Now</button>
         </div>
+        <hr>
+        <div>Already have an Account?&nbsp;<a class="signup-switch" href="reg_vendor.php">Login</a></div>
       </form>
     </div>
    </div>

@@ -3,19 +3,7 @@ require 'config.php';
 
 
    
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    $username =$_POST["username"];
-$password= $_POST['pass'];
-$sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$password')";
-   $result= mysqli_query($conn,$sql);
-   if($result==false){
-    echo mysqli_error($conn);
-   }
-   else{
-    echo '<script>  alert("Added new admin"); </script>';
-}
-}
+    
 ?>
 <!DOCTYPE html>
 <html>
