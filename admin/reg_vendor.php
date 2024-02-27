@@ -63,6 +63,22 @@ background-color: rgba(0,0,0, 1);
         .row{
           background: linear-gradient(180deg,rgba(0,0,0,.8),rgba(0,0,0,.4),rgba(0,0,0,.8));
         }
+        .pass-icon{
+          position: absolute;
+          right: 18px;
+          width: 23px;
+          cursor: pointer;
+          bottom: 438px;
+    }
+    .pass-icon2{
+          position: absolute;
+          right: 18px;
+          width: 23px;
+          cursor: pointer;
+          bottom: 361px;
+    }
+
+    
   </style>
 </head>
 <body>
@@ -118,8 +134,10 @@ background-color: rgba(0,0,0, 1);
         
         <!--//Password//-->
         <div class="form-group">
+        <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
             <label for="pwd">Password:</label>
-            <input type="password" class="form-control"  placeholder="Enter password" name="password">
+            <input type="password"  id="pass" class="form-control"  placeholder="Enter password" name="password" >
+            
             <p class="err-msg">
                 <?php if($passErr!=1){ echo $passErr; } ?>
             </p>
@@ -127,8 +145,9 @@ background-color: rgba(0,0,0, 1);
 
         <!--//Confirm Password//-->
         <div class="form-group">
+        <img src="eye-close.png" onclick="pass2()" class="pass-icon2" id="pass-icon1">
             <label for="pwd">Confirm Password:</label>
-            <input type="password" class="form-control" placeholder="Enter Confirm password" name="cpassword">
+            <input type="password" id="password" class="form-control" placeholder="Enter Confirm password" name="cpassword">
             <p class="err-msg">
               <?php if($cpassErr!=1){ echo $cpassErr; } ?>
             </p>
@@ -177,6 +196,43 @@ background-color: rgba(0,0,0, 1);
  </div>
   
 </div>
+<script>
+        var c;
+    function pass3()
+    {
+        if(c==1)
+        {
+            document.getElementById('pass').type='password';
+            document.getElementById('pass-icon3').src='eye-close.png';
+            c=0;
+        }
+        else
+        {
+            document.getElementById('pass').type='text';
+            document.getElementById('pass-icon3').src='eye-open.png';
+            c=1;
+            
+        }
+    }
+    var b;
+    function pass2()
+    {
+        if(b==1)
+        {
+            document.getElementById('password').type='password';
+            document.getElementById('pass-icon1').src='eye-close.png';
+            b=0;
+        }
+        else
+        {
+            document.getElementById('password').type='text';
+            document.getElementById('pass-icon1').src='eye-open.png';
+            b=1;
+            
+        }
+    }
+
+</script>    
 
 </body>
 
