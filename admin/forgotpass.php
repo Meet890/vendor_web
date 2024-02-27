@@ -8,7 +8,7 @@ require_once "loginphp.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Forgot password</title>
   
     <link rel="stylesheet" href="reg.css">    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -17,12 +17,12 @@ require_once "loginphp.php";
 <body>
     <div class="bg-img"></div>
     <div id="main-container">
-        <div class="form-container">
+        <div class="form-container mt-5">
             <div class="login-form">
                 <div class="image">
                     
                 </div>
-                <div class="title">LOGIN</div>
+                <div class="title">Forgot Password</div>
                 <?php
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -35,31 +35,14 @@ require_once "loginphp.php";
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
                         <!-- <i class="fa fa-envelope"></i> -->
                     </div>
-
-                    <div class="field">
-                    <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
-                        <input type="password" id="pass" name="password" required placeholder=" " autocomplete="on">
-                        <label for="create-pass">Password</label>
-                        <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        <!-- <i class="fa fa-lock"></i> -->
-                        
-                    </div>
-                    <div style="text-align:left;">Forgot Password ?&nbsp;<a class="signup-switch" href="forgotpass.php">Click here</a></div>
                         <br>
                    
 
-                    <button class="login-btn" name="submit">Login</button>
+                    <button class="login-btn" name="submit">Next</button>
                 </form>
                 
                 <div class="bottom">
-                    <div class="other">
-                        <div class="or">
-                            <span></span>Or<span></span>
-                        </div>
-
-                        
-                    </div>
-                    <div>Don't have an Account?&nbsp;<a class="signup-switch" href="reg_vendor.php">Sign up</a></div>
+                    
                 </div>
             </div>
 
@@ -68,7 +51,7 @@ require_once "loginphp.php";
 
             
         </div>
-        <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close" onclick="redirect()"></button>
+        <button type="button" class="btn-close bg-white m-2 background cencel mt-5" aria-label="Close" onclick="redirect()"></button>
     </div>
     <script>
         var c;

@@ -34,12 +34,17 @@
 					<div class="widget widegt_about">
 						<div class="widget_title">
 						<div class="container mb-2 p-0 justify-content-center ">
-						<a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> <span class="text-light">PARTNERS</span>
+						<a class="navbar-brand" href="index.php"><span class="text-warning">KACHCHHI</span> <span class="text-light">VENT</span>
  						 </a>
 						</div>
 						<p> The client can easilly find his choise vendors.</p>
             <p class="mb-5 fw-bold">We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
 				                      innovation, and customer satisfaction. We are always looking for new ways to improve our vendor.</p>
+            <p class="mb-5 fw-bold">vendor management system is online platform which provides all kind of  vandor like photographer , decoraters, catering and many more vendors for you events. in vendor management system vendors can register in website and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
+									  
+                                      <p><a href="privacy_policy.php" class="link-Primary">Privacy Policy</a></p>
+                                      <p><a href="terms_condition.php" class="link-primary">Terms & Conditions </a></p>
+                                      
 						<ul class="social">
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -68,7 +73,7 @@
 									<i class="fas fa-envelope"></i>
 								</div>
 								<div class="info">
-									<p><a href="mailto:info@deneb.com">vendorpartners@gmail.com</a></p>
+									<p><a href="mailto:info@deneb.com">kachchhivent@gmail.com</a></p>
 								</div>
 							</div>
 							<div class="single_info">

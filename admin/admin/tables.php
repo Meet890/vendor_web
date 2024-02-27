@@ -135,7 +135,7 @@ require 'config.php';
 														<th>Vendor Profession</th>
 														<th>Instagram Link</th>
 														<th>Facebook Link</th>
-														<th>Whatsapp Link</th>
+														
 														<th>Vendor Joined Time</th>
 														<th>Edit</th>
 														<th>delete</th>
@@ -166,7 +166,7 @@ require 'config.php';
 															 
 															  $ig=$row["v_iglink"];
 															  $fb=$row["v_fblink"];
-															  $wa=$row["v_walink"];
+															
 															  $dis=$row["v_discription"];
 														      
 
@@ -185,7 +185,7 @@ require 'config.php';
 														<td><?php echo $profession  ?></td>	
 														<td><?php echo $ig  ?></td>
 														<td><?php echo $fb  ?></td>
-														<td><?php echo $wa  ?></td>
+														
 														<td><?php echo $dis  ?></td>												
 														<td>
 														  <a href = 'update.php?rn=$result[name]'onclick='return

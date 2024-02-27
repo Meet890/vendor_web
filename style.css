@@ -6,9 +6,10 @@ body{
     /* background-image: url("background6.jpg");
     background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; */
-  background: linear-gradient(180deg, #fbe4d8 0%, #dfb6b2 36%, #854f6c 70%, #072e33 98%);
-}
+  background-size: cover;*/
+   
+background: linear-gradient(167deg, rgb(124, 117, 179) 0%, rgb(140, 209, 177) 50%, rgb(204, 192, 141) 96%);
+  }
 .section-padding{
     padding:150px 0 ;
 }
@@ -61,7 +62,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background:rgba(0,0,0,0.7);
+    background:rgba(0, 0, 0, 0.726);
     z-index: 1;
 }
 
