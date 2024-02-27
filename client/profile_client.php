@@ -50,17 +50,25 @@ img {
 <body>
 
 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-9 col-md-6 col-sm-6 col-lg-3">
+      <div class="row mt-5">
+        <div class="col bg-white text-dark rounded shadow p-3">
+          <img src="img/pro.jpg" alt="Avatar" style="width:100%">
+  
+          <h6>username</h6> 
+          <h6>name</h6> 
+          <h6>email</h6>
+          <h6>city</h6> 
+          <h6>password</h6> 
+          <br>
+          <a href="">Update profile?</a>
 
-<div class="card mt-5">
-  <img src="img/pro.jpg" alt="Avatar" style="width:100%">
-  <div class="container">
-    <h6>username</h6> 
-    <h6>name</h6> 
-    <h6>email</h6>
-    <h6>city</h6> 
-    <h6>password</h6> 
-    <br>
-    <a href="">Update profile?</a>
+      </div>
+    </div>
+      
+    </div>
   </div>
 </div>
 
