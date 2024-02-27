@@ -71,67 +71,69 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }
                 }
                 else{
-                    echo '<script>  alert("10"); </script>';
-                    // Prepare a select statement
-          $sql = "SELECT * FROM admin_tbl WHERE a_username = ?";
- 
-          if($stmt = mysqli_prepare($conn, $sql)){
-              // Bind variables to the prepared statement as parameters
-              mysqli_stmt_bind_param($stmt, "s",$param_username);
-              // Set parameters
-              $param_username = $username;
-              // Attempt to execute the prepared statement
-              if(mysqli_stmt_execute($stmt)){
-                  // Store result
-                  mysqli_stmt_store_result($stmt);
-                  // Check if username exists, if yes then verify password
-                  if(mysqli_stmt_num_rows($stmt) == 1){
-                      // Bind result variables
-                      mysqli_stmt_bind_result($stmt, $id, $username, $c_password);
-                      
-                      if(mysqli_stmt_fetch($stmt)){
-                          if($password = $c_password){
-                              // Password is correct, so start a new session
-                             
-                              // Store data in session variables
-                              $_SESSION["loggedin"] = true;
-                              $_SESSION["a_id"] = $id;
-                              $_SESSION["a_username"] = $username;
-                             
-                              echo '<script>  alert("connected"); </script>';
-                              header("location: admin/index.php");
-                          }else{
-                              // Password is not valid, display a generic error message
+                   // Prepare a select statement
+         $sql = "SELECT * FROM admin_tbl WHERE a_username = ?";
+
+         if($stmt = mysqli_prepare($conn, $sql)){
+             // Bind variables to the prepared statement as parameters
+             mysqli_stmt_bind_param($stmt, "s",$param_username);
+             // Set parameters
+             $param_username = $username;
+             // Attempt to execute the prepared statement
+             if(mysqli_stmt_execute($stmt)){
+                 // Store result
+                 mysqli_stmt_store_result($stmt);
+                 // Check if username exists, if yes then verify password
+                 if(mysqli_stmt_num_rows($stmt) == 1){
+                     // Bind result variables
+                     mysqli_stmt_bind_result($stmt, $id, $username, $c_password);
+                     
+                     if(mysqli_stmt_fetch($stmt)){
+                         if($password = $c_password){
+                             // Password is correct, so start a new session
                             
-                              echo '<script>  alert("varify pass"); </script>';
-                          }
-                      }else{
-                         // Password is not valid, display a generic error message
-                       
-                         echo '<script>  alert("4"); </script>';
-                     }
-                  }else{
-                     // Password is not valid, display a generic error message
-                   
-                     echo '<script>  alert("5"); </script>';
-                 }
-          }else{
-             // Password is not valid, display a generic error message
-           
-             echo '<script>  alert("6"); </script>';
-         }
-      }else{
-         // Password is not valid, display a generic error message
-       
-         echo '<script>  alert("7"); </script>';
-     }
+                             // Store data in session variables
+                             $_SESSION["loggedin"] = true;
+                             $_SESSION["a_id"] = $id;
+                             $_SESSION["a_username"] = $username;
+                            
+                             echo '<script>  alert("connected"); </script>';
+                             header("location: admin/index.php");
+                         }else{
+                             // Password is not valid, display a generic error message
+                           
+                             echo '<script>  alert("varify pass"); </script>';
+                         }
+                     }else{
+                        // Password is not valid, display a generic error message
+                      
+                        echo '<script>  alert("4"); </script>';
+                    }
+                 }else{
+                    // Password is not valid, display a generic error message
+                  
+                    echo '<script>  alert("5"); </script>';
+                }
+         }else{
+            // Password is not valid, display a generic error message
+          
+            echo '<script>  alert("6"); </script>';
+        }
+     }else{
+        // Password is not valid, display a generic error message
+      
+        echo '<script>  alert("7"); </script>';
+    }
+     
                 }
         }else{
-            
+            // Password is not valid, display a generic error message
+          
+            echo '<script>  alert("3"); </script>';
         }
     }
     else{
-        echo '<script>  alert("9"); </script>'; 
+         
     }
 }else{
     // Password is not valid, display a generic error message
