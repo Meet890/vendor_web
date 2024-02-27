@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
   
     if(isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)){
-        $sql = "SELECT v_username FROM vendor WHERE v_username = ?";
+        $sql = "SELECT c_username FROM client WHERE c_username = ?";
 
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -35,7 +35,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 else{
-    $username_err = "Enter valid Username";
+    echo '<script>  alert("Enter valid username"); </script>';
+    // $username_err = "Enter valid Username";
 }
 }
 ?>
@@ -48,7 +49,7 @@ else{
     <title>Forgot password</title>
   
     <link rel="stylesheet" href="reg.css">    
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
 </head>
 
 <body>
@@ -69,7 +70,7 @@ else{
                     <div class="field">
                         <input type="Username" id="Username" name="username" placeholder=" " value="" required autocomplete="on">
                         <label for="Username">Username</label>
-                        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                       
                         <!-- <i class="fa fa-envelope"></i> -->
                     </div>
                         <br>

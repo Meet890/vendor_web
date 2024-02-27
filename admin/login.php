@@ -22,7 +22,7 @@ require_once "loginphp.php";
                 <div class="image">
                     
                 </div>
-                <div class="title">LOGIN</div>
+                <div class="title">LOGIN AS VENDOR</div>
                 <?php
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger">' . $login_err . '</div>';

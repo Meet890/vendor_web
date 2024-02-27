@@ -1,6 +1,7 @@
 <?php
 require 'config.php';
 $username = $_GET["username"];
+
 // echo $username;
 $uppercasePassword = "/(?=.*?[A-Z])/";
 $lowercasePassword = "/(?=.*?[a-z])/";
@@ -19,7 +20,7 @@ if(empty($password)){
   }
   else{
     // $password = $_POST["password"];
-    $sql = "UPDATE  vendor SET v_password='$password' WHERE v_username = '$username'";
+    $sql = "UPDATE client SET c_password='$password' WHERE c_username = '$username'";
     if(mysqli_query($conn,$sql)){
         header("Location: login.php");
     }
@@ -62,7 +63,7 @@ if(empty($password)){
                     <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
                         <input type="password" id="pass" name="password" required placeholder=" " autocomplete="on">
                         <label for="create-pass">New Password</label>
-                        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                        
                         <!-- <i class="fa fa-lock"></i> -->
                         
                     </div>

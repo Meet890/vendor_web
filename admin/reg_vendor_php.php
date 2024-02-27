@@ -12,7 +12,7 @@ session_start();
 $valid=$nameErr=$usernameErr=$phoneErr=$emailErr=$passErr=$cpassErr=$AddErr=$GenErr=$cnameErr='';
 
 // by default,set input values are empty
-$set_Name=$set_username=$set_PhoneNo=$set_email=$set_pass=$set_cpass=$set_add=$set_Gender=$set_ComName='';    
+$set_Name=$set_username=$set_PhoneNo=$set_email=$set_pass=$set_cpass=$set_add=$set_Gender=$set_ComName=$v_gender='';    
  extract($_POST);
 
 if(isset($_POST['register']))
@@ -47,7 +47,15 @@ if(empty($username)){
 else if (!preg_match($validUserName,$username)) {
    $usernameErr="Only characters and digits are allowed";
 }else{
-   $usernameErr=true;
+   $pattern = "/\badmin\b/i";
+
+// Use preg_match to check if the pattern is found in the file name
+if (preg_match($pattern, $username)) {
+   $usernameErr="Invalid name.. You cannot contain 'admin'.";
+} else {
+    $usernameErr=true;
+}
+
 }
 
 //  phone no Validation

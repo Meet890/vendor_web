@@ -24,7 +24,7 @@ require_once "loginphp.php";
                 <div class="image">
                     
                 </div>
-                <div class="title">LOGIN AS USER</div>
+                <div class="title">LOGIN AS CLIENT</div>
                 <?php
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger mb-0">' . $login_err . '</div>';
@@ -45,6 +45,7 @@ require_once "loginphp.php";
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
                         <!-- <i class="fa fa-lock"></i> -->
                     </div>
+                    <div style="text-align:left;">Forgot Password ?&nbsp;<a class="signup-switch" href="forgotpass.php">Click here</a></div>
                         <br>
                    
 
