@@ -7,8 +7,9 @@ body{
     background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;*/
-  /* background: linear-gradient(180deg, rgba(195,142,180,1) 0%, rgba(225,203,215,1) 36%, rgba(134,168,207,1) 70%, rgba(38,66,90,1) 98%); */
-}
+   
+background: linear-gradient(167deg, rgb(124, 117, 179) 0%, rgb(140, 209, 177) 50%, rgb(204, 192, 141) 96%);
+  }
 .section-padding{
     padding:150px 0 ;
 }
@@ -55,7 +56,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background:rgba(0,0,0,0.7);
+    background:rgba(0, 0, 0, 0.726);
     z-index: 1;
 }
 

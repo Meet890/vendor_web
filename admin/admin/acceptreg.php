@@ -1,7 +1,7 @@
 <?php
 require 'config.php';
 $id = $_GET['id'];
-$sql = "SELECT * FROM registration WHERE reg_id =$id ORDER BY " ;
+$sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
     $query = mysqli_query($conn, $sql);
      if($query){
         while ($row=mysqli_fetch_array($query)) { 
