@@ -68,7 +68,7 @@
             <img src="../user.png" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="editProfile.php">Profile</a></li>
             
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="login/Logout.php">Sign out</a></li>
