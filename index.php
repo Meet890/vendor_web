@@ -43,7 +43,7 @@ else{
 <!--slider-->
   <div class="row justify-content-center " >
   
-  <section class="slider col-11 mt-5 " id="slider">
+  <section class="slider col-11 mt-5" id="slider">
 
 <div class="hight">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -92,6 +92,22 @@ else{
 
 </div>
 
+<!-- about -->
+ <section class="about_us">
+
+ <center>
+
+ <div class="title mt-5">
+     <h1 class="heding">About us</h1>
+  </div>
+
+     <h3>We help vendor to grow up his business.<br> We provide the pletform for a vendor for grow his business.<br> 
+      The client can easilly find his choise vendors.</h3>
+      <h4>We are provide vendor to customer, but we have never lost sight of our core values. We believe in <br>
+        collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our 
+        vendor.</h4>
+</center>
+</section>
   <!-- card -->
   <section class="event">
 

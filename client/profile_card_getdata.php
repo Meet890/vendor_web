@@ -94,7 +94,7 @@ if (mysqli_num_rows($result) > 0) {
          </div>
                 <div class="d-grid gap-2">
 
-                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='profile.php?id=<?php echo $id ?>'>More Info</a></button>
+                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='profile.php?id=<?php echo $id ?>' class="a1">More Info</a></button>
 
                 </div>
         </div>   
@@ -107,7 +107,7 @@ if (mysqli_num_rows($result) > 0) {
 
   } else {
 
-    echo "0 results";
+    echo "No vendor available";
   }
   
   mysqli_close($conn);

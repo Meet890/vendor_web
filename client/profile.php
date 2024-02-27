@@ -58,7 +58,7 @@ else if(isset($_SESSION["username"])){
 
 
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_id = '$id'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription, v_comp FROM vendor where v_id = '$id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -71,6 +71,7 @@ if ($result->num_rows > 0) {
         $city=$row["v_ser_places"];
         $phone=$row["v_phoneno"];
         $about=$row["v_discription"];
+        $comp=$row["v_comp"];
     }
   } else {
   echo "0 results";
@@ -100,7 +101,7 @@ if ($result->num_rows > 0) {
                 <p class="p1">1 Review</p>
             </div>
         </div>    
-        <h2 class="mt-3"><?php echo $name ?></h2>
+        <h2 class="mt-3"><?php echo $comp; ?></h2>
         <div class="about">
         <h4><?php echo $services ?><h4>
         </div>

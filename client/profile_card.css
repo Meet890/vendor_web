@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url("img/background3.jpg");
+    background-repeat: repeat;
+}
+.a1{
+    text-decoration: none;
+    color: aliceblue;
+}
 .mar{
     margin-top: 120px;
 }

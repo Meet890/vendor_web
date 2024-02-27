@@ -67,7 +67,7 @@ while($row = $result->fetch_assoc()) {
     }
 }
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno, v_discription, v_comp FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -80,6 +80,7 @@ while($row = $result->fetch_assoc()) {
     $city=$row["v_ser_places"];
     $phone=$row["v_phoneno"];
     $about=$row["v_discription"];
+    $comp=$row["v_comp"];
 }
 } else {
 echo "0 results";
@@ -106,7 +107,7 @@ echo "0 results";
                 <p>1 Review</p>
             </div>
         </div>    
-        <h2 class="mt-3"><?php echo $name ?></h2>
+        <h2 class="mt-3"><?php echo $comp ?></h2>
         <div class="about">
         <h4><?php echo $services ?><h4>
         </div>
@@ -150,26 +151,7 @@ echo "0 results";
             <img class="w-auto modal-content "  id="modalImg">
         </div>
 
-        <div class="container">
-        <h1>Give your reating..</h1>
-        <div class="rating">
-            <span id="rating">0</span>/5
-        </div>
-        <div class="stars" id="stars">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-        <p>Share your review:</p>
-        <textarea id="review"
-                  placeholder="Write your review here">
-          </textarea>
-        <button id="submit">Submit</button>
-        <div class="reviews" id="reviews">
-        </div>
-    </div>
+        
 
     </section>
 						
