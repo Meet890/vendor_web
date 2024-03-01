@@ -58,7 +58,7 @@ else if(isset($_SESSION["username"])){
 
 
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription, v_comp FROM vendor where v_id = '$id'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno,v_discription, v_comp FROM vendor where v_id = '$id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -68,7 +68,7 @@ if ($result->num_rows > 0) {
         $name= $row["v_name"];
         $username= $row["v_username"];
         $services=$row["v_profession"];
-        $city=$row["v_ser_places"];
+        $city=$row["v_address"];
         $phone=$row["v_phoneno"];
         $about=$row["v_discription"];
         $comp=$row["v_comp"];
@@ -132,39 +132,7 @@ if ($result->num_rows > 0) {
                 <img src="img/Facebook.png" alt="Phone Icon" class="png">
             </li>
         </ul>
-        <form action="report.php?id=<?php echo $id; ?>" method="post"> 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                report
-            </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content px-3 py-1 m-4">
-                            <div class="row">
-                                <div class="col-11">
-                            <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
-                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
-                            
-                        
-                            <div class="mb-3">
-                                <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="title" name="title">
-                            </div>
-                            <div class="mb-3">
-                                <label for="dis" class="form-label">Discription</label>
-                                <textarea class="form-control" id="dis" rows="3" name="dis"></textarea>
-                            </div>
-                        
-                        
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" name="Submit">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
+        
     </div>
     <div class="about center">
         <h3 class="mt-4">About us</h3>
@@ -174,7 +142,7 @@ if ($result->num_rows > 0) {
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery">
+        <div class="gallery mb-5">
         <?php
             
               $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
@@ -211,7 +179,41 @@ if ($result->num_rows > 0) {
         <textarea id="review"
                   placeholder="Write your review here" name="r_discription">
           </textarea>
-        <button id="submit" name="submit">Submit</button>
+        <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                report
+            </button>
+        <form action="report.php?id=<?php echo $id; ?>" method="post"> 
+            <!-- Button trigger modal -->
+            
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content px-3 py-1 m-4">
+                            <div class="row">
+                                <div class="col-11">
+                            <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
+                            
+                        
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dis" class="form-label">Discription</label>
+                                <textarea class="form-control" id="dis" rows="3" name="dis"></textarea>
+                            </div>
+                        
+                        
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" name="Submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
         <div class="reviews" id="reviews">
         </div>
     </div>

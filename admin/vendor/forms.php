@@ -51,7 +51,7 @@ $result = $conn->query($sql);
   
    $result = mysqli_query($conn, $sql);
   if (isset($result)) {
-     echo "";
+    header("location:profile.php");
 
   }
  else{
@@ -160,16 +160,6 @@ $result = $conn->query($sql);
 											<input type="email" class="form-control" id="v_email" value="<?php echo $email; ?>" name="v_email">
 											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
-										<!-- <div class="form-group">
-											<label for="password">Password</label>
-											<input type="password" class="form-control" id="password" placeholder="Password">
-										</div> -->
-										<!-- <div class="form-group form-inline">
-											<label for="inlineinput" class="col-md-3 col-form-label">Inline Input</label>
-											<div class="col-md-9 p-0">
-												<input type="text" class="form-control input-full" id="inlineinput" placeholder="Enter Input">
-											</div>
-										</div> -->
 
 										<!-- address -->
 										<div class="form-group ">
@@ -189,11 +179,6 @@ $result = $conn->query($sql);
                 							</p> -->
 										</div>
 										
-											
-											
-
-											
-
 											<!-- ig id -->
 											<div class="form-group">
 												<label for="email">Instagram Id link</label>
@@ -207,13 +192,9 @@ $result = $conn->query($sql);
 												<input type="text" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
-
-
-											
 										</div>
 										<div class="card-action">
 											<button class="btn btn-success" name="reg_user">Submit</button>
-											
 										</div>
 									</div>
 								</div>

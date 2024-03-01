@@ -15,6 +15,8 @@ require 'config.php';
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="assets/css/ready.css">
 	<link rel="stylesheet" href="assets/css/demo.css">
+	<link rel="stylesheet" href="tables.css">
+
 </head>
 <body>
 	<div class="wrapper">
@@ -44,7 +46,7 @@ require 'config.php';
 										<div class="table-responsive">
 											<table class="table table-bordered">
 												<thead>
-													<tr>
+													<tr class="thh">
 														<th>Id</th>
 														<th>Name</th>
 														<th>Username</th>
@@ -99,10 +101,10 @@ require 'config.php';
 														<td><?php echo $tra_id ?></td>
 														<td><?php echo $accept ?></td>
 														<td>
-														  <a href="acceptreg.php?id=<?php echo $id ;?>">Accept</a>
+														  <a href="acceptreg.php?id=<?php echo $id ;?>" class="tda">Accept</a>
 														</td>
 														<td>
-														  <a href="deletereg.php?id=<?php echo $id ;?>">Delete</a>
+														  <a href="deletereg.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
 														</td>
 													</tr>
 															

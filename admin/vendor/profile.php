@@ -35,7 +35,6 @@ if(!isset($_SESSION["username"])){
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Dashboard</h4>
                         <?php
 
 $v_username = $_SESSION["username"];
@@ -67,7 +66,7 @@ while($row = $result->fetch_assoc()) {
     }
 }
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno, v_discription, v_comp FROM vendor where v_username = '$v_username'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -77,7 +76,7 @@ while($row = $result->fetch_assoc()) {
     $name= $row["v_name"];
     $username= $row["v_username"];
     $services=$row["v_profession"];
-    $city=$row["v_ser_places"];
+    $city=$row["v_address"];
     $phone=$row["v_phoneno"];
     $about=$row["v_discription"];
     $comp=$row["v_comp"];

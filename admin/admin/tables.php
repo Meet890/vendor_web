@@ -14,6 +14,10 @@ require 'config.php';
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="assets/css/ready.css">
 	<link rel="stylesheet" href="assets/css/demo.css">
+	<link rel="stylesheet" href="tables.css">
+	<style>
+		
+     </style>		
 </head>
 <body>
 	<div class="wrapper">
@@ -44,7 +48,7 @@ require 'config.php';
 										<div class="table-responsive">
 											<table class="table table-bordered">
 												<thead>
-													<tr>
+													<tr class="thh">
 														<th>id</th>
 														<th>Client Name</th>
 														<th>Client Username</th>
@@ -52,7 +56,7 @@ require 'config.php';
 														<th>Client Email</th>
 														<th>Client City</th>
 														<th>Client Joined Time</th>
-														<th>Edit</th>
+														<!-- <th>Edit</th> -->
 														<th>delete</th>
 
 													</tr>
@@ -86,11 +90,11 @@ require 'config.php';
 														<td><?php echo $email  ?></td>
 														<td><?php echo $city  ?></td>
 														<td><?php echo $time  ?></td>	
-														<td>
+														<!-- <td>
 														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
-														</td>
+														</td> -->
 														<td>
-														  <a href = 'delete.php?id=<?php echo $id ;?>?client'>Delete
+														  <a href = 'delete.php?id=<?php echo $id ;?>?client' class="tdd">Delete
 														</td>
 													</tr>
 															
@@ -123,7 +127,7 @@ require 'config.php';
 										<div class="table-responsive">
 											<table class="table table-bordered">
 											<thead>
-													<tr>
+													<tr class="thh">
 														<th>id</th>
 														<th>Vendor Name</th>
 														<th>Vendor Username</th>
@@ -131,7 +135,7 @@ require 'config.php';
 														<th>Vendor Email</th>
 														<th>Vendor City</th>
 														<th>Vendor Gender</th>
-														<th>Vendor Service places</th>
+														<!-- <th>Vendor Service places</th> -->
 														<th>Vendor Profession</th>
 														<th>Instagram Link</th>
 														<th>Facebook Link</th>
@@ -161,7 +165,7 @@ require 'config.php';
 														      $email=$row["v_email"];
 														      $city=$row["v_address"];
 															  $gender=$row["v_gender"];
-															  $serplc=$row["v_ser_places"];
+															//   $serplc=$row["v_ser_places"];
 															  $profession=$row["v_profession"];
 															 
 															  $ig=$row["v_iglink"];
@@ -181,18 +185,18 @@ require 'config.php';
 														<td><?php echo $email  ?></td>
 														<td><?php echo $city  ?></td>
 														<td><?php echo $gender  ?></td>
-														<td><?php echo $serplc  ?></td>
+														<!-- <td><?php echo $serplc  ?></td> -->
 														<td><?php echo $profession  ?></td>	
 														<td><?php echo $ig  ?></td>
 														<td><?php echo $fb  ?></td>
 														
 														<td><?php echo $dis  ?></td>												
-														<td>
+														<td class="tda">
 														  <a href = 'update.php?rn=$result[name]'onclick='return
-														  checkdelete()'>Edit
+														  checkdelete()' class="tda">Edit
 														</td>
-														<td>
-														  <a href = 'delete.php?id=<?php echo $id?>?table=<?php echo $table; ?>'>Delete
+														<td class="tdd">
+														  <a href = 'delete.php?id=<?php echo $id?>?table=<?php echo $table; ?>' class="tdd">Delete
 														</td>
 													</tr>
 															

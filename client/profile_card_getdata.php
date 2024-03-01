@@ -61,7 +61,7 @@ else{
   die("Connection failed: " . mysqli_connect_error());
 }
 $service = $_GET["service"];
-$sql = "SELECT v_name, v_username, v_photo, v_profession, v_ser_places, v_id FROM vendor where v_profession = '$service' ";
+$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id FROM vendor where v_profession = '$service' ";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -74,7 +74,7 @@ if (mysqli_num_rows($result) > 0) {
       $username= $row["v_username"];
       $image = $row["v_photo"];
       $services=$row["v_profession"];
-      $city=$row["v_ser_places"];
+      $city=$row["v_address"];
       $id=$row["v_id"];
       if($row['v_photo']==""){
         $img ="../user2.png";
