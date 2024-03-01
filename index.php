@@ -262,14 +262,14 @@ else{
 
 <script src="js/bootstrap.min.js"></script>  
 <script src="js/bootstrap.bundle.min.js"></script> 
-</html>
+
 <section class="footer" id="footer">
   <?php
   include("footer.php");
 
   ?>
 
-
+</section>
 
 </body>
 
