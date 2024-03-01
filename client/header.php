@@ -8,7 +8,7 @@
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
   
-    <script src="./js/bootstrap.bundle.js"></script> 
+    <script src="../js/bootstrap.bundle.js"></script> 
     <!--extranal css file-->
     
 </head>
@@ -47,18 +47,19 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "decorator";?>">Decorators</a></li>
-            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "photographer";?>">photographers</a></li>
-            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "videographer";?>">vediographers</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">cake</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "flowers";?>">flowers</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "wedding wear";?>">wedding wear</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "jewellery";?>">jewellery</a></li>
-						<li><a class="dropdown-item"  href="#">invitation cards</a></li>
-						<li><a class="dropdown-item"  href="#">sound</a></li>
-						<li><a class="dropdown-item"  href="#">planners</a></li>
-						<li><a class="dropdown-item"  href="#">makeup artist</a></li>
-						<li><a class="dropdown-item"  href="#">venues</a></li>
-						<li><a class="dropdown-item"  href="#">gifts</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "photographer";?>">Photographers</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "videographer";?>">Vediographers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">Cake</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "flowers";?>">Flowers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "wedding wear";?>">Event wear</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "jewellery";?>">Jewellery</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "invitation card";?>">Invitation Cards</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "sound";?>">Sound</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "makeup artist";?>">Makeup Artist</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "venues";?>">Venues</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "gifts";?>">Gifts</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "catring";?>">Catring</a></li>
+
           </ul>
         </li>
        

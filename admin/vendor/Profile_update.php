@@ -1,7 +1,4 @@
 <?php
- 
- 
- 
     $dbservername="localhost";
     $dbuser="root";
     $dbpass="";

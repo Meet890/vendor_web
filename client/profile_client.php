@@ -1,16 +1,32 @@
-<?php
-// require 'config.php';
-// require 'session.php';
 
-// error_reporting(0);
-// $username = $_SESSION["username"];
-// $sql = "SELECT c_id, c_username, FROM client where c_username='$username";
-// $result = $conn->query($sql);
-// if($row = $result->fetch_assoc())
-// {
-//     $username= $row["v_username"];
-// }
-// ?>
+<?php
+ require 'config.php';
+
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
+	header("location:login/login.php");
+ 
+}
+else if(isset($_SESSION["username"])){
+  header("location:.././admin/vendor/index.php");
+}
+
+
+//  error_reporting(0);
+ $username = $_SESSION["c_username"];
+ $id = $_SESSION["c_id"];
+ $sql = "SELECT * FROM client WHERE c_id ='$id'";
+ $result = mysqli_query($conn,$sql);
+ if($row = $result->fetch_assoc())
+ {
+    $username= $row["c_username"];
+    $name= $row["c_name"];
+    $email= $row["c_email"];
+    $city= $row["c_city"];
+ }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -57,21 +73,27 @@ img {
         <div class="col bg-white text-dark rounded shadow p-3">
           <img src="img/pro.jpg" alt="Avatar" style="width:100%">
   
-          <h6>username</h6> 
-          <h6>name</h6> 
-          <h6>email</h6>
-          <h6>city</h6> 
-          <h6>password</h6> 
+          <h6>username :  <?php echo $username; ?></h6> 
+          <h6>name :  <?php echo $name ; ?></h6> 
+          <h6>email :  <?php echo $email ; ?></h6>
+          <h6>city :  <?php echo $city ; ?></h6> 
+          
           <br>
-          <a href="">Update profile?</a>
+          <a href="update_client_profile.php">Update profile?</a>
 
       </div>
     </div>
       
-    </div>
+    </div>        <button type="button" class="btn-close bg-white mt-5 background cencel" aria-label="Close" onclick="redirect()"></button>
+
   </div>
 </div>
 
-
+<script>
+  function redirect()
+    {
+        window.location.href = "../index.php";
+    }
+  </script>
 </body>
 </html> 
