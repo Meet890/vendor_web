@@ -139,12 +139,18 @@ $result = $conn->query($sql);
 				      						 <option value="Decoration">Decoration</option>
 				                             <option value="Sound system">Sound system</option>
 				                             <option value="Catering">Catering</option>
-				                             <option value="Bakery">Bakery</option>
+				                             <option value="Jewellery">Jewellery</option>
 				                             <option value="Photographer">Photographer</option>
 				                             <option value="Videographer">Videographer</option>
 				                             <option value="Flowers">Flowers</option>
 					                         <option value="Venue">Venue</option>
-					                         <option value="Invitation">Invitation Card</option>
+					                         <option value="Invitation Card">Invitation Card</option>
+											 <option value="Event Wear"> Event Wear </option>
+					                         <option value="Cake">Cake</option>
+											 <option value="Makeup Artist">Makeup Artist</option>
+											 <option value="Gifts">Gifts</option>L
+
+
 											</select>
 											
 										</div>

@@ -46,19 +46,19 @@
             vendor
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "decorator";?>">Decorators</a></li>
-            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "photographer";?>">Photographers</a></li>
-            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "videographer";?>">Vediographers</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Decorator";?>">Decorators</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Photographer";?>">Photographers</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Videographer";?>">Vediographers</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">Cake</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "flowers";?>">Flowers</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "wedding wear";?>">Event wear</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "jewellery";?>">Jewellery</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "invitation card";?>">Invitation Cards</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "sound";?>">Sound</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "makeup artist";?>">Makeup Artist</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "venues";?>">Venues</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "gifts";?>">Gifts</a></li>
-            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "catring";?>">Catring</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Flowers";?>">Flowers</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Event Wear";?>">Event Wear</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Jewellery";?>">Jewellery</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Invitation Card";?>">Invitation Cards</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Sound";?>">Sound</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Makeup Artist";?>">Makeup Artist</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Venues";?>">Venues</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Gifts";?>">Gifts</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Catring";?>">Catring</a></li>
 
           </ul>
         </li>
