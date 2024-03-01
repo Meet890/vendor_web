@@ -31,7 +31,7 @@ $result = $conn->query($sql);
   	$compony_name =  $_POST['v_comp'];
 	if($_POST['v_profession']=="")
 	{
-		$pro ="Enter valid input";
+		$pro ="Enter Service";
 		
 	}else{
 		$profession = $_POST['v_profession'];
@@ -47,7 +47,7 @@ $result = $conn->query($sql);
  	
  
    
-	$sql = "UPDATE vendor SET v_comp = '$compony_name' v_username= '$username',v_password='$pass', v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
+	$sql = "UPDATE vendor SET v_comp = '$compony_name', v_username= '$username',v_password='$pass', v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
   
    $result = mysqli_query($conn, $sql);
   if (isset($result)) {
@@ -101,7 +101,7 @@ $result = $conn->query($sql);
 									<p class="text-success text-center"></p> <form method="post">
 
 									<div class="card-body">
-										<h4><p class="err-msg">
+										<h4><p class="danger">
                 								<?php if($pro!=1){ echo $pro; }?>
                								</p> </h4>
  										<!-- compony name -->
@@ -114,7 +114,7 @@ $result = $conn->query($sql);
 										</div>
                                         <!-- user name -->
 										<div class="form-group">
-											<label for="user name">User name</label>
+											<label for="user name">Username</label>
 											<input type="text" class="form-control" id="username" name="v_username" value="<?php echo $username; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
@@ -145,6 +145,11 @@ $result = $conn->query($sql);
 				                             <option value="Flowers">Flowers</option>
 					                         <option value="Venue">Venue</option>
 					                         <option value="Invitation">Invitation Card</option>
+											 <option value="Gifts">Gifts</option>
+											 <option value="Mackup Artist">Mackup Artist</option>
+											 <option value="Jewellery">Jewellery</option>
+											 <option value="Event Cloths">Event Cloths</option>
+											 
 											</select>
 											
 										</div>
