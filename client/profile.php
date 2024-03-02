@@ -149,7 +149,7 @@ if ($result->num_rows > 0) {
         
         
          foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
                 
             <?php endforeach; ?>   
             </div>

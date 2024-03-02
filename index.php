@@ -38,10 +38,15 @@ else{
   <!--navbar-->
   <?php include 'header3.php' ?>
 
-
+  <!-- <video controls>
+  <source src="img/v.mp4" type="video/mp4" class="v">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video> -->
+<img src ="img/w.png" class="v">
 
 <!--slider-->
-  <div class="row justify-content-center " >
+  <!-- <div class="row justify-content-center " >
   
   <section class="slider col-11 mt-5" id="slider">
 
@@ -59,22 +64,22 @@ else{
         <h5>FIND THE BEST DECORATION</h5>
         <p>Your Choise Your Budget.</p>
         <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
-      </div>
+      <!-- </div>
     </div>
     <div class="carousel-item">
       <img src="img/catring2.jpg" class="d-block w-100" alt="img2">
       <div class="carousel-caption a2">
         <h5>FIND BEST CATRING SERVICES</h5>
         <p>Your Choise Your Budget.</p>
-        <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
-      </div>
-    </div>
+         <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> 
+       </div>
+    </div> 
     <div class="carousel-item">
       <img src="img/SOUND2.jpg" class="d-block w-100" alt="img3">
       <div class="carousel-caption a2">
         <h5>FIND BEST SOUND</h5>
         <p>Your Choise Your Budget.</p>
-        <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
+         <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> 
       </div>
     </div>
   </div>
@@ -90,10 +95,10 @@ else{
 </div>
 </section>
 
-</div>
+</div>-->
 
 <!-- about -->
- <section class="about_us">
+ <!-- <section class="about_us">
 
  <center>
 
@@ -107,7 +112,7 @@ else{
         collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our 
         vendor.</h4>
 </center>
-</section>
+</section> -->
   <!-- card -->
   <section class="event">
 
@@ -121,7 +126,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
                 <div class="card text-white">
                   <div class="imgholder">
-                   <img src="img/decoration.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/wedding-arch.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">decorators</h4>
                    <p class="title">Creativity at its finest.</p>
@@ -134,7 +139,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "photographer";?>" id="photographer" class="a1">
                  <div class="card b-2 text-white">
                  <div class="imgholder">
-                   <img src="img/photo.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/camera.png" class="card-img img1 p-2" alt="...">
                  </div>
                    <h4 class="titleh3">photographers</h4>
                    <p class="title">Preserve your memories.</p>
@@ -145,7 +150,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "videographer";?>" id="vieographer" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
-                   <img src="img/vedio.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/production.png" class="card-img img1 p-2" alt="...">
                    </div>
                    <h4 class="titleh3">videographers</h4>
                    <p class="title">Moments well Shared.</p>
@@ -156,7 +161,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "Bakery";?>" id="bakery" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
-                   <img src="img/cake.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/birthday-cake (1).png" class="card-img img1 p-2" alt="...">
                    </div>
                    <h4 class="titleh3">cake</h4>
                    <p class="title">Sweetness Readfined.</p>
@@ -167,7 +172,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "flowers";?>" id="flowers" class="a1">
                  <div class="card b-2  text-white">
                  <div class="imgholder"> 
-                 <img src="img/flowers.jpg" class="card-img img1 p-2" alt="...">
+                 <img src="img/flower-shop.png" class="card-img img1 p-2" alt="...">
                  </div> 
                  <h4 class="titleh3">flowers</h4>
                    <p class="title">Make your life colorful.</p>
@@ -178,10 +183,10 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "wedding wear";?>" id="wedding wear" class="a1">
                  <div class="card b-2   text-white">
                  <div class="imgholder">
-                   <img src="img/cloth.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/boutique.png" class="card-img img1 p-2" alt="...">
                  </div>
                    <h4 class="titleh3">wedding wear</h4>
-                   <p class="title">Dress Your Dreams,Feel the Love.</p>
+                   <p class="title">Dress Your Dreams.</p>
                  </div>
               </a>
             </div>
@@ -189,7 +194,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "jewellery";?>" id="jewellery" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
-                   <img src="img/jwellery.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/display.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">jewellery</h4>
                    <p class="title">Jewelryize me.</p>
@@ -200,7 +205,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "invitation card";?>" id="invitation card" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
-                   <img src="img/printing.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/wedding-invitation.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">invitation cards</h4>
                    <p class="title">Invite in style.</p>
@@ -211,7 +216,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "sound";?>" id="sound" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
-                   <img src="img/sound.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/sound-system.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">sound</h4>
                    <p class="title">Audio you can rely on.</p>
@@ -222,7 +227,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "makeup artist";?>" id="makeup artist" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
-                   <img src="img/makeup.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/makeup.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">makeup artist</h4>
                    <p class="title">Ready, Set, Glow!.</p>
@@ -233,7 +238,7 @@ else{
             <a href="client/profile_card_getdata.php?service=<?php echo "venues";?>" id="venues" class="a1">
                  <div class="card text-white">
                   <div class="imgholder">
-                   <img src="img/vanue.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/venue.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">venues</h4>
                    <p class="title">	Where memories are made.</p>
@@ -245,7 +250,7 @@ else{
                 
                  <div class="card text-white">
                   <div class="imgholder">
-                   <img src="img/gift.jpg" class="card-img img1 p-2" alt="...">
+                   <img src="img/presents.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">gifts</h4>
                    <p class="title">More than just a gift.</p>
