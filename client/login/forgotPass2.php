@@ -1,7 +1,8 @@
 <?php
 require 'config.php';
-$username = $_GET["username"];
-
+session_start();
+$username = $_SESSION["username"];
+session_destroy();
 // echo $username;
 $uppercasePassword = "/(?=.*?[A-Z])/";
 $lowercasePassword = "/(?=.*?[a-z])/";
@@ -63,7 +64,7 @@ if(empty($password)){
                     <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
                         <input type="password" id="pass" name="password" required placeholder=" " autocomplete="on">
                         <label for="create-pass">New Password</label>
-                        
+                        <span class="invalid-feedback"><?php echo $password_err; ?></span>
                         <!-- <i class="fa fa-lock"></i> -->
                         
                     </div>

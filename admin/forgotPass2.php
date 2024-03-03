@@ -1,6 +1,8 @@
 <?php
 require 'config.php';
-$username = $_GET["username"];
+session_start();
+$username = $_SESSION["username"];
+session_destroy();
 // echo $username;
 $uppercasePassword = "/(?=.*?[A-Z])/";
 $lowercasePassword = "/(?=.*?[a-z])/";

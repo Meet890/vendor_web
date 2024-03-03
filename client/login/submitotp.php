@@ -1,44 +1,32 @@
 <?php
-require 'config.php';
-$username_err="";
+session_start();
+// echo $_SESSION["otp"];
+$org_otp =$_SESSION["otp"];
+$err="OTP is sent into your  registered email id.";
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $username = $_POST["username"];
+ 
   if(isset($_POST["submit"])){
-    if(isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)){
-        $sql = "SELECT v_username FROM vendor WHERE v_username = ?";
-
-        if($stmt = mysqli_prepare($conn, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s",$param_username);
-            // Set parameters
-            $param_username = $username;
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Store result
-                mysqli_stmt_store_result($stmt);
-                // Check if username exists, if yes then verify password
-                if(mysqli_stmt_num_rows($stmt) == 1){
-                    // Bind result variables
-                   header("location: otp.php?username=$username");
-                    
-                    
-                }else{
-                    echo '<script>  alert("This username dose not  exist."); </script>';
-                }
-            }else{
-                echo '<script>  alert("3"); </script>';
-            }
-        }else{
-            echo '<script>  alert("4"); </script>';
+    $c_otp = $_POST["otp"];
+    $digit = "/(?=.*?[0-9])/";
+    if( preg_match($digit,$c_otp))
+    {
+        if($org_otp== $c_otp){
+            
+           header("location: forgotPass2.php");
         }
-    
-
-}
-else{
-    $username_err = "Enter valid Username";
-}
+        else{
+            echo '<script>  alert("Invalid otp"); </script>';
+        }
+    }
+    else
+    {
+        echo '<script>  alert("Only Digits  are allowed in OTP."); </script>';
+    }
   }
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,15 +50,15 @@ else{
                 </div>
                 <div class="title">Forgot Password</div>
                 <?php
-                  if(!empty($login_err)){
-                         echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                  if(!empty($err)){
+                         echo '<div class="alert alert-success ">' . $err . '</div>';
                      }
                 ?>
                 <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
-                        <input type="Username" id="Username" name="username" placeholder=" " value="" required autocomplete="on">
-                        <label for="Username">Username</label>
-                        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                        <input type="number" id="otp" name="otp" placeholder=" " value="" required autocomplete="on">
+                        <label for="otp">otp</label>
+                        <span class="invalid-feedback"><?php echo $otp_err; ?></span>
                         <!-- <i class="fa fa-envelope"></i> -->
                     </div>
                     
