@@ -93,7 +93,7 @@ else if(isset($_SESSION["username"])){
       <div class="row">
 
             <div class="col-md-4  col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Decoration";?>" id="Decoration" class="a1">
               
                   <div class="card text-white">
                   <div class="row">
@@ -101,7 +101,7 @@ else if(isset($_SESSION["username"])){
                    <img src="../img/decoration.jpg" class="card-img img1 p-2" alt="...">
                    </div>
                   <div class="col12">
-                   <h3 class="titleh3">decorators</h3>
+                   <h3 class="titleh3">Decoration</h3>
                    <p class="title">Creativity at its finest.</p>
                   </div>
                  </div>

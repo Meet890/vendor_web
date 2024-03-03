@@ -46,7 +46,7 @@
             vendor
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Decorator";?>">Decorators</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Decoration";?>">Decoration</a></li>
             <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Photographer";?>">Photographers</a></li>
             <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Videographer";?>">Vediographers</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">Cake</a></li>
