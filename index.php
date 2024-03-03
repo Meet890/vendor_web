@@ -123,12 +123,12 @@ Your browser does not support the video tag.
       <div class="row">
 
             <div class="col-md-4  col-sm-6  ">
-            <a href="client/profile_card_getdata.php?service=<?php echo "decorator";?>" id="decorators" class="a1">
+            <a href="client/profile_card_getdata.php?service=<?php echo "Decoration";?>" id="Decoration" class="a1">
                 <div class="card text-white">
                   <div class="imgholder">
                    <img src="img/wedding-arch.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h4 class="titleh3">decorators</h4>
+                   <h4 class="titleh3">Decoration</h4>
                    <p class="title">Creativity at its finest.</p>
                   
                  </div>
