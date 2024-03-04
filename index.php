@@ -124,7 +124,7 @@ Your browser does not support the video tag.
 
             <div class="col-md-4  col-sm-6  ">
             <a href="client/profile_card_getdata.php?service=<?php echo "Decoration";?>" id="Decoration" class="a1">
-                <div class="card text-white">
+                <div class="card b-2 text-white">
                   <div class="imgholder">
                    <img src="img/wedding-arch.png" class="card-img img1 p-2" alt="...">
                   </div>
@@ -247,12 +247,22 @@ Your browser does not support the video tag.
             </div>
             <div class="col-md-4 col-sm-6 ">
             <a href="client/profile_card_getdata.php?service=<?php echo "gifts";?>" id="gifts" class="a1">
-                
-                 <div class="card text-white">
+                  <div class="card text-white">
                   <div class="imgholder">
                    <img src="img/presents.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">gifts</h4>
+                   <p class="title">More than just a gift.</p>
+                 </div>
+              </a>
+            </div> 
+            <div class="col-md-4 col-sm-6 ">
+            <a href="client/profile_card_getdata.php?service=<?php echo "Catring";?>" id="Catring" class="a1">
+                  <div class="card text-white">
+                  <div class="imgholder">
+                   <img src="img/banquet.png" class="card-img img1 p-2" alt="...">
+                  </div>
+                   <h4 class="titleh3">Catring</h4>
                    <p class="title">More than just a gift.</p>
                  </div>
               </a>

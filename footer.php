@@ -43,8 +43,8 @@
             <p>vendor management system is online platform which provides all kind of  vandor like photographer , decoraters,<br> catering and many more vendors for you events. in vendor management system vendors can register in website
 			<br> and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
 									  
-                                      <p><a href="privacy_policy.php" class="link-Primary">Privacy Policy</a></p>
-                                      <p><a href="terms_condition.php" class="link-primary">Terms & Conditions </a></p>
+                                      <p><a href="privacy_policy.php" class="link-Primary a1">Privacy Policy</a></p>
+                                      <p><a href="terms_condition.php" class="link-primary a1">Terms & Conditions </a></p>
                                       
 						<ul class="social">
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -82,7 +82,7 @@
 									<i class="fas fa-map-marker-alt"></i>
 								</div>
 								<div class="info">
-									<p>SGJ College, Mandvi<span>Kachchh</span></p>
+									<h6>SGJ College, Mandvi-Kachchh</h6>
 								</div>
 							</div>
 							

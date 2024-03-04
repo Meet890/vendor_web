@@ -1,6 +1,7 @@
 <?php
 require 'config.php';
 session_start();
+$password_err="";
 $username = $_SESSION["username"];
 session_destroy();
 // echo $username;

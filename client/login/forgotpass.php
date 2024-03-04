@@ -5,7 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
   if(isset($_POST["submit"])){
     if(isset($username) && preg_match("/^[a-zA-Z0-9_]{5,}$/", $username)){
-        $sql = "SELECT v_username FROM vendor WHERE v_username = ?";
+        $sql = "SELECT c_username FROM client WHERE c_username = ?";
 
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters

@@ -7,43 +7,26 @@
     rel="stylesheet"
     />
     
-<!-- <section class="deneb_cta">
-	<div class="container mar">
-		<div class="cta_wrapper">
-			<div class="row align-items-center">
-				<div class="col-lg-7">
-					<div class="cta_content">
-						<h3>Registration as a vendor </h3>
-						<p>We help to vendor for grow up his business. We provide the platform for a vendor for grow his business.</p>
-					</div>
-				</div>
-				<div class="col-lg-5">
-					<div class="button_box">
-						<a href="admin/reg_vendor.php" class="btn btn-dark">Registration</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
+
 <footer class="deneb_footer">
 	<div class="widget_wrapper" >
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-12 pb-0">
+				<div class="col-lg-9 col-md-6 col-12 pb-0">
 					<div class="widget widegt_about">
 						<div class="widget_title">
 						<div class="container mb-2 p-0 justify-content-center ">
-						<a class="navbar-brand" href="index.php"><span class="text-warning">KACHCHHI</span> <span class="text-light">VENT</span>
+						<a class="navbar-brand" href="index.php"><h5><b>KACHCHHIVENT</b></h5>
  						 </a>
-						</div>
+						</div><br>
 						<p> The client can easilly find his choise vendors.</p>
-            <p class="mb-5 fw-bold">We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
+            <p>We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
 				                      innovation, and customer satisfaction. We are always looking for new ways to improve our vendor.</p>
-            <p class="mb-5 fw-bold">vendor management system is online platform which provides all kind of  vandor like photographer , decoraters, catering and many more vendors for you events. in vendor management system vendors can register in website and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
+            <p>vendor management system is online platform which provides all kind of  vandor like photographer , decoraters,<br> catering and many more vendors for you events. in vendor management system vendors can register in website
+			<br> and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
 									  
-                                      <p><a href="privacy_policy.php" class="link-Primary">Privacy Policy</a></p>
-                                      <p><a href="terms_condition.php" class="link-primary">Terms & Conditions </a></p>
+                                      <p><a href="privacy_policy.php" class="link-Primary a1">Privacy Policy</a></p>
+                                      <p><a href="terms_condition.php" class="link-primary a1">Terms & Conditions </a></p>
                                       
 						<ul class="social">
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -81,7 +64,7 @@
 									<i class="fas fa-map-marker-alt"></i>
 								</div>
 								<div class="info">
-									<p>SGJ College, Mandvi<span>Kachchh</span></p>
+									<h6>SGJ College, Mandvi-Kachchh</h6>
 								</div>
 							</div>
 							

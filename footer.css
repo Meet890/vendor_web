@@ -1,8 +1,11 @@
 body{margin-top:20px;
 color: #011a3e;}
 .deneb_footer{
-    background-color: #8e2121;
+    /* background-color: #8e2121; */
+    /* background-color: #521c1c; */font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
+    background-color: #486c8a;
+
 }
 .deneb_footer .widget_wrapper {
     background-repeat: no-repeat;
@@ -36,6 +39,7 @@ color: #011a3e;}
 }
 .deneb_footer .widget_wrapper .widegt_about p {
     margin-bottom: 10px;
+    font-weight: 100;
 }
 .deneb_footer .widget_wrapper .widegt_about .social li {
     display: inline-block;
@@ -88,7 +92,7 @@ color: #011a3e;}
     margin-right: 10px;
 }
 .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p a {
-    color: #7a808d;
+    color: #dee0e4;
 }
 .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p span {
     display: block;
@@ -173,4 +177,10 @@ color: #011a3e;}
 .deneb_cta .cta_wrapper .button_box .deneb_btn:hover,
 .deneb_cta .cta_wrapper .button_box .deneb_btn:focus {
     box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.a1{
+    color: #011a3e;
+}
+p{
+    color: darkgray;
 }

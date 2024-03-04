@@ -1,6 +1,7 @@
 <?php
 session_start();
 // echo $_SESSION["otp"];
+$otp_err="";
 $org_otp =$_SESSION["otp"];
 $err="OTP is sent into your  registered email id.";
 
@@ -58,11 +59,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="field">
                         <input type="number" id="otp" name="otp" placeholder=" " value="" required autocomplete="on">
                         <label for="otp">otp</label>
-                        <span class="invalid-feedback"><?php echo $otp_err; ?></span>
+                       
                         <!-- <i class="fa fa-envelope"></i> -->
                     </div>
                     
-                   
+                    <span class="invalid-feedback"><?php echo $otp_err; ?></span>
                         <br>
                    
 
