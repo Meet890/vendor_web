@@ -136,19 +136,19 @@ $result = $conn->query($sql);
 											<label for="exampleFormControlSelect1">select service</label>
 											<select class="form-control" id="exampleFormControlSelect1" name="v_profession">
 											 <option selected disabled value="">Choose...</option>
-				      						 <option value="Decoration">Decoration</option>
-				                             <option value="Sound system">Sound system</option>
-				                             <option value="Catering">Catering</option>
-				                             <option value="Jewellery">Jewellery</option>
-				                             <option value="Photographer">Photographer</option>
-				                             <option value="Videographer">Videographer</option>
-				                             <option value="Flowers">Flowers</option>
-					                         <option value="Venue">Venue</option>
-					                         <option value="Invitation">Invitation Card</option>
-											 <option value="Gifts">Gifts</option>
-											 <option value="Mackup Artist">Mackup Artist</option>
-											 <option value="Jewellery">Jewellery</option>
-											 <option value="Event Cloths">Event Cloths</option>
+				      						 <option value="decoration">Decoration</option>
+				                             <option value="sound system">Sound system</option>
+				                             <option value="catring">Catring</option>
+				                             <option value="jewellery">Jewellery</option>
+				                             <option value="photographer">Photographer</option>
+				                             <option value="videographer">Videographer</option>
+				                             <option value="flowers">Flowers</option>
+					                         <option value="venue">Venue</option>
+					                         <option value="invitation">Invitation Card</option>
+											 <option value="gifts">Gifts</option>
+											 <option value="mackup Artist">Mackup Artist</option>
+											 <option value="jewellery">Jewellery</option>
+											 <option value="event Cloths">Event Cloths</option>
 											 
 											</select>
 											

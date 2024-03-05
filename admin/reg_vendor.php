@@ -29,7 +29,7 @@ include('reg_vendor_php.php');
 
      /* Add some basic styling for better visibility */
      body, html {
-height: 100%;
+
 margin: 0;
 font-family: Arial, Helvetica, sans-serif;
 background-image: url("ss.png");
@@ -69,14 +69,14 @@ background-color: rgba(0,0,0, 1);
           right: 18px;
           width: 23px;
           cursor: pointer;
-          bottom: 438px;
+          bottom: 453px;
     }
     .pass-icon2{
           position: absolute;
           right: 18px;
           width: 23px;
           cursor: pointer;
-          bottom: 361px;
+          bottom: 372px;
     }
 
     
@@ -99,7 +99,7 @@ background-color: rgba(0,0,0, 1);
 
         <!--//first name//-->
         <div class="form-group">
-           <label>Name</label>
+           <label>Name:</label>
                <input type="text" class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_Name;?>">
                <p class="err-msg">
                 <?php if($nameErr!=1){ echo $nameErr; }?>
@@ -108,7 +108,7 @@ background-color: rgba(0,0,0, 1);
 
         <!--//last name//-->
         <div class="form-group">
-           <label >username</label>
+           <label >Username:</label>
                <input type="text" class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
                <p class="err-msg">
                 <?php if($usernameErr!=1){ echo $usernameErr; }?>
@@ -117,7 +117,7 @@ background-color: rgba(0,0,0, 1);
 
         <!--//Phone no//-->
         <div class="form-group">
-            <label for="email">Phone no</label>
+            <label for="email">Phone no:</label>
                 <input type="text" class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
                 <p class="err-msg"> 
                  <?php if($phoneErr!=1){ echo $phoneErr; } ?>
@@ -156,7 +156,7 @@ background-color: rgba(0,0,0, 1);
 
         <!-- Address -->
         <div class="form-group">
-        <label for="email">Address</label>
+        <label for="email">Address:</label>
                <input type="text" class="form-control" placeholder="Enter Address" name="Address" value="<?php echo $set_add;?>">
                <p class="err-msg">
                 <?php if($AddErr!=1){ echo $AddErr; }?>
@@ -165,7 +165,7 @@ background-color: rgba(0,0,0, 1);
 
         <!-- Gender -->
         <div class="form-group">
-           <label for="email">Gender</label>
+           <label for="email">Gender:</label>
            <select class="form-control" placeholder="Select Gender" name="v_gender" value="<?php echo $set_Gender;?>">
               <option selected disabled value=""></option>
 				      <option value="m">Male</option>
@@ -178,7 +178,7 @@ background-color: rgba(0,0,0, 1);
 
         <!--//compony name//-->
         <div class="form-group">
-           <label for="email">Compony Name</label>
+           <label for="email">Compony Name:</label>
                <input type="text" class="form-control" placeholder="Enter Compony Name" name="compony_name" value="<?php echo $set_ComName;?>">
                <p class="err-msg">
                 <?php if($cnameErr!=1){ echo $cnameErr; }?>
