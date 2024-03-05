@@ -177,10 +177,12 @@ if ($result->num_rows > 0) {
             <span class="star" data-value="5">★</span>
         </div>
         <p>Share your review:</p>
-        <textarea id="review"
-                  placeholder="Write your review here" name="r_discription">
+        <textarea id="review" placeholder="Write your review here" name="r_discription">
           </textarea>
-        <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+        <button id="submit" name="submit">Submit</button>
+        <div class="reviews" id="reviews">
+        </div>
+    </div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 report
             </button>
@@ -240,7 +242,7 @@ include("footer.php");
         modal.style.display = "none";
         }
     </script>
-    <script>
+  <script>
         const stars = document.querySelectorAll(".star");
         const rating = document.getElementById("rating");
         const reviewText = document.getElementById("review");
@@ -262,7 +264,7 @@ include("footer.php");
 		// Add the appropriate class to 
 		// each star based on the selected star's value
 		stars.forEach((s, index) => {
-			if (index < value) {
+			if (index <= value) {
 				s.classList.add(getStarColorClass(value));
 			}
 		});
@@ -321,14 +323,7 @@ include("footer.php");
 	    }
     }
 
-    var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
     </script>
-
 
 </body>
 </html>
