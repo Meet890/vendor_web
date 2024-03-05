@@ -10,7 +10,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.name{
+  color: dimgray;
+}
 header {
     background-color: #333;
     color: #fff;
@@ -38,7 +40,7 @@ section {
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
     margin-top: 65px;
 }
 .reat{

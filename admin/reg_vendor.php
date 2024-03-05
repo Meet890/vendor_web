@@ -11,6 +11,7 @@ include('reg_vendor_php.php');
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--BS 5 css link-->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="reg.css">
     <!--BS 5 js link-->
     <script src="../js/bootstrap.min.js"></script>
   <!--bootstrap4 library linked-->
@@ -192,10 +193,12 @@ background-color: rgba(0,0,0, 1);
       </form>
     </div>
    </div>
- 
+   <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close" onclick="redirect()"></button>
+
  </div>
   
 </div>
+
 <script>
         var c;
     function pass3()
@@ -230,6 +233,10 @@ background-color: rgba(0,0,0, 1);
             b=1;
             
         }
+    }
+    function redirect()
+    {
+        window.location.href = "../../index.php";
     }
 
 </script>    

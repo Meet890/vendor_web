@@ -1,15 +1,10 @@
 *{
-  /* font-family: 'Times New Roman', Times, serif; */
   font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
 }
 
 body{
-  /* background-image: url("background6.jpg");
-  background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;*/
- 
-/* background: linear-gradient(167deg, rgb(124, 117, 179) 0%, rgb(140, 209, 177) 50%, rgb(204, 192, 141) 96%); */
+
+ /* background: linear-gradient(167deg, rgb(124, 117, 179) 0%, rgb(140, 209, 177) 50%, rgb(204, 192, 141) 96%); */
 /* background-color: #c6b8ad; */
 /* background-color: #c6b8ad; */
 background-color: #f0f2f5;
@@ -25,57 +20,12 @@ height: 34px;
 
 }
 .v{
-margin-top: 37px;
-width: 100% ;
-height:90vh ;
-border:double rgb(218, 218, 226) 1px;
+margin-top: 80px;
+width: 90% ;
+height:80vh ;
+border:double rgb(96, 96, 100) 8px;
 }
-/* slider*/
 
-/* .im{ */
-/* background-image: url("img/background3.jpg");
-background-repeat: no-repeat;
-background-attachment: fixed;
-} */
-/* .carousel {
-position: relative;
-padding-top: 20px;
-}
-.slider{
-margin-top: 75px;
-margin-left: 10px;
-margin-right: 10px;
-}
-.carousel-item{
-  height: 80vh;
-  min-height: 3 00px;
-}
-.carousel-caption{
-top: 190px;
-  z-index: 2;
-}
-.carousel-caption h5{
-  font-size: 45px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 10px;
-}
-.carousel-caption p{
-  width: 60%;
-  margin: auto;
-  font-size: 18px;
-  line-height: 1.9;
-}
-.carousel-inner::before{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background:rgba(0, 0, 0, 0.726);
-  z-index: 1;
-} */
 
 /* navbar */
 
@@ -97,9 +47,9 @@ margin-right: 0px;
 }
 
 .navbar-nav a{
-  font-size: 15px;
+  font-size: 12px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
 }
 .navbar-dark .navbar-brand{
 
@@ -107,6 +57,7 @@ margin-right: 0px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
+  color: #fdb524;
   
 }
 .navbar-dark .navbar-brand:focus,

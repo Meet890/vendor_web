@@ -38,82 +38,12 @@ else{
   <!--navbar-->
   <?php include 'header3.php' ?>
 
-  <!-- <video controls>
-  <source src="img/v.mp4" type="video/mp4" class="v">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video> -->
+
+<center>
 <img src ="img/w.png" class="v">
-
-<!--slider-->
-  <!-- <div class="row justify-content-center " >
-  
-  <section class="slider col-11 mt-5" id="slider">
-
-<div class="hight">
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" id="event"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/decoration2.jpg" class="d-block w-100" alt="img1">
-      <div class="carousel-caption a2">
-        <h5>FIND THE BEST DECORATION</h5>
-        <p>Your Choise Your Budget.</p>
-        <!-- <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> -->
-      <!-- </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/catring2.jpg" class="d-block w-100" alt="img2">
-      <div class="carousel-caption a2">
-        <h5>FIND BEST CATRING SERVICES</h5>
-        <p>Your Choise Your Budget.</p>
-         <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> 
-       </div>
-    </div> 
-    <div class="carousel-item">
-      <img src="img/SOUND2.jpg" class="d-block w-100" alt="img3">
-      <div class="carousel-caption a2">
-        <h5>FIND BEST SOUND</h5>
-        <p>Your Choise Your Budget.</p>
-         <p><a href="" class="btn btn btn-warning mt-3">FIND VENDOR</a></p> 
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden" >Next</span>
-  </button>
-</div>
-</div>
-</section>
-
-</div>-->
-
-<!-- about -->
- <!-- <section class="about_us">
-
- <center>
-
- <div class="title mt-5">
-     <h1 class="heding">About us</h1>
-  </div>
-
-     <h3>We help vendor to grow up his business.<br> We provide the pletform for a vendor for grow his business.<br> 
-      The client can easilly find his choise vendors.</h3>
-      <h4>We are provide vendor to customer, but we have never lost sight of our core values. We believe in <br>
-        collaboration, innovation, and customer satisfaction. We are always looking for new ways to improve our 
-        vendor.</h4>
 </center>
-</section> -->
-  <!-- card -->
+
+<!-- card -->
   <section class="event">
 
     <div class="title mt-5">

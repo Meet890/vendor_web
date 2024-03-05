@@ -17,8 +17,9 @@ else if(isset($_SESSION["username"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link href="test.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="test.css" rel="stylesheet">
 </head>
 <body>
 <?php 
@@ -58,7 +59,7 @@ else if(isset($_SESSION["username"])){
 
 
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno,v_discription, v_comp FROM vendor where v_id = '$id'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno,v_discription, v_comp,v_iglink,v_fblink FROM vendor where v_id = '$id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -72,6 +73,8 @@ if ($result->num_rows > 0) {
         $phone=$row["v_phoneno"];
         $about=$row["v_discription"];
         $comp=$row["v_comp"];
+        $ig=$row["v_iglink"];
+        $fb=$row["v_fblink"];
     }
   } else {
   echo "0 results";
@@ -103,10 +106,10 @@ if ($result->num_rows > 0) {
         </div>    
         <h2 class="mt-3"><?php echo $comp; ?></h2>
         <div class="about">
-        <h4><?php echo $services ?><h4>
+        <h4 class="name"><?php echo $name; ?><h4>
         </div>
         <div class="row">
-            <div class="col-9">
+            <div class="col-6">
         <ul>
             <li>
                 <img src="img/location.png" alt="Location Icon" class="png">
@@ -123,16 +126,18 @@ if ($result->num_rows > 0) {
             
         </ul>
         </div>
-        <div class="col-3">
+        <div class="col-6">
         <ul>
-            <li> <br></li>
             <li>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="img/insta.jpg" alt="Location Icon" class="png">
                 <img src="img/Facebook.png" alt="Phone Icon" class="png">
+                <h5 class="city"><?php echo $fb ?></h5>
             </li>
+            
+            <li>
+                <img src="img/insta.jpg" alt="Location Icon" class="png">
+                <h5 class="call"><?php echo $ig ?></h5>
+            </li>   
         </ul>
-        
     </div>
     <div class="about center">
         <h3 class="mt-4">About us</h3>
@@ -216,9 +221,16 @@ if ($result->num_rows > 0) {
         </form>
         <div class="reviews" id="reviews">
         </div>
+        
     </div>
 
     </section>
+    <?php 
+
+include("../footer.php");
+
+
+?>
     <script>
         function openModal(imageSrc) {
         var modal = document.getElementById("myModal");

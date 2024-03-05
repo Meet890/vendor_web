@@ -7,6 +7,15 @@ body{margin-top:20px;
         background-color: #486c8a;
     
     }
+    
+    .brand{
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #fdb524;
+        
+    }
     .deneb_footer .widget_wrapper {
         background-repeat: no-repeat;
         background-size: cover;
@@ -14,6 +23,9 @@ body{margin-top:20px;
         margin-top: 20px;
         padding-bottom: 0px;
         color: #edecf0;
+    }
+    .m{
+        margin-left: 180px;
     }
     .mar{
         margin-top: 100px;
@@ -39,7 +51,8 @@ body{margin-top:20px;
     }
     .deneb_footer .widget_wrapper .widegt_about p {
         margin-bottom: 10px;
-        font-weight: 100;
+        /* font-weight: 100; */
+        color: hwb(0 100% 0%);
     }
     .deneb_footer .widget_wrapper .widegt_about .social li {
         display: inline-block;
@@ -84,7 +97,7 @@ body{margin-top:20px;
         max-width: 250px;
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
     }
     .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .icon {
         font-size: 12px;
@@ -165,7 +178,7 @@ body{margin-top:20px;
     }
     @media (max-width: 767px) {
         .deneb_cta .cta_wrapper .button_box {
-            float: none;
+            float: none;    
             text-align: center;
             margin-top: 30px;
         }
@@ -178,9 +191,11 @@ body{margin-top:20px;
     .deneb_cta .cta_wrapper .button_box .deneb_btn:focus {
         box-shadow: 2.5px 4.33px 15px 0px rgba(0, 0, 0, 0.15);
     }
-    .a1{
+     .a2
+     {
+        color: #81b6ff;
+        text-decoration: underline;
+    } 
+    .a3{
         color: #011a3e;
-    }
-    p{
-        color: darkgray;
     }
