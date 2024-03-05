@@ -17,7 +17,7 @@
    <p class="text-start"><h2> 3.Event Registration and Payment:</h2> The terms may outline the process for event registration, including payment procedures, refund policies, and cancellation fees. Users may be required to provide accurate and up-to-date information during registration.</p><br>
 
 
-   <p class="text-start"><h2> 4.Intellectual Property:</h2> The website's content, including text, images, logos, and trademarks, may be protected by intellectual property laws. Users are prohibited from using, reproducing, or distributing the website's content without authorization.</p><br>
+   <p class="text-start" ><h2> 4.Intellectual Property:</h2> The website's content, including text, images, logos, and trademarks, may be protected by intellectual property laws. Users are prohibited from using, reproducing, or distributing the website's content without authorization.</p><br>
 
 
    <p class="text-start"><h2> 5.Privacy Policy:</h2> The terms may reference the website's privacy policy, which outlines how user data is collected, stored, and used. Users may have the option to opt out of certain data collection practices or request the deletion of their personal information.</p><br>

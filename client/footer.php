@@ -64,7 +64,7 @@
 									<i class="fas fa-map-marker-alt"></i>
 								</div>
 								<div class="info">
-									<h6>SGJ College, Mandvi</h6>
+									<p class="loc">SGJ College, Mandvi</p>
 								</div>
 							</div>
 							

@@ -54,7 +54,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/wedding-arch.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">photographers</h3>
+                   <h3 class="titleh3">Decoration</h3>
                    <p class="title">Preserve your memories.</p>
                  </div>
               </a>
@@ -65,7 +65,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/camera.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">photographers</h3>
+                   <h3 class="titleh3">Photographers</h3>
                    <p class="title">Preserve your memories.</p>
                  </div>
               </a>
@@ -76,7 +76,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/production.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">videographers</h3>
+                   <h3 class="titleh3">Videographers</h3>
                    <p class="title">Moments well Shared.</p>
                  </div>
               </a>
@@ -87,7 +87,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/birthday-cake (1).png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">cake</h3>
+                   <h3 class="titleh3">Cake</h3>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
               </a>
@@ -98,7 +98,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/flower-shop.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">flowers</h3>
+                   <h3 class="titleh3">Flowers</h3>
                    <p class="title">Make your life colorful.</p>
                  </div>
               </a>
@@ -109,7 +109,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/boutique.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">wedding wear</h3>
+                   <h3 class="titleh3">Wedding wear</h3>
                    <p class="title">Dress Your Dreams.</p>
                  </div>
               </a>
@@ -120,7 +120,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/display.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">jewellery</h3>
+                   <h3 class="titleh3">Jewellery</h3>
                    <p class="title">Jewelryize me.</p>
                  </div>
               </a>
@@ -131,7 +131,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/wedding-invitation.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">invitation cards</h3>
+                   <h3 class="titleh3">Invitation cards</h3>
                    <p class="title">Invite in style.</p>
                  </div>
               </a>
@@ -142,7 +142,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/sound-system.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">sound</h3>
+                   <h3 class="titleh3">Sound</h3>
                    <p class="title">Audio you can rely on.</p>
                  </div>
               </a>
@@ -154,7 +154,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/makeup.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">makeup artist</h3>
+                   <h3 class="titleh3">Makeup artist</h3>
                    <p class="title">Ready, Set, Glow!.</p>
                  </div>
               </a>
@@ -165,7 +165,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/venue.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">venues</h3>
+                   <h3 class="titleh3">Venues</h3>
                    <p class="title">	Where memories are made.</p>
                  </div>
               </a>
@@ -176,7 +176,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/presents.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h3 class="titleh3">gifts</h3>
+                   <h3 class="titleh3">Gifts</h3>
                    <p class="title">More than just a gift.</p>
                  </div>
               </a>

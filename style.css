@@ -1,6 +1,6 @@
 *{
     /* font-family: 'Times New Roman', Times, serif; */
-    font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+    font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body{
@@ -475,4 +475,8 @@ textarea {
 
 .btn-group .btn.cancel:hover {
   background: var(--meet-color);
+}
+h1{
+  color: #2c5661;
+  margin-bottom: 5px;
 }

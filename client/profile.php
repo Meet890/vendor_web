@@ -115,10 +115,6 @@ if ($result->num_rows > 0) {
                 <img src="img/location.png" alt="Location Icon" class="png">
                 <h5 class="city"><?php echo $city ?></h5>
             </li>
-            <!-- <li>
-                <img src="email-icon.png" alt="Email Icon">
-                <p>john.doe@example.com</p>
-            </li> -->
             <li>
                 <img src="img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
@@ -168,7 +164,7 @@ if ($result->num_rows > 0) {
         <!-- rateinggg -->
 
 
-        <div class="container">
+        <div class="container1">
         <h1>Give your reating..</h1>
         <div class="rating">
             <span id="rating" name="r_star">0</span>/5
@@ -227,7 +223,7 @@ if ($result->num_rows > 0) {
     </section>
     <?php 
 
-include("../footer.php");
+include("footer.php");
 
 
 ?>

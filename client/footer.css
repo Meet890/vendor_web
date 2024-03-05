@@ -53,6 +53,7 @@ body{margin-top:20px;
         margin-bottom: 10px;
         /* font-weight: 100; */
         color: hwb(0 100% 0%);
+        font-size: 14px;
     }
     .deneb_footer .widget_wrapper .widegt_about .social li {
         display: inline-block;
@@ -106,6 +107,7 @@ body{margin-top:20px;
     }
     .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p a {
         color: #dee0e4;
+        font-size: 15px;
     }
     .deneb_footer .widget_wrapper .widget_contact .contact_info .single_info .info p span {
         display: block;
@@ -198,4 +200,9 @@ body{margin-top:20px;
     } 
     .a3{
         color: #011a3e;
+    }
+    .loc{
+        color: #dee0e4;
+        font-size: 15px;
+        margin-top: 7px;
     }

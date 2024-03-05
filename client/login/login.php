@@ -70,7 +70,7 @@ require_once "loginphp.php";
             
         </div>
         
-        L̥<button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close" onclick="redirect()"></button>
+        <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close" onclick="redirect()"></button>
                   
     </div>
     <script>
