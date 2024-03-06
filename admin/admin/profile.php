@@ -1,9 +1,6 @@
 <?php
 require '../config.php';
-require '../session.php';
-if(!isset($_SESSION["username"])){
-	header("location:../login.php");
-}
+
 ?>
   
 
@@ -36,12 +33,11 @@ if(!isset($_SESSION["username"])){
 				<div class="content">
 					<div class="container-fluid">
                         <?php
-if(isset($_SESSION["username"])){
-$v_username = $_SESSION["username"];
-}
-else{
-    $v_username = $_GET['username'];
-}
+
+
+    
+        $v_id = $_GET['id'];
+  
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -56,7 +52,7 @@ echo"<br>";
 else{
 die("Connection failed: " . mysqli_connect_error());
 }
-$result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_username ='$v_username' ");
+$result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $v_id ");
 
 while($row = $result->fetch_assoc()) {
     if($row['v_photo']==""){
@@ -70,7 +66,7 @@ while($row = $result->fetch_assoc()) {
     }
 }
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp FROM vendor where v_username = '$v_username'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp FROM vendor where v_id = $v_id ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
