@@ -12,10 +12,23 @@ require_once "loginphp.php";
   
     <link rel="stylesheet" href="reg.css">    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body, html {
+
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-image: url("ss.png");
+background-size: fill;
+background-position: center;
+background-repeat: no-repeat;
+background-color: rgba(0,0,0, 1);
+height: 100vh;
+}
+    </style>
 </head>
 
 <body>
-    <div class="bg-img"></div>
+    
     <div id="main-container">
         <div class="form-container">
             <div class="login-form">

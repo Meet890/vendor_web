@@ -144,7 +144,7 @@ if ($result->num_rows > 0) {
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery mb-5">
-        <!-- <?php
+        <?php
             
               $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
         
@@ -153,101 +153,8 @@ if ($result->num_rows > 0) {
                 <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4 w-100" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2"> 
                 
             <?php endforeach; ?>   
-            </div> -->
-            <div class="row">
-    <div class="col-4  p-1 " >
-    <!-- <a href="#" id="button" class="button"><img 
-      src="img/annie-spratt-ogDort6vKuE-unsplash.jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Boat on Calm Water"
-      /></a>-->
-            <img id="myImg" src="img/f1.jpg"  style="width:100%;max-width:300px"class="mt-2">
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="img01">
-      <div id="caption"></div>
-      </div>
-
-      
-      <!-- <a href="#" id="button" class="button"><img
-      src="img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Wintry Mountain Landscape"
-      /></a> -->
-      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
-      <div id="myModal" class="modal">
-         <span class="close">&times;</span>
-        <img class="modal-content mt-2" id="img01">
-         <div id="caption"></div>
-       </div>
-
-    </div>
-    
-    <div class="col-4  p-1">
-    <!-- <a href="#" id="button" class="button"><img
-      src="img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Mountains in the Clouds"
-      /></a> -->
-      <img id="myImg" src="../img/foto-pettine-IfjHaIoAoqE-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
-    <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-      
-      <!-- <a href="#" id="button" class="button"><img
-      src="img/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Boat on Calm Water"
-      /></a> -->
-      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
-    <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-    </div>
-    
-    <div class="col-4 p-1 ">
-    <!-- <a href="#" id="button" class="button"> <img
-      src="img/drew-coffman-llWjwo200fo-unsplash.jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Waves at Sea"
-      /></a> -->
-      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
-     <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-      
-      <!-- <a href="#" id="button" class="button"><img
-      src="img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Yosemite National Park"
-      /></a> -->
-      <img id="myImg" src="../img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
-    <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-      <!-- <a href="#" id="button" class="button"><img
-      src="img/nyegi-Tzu3Qsww1tQ-unsplash (1).jpg"
-      class="w-100 shadow-1-strong rounded mb-1"
-      alt="Yosemite National Park"
-      /> -->
-      <img id="myImg" src="../img/nyegi-Tzu3Qsww1tQ-unsplash (1).jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
-      <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-      
-  </div>
-</div>
+            </div>
+          
 
         <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
