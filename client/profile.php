@@ -108,7 +108,7 @@ if ($result->num_rows > 0) {
         <div class="about">
         <h4 class="name"><?php echo $name; ?><h4>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-6">
         <ul>
             <li>
@@ -144,16 +144,110 @@ if ($result->num_rows > 0) {
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery mb-5">
-        <?php
+        <!-- <?php
             
               $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
         
         
          foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4 w-100" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2"> 
                 
             <?php endforeach; ?>   
-            </div>
+            </div> -->
+            <div class="row">
+    <div class="col-4  p-1 " >
+    <!-- <a href="#" id="button" class="button"><img 
+      src="img/annie-spratt-ogDort6vKuE-unsplash.jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Boat on Calm Water"
+      /></a>-->
+            <img id="myImg" src="img/f1.jpg"  style="width:100%;max-width:300px"class="mt-2">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+      <div id="caption"></div>
+      </div>
+
+      
+      <!-- <a href="#" id="button" class="button"><img
+      src="img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Wintry Mountain Landscape"
+      /></a> -->
+      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
+      <div id="myModal" class="modal">
+         <span class="close">&times;</span>
+        <img class="modal-content mt-2" id="img01">
+         <div id="caption"></div>
+       </div>
+
+    </div>
+    
+    <div class="col-4  p-1">
+    <!-- <a href="#" id="button" class="button"><img
+      src="img/elvis-bekmanis-WJc87MVcDaA-unsplash.jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Mountains in the Clouds"
+      /></a> -->
+      <img id="myImg" src="../img/foto-pettine-IfjHaIoAoqE-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
+    <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+      
+      <!-- <a href="#" id="button" class="button"><img
+      src="img/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Boat on Calm Water"
+      /></a> -->
+      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg"  style="width:100%;max-width:300px" class="mt-2">
+    <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+    </div>
+    
+    <div class="col-4 p-1 ">
+    <!-- <a href="#" id="button" class="button"> <img
+      src="img/drew-coffman-llWjwo200fo-unsplash.jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Waves at Sea"
+      /></a> -->
+      <img id="myImg" src="../img/leonardo-miranda-dvF6s1H1x68-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
+     <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+      
+      <!-- <a href="#" id="button" class="button"><img
+      src="img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Yosemite National Park"
+      /></a> -->
+      <img id="myImg" src="../img/photos-by-lanty-O38Id_cyV4M-unsplash.jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
+    <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+      <!-- <a href="#" id="button" class="button"><img
+      src="img/nyegi-Tzu3Qsww1tQ-unsplash (1).jpg"
+      class="w-100 shadow-1-strong rounded mb-1"
+      alt="Yosemite National Park"
+      /> -->
+      <img id="myImg" src="../img/nyegi-Tzu3Qsww1tQ-unsplash (1).jpg" alt="Snow" style="width:100%;max-width:300px" class="mt-2">
+      <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+      
+  </div>
+</div>
 
         <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -163,9 +257,9 @@ if ($result->num_rows > 0) {
 
         <!-- rateinggg -->
 
-
-        <div class="container1">
-        <h1>Give your reating..</h1>
+        <div class="col-6 p-0">
+        <div class="container3">
+        <h1>Rate this profile</h1>
         <div class="rating">
             <span id="rating" name="r_star">0</span>/5
         </div>
@@ -183,7 +277,8 @@ if ($result->num_rows > 0) {
         <div class="reviews" id="reviews">
         </div>
     </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        </div>
+        <button type="button" class="btn  btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 report
             </button>
         <form action="report.php?id=<?php echo $id; ?>" method="post"> 
@@ -217,8 +312,7 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </form>
-        <div class="reviews" id="reviews">
-        </div>
+        
         
     </div>
 

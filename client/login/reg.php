@@ -28,7 +28,7 @@ require_once "registerphp.php";
                         <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="name">Name</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        <!-- <i class="fa fa-user"></i> -->
+                       
                     </div>
 
                     <div class="field">
@@ -46,18 +46,17 @@ require_once "registerphp.php";
                             
                         </select>
                         
-                        <!-- <i class="fa fa-envelope"></i> -->
                     </div>
 
                     <div class="field email">
                         <input type="email" name="email" id="email" placeholder=" " required autocomplete="on">
                         <label for="email">Email</label>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                        
                     </div>
                     <div class="field">
                         <input type="username" name="username" id="username" placeholder=" " required autocomplete="on">
                         <label for="username">Username</label>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                        
                     </div>
 
                     <div class="field">
@@ -65,7 +64,7 @@ require_once "registerphp.php";
                         <input type="password" name="password" id="password" required placeholder=" " autocomplete="off">
                         <label for="password">Password</label>
                         
-                        <!-- <i class="fa fa-lock"></i> -->
+
                     </div>
 
                     <div class="field">
@@ -74,7 +73,7 @@ require_once "registerphp.php";
                         
                         <label for="confirm-pass">Confirm Password</label>
                        
-                        <!-- <i class="fa fa-lock"></i> -->
+
                     </div>
 
                     <section>
