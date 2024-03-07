@@ -108,7 +108,7 @@ if ($result->num_rows > 0) {
         <div class="about">
         <h4 class="name"><?php echo $name; ?><h4>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-6">
         <ul>
             <li>
@@ -150,10 +150,11 @@ if ($result->num_rows > 0) {
         
         
          foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-5 p-0 m-0 " onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
                 
             <?php endforeach; ?>   
             </div>
+          
 
         <div id="myModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -163,9 +164,9 @@ if ($result->num_rows > 0) {
 
         <!-- rateinggg -->
 
-
-        <div class="container1">
-        <h1>Give your reating..</h1>
+        <div class="col-6 p-0">
+        <div class="container3">
+        <h1>Rate this profile</h1>
         <div class="rating">
             <span id="rating" name="r_star">0</span>/5
         </div>
@@ -183,7 +184,8 @@ if ($result->num_rows > 0) {
         <div class="reviews" id="reviews">
         </div>
     </div>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        </div>
+        <button type="button" class="btn  btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 report
             </button>
         <form action="report.php?id=<?php echo $id; ?>" method="post"> 
@@ -195,7 +197,7 @@ if ($result->num_rows > 0) {
                 <div class="modal-dialog">
                     <div class="modal-content px-3 py-1 m-4">
                             <div class="row">
-                                <div class="col-10">
+                                <div class="col-11">
                             <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
                             <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
                             
@@ -217,8 +219,7 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
         </form>
-        <div class="reviews" id="reviews">
-        </div>
+        
         
     </div>
 

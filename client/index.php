@@ -20,7 +20,7 @@ else if(isset($_SESSION["username"])){
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!--BS 5 js link-->
-    <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/bootstrap.min.js"></script> -->
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
@@ -39,7 +39,7 @@ else if(isset($_SESSION["username"])){
 </center>
 
 <!-- card -->
-<section class="event" >
+<section class="event" id="event">
 
         <div class="title mt-5" >
             <h1 class="heding">Services</h1>

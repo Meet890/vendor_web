@@ -35,7 +35,7 @@ require_once "loginphp.php";
                         <input type="Username" id="Username" name="username" placeholder=" " required autocomplete="on">
                         <label for="Username">Username</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                       
                     </div>
 
                     <div class="field">
@@ -43,7 +43,7 @@ require_once "loginphp.php";
                         <input type="password" id="pass" name="password" required placeholder=" " autocomplete="on">
                         <label for="create-pass">Password</label>
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        <!-- <i class="fa fa-lock"></i> -->
+                        
                     </div>
                     <div style="text-align:left;">Forgot Password ?&nbsp;<a class="signup-switch" href="forgotpass.php">Click here</a></div>
                         <br>
