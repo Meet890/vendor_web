@@ -150,7 +150,7 @@ if ($result->num_rows > 0) {
         
         
          foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-5 p-0 m-0 " onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
                 
             <?php endforeach; ?>   
             </div>
@@ -195,7 +195,7 @@ if ($result->num_rows > 0) {
                 <div class="modal-dialog">
                     <div class="modal-content px-3 py-1 m-4">
                             <div class="row">
-                                <div class="col-11">
+                                <div class="col-10 ">
                             <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
                             <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
                             
@@ -211,7 +211,7 @@ if ($result->num_rows > 0) {
                         
                         
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" name="Submit">Submit</button>
+                            <button type="submit" class="mt-1 btn btn-primary rounded" name="Submit">Submit</button>
                         </div>
                     </div>
                 </div>

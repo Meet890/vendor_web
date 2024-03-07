@@ -56,7 +56,7 @@
 						<li class="nav-item">
 							<a href="about.php">
 								<i class="la la-th"></i>
-								<p>about</p>
+								<p>Edit discription</p>
 								
 							</a>
 						</li>
@@ -64,7 +64,7 @@
                         <li class="nav-item">
 							<a href="gallery.php">
 								<i class="la la-table"></i>
-								<p>gallery</p>
+								<p>Edit gallery & profile image</p>
 								<span class="badge badge-count"></span>
 							</a>
 						</li>
