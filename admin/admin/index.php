@@ -31,48 +31,7 @@ require 'config.php';
 						<h4 class="page-title">Dashboard</h4>
 						<div class="row">
 							
-							<div class="col-md-4">
-								<div class="card card-stats card-success">
-									<div class="card-body ">
-										<div class="row">
-											<div class="col-5">
-												<div class="icon-big text-center">
-													<i class="la la-bar-chart"></i>
-												</div>
-											</div>
-											<div class="col-7 d-flex align-items-center">
-												<div class="numbers">
-                                                <?php
-                                                    $sql = "SELECT * FROM vendor";
-                                                    $result = mysqli_query($conn, $sql);
-
-                                                    if (mysqli_num_rows($result) > 0) {
-                                                        $a=0;
-                                                        // output data of each row
-                                                        while($row = mysqli_fetch_assoc($result)) {
-                                                            $a += 100;
-                                                        }
-                                                    ?>
-													<p class="card-category">Earning</p>
-													<h4 class="card-title"><?php echo $a ?></h4>
-                                                    <?php
-                                                    } else {
-                                                        ?>
-                                                        <p class="card-category">Earning</p>
-													    <h4 class="card-title">0</h4>
-                                                        <?php
-                                                        
-                                                    }
-
-                                                    ?>
-
-												
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							
 							<div class="col-md-4">
 								<div class="card card-stats card-danger">
                                 <a href = "tables.php#vendors">
