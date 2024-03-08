@@ -53,7 +53,7 @@ else{
       <div class="row">
 
             <div class="col-md-4  col-sm-6  ">
-            <a href="client/login/login.php?service=<?php echo "decoration";
+            <a href="profile_card_getdata.php?service=<?php echo "decoration";
             ?>" id="Decoration" class="a1">
                 <div class="card b-2 text-white">
                   <div class="imgholder">
@@ -67,7 +67,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "photographer";
+            <a href="profile_card_getdata.php?service=<?php echo "photographer";
             ?>" id="photographer" class="a1">
                  <div class="card b-2 text-white">
                  <div class="imgholder">
@@ -79,7 +79,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "videographer";
+            <a href="profile_card_getdata.php?service=<?php echo "videographer";
             ?>" id="vieographer" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
@@ -91,7 +91,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "Bakery";
+            <a href="profile_card_getdata.php?service=<?php echo "Bakery";
             ?>" id="bakery" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
@@ -103,7 +103,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "flowers";
+            <a href="profile_card_getdata.php?service=<?php echo "flowers";
             ?>" id="flowers" class="a1">
                  <div class="card b-2  text-white">
                  <div class="imgholder"> 
@@ -115,7 +115,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "wedding wear";
+            <a href="profile_card_getdata.php?service=<?php echo "wedding wear";
             ?>" id="wedding wear" class="a1">
                  <div class="card b-2   text-white">
                  <div class="imgholder">
@@ -127,7 +127,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "jewellery";
+            <a href="profile_card_getdata.php?service=<?php echo "jewellery";
             ?>" id="jewellery" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
@@ -139,7 +139,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "invitation card";
+            <a href="profile_card_getdata.php?service=<?php echo "invitation card";
             ?>" id="invitation card" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
@@ -151,7 +151,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "sound system";
+            <a href="profile_card_getdata.php?service=<?php echo "sound system";
             ?>" id="sound" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
@@ -163,7 +163,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "makeup artist";
+            <a href="profile_card_getdata.php?service=<?php echo "makeup artist";
             ?>" id="makeup artist" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
@@ -175,7 +175,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "venues";
+            <a href="profile_card_getdata.php?service=<?php echo "venues";
             ?>" id="venues" class="a1">
                  <div class="card text-white">
                   <div class="imgholder">
@@ -187,7 +187,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "gifts";
+            <a href="profile_card_getdata.php?service=<?php echo "gifts";
             ?>" id="gifts" class="a1">
                   <div class="card text-white">
                   <div class="imgholder">
@@ -199,7 +199,7 @@ else{
               </a>
             </div> 
             <div class="col-md-4 col-sm-6 ">
-            <a href="client/login/login.php?service=<?php echo "Catring";
+            <a href="profile_card_getdata.php?service=<?php echo "Catring";
             ?>" id="Catring" class="a1">
                   <div class="card text-white">
                   <div class="imgholder">
