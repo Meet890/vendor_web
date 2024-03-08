@@ -87,8 +87,12 @@ require_once "registerphp.php";
                     <span>Already Registered?&nbsp;<a class="login-switch" href="login.php">Login</a></span>
                 </div>
             </div>
+
         </div>
+
+        
     </div>
+
     <script>
         
 const loginForm = document.querySelector('.login-form')

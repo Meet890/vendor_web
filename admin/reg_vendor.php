@@ -138,11 +138,13 @@ background-color: rgba(0,0,0, 1);
         <!-- <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3"> -->
             <label for="pwd">Password:</label>
             <input type="password"  id="pass" class="form-control"  placeholder="Enter password" name="password" >
-            
+            <!-- <span class="password-toggle-icon"><i class="fas fa-eye"></i></span> -->
             <p class="err-msg">
                 <?php if($passErr!=1){ echo $passErr; } ?>
             </p>
+            
         </div>
+       
 
         <!--//Confirm Password//-->
         <div class="form-group">
