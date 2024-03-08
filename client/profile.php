@@ -179,13 +179,14 @@ if ($result->num_rows > 0) {
         <p>Share your review:</p>
         <textarea id="review" placeholder="Write your review here" name="r_discription">
           </textarea>
-        <button id="submit" name="submit">Submit</button>
-        <div class="reviews" id="reviews">
-        </div>
-    </div>
+        <button id="submit" name="submit" class="btn btn-primary">Submit</button>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 report
             </button>
+        <div class="reviews" id="reviews">
+        </div>
+    </div>
+        
         <form action="report.php?id=<?php echo $id; ?>" method="post"> 
             <!-- Button trigger modal -->
             

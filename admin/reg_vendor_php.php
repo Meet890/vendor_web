@@ -119,7 +119,7 @@ else{
 if(empty($compony_name)){
    $cnameErr="Compony Name is Required"; 
 }
-else if (!preg_match($validName,$name)) {
+else if (!preg_match($validName,$compony_name)) {
    $cnameErr="Digits are not allowed";
 }else{
    $cnameErr=true;
