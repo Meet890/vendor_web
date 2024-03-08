@@ -28,6 +28,7 @@ else{
     <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     <link href="client/profile_card.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php 

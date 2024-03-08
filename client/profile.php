@@ -2,7 +2,15 @@
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
 
+if(isset($_GET["id"])){
+	
+$id= $_GET["id"];
+}
+else{
+$id =$_SESSION['vid']; 
+}
 if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
+    $_SESSION['vid']= $id;
 	header("location:login/login.php");
  
 }
@@ -27,8 +35,8 @@ else if(isset($_SESSION["username"])){
 
 ?>
     <?php
+//    $id= $_GET["id"]; 
     
-    $id = $_GET["id"];
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -167,6 +175,7 @@ if ($result->num_rows > 0) {
         <div class="col-6 p-0">
         <div class="container3">
         <h1>Rate this profile</h1>
+        <form action="">
         <div class="rating">
             <span id="rating" name="r_star">0</span>/5
         </div>
@@ -187,7 +196,7 @@ if ($result->num_rows > 0) {
         <div class="reviews" id="reviews">
         </div>
     </div>
-        
+    </form>
         <form action="report.php?id=<?php echo $id; ?>" method="post"> 
             <!-- Button trigger modal -->
             
@@ -350,5 +359,5 @@ include("footer.php");
     }
         mysqli_close($conn);
     
-
+$_SESSION['vid']="";
 ?>

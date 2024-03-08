@@ -3,16 +3,22 @@
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["c_username"]) &&( $_SESSION["loggedin"] === true)){
-    header("location: index.php");
-    exit;
+// session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(isset($_SESSION["c_username"])){
+	header("location:../../client/index.php");
+ 
 }
-else if(isset($_SESSION["username"])){
-  header("location:../../admin/vendor/index.php");
+elseif(isset($_SESSION["username"])){
+	header("location:../../admin/vendor/");
+}
+else{
+
 }
 // Include config file
 require_once "config.php";
-
+// $v_id=$_GET['id'];
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -65,15 +71,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["c_email"] = "$row[c_email]";  
                                     $_SESSION["loggedin"] = "true";  
                                     ?>
-                                    <script type="text/javascript">
-                                        alert ="session is created";
-                                        </script>
+                                    
                                     <?php
 
                                 }
                             }
-                            echo '<script>  alert("connected"); </script>';
-                            header("location: ../index.php");
+                            // echo '<script>  alert("connected"); </script>';
+                            
+                            if(isset($_SESSION['vid'])){
+                                header ("location: ../profile.php");
+                            }else{
+                                header("location: ../index.php");
+                            }
+                            
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid password.";
