@@ -52,7 +52,7 @@ require 'config.php';
 														<th>id</th>
 														<th>Client Name</th>
 														<th>Client Username</th>
-														<th>Client Password</th>
+														<!-- <th>Client Password</th> -->
 														<th>Client Email</th>
 														<th>Client City</th>
 														<th>Client Joined Time</th>
@@ -86,7 +86,7 @@ require 'config.php';
 														<th scope="row"><?php echo $id ?></th>
 														<td><?php echo $name  ?></td>
 														<td><?php echo $username  ?></td>
-														<td><?php echo $password  ?></td>
+														<!-- <td><?php echo $password  ?></td> -->
 														<td><?php echo $email  ?></td>
 														<td><?php echo $city  ?></td>
 														<td><?php echo $time  ?></td>	
@@ -131,7 +131,7 @@ require 'config.php';
 														<th>id</th>
 														<th>Vendor Name</th>
 														<th>Vendor Username</th>
-														<th>Vendor Password</th>
+														<!-- <th>Vendor Password</th> -->
 														<th>Vendor Email</th>
 														<th>Vendor City</th>
 														<th>Vendor Gender</th>
@@ -142,6 +142,7 @@ require 'config.php';
 														
 														<th>Vendor Joined Time</th>
 														<th>Edit</th>
+														<th>View</th>
 														<th>delete</th>
 
 													</tr>
@@ -161,7 +162,7 @@ require 'config.php';
 															  $id=$row["v_id"];
 														      $name= $row["v_name"];
 														      $username= $row["v_username"];
-															  $password=$row["v_password"];
+															//   $password=$row["v_password"];
 														      $email=$row["v_email"];
 														      $city=$row["v_address"];
 															  $gender=$row["v_gender"];
@@ -181,7 +182,7 @@ require 'config.php';
 														<th scope="row"><?php echo $id ?></th>
 														<td><?php echo $name  ?></td>
 														<td><?php echo $username  ?></td>
-														<td><?php echo $password  ?></td>
+														<!-- <td><?php echo $password  ?></td> -->
 														<td><?php echo $email  ?></td>
 														<td><?php echo $city  ?></td>
 														<td><?php echo $gender  ?></td>
@@ -194,6 +195,10 @@ require 'config.php';
 														<td class="tda">
 														  <a href = 'update.php?rn=$result[name]'onclick='return
 														  checkdelete()' class="tda">Edit
+														</td>
+														<td class="tda">
+														  <a href = 'profile.php?id=<?php echo $id;?>'onclick='return
+														  checkdelete()' class="tda">View Profile
 														</td>
 														<td class="tdd">
 														  <a href = 'delete.php?id=<?php echo $id?>?table=<?php echo $table; ?>' class="tdd">Delete

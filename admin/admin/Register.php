@@ -39,7 +39,7 @@ require 'config.php';
 						</div>
                         <div class="card">
 									<div class="card-header">
-										<div class="card-title">Admin record table</div>
+										<div class="card-title">registration table</div>
 									</div>
 									<div class="card-body">
 										

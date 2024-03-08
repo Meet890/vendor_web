@@ -135,7 +135,7 @@ background-color: rgba(0,0,0, 1);
         
         <!--//Password//-->
         <div class="form-group">
-        <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3">
+        <!-- <img src="eye-close.png" onclick="pass3()" class="pass-icon" id="pass-icon3"> -->
             <label for="pwd">Password:</label>
             <input type="password"  id="pass" class="form-control"  placeholder="Enter password" name="password" >
             <!-- <span class="password-toggle-icon"><i class="fas fa-eye"></i></span> -->
@@ -148,7 +148,7 @@ background-color: rgba(0,0,0, 1);
 
         <!--//Confirm Password//-->
         <div class="form-group">
-        <img src="eye-close.png" onclick="pass2()" class="pass-icon2" id="pass-icon1">
+        <!-- <img src="eye-close.png" onclick="pass2()" class="pass-icon2" id="pass-icon1"> -->
             <label for="pwd">Confirm Password:</label>
             <input type="password" id="password" class="form-control" placeholder="Enter Confirm password" name="cpassword">
             <p class="err-msg">
@@ -191,7 +191,7 @@ background-color: rgba(0,0,0, 1);
         <button type="submit" class="btn btn-danger my-1" value="Register" name="register">Register Now</button>
         </div>
         <hr>
-        <div>Already have an Account?&nbsp;<a class="signup-switch" href="reg_vendor.php">Login</a></div>
+        <div>Already have an Account?&nbsp;<a class="signup-switch" href="login.php">Login</a></div>
       </form>
     </div>
    </div>

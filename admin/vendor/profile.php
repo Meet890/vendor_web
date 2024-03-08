@@ -36,8 +36,12 @@ if(!isset($_SESSION["username"])){
 				<div class="content">
 					<div class="container-fluid">
                         <?php
-
+if(isset($_SESSION["username"])){
 $v_username = $_SESSION["username"];
+}
+else{
+    $v_username = $_GET['username'];
+}
 $servername = "localhost";
 $username = "root";
 $password = "";
