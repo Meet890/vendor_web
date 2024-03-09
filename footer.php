@@ -44,8 +44,8 @@
             <!-- <p>vendor management system is online platform which provides all kind of  vandor like photographer , decoraters,<br> catering and many more vendors for you events. in vendor management system vendors can register in website
 			<br> and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
 									   -->
-                                      <p><a href="privacy_policy.php" class="a3">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_condition.php" class="a3">Terms & Conditions </a></p>
-                                      <p></p>
+                                      <!-- <p><a href="privacy_policy.php" class="a3">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_condition.php" class="a3">Terms & Conditions </a></p> -->
+                                      
                                       
 						<ul class="social">
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

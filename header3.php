@@ -16,7 +16,7 @@
           <a class="nav-link" href="index.php#event">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php#footer">About us</a>
+          <a class="nav-link" href="about_us.php">About us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
