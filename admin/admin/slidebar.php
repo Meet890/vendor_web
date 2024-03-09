@@ -39,5 +39,12 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
 								<!-- <span class="badge badge-count">14</span> -->
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="report.php">
+								<i class="lla la-send"></i>
+								<p>Reports</p>
+								<!-- <span class="badge badge-count">14</span> -->
+							</a>
+						</li>
 					</ul>
 				</div>
