@@ -26,6 +26,7 @@ else if(isset($_SESSION["username"])){
     <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     <link href="profile_card.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <?php 
@@ -62,13 +63,18 @@ else{
   die("Connection failed: " . mysqli_connect_error());
 }
 $service = $_GET["service"];
-$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id FROM vendor where v_profession = '$service' ";
+date_default_timezone_set("Asia/Kolkata");
+$date =date("Y/m/d");
+echo $date;
+$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id FROM vendor where v_profession = '$service'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
 
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
+      if($date <=  $row['v_reg_end_time']){
+      echo  $row['v_reg_end_time'];
       
       $name= $row["v_name"];
 
@@ -113,6 +119,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
       <?php
+      }
     }
 
   } else {

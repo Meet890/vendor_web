@@ -9,8 +9,8 @@ if(isset($_SESSION["c_username"])){
 elseif(isset($_SESSION["username"])){
 	header("location:admin/vendor/");
 }
-else{
-
+elseif(isset($_SESSION["a_id"])){
+	header("location:admin/admin/");
 }
 
 ?>
@@ -27,8 +27,9 @@ else{
     <!--BS 5 js link-->
     <script src="js/bootstrap.min.js"></script>
     <!--extranal css file-->
+    <link href="style.css" rel="stylesheet">
     <link href="client/profile_card.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 <?php 
@@ -64,8 +65,11 @@ if($conn){
 else{
   die("Connection failed: " . mysqli_connect_error());
 }
+date_default_timezone_set("Asia/Kolkata");
+$date =date("Y-m-d");
+// echo $date;
 $service = $_GET["service"];
-$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id FROM vendor where v_profession = '$service' ";
+$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id ,v_reg_end_time FROM vendor where v_profession = '$service' ";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -73,6 +77,8 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
       
+      if($date <=  $row['v_reg_end_time']){
+      // echo  $row['v_reg_end_time'];
       $name= $row["v_name"];
 
       $username= $row["v_username"];
@@ -116,6 +122,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
       <?php
+      }
     }
 
   } else {

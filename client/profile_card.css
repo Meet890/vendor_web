@@ -13,6 +13,9 @@ body{
 .mar{
     margin-top: 120px;
 }
+.hed {
+    background-color: #486c8a;
+  } 
 .team .member{
     position: relative;
     padding: 20px;

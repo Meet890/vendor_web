@@ -50,7 +50,7 @@ require 'config.php';
 														<th>Id</th>
 														<th>Name</th>
 														<th>Username</th>
-														<th>Password</th>
+														
 														<th>Phone</th>
 														<th>Email</th>
 														<th>Address</th>
@@ -78,7 +78,7 @@ require 'config.php';
                                                               $id = $row["reg_id"];
 															  $name = $row["reg_name"];
 														      $username= $row["reg_username"];
-															  $password=$row["reg_pass"];
+															
 															  $phone =$row["reg_phone"];
 															  $email = $row["reg_email"];
 															  $add = $row["reg_add"];
@@ -92,7 +92,7 @@ require 'config.php';
 														<th scope="row"><?php echo $id ?></th>
 														<td> <?php echo $name;?> </td>
 														<td><?php echo $username  ?></td>
-														<td><?php echo $password  ?></td>
+														
 														<td><?php echo $phone ?></td>	
 														<td><?php echo $email ?></td>
 														<td><?php echo $add ?></td>

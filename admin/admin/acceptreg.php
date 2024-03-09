@@ -8,7 +8,6 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
             $set_id= $row['reg_id'];
             $set_name= $row['reg_name'];
             $set_username= $row['reg_username'];
-            $set_pass= $row['reg_pass'];
             $set_PhoneNo= $row['reg_phone'];
             $set_email= $row['reg_email'];
             $set_add= $row['reg_add'];
@@ -35,7 +34,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
            
             $set_name= $_POST['name'];
             $set_username= $_POST['username'];
-            $set_pass= $_POST['password'];
             $set_PhoneNo= $_POST['Phone_no'];
             $set_email= $_POST['email'];
             $set_add= $_POST['Address'];
@@ -60,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             // echo $set_traid. "     "; 
             // echo $set_accept. "     "; 
            
-$sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_username', reg_pass='$set_pass', reg_phone='$set_PhoneNo', reg_email='$set_email', reg_add='$set_add' ,reg_gen='$set_Gender', reg_com='$set_ComName', reg_tra_id='$set_traid', reg_accept='1'  WHERE reg_id=$id  ";
+$sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_username', reg_phone='$set_PhoneNo', reg_email='$set_email', reg_add='$set_add' ,reg_gen='$set_Gender', reg_com='$set_ComName', reg_tra_id='$set_traid', reg_accept='1'  WHERE reg_id=$id  ";
      $result = mysqli_query($conn,$sql);      
      if($result==1)
      {  $currentdate = date("Y-m-d");
@@ -69,7 +67,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         // Add 30 days to the current date
         $newdate = date("Y-m-d", strtotime($currentdate . " +$set_days days"));
         $id = $_GET['id'];
-        $sql = "INSERT INTO vendor(reg_id,v_name,v_username,v_password,v_email,v_phoneno,v_address,v_gender,v_comp,v_reg_end_time) VALUES ('$id','$set_name','$set_username','$set_pass','$set_email','$set_PhoneNo','$set_add','$set_Gender','$set_ComName','$newdate')";
+        $sql = "INSERT INTO vendor(reg_id,v_name,v_username,v_email,v_phoneno,v_address,v_gender,v_comp,v_reg_end_time) VALUES ('$id','$set_name','$set_username','$set_email','$set_PhoneNo','$set_add','$set_Gender','$set_ComName','$newdate')";
         $result = mysqli_query($conn,$sql);      
         if($result==1)
         {
@@ -150,12 +148,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
               
         </div>
         
-        <!--//Password//-->
-        <div class="form-group">
-            <label >Password:</label>
-            <input type="text" class="form-control"  placeholder="Enter password" name="password"value="<?php echo $set_pass;?>">
-            
-        </div>
+        
 
        
 
