@@ -130,10 +130,6 @@ if(strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'
 // check all fields are valid or not
 if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )
 {
-   
-
-   
-   
    //legal input values
    $name= legal_input($name);
    $username= legal_input($username);
@@ -148,7 +144,8 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
    if(mysqli_query($conn, $sql)==true){
       // Redirect to login page
       $_SESSION["test_username"]=$username;
-      header("location: scanner.php");
+      header("location: otp_reg.php?username=$username");
+      // header("location: scanner.php");
   } else{
       echo "Oops! Something went wrong. Please try again later.";
   }

@@ -77,7 +77,7 @@ require_once "registerphp.php";
                     </div>
 
                     <section>
-                        <label for="agree"><input type="checkbox" name="checkbox" id="agree">I agree to all&nbsp;<a href="#">Terms &
+                        <label for="agree"><input type="checkbox" name="checkbox" id="agree">I agree to all&nbsp;<a href="../../terms_condition.php">Terms &
                                 Conditions</a></label>
                     </section>
                     <button class="signup-btn">Register</button>
