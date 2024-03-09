@@ -29,6 +29,7 @@ require_once "loginphp.php";
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger mb-0">' . $login_err . '</div>';
                      }
+                     
                 ?>
                 <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
