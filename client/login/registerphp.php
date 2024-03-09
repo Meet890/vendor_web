@@ -3,7 +3,7 @@
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$username = $name = $city = $email = $password = $confirm_password = "";
+$username = $name = $city = $email = $password = $confirm_password = $checkbox= "";
 $username_err = $name_err = $city_err = $email_err = $password_err = $confirm_password_err =$checkbox= "";
 
 function test_input($data) {
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = test_input($_POST["email"]);
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
-    $checkbox = $_POST["checkbox"];
+    // $checkbox = $_POST["checkbox"];
     //echo $checkbox; ON 
 // testing values
     // echo $name;
@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(!empty(trim($_POST["confirm_password"]))){
                         $confirm_password = trim($confirm_password);
                         if($password == $confirm_password){
-                            if($checkbox = "ON"){
+                            if(isset($_POST["checkbox"])){
                                 $sql = "INSERT INTO client (c_username,c_name,c_city, c_password,c_email) VALUES ('$username','$name','$city','$password','$email')";
                                   
                                           if(mysqli_query($conn, $sql)==true){

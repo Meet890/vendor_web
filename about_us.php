@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <title> An About Us Page | CoderGirl </title>
   <!---Custom Css File!--->
-  <link rel="stylesheet" href="style.css">
+  
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php
