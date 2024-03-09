@@ -100,17 +100,20 @@ if ($result->num_rows > 0) {
               <!-- <h2>14</h2>
               <p>post</p> -->
             </div>
-            <div class="followers">
-                <h4>30</h4>
+            <div></div>
+            <div class="followers text-align-center">
+                <?php 
+                     $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
+                     while($rows){
+                        $i=0;
+                        $i++;
+
+                     }
+                ?>
+                <h4><?php echo $i;?></h4>
                 <p class="p1">Post</p>
             </div>
-            <div class="following">
-            <h4><img src="img/star.jpg" alt="Location Icon" class="star">30</h4>
-                <!-- <h4><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill star" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>4.3</h4> -->
-                <p class="p1">1 Review</p>
-            </div>
+            
         </div>    
         <h2 class="mt-3"><?php echo $comp; ?></h2>
         <div class="about">
@@ -171,26 +174,13 @@ if ($result->num_rows > 0) {
 
 
         <!-- rateinggg -->
-
+<hr>
         <div class="col-6 p-0">
         <div class="container3">
-        <h1>Rate this profile</h1>
+        <h1>Report this profile</h1>
         <form action="">
-        <div class="rating">
-            <span id="rating" name="r_star">0</span>/5
-        </div>
-        <div class="stars" id="stars" name="">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-        <p>Share your review:</p>
-        <textarea id="review" placeholder="Write your review here" name="r_discription">
-          </textarea>
-        <button id="submit" name="submit" class="btn btn-primary">Submit</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        
+        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 report
             </button>
         <div class="reviews" id="reviews">
@@ -237,7 +227,7 @@ if ($result->num_rows > 0) {
 
 include("footer.php");
 
-
+$_SESSION['vid']="";
 ?>
     <script>
         function openModal(imageSrc) {
@@ -359,5 +349,5 @@ include("footer.php");
     }
         mysqli_close($conn);
     
-$_SESSION['vid']="";
+
 ?>
