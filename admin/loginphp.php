@@ -89,16 +89,29 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                      mysqli_stmt_bind_result($stmt, $id, $username, $c_password);
                      
                      if(mysqli_stmt_fetch($stmt)){
-                         if($password = $c_password){
+                        $username2 = $_POST["username"];
+                        $sql2 = "SELECT a_password FROM admin_tbl WHERE a_username = '$username2'";
+                        $result = mysqli_query($conn, $sql2);
+                            if ($row = mysqli_fetch_assoc($result)){
+                        
                              // Password is correct, so start a new session
-                            
-                             // Store data in session variables
+                             
+                    
+                                if($password==$row["a_password"]){
+                            // echo $c_password;
+                            // echo $password;
+                            // echo $row["a_password"];
+                            // Store data in session variables
                              $_SESSION["loggedin"] = true;
                              $_SESSION["a_id"] = $id;
                              $_SESSION["a_username"] = $username;
                             
                              echo '<script>  alert("connected"); </script>';
                              header("location: admin/index.php");
+                                }else{
+                                    echo '<script>  alert("Password is invalid"); </script>';
+                                }
+
                          }else{
                              // Password is not valid, display a generic error message
                            

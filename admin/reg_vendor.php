@@ -100,7 +100,7 @@ background-color: rgba(0,0,0, 1);
         <!--//first name//-->
         <div class="form-group">
            <label>Name:</label>
-               <input type="text" class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_Name;?>">
+               <input type="text" class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_name;?>">
                <p class="err-msg">
                 <?php if($nameErr!=1){ echo $nameErr; }?>
                </p>
@@ -168,7 +168,7 @@ background-color: rgba(0,0,0, 1);
         <!-- Gender -->
         <div class="form-group">
            <label for="email">Gender:</label>
-           <select class="form-control" placeholder="Select Gender" name="v_gender" value="<?php echo $set_Gender;?>">
+           <select class="form-control p-0 ps-1" placeholder="Select Gender" name="v_gender" value="<?php echo $set_Gender;?>">
               <option selected disabled value=""></option>
 				      <option value="m">Male</option>
 				      <option value="f">Female</option>

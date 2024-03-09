@@ -29,7 +29,7 @@ if($idErr==true)
     
     
     
-    $sql = "UPDATE registration SET reg_tra_id ='$tra_id'  WHERE registration.reg_username= '$username';";
+    $sql = "UPDATE registration SET reg_tra_id ='$tra_id'  WHERE reg_username= '$username';";
     
     if($result= mysqli_query($conn, $sql))
     {

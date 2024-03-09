@@ -19,12 +19,18 @@ include('scannerphp.php');
 </head>
 <body>
     <div class="container mb-10">
-        <h3>Pay 150 for 1 month.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pay 350 for 3 month</h3>
+    <div class="row">
+       <center>
+
+        <div class="col"> <h3>Pay 150 for 1 month.   </h3></div>
+
+        <div class="col"> <h3>  Pay 350 for 3 month</h3></div>
        
-        <h3>Pay 750 for 6 month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pay 1500 for 12 month</h3>
-     
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-10 mx-auto">
+        <div class="col"> <h3>Pay 750 for 6 month </h3></div>
+        <div class="col"> <h3>  Pay 1500 for 12 month</h3></div>
+        
+        
+            <div class="col-6 col-lg-4 mx-auto">
                 <div class="card ">
                 <div class="w-100 h-auto">
                     <img src="qr.png" alt="qr code" class="img-fluid  rounded">
@@ -38,10 +44,11 @@ include('scannerphp.php');
                        <p class="err-msg"> 
                          <?php if($idErr != 1){ echo $idErr ; } ?>
                       </p>
-                    <button class=" bg-dark text-white  btn" name="submit">Submit</button>
+                    <button class=" bg-dark text-white btn" name="submit">Submit</button>
                 </form>
                 </div>
             </div>
+            </center>
         </div>
     </div>
 </body>

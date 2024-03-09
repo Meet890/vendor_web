@@ -23,8 +23,8 @@ $sql ="SELECT reg_email, reg_name FROM registration WHERE reg_username= '$userna
     while ($row = $result->fetch_assoc()) {
     
        
-$email =  $row['v_email'];
-$name =   "Dear".$row['v_name'] ;
+$email =  $row['reg_email'];
+$name =   "Dear".$row['reg_name'] ;
 // echo $email;
 // echo $name;
 $_SESSION["otp"] =( rand(100000,999999));
@@ -59,7 +59,7 @@ try {
     $mail->AltBody = '';
 
    if($mail->send()){
-    header("Location: submitotp.php");
+    header("Location: submitregotp.php");
    }
     
 } catch (Exception $e) {

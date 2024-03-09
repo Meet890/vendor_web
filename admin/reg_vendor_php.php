@@ -12,7 +12,7 @@ session_start();
 $valid=$nameErr=$usernameErr=$phoneErr=$emailErr=$passErr=$cpassErr=$AddErr=$GenErr=$cnameErr='';
 
 // by default,set input values are empty
-$set_Name=$set_username=$set_PhoneNo=$set_email=$set_pass=$set_cpass=$set_add=$set_Gender=$set_ComName=$v_gender='';    
+$set_name=$set_username=$set_PhoneNo=$set_email=$set_pass=$set_cpass=$set_add=$set_Gender=$set_ComName=$v_gender='';    
  extract($_POST);
 
 if(isset($_POST['register']))
@@ -144,12 +144,13 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
    if(mysqli_query($conn, $sql)==true){
       // Redirect to login page
       $_SESSION["test_username"]=$username;
-      header("location: otp_reg.php?username=$username");
+      $valid="All fields are validated ";
+     header("location: otp_reg.php?username=$username");
       // header("location: scanner.php");
   } else{
       echo "Oops! Something went wrong. Please try again later.";
   }
-   $valid="All fields are validated successfully";
+  
    // here you can write Sql Query to insert user data into database table
 }else{
      // set input values is empty until input field is invalid
