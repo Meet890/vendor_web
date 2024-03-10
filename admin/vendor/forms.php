@@ -6,7 +6,7 @@ require '../session.php';
 error_reporting(0);
 $username = $_SESSION["username"];
 
-$sql="select v_id,v_name,v_username,v_password,v_phoneno,v_email,v_photo,v_address,v_gender,v_comp,v_iglink,v_fblink from vendor where v_username='$username'";
+$sql="select * from vendor where v_username='$username'";
 $result = $conn->query($sql);
 
     // output data of each row
@@ -19,6 +19,7 @@ $result = $conn->query($sql);
 		  $email=$row["v_email"];
 		  $photo=$row["v_photo"];
           $city=$row["v_address"];
+		  $profession=$row["v_v_profession"];
 		  $gender=$row["v_gender"];
 		  $ig=$row["v_iglink"];
 		  $fb=$row["v_fblink"];

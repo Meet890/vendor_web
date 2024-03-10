@@ -26,6 +26,7 @@ require_once "loginphp.php";
                 </div>
                 <div class="title">LOGIN AS CLIENT</div>
                 <?php
+                echo $_SESSION['vid'];
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger mb-0">' . $login_err . '</div>';
                      }

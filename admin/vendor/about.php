@@ -74,9 +74,7 @@ if(!isset($_SESSION["username"])){
 			
                         <div class="form-group">
 												<label for="comment">About</label>
-												<textarea class="form-control" id="comment" rows="5" name="v_discription" value="">
-                        <?php echo $about; ?>
-												</textarea>
+												<textarea class="form-control" id="comment" rows="7" name="v_discription" ><?php echo $about; ?></textarea>
 											  </div>
 
                         <div class="card-action">
@@ -86,7 +84,10 @@ if(!isset($_SESSION["username"])){
                   </div>
 </form> 
                 </div>            
-            
+                <script src="assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="assets/js/core/popper.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
   </body>
 </html>
 

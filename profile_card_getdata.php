@@ -102,18 +102,18 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="<?php echo $img ?>" class="img-fluid" alt="team1">
+                <img src="<?php echo $img; ?>" class="img-fluid" alt="team1">
              </div>
              <div class="member-info">
-                <h4><?php echo $name ?></h4>
-                <span><?php echo $services ?></span>
-                <p><?php echo $city ?></p>
+                <h4><?php echo $name; ?></h4>
+                <span><?php echo $services; ?></span>
+                <p><?php echo $city ;?></p>
                 
               </div>
          </div>
                 <div class="d-grid gap-2">
 
-                <button class="btn btn-secondary mt-2 btns" type="button" onclick=""><a href='client/profile.php?id=<?php echo $id ?>' class="a4">More Info</a></button>
+                <button class="btn btn-secondary mt-2 btns" type="button" onclick=""><a href='redirect.php?id=<?php echo $id ?>' class="a4">More Info</a></button>
 
                 </div>
         </div>   
