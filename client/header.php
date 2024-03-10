@@ -7,9 +7,11 @@
     <title>Home page</title>
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.bundle.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
   
-    <script src="../js/bootstrap.bundle.js"></script> 
+    
     <!--extranal css file-->
     
 </head>
@@ -60,24 +62,28 @@
         </li>
        
         <li>
-        <div class="dropdown text-end ms-2">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../user.png" alt="mdo" width="32" height="32" class="rounded-circle">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu"> 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="profile-pic">
+                <img src="../user.png" alt="Profile Picture">
+             </div>
           </a>
-          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="profile_client.php">Profile</a></li>
-            
-            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="login/Logout.php">Sign out</a></li>
           </ul>
-        </div>
+        </li>
+        </ul>
         </li>
 
-        </ul>
+      </ul>
+       
       </div>
 
 </nav>
 <script src="../js/bootstrap.min.js"></script>  
-<script src="../js/bootstrap.bundle.js"></script>  
+<script src="../js/bootstrap.bundle.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
 </body>
 </html>

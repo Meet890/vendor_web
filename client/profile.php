@@ -51,7 +51,7 @@ else if(isset($_SESSION["username"])){
 
 
 
-    $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $id ");
+    $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = '$id' ");
 
     while($row = $result->fetch_assoc()) {
         if($row['v_photo']==""){
