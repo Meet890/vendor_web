@@ -21,7 +21,7 @@
 						</div><br>
 						<p> The client can easilly find his choise vendors.</p>
             <p>We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
-				                      innovation, and customer satisfaction. We are always looking for new ways to improve our vendor...<a href="" class="a2">Read more</a></p>
+				                      innovation, and customer satisfaction. We are always looking for new ways to improve our vendor...<a href="about_us.php" class="a2">Read more</a></p>
             <!-- <p>vendor management system is online platform which provides all kind of  vandor like photographer , decoraters,<br> catering and many more vendors for you events. in vendor management system vendors can register in website
 			<br> and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
 									   -->
