@@ -67,8 +67,7 @@ else if(isset($_SESSION["username"])){
 
 
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno,v_discription, v_comp,v_iglink,v_fblink FROM vendor where v_id = '$id'";
-$result = $conn->query($sql);
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno,v_discription, v_comp,v_iglink,v_fblink FROM vendor where v_id = '$id'";$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -133,12 +132,13 @@ if ($result->num_rows > 0) {
                 <h5 class="city"><?php echo $fb ?></h5>
             </li>
             
-            <li>
+            <li class="mt-1">
                 <img src="img/insta.jpg" alt="Location Icon" class="png">
                 <h5 class="call"><?php echo $ig ?></h5>
             </li>   
         </ul>
     </div>
+        </div>
     <div class="about center">
         <h3 class="mt-4">About us</h3>
             <p><?php echo $about ?></p>
@@ -168,8 +168,9 @@ if ($result->num_rows > 0) {
 
         <!-- rateinggg -->
 <hr>
+<div class="row justify-content-center">
         <div class="col-6 p-0">
-        <div class="container3">
+        <div class="container3 justify-content-center">
         <h1>Report this profile</h1>
         <form action="">
         
@@ -214,7 +215,7 @@ if ($result->num_rows > 0) {
         
         
     </div>
-
+    </div>
     </section>
     <?php 
 
