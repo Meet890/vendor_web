@@ -19,7 +19,7 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
 						
 						<li class="nav-item">
 							<a href="register.php">
-								<i class="la la-keyboard-o"></i>
+								<i class="la la-black-tie"></i>
 								<p>Register</p>
 								<!-- <span class="badge badge-count">50</span> -->
 							</a>
@@ -41,7 +41,7 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
 						</li>
 						<li class="nav-item">
 							<a href="report.php">
-								<i class="lla la-send"></i>
+								<i class="la la-keyboard-o"></i>
 								<p>Reports</p>
 								<!-- <span class="badge badge-count">14</span> -->
 							</a>

@@ -65,8 +65,8 @@ else{
 $service = $_GET["service"];
 date_default_timezone_set("Asia/Kolkata");
 $date =date("Y/m/d");
-echo $date;
-$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id FROM vendor where v_profession = '$service'";
+//echo $date;
+$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id,v_reg_end_time FROM vendor where v_profession = '$service'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -74,7 +74,7 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
       if($date <=  $row['v_reg_end_time']){
-      echo  $row['v_reg_end_time'];
+     // echo  $row['v_reg_end_time'];
       
       $name= $row["v_name"];
 

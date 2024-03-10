@@ -49,9 +49,9 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
                             <div class="col-3"></div>
 								<div class="col-3 justify-content-center ">
                                     <div class="card ">
-                                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="p-3">
                                             <label for="username">Username: </label><br>
-                                            <input type="text" id="username" name="username" class =""><br><br>
+                                            <input type="text" id="username" name="username"><br><br>
                                             <label for="password">Password: </label><br>
                                             <input type="password" id="pass" name="pass">
                                             <button type="submit" name ="submit">Submit</button>
