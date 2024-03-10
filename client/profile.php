@@ -51,7 +51,7 @@ else if(isset($_SESSION["username"])){
 
 
 
-    $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $id ");
+    $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = '$id' ");
 
     while($row = $result->fetch_assoc()) {
         if($row['v_photo']==""){
@@ -102,15 +102,8 @@ if ($result->num_rows > 0) {
             </div>
             <div></div>
             <div class="followers text-align-center">
-                <?php 
-                     $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
-                     while($rows){
-                        $i=0;
-                        $i++;
-
-                     }
-                ?>
-                <h4><?php echo $i;?></h4>
+                
+                <h4>00</h4>
                 <p class="p1">Post</p>
             </div>
             
