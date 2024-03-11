@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         if( $_POST["password"]= $password){
                             // Password is correct, so start a new session
                             
-                              $sql = "SELECT * FROM client where c_username = '$uname'" ;
+                              $sql = "SELECT * FROM client where c_username = '$username'" ;
                               $result = mysqli_query($conn, $sql);
 
                               if ($result) {
@@ -70,19 +70,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["c_city"] = "$row[c_city]";
                                     $_SESSION["c_email"] = "$row[c_email]";  
                                     $_SESSION["loggedin"] = "true";  
-                                    ?>
                                     
-                                    <?php
-
+                                    if(isset($_GET['id'])){
+                                        $vid =$_GET['id'];
+                                        header ("location: ../profile.php?id=$vid");
+                                    }else{
+                                        header("location: ../index.php");
+                                    }
                                 }
                             }
                             // echo '<script>  alert("connected"); </script>';
                             
-                            if(isset($_SESSION['vid'])){
-                                header ("location: ../profile.php");
-                            }else{
-                                header("location: ../index.php");
-                            }
+                            
                             
                         } else{
                             // Password is not valid, display a generic error message
