@@ -85,10 +85,9 @@ background-color: rgba(0,0,0, 1);
 <body>
 
 <div class="container-fluid">
- <div class="row">
-   <div class="col-1 col-sm-3 col-lg-4 col-md-3">
-   </div>
-   <div class="col-10 col-sm-6 col-lg-4 col-md-6 card mt-4 " style="margin-bottom: 100px;">
+ <div class="row justify-content-center">
+   
+   <div class="col col-sm-6 col-lg-4 col-md-6 card mt-4 " style="margin-bottom: 100px;">
     
     <!--====registration form====-->
     <div class="registration-form">
@@ -195,7 +194,7 @@ background-color: rgba(0,0,0, 1);
       </form>
     </div>
    </div>
-   <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close" onclick="redirect()"></button>
+   <button type="button" class="btn-close bg-white m-2 background cencel col-1" aria-label="Close" onclick="redirect()"></button>
 
  </div>
   
