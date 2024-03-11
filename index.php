@@ -49,8 +49,8 @@ else{
     <div class="title mt-5">
       <h1 class="heding">Services</h1>
     </div>
-    <div class="container mt-2">
-      <div class="row">
+    <div class="container mt-2 justify-content-center">
+      <div class="row justify-content-center">
 
             <div class="col-md-4  col-sm-6  ">
             <a href="profile_card_getdata.php?service=<?php echo "decoration";

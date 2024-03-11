@@ -20,7 +20,7 @@ background-color: #f0f2f5;
 .v{
   margin-top: 75px;
   width: 90% ;
-  height:500px;
+  height:70vh;
   border:double rgb(96, 96, 100) 8px;
 }
 
@@ -230,10 +230,15 @@ transform: scale3d(1, 1, 1);
     
 
 }
-@media only screen and (max-width: 765px){
+@media only screen and (max-width: 767px){
 
   /*.....navbar.....*/
-
+  .navbar-dark .navbar-brand {
+    font-size: 13px;
+  }
+  .navbar-toggler{
+    margin-right: 95px;
+  }
     .navbar-nav{
         text-align: center;
     }
@@ -276,7 +281,9 @@ transform: scale3d(1, 1, 1);
       height: 250px;
       width: 250px;
     }
-
+    .v{
+      height: auto;
+    }
 
      /*......about.....*/
     img{
@@ -293,10 +300,7 @@ transform: scale3d(1, 1, 1);
   .carousel-item > img {
       height: 600px;
   }
-  .v{
-    height:500px;
-   
-  }
+  
   
 
   .nav-item:hover > .nav-link {
