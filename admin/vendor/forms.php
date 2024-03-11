@@ -52,7 +52,7 @@ $result = $conn->query($sql);
   
    $result = mysqli_query($conn, $sql);
   if (isset($result)) {
-    header("location:profile.php");
+    header("location:index.php");
 
   }
  else{
@@ -144,11 +144,11 @@ $result = $conn->query($sql);
 				                             <option <?php if($profession=='photographer' ){echo "SELECTED";}?> value="photographer">Photographer</option>
 				                             <option <?php if($profession=='videographer' ){echo "SELECTED";}?> value="videographer">Videographer</option>
 				                             <option <?php if($profession=='flowers' ){echo "SELECTED";}?> value="flowers">Flowers</option>
-					                         <option <?php if($profession=='venue' ){echo "SELECTED";}?> value="venue">Venue</option>
-					                         <option <?php if($profession=='invitation' ){echo "SELECTED";}?> value="invitation">Invitation Card</option>
+					                         <option <?php if($profession=='venues' ){echo "SELECTED";}?> value="venues">Venue</option>
+					                         <option <?php if($profession=='invitation card' ){echo "SELECTED";}?> value="invitation card">Invitation Card</option>
 											 <option <?php if($profession=='gifts' ){echo "SELECTED";}?> value="gifts">Gifts</option>
-											 <option <?php if($profession=='mackup Artist' ){echo "SELECTED";}?> value="mackup Artist">Mackup Artist</option>
-											 <option <?php if($profession=='event Cloths' ){echo "SELECTED";}?> value="event Cloths">Event Cloths</option>
+											 <option <?php if($profession=='makeup artist' ){echo "SELECTED";}?> value="makeup artist">Makeup Artist</option>
+											 <option <?php if($profession=='event cloths' ){echo "SELECTED";}?> value="event cloths">Event Cloths</option>
 											 <option <?php if($profession=='bakery' ){echo "SELECTED";}?> value="bakery">Bakery</option>
 											 
 											</select>

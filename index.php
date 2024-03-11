@@ -91,7 +91,7 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "Bakery";
+            <a href="profile_card_getdata.php?service=<?php echo "bakery";
             ?>" id="bakery" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
@@ -115,13 +115,13 @@ else{
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "wedding wear";
-            ?>" id="wedding wear" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "event cloths";
+            ?>" id="event cloths" class="a1">
                  <div class="card b-2   text-white">
                  <div class="imgholder">
                    <img src="img/boutique.png" class="card-img img1 p-2" alt="...">
                  </div>
-                   <h4 class="titleh3">wedding wear</h4>
+                   <h4 class="titleh3">event cloths</h4>
                    <p class="title">Dress Your Dreams.</p>
                  </div>
               </a>
@@ -199,13 +199,13 @@ else{
               </a>
             </div> 
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "Catring";
-            ?>" id="Catring" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "catring";
+            ?>" id="catring" class="a1">
                   <div class="card text-white">
                   <div class="imgholder">
                    <img src="img/banquet.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h4 class="titleh3">Catring</h4>
+                   <h4 class="titleh3">catring</h4>
                    <p class="title">More than just a gift.</p>
                  </div>
               </a>
