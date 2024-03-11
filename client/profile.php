@@ -25,7 +25,9 @@ else if(isset($_SESSION["username"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href="test.css" rel="stylesheet">
 </head>
@@ -99,12 +101,15 @@ if ($result->num_rows > 0) {
               <!-- <h2>14</h2>
               <p>post</p> -->
             </div>
-            <div></div>
-            <div class="followers text-align-center">
+            <div class="followers">
+                <h2>30</h2>
+                <p>Post</p>
+            </div>
+            <!-- <div class="followers text-align-center">
                 
                 <h4>00</h4>
                 <p class="p1">Post</p>
-            </div>
+            </div> -->
             
         </div>    
         <h2 class="mt-3"><?php echo $comp; ?></h2>

@@ -147,6 +147,8 @@ include("footer.php");
     <!--BS 5 js link-->
 
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script> 
+
 
 <script>
   function redirect($test){

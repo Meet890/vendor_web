@@ -10,6 +10,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.name{
+  color: dimgray;
+}
 
 header {
     background-color: #333;
@@ -38,7 +41,7 @@ section {
     background-color: #fff;
     padding: 2em;
     border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.1);
 }
 .reat{
     height: 20px;
@@ -47,11 +50,14 @@ svg{
     margin-top: -8px;
     margin-bottom: 0px;
 }
-
-
+.p1 {
+  margin-top: 9px;
+  margin-bottom: 1rem;
+}
+/* 
 .star{
     max-width: 50%;
-}
+} */
 /* img{
     max-width: 50%;
     border-radius: 50%;
@@ -123,6 +129,8 @@ li img {
     margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 223px;
+    width: 218px;
 }
 .modal {
     display: none;
