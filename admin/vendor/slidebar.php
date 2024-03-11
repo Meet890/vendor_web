@@ -18,7 +18,7 @@
 							<div class="collapse in" id="collapseExample" aria-expanded="true" >
 								<ul class="nav">
 									<li>
-										<a href="profile.php">
+										<a href="index.php">
 											<span class="link-collapse">Show My Profile</span>
 										</a>
 									</li>

@@ -19,7 +19,7 @@ $result = $conn->query($sql);
 		  $email=$row["v_email"];
 		  $photo=$row["v_photo"];
           $city=$row["v_address"];
-		  $profession=$row["v_v_profession"];
+		  $profession=$row["v_profession"];
 		  $gender=$row["v_gender"];
 		  $ig=$row["v_iglink"];
 		  $fb=$row["v_fblink"];
@@ -137,19 +137,19 @@ $result = $conn->query($sql);
 											<label for="exampleFormControlSelect1">select service</label>
 											<select class="form-control" id="exampleFormControlSelect1" name="v_profession">
 											 <option selected disabled value="">Choose...</option>
-				      						 <option value="decoration">Decoration</option>
-				                             <option value="sound system">Sound system</option>
-				                             <option value="catring">Catring</option>
-				                             <option value="jewellery">Jewellery</option>
-				                             <option value="photographer">Photographer</option>
-				                             <option value="videographer">Videographer</option>
-				                             <option value="flowers">Flowers</option>
-					                         <option value="venue">Venue</option>
-					                         <option value="invitation">Invitation Card</option>
-											 <option value="gifts">Gifts</option>
-											 <option value="mackup Artist">Mackup Artist</option>
-											 <option value="jewellery">Jewellery</option>
-											 <option value="event Cloths">Event Cloths</option>
+				      						 <option <?php if($profession=='decoration' ){echo "SELECTED";}?> value="decoration">Decoration</option>
+				                             <option <?php if($profession=='sound system' ){echo "SELECTED";}?> value="sound system">Sound system</option>
+				                             <option <?php if($profession=='catring' ){echo "SELECTED";}?> value="catring">Catring</option>
+				                             <option <?php if($profession=='jewellery' ){echo "SELECTED";}?> value="jewellery">Jewellery</option>
+				                             <option <?php if($profession=='photographer' ){echo "SELECTED";}?> value="photographer">Photographer</option>
+				                             <option <?php if($profession=='videographer' ){echo "SELECTED";}?> value="videographer">Videographer</option>
+				                             <option <?php if($profession=='flowers' ){echo "SELECTED";}?> value="flowers">Flowers</option>
+					                         <option <?php if($profession=='venue' ){echo "SELECTED";}?> value="venue">Venue</option>
+					                         <option <?php if($profession=='invitation' ){echo "SELECTED";}?> value="invitation">Invitation Card</option>
+											 <option <?php if($profession=='gifts' ){echo "SELECTED";}?> value="gifts">Gifts</option>
+											 <option <?php if($profession=='mackup Artist' ){echo "SELECTED";}?> value="mackup Artist">Mackup Artist</option>
+											 <option <?php if($profession=='event Cloths' ){echo "SELECTED";}?> value="event Cloths">Event Cloths</option>
+											 <option <?php if($profession=='bakery' ){echo "SELECTED";}?> value="bakery">Bakery</option>
 											 
 											</select>
 											

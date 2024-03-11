@@ -92,7 +92,7 @@ else if(isset($_SESSION["username"])){
                   <div class="imgholder">
                    <img src="../img/birthday-cake (1).png" class="card-img img1 p-2" alt="...">
                    </div>
-                   <h4 class="titleh3">cake</h4>
+                   <h4 class="titleh3">bakery</h4>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
               </a>
