@@ -18,7 +18,7 @@ require_once "loginphp.php";
 <body>
     <div class="bg-img"></div>
     <div id="main-container">
-        <div class="form-container">
+        <div class="form-container d-flex align-items-center   ">
         
 
             <div class="login-form">

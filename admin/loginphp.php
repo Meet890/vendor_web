@@ -27,6 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password_err = "Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
+        $pass= $_POST["password"];
     }
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
@@ -48,7 +49,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $c_password);
                     
                     if(mysqli_stmt_fetch($stmt)){
-                        if($password = $c_password){
+                       $pass= $_POST["password"];
+                      // echo $pass;
+                        if($pass == $c_password){
+                            echo $password;
+                            echo $c_password;
+                            
                             // Password is correct, so start a new session
                             session_start();
                             // Store data in session variables
@@ -61,13 +67,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         }else{
                             // Password is not valid, display a generic error message
                           
-                            echo '<script>  alert("varify pass"); </script>';
+                            // echo '<script>  alert("Invalid password"); </script>';
+                            $login_err = "Invalid Password.";
                         }
                     }
                     else{
                         // Password is not valid, display a generic error message
                       
-                        echo '<script>  alert("1"); </script>';
+                        // echo '<script>  alert("Username is invalid"); </script>';
+                        $login_err = "Invalid Username";
                     }
                 }
                 else{
@@ -109,38 +117,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                              echo '<script>  alert("connected"); </script>';
                              header("location: admin/index.php");
                                 }else{
-                                    echo '<script>  alert("Password is invalid"); </script>';
+                                    // echo '<script>  alert("Password is invalid"); </script>';
+                                    $login_err = "Invalid Password.";
                                 }
 
                          }else{
-                             // Password is not valid, display a generic error message
+                             
                            
-                             echo '<script>  alert("varify pass"); </script>';
+                            //  echo '<script>  alert("Invalid Password"); </script>';
+                            $login_err = "Invalid Password.";
                          }
                      }else{
-                        // Password is not valid, display a generic error message
+                        
                       
                         echo '<script>  alert("4"); </script>';
                     }
                  }else{
-                    // Password is not valid, display a generic error message
+                    
                   
-                    echo '<script>  alert("5"); </script>';
+                    // echo '<script>  alert("Invalid Username"); </script>';
+                    $login_err = "Invalid Username.";
                 }
          }else{
-            // Password is not valid, display a generic error message
+           
           
             echo '<script>  alert("6"); </script>';
         }
      }else{
-        // Password is not valid, display a generic error message
+        
       
         echo '<script>  alert("7"); </script>';
     }
      
                 }
         }else{
-            // Password is not valid, display a generic error message
+            
           
             echo '<script>  alert("3"); </script>';
         }
@@ -149,7 +160,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
     }
 }else{
-    // Password is not valid, display a generic error message
+    
   
     echo '<script>  alert("8"); </script>';
 }

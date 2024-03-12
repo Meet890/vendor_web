@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $password);
                     
                     if(mysqli_stmt_fetch($stmt)){
-                        if( $_POST["password"]= $password){
+                        if( $_POST["password"]== $password){
                             // Password is correct, so start a new session
                             
                               $sql = "SELECT * FROM client where c_username = '$username'" ;
