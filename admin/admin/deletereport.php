@@ -7,8 +7,9 @@
         
         $sql ="DELETE FROM report WHERE report_id='$id'";
         $res =mysqli_query($conn , $sql );
-        if ($res == true) {
-            header("Location: report.php");
+        if ($res == true) {?>
+            <script>window.location.href = "report.php";</script>
+                <?php
         }
 
 

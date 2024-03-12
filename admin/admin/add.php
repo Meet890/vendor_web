@@ -5,8 +5,36 @@ require 'config.php';
    
     if($_SERVER["REQUEST_METHOD"] == "POST")
 {
+	$validUserName="/^[A-Za-z0-9_]+$/";
+	$uppercasePassword = "/(?=.*?[A-Z])/";
+	$lowercasePassword = "/(?=.*?[a-z])/";
+	$digitPassword = "/(?=.*?[0-9])/";
+
     $username =$_POST["username"];
 $password= $_POST['pass'];
+
+if(empty($username)){
+	$login_err="username is Required"; 
+ }
+ else if (!preg_match($validUserName,$username)) {
+	$login_err="Only characters and digits are allowed";
+ }else{
+
+	 $login_err=true;
+
+ }
+ if(empty($password)){
+	$login_err="Password is Required"; 
+  } 
+  elseif (!preg_match($uppercasePassword,$password) || !preg_match($lowercasePassword,$password) || !preg_match($digitPassword,$password)) {
+	$login_err="Password must be at least one uppercase letter, lowercase letter, digit, a special character with no spaces and minimum 8 length";
+  }
+  else{
+	 $login_err=true;
+  }
+
+if($login_err==1){
+
 $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$password')";
    $result= mysqli_query($conn,$sql);
    if($result==false){
@@ -14,6 +42,7 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
    }
    else{
     echo '<script>  alert("Added new admin"); </script>';
+}
 }
 }
 ?>
@@ -49,6 +78,11 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
                             <div class="col-3"></div>
 								<div class="col-3 justify-content-center ">
                                     <div class="card ">
+									<?php
+                  if(!empty($login_err)){
+                         echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                     }
+                ?>
                                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="p-3">
                                             <label for="username">Username: </label><br>
                                             <input type="text" id="username" name="username"><br><br>
@@ -82,7 +116,7 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
 													<?php
 														
 
-														$sql = "SELECT * FROM admin_tbl";
+														$sql = "SELECT * FROM admin_tbl where a_username <> 'admin'";
 														$result = mysqli_query($conn, $sql);
 
 														if (mysqli_num_rows($result) > 0) {

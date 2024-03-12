@@ -130,7 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                      }else{
                         
                       
-                        echo '<script>  alert("4"); </script>';
+                        echo '<script>  alert("Invalid Username."); </script>';
                     }
                  }else{
                     
@@ -141,28 +141,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          }else{
            
           
-            echo '<script>  alert("6"); </script>';
+            echo '<script>  alert("Please try again after few minutes"); </script>';
         }
      }else{
         
       
-        echo '<script>  alert("7"); </script>';
+        echo '<script>  alert("Please try again after few minutes"); </script>';
     }
      
                 }
         }else{
             
           
-            echo '<script>  alert("3"); </script>';
+            echo '<script>  alert("Please try again after few minutes"); </script>';
         }
     }
     else{
          
     }
-}else{
-    
-  
-    echo '<script>  alert("8"); </script>';
 }
 
 
