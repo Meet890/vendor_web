@@ -140,7 +140,7 @@ require 'config.php';
 														<th>Instagram Link</th>
 														<th>Facebook Link</th>
 														
-														<th>Vendor Joined Time</th>
+														<th>Vendor Discription</th>
 														<th>Edit</th>
 														<th>View</th>
 														<th>delete</th>

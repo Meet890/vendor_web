@@ -73,10 +73,10 @@ img {
         <div class="col bg-white text-dark rounded shadow p-3">
           <img src="img/pro.jpg" alt="Avatar" style="width:100%">
   
-          <h6>username :  <?php echo $username; ?></h6> 
-          <h6>name :  <?php echo $name ; ?></h6> 
-          <h6>email :  <?php echo $email ; ?></h6>
-          <h6>city :  <?php echo $city ; ?></h6> 
+          <h6>Username :  <?php echo $username; ?></h6> 
+          <h6>Name :  <?php echo $name ; ?></h6> 
+          <h6>Email :  <?php echo $email ; ?></h6>
+          <h6>City :  <?php echo $city ; ?></h6> 
           
           <br>
           <a href="update_client_profile.php">Update profile?</a>

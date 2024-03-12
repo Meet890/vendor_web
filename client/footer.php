@@ -58,14 +58,7 @@
 									<p><a href="mailto:kachchhivent@gmail.com">kachchhivent@gmail.com</a></p>
 								</div>
 							</div>
-							<div class="single_info">
-								<div class="icon">
-									<i class="fas fa-map-marker-alt"></i>
-								</div>
-								<div class="info">
-									<p class="loc">SGJ College, Mandvi</p>
-								</div>
-							</div>
+							
 							
 						</div>
 					</div>
