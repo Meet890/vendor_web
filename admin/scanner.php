@@ -13,42 +13,79 @@ include('scannerphp.php');
     <style>
         *{
             align-items: center;
-  justify-content: center;
+            justify-content: center;
         }
+        body{
+            background-color: #f0f2f5;
+        }
+        table, td, th{
+            border: 4px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        h1{
+             /* margin-top: 80px;
+             margin-bottom: 20px; */
+        }
+        .qr{
+            height: 384px;
+            width: 355px;
+        }
+    </style>
     </style>
 </head>
 <body>
+    <center>
+        <div class="mb-3">
+        <h1>Get Membership</h1>
+        </div>
+<table style="width:750px">
     <div class="container mb-10">
     <div class="row">
-       <center>
+        <tr>
+            <td>
+   
+         <h2>Priemium Plans</h2>
+         <br>
+        <div class="col"> <h4>Pay 149 for 1 month.   </h4></div>
 
-        <div class="col"> <h3>Pay 150 for 1 month.   </h3></div>
-
-        <div class="col"> <h3>  Pay 350 for 3 month</h3></div>
+        <div class="col"> <h4>  Pay 349 for 3 month</h4></div>
        
-        <div class="col"> <h3>Pay 750 for 6 month </h3></div>
-        <div class="col"> <h3>  Pay 1500 for 12 month</h3></div>
-        
-        
-            <div class="col-6 col-lg-4 mx-auto">
-                <div class="card ">
-                <div class="w-100 h-auto">
-                    <img src="qr.png" alt="qr code" class="img-fluid  rounded">
-                </div>
+        <div class="col"> <h4>Pay 749 for 6 month </h4></div>
+        <div class="col"> <h4>  Pay 1499 for 12 month</h4></div>
+   
+    </td>
+    <td>
+    
+            <!-- <div class="col-6 col-lg-4 mx-auto"> -->
+                <div class="mt-2 mb-2">
+
+                    <img src="qr.png" alt="qr code" class="qr">
+                <!-- </div> -->
+  
+    </td>
+    </tr>
+    <tr><td colspan="2">
+      
                 <form action="scannerphp.php" method="post">
+                    <div class="mt-3">
                     <label for="tra-id">Enter Transection id :</label>
                     
 
                     <input type="number" min="100000000000" max="999999999999" name="tra_id" id="tra_id" class="rounded w-5">
-                    <br>
+                    <button class=" bg-dark text-white btn" name="submit">Submit</button>
+                  
                        <p class="err-msg"> 
                          <?php if($idErr != 1){ echo $idErr ; } ?>
                       </p>
-                    <button class=" bg-dark text-white btn" name="submit">Submit</button>
+                    
+                    </div>
                 </form>
+               
+    </td>
                 </div>
             </div>
-            </center>
+          
         </div>
     </div>
 </body>
