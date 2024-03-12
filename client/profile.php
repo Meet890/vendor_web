@@ -182,8 +182,7 @@ if ($result->num_rows > 0) {
         <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 report
             </button>
-        <div class="reviews" id="reviews">
-        </div>
+        
     </div>
     </form>
         <form action="report.php?id=<?php echo $id; ?>" method="post"> 
@@ -195,7 +194,7 @@ if ($result->num_rows > 0) {
                 <div class="modal-dialog">
                     <div class="modal-content px-3 py-1 m-4">
                             <div class="row">
-                                <div class="col-11">
+                                <div class="col-9">
                             <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
                             <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
                             

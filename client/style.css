@@ -22,7 +22,7 @@ height: 34px;
 .v{
 margin-top: 80px;
 width: 90% ;
-height:80vh ;
+height:70vh ;
 border:double rgb(96, 96, 100) 8px;
 }
 
@@ -255,10 +255,10 @@ font-size: 21px;
   .abouth1{
     margin-top: -55px;
   }
-  
 
 }
 @media only screen and (max-width: 765px){
+
 
 /*.....navbar.....*/
 
@@ -318,7 +318,9 @@ font-size: 21px;
     height: 250px;
     width: 250px;
   }
-
+  .v{
+    height: auto;
+  }
 
    /*......about.....*/
   img{
