@@ -6,9 +6,14 @@ if(isset($_GET["id"])){
 	
 $id= $_GET["id"];
 }
-else{
+elseif(isset($_SESSION["vid"])){
 $id =$_SESSION['vid']; 
+
 }
+else {
+    header("location:index.php");
+}
+
 if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
     $_SESSION['vid']= $id;
 	header("location:login/login.php");
@@ -227,7 +232,6 @@ if ($result->num_rows > 0) {
 
 include("footer.php");
 
-$_SESSION['vid']="";
 ?>
     <script>
         function openModal(imageSrc) {
