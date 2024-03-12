@@ -9,8 +9,8 @@ if(isset($_SESSION["c_username"])){
 elseif(isset($_SESSION["username"])){
 	header("location:admin/vendor/");
 }
-else{
-
+elseif(isset($_SESSION["a_id"])){
+	header("location:admin/admin/");
 }
 
 ?>
@@ -47,7 +47,7 @@ else{
   <section class="event">
 
     <div class="title mt-5">
-      <h1 class="heding">Services</h1>
+      <h1 class="heding" id="event">Services</h1>
     </div>
     <div class="container mt-2 justify-content-center">
       <div class="row justify-content-center">
