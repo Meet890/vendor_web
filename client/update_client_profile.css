@@ -11,11 +11,12 @@
     height: 100%;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("ss.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-     background-color: rgb(161, 71, 221); 
+     /* background-color: rgb(161, 71, 221);  */
+     background-image: url("img/update.jpg");
+    
     
     }
     
@@ -39,6 +40,7 @@
     position: relative;
     perspective: 1000px;
     transform-style: preserve-3d;
+    margin-top: 50px;
     }
     
     .login-form,
@@ -46,7 +48,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    
+    margin-top: 100px;
     position: absolute;
     border-radius: 20px;
     padding: 20px;

@@ -101,8 +101,8 @@ echo "0 results";
               <p>post</p> -->
             </div>
             <div class="followers">
-                <h2>30</h2>
-                <p>Post</p>
+                <!-- <h2>30</h2>
+                <p>Post</p> -->
             </div>
             <!-- <div class="following">
                 <img src="rating.png" alt="Location Icon" class="star"> -->
@@ -111,21 +111,25 @@ echo "0 results";
                 </svg>4.3</h2>
                 <p>1 Review</p>
             </div> -->
+            <div class="followers">
+                <h2>30</h2>
+                <p>Post</p>
+            </div>
         </div>    
         <h2 class="mt-3"><?php echo $comp ?></h2>
         <div class="about">
         <h4><?php echo $name ?><h4>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-3">
             <div class="col-6">
         <ul>
             <li>
                 <img src="assets/img/location.png" alt="Location Icon" class="png">
-                <h5 class="city"><?php echo $city ?></h5>
+                <h5 class="city h"><?php echo $city ?></h5>
             </li>
             <li>
                 <img src="assets/img/calling.png" alt="Phone Icon" class="png">
-                <h5 class="call"><?php echo $phone ?></h5>
+                <h5 class="call h"><?php echo $phone ?></h5>
             </li>
         </ul>
         </div>
@@ -133,12 +137,12 @@ echo "0 results";
         <ul>
             <li>
                 <img src="assets/img/Facebook.png" alt="Phone Icon" class="png">
-                <h5 class="city"><?php echo $fb ?></h5>
+                <h5 class="city h"><?php echo $fb ?></h5>
             </li>
             
             <li>
                 <img src="assets/img/insta.jpg" alt="Location Icon" class="png">
-                <h5 class="call"><?php echo $ig ?></h5>
+                <h5 class="call h"><?php echo $ig ?></h5>
             </li>   
         </ul>
     </div>

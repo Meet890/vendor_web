@@ -9,7 +9,7 @@ $username=$email=$city=$name=$id="";
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $id = $_SESSION["c_id"];
-        echo $id;
+        // echo $id;
           $email=$row["c_email"];
           $password=$row["c_password"];
     }

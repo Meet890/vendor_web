@@ -35,7 +35,7 @@ else if(isset($_SESSION["username"])){
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <style>
     body{
-        background-image: url("img/backpro.jpg");
+        background-image: url("img/update.jpg");
     background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
