@@ -162,14 +162,14 @@ echo "0 results";
       
       
        foreach ($rows as $row) : ?>
-              <img src="img/<?php echo $row['g_photo']; ?>" onclick="openModal('img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+              <img src="img/<?php echo $row['g_photo']; ?>"  class="col-4 "onclick="openModal('img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image">
               
           <?php endforeach; ?>
         </div>
 
         <div id="myModal" class="modal" onclick="closeModal()">
             
-            <img class="w-auto modal-content "  id="modalImg">
+            <img class="h-auto modal-content "  id="modalImg">
         </div>
 
         

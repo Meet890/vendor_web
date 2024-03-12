@@ -16,6 +16,9 @@ body{
 .hed {
     background-color: #486c8a;
   } 
+  .circle{
+    border-radius: 50%;
+  }
 .team .member{
     position: relative;
     padding: 20px;

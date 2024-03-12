@@ -100,7 +100,7 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="<?php echo $img ?>" class="img-fluid" alt="team1">
+                <img src="<?php echo $img ?>" class="img-fluid circle" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>
