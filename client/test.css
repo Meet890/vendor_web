@@ -119,17 +119,20 @@ li img {
     color: #5c3921;
 }
 .gallery {
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 2em;
 }
 
+
 .gallery img {
-    width: calc(33.33% - 10px);
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  height: 240px;
+  width: 233px;
 }
 .modal {
     display: none;
@@ -144,12 +147,13 @@ li img {
     background-color: rgba(0,0,0,0.9);
 }
 
+
 .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80vh;
-    max-height: 80vh;
-    margin-top: 100px;
+  margin: auto;
+  display: block;
+  max-width: 80vh;
+  max-height: 80vh;
+  margin-top: 100px;
 }
 
 .close {

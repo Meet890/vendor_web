@@ -34,6 +34,7 @@
       </div>
     </div>
   </section>
- 
+  <script src="js/bootstrap.bundle.js"></script>  
+
 </body>
 </html>
