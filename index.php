@@ -9,8 +9,8 @@ if(isset($_SESSION["c_username"])){
 elseif(isset($_SESSION["username"])){
 	header("location:admin/vendor/");
 }
-else{
-
+elseif(isset($_SESSION["a_id"])){
+	header("location:admin/admin/");
 }
 
 ?>

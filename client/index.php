@@ -9,6 +9,9 @@ if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
 else if(isset($_SESSION["username"])){
   header("location:.././admin/vendor/index.php");
 }
+elseif(isset($_SESSION["a_id"])){
+	header("location:../admin/admin/");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
