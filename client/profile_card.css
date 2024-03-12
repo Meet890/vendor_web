@@ -18,6 +18,8 @@ body{
   } 
   .circle{
     border-radius: 50%;
+    width: 96px;
+    height: 93px;
   }
 .team .member{
     position: relative;
