@@ -201,7 +201,7 @@ require 'config.php';
 														  checkdelete()' class="tda">View Profile
 														</td>
 														<td class="tdd">
-														  <a href = 'delete.php?id=<?php echo $id?>?table=<?php echo $table; ?>' class="tdd">Delete
+														  <a href = 'deletev.php?id=<?php echo $id?>?table=<?php echo $table; ?>' class="tdd">Delete
 														</td>
 													</tr>
 															

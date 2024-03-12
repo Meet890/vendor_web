@@ -8,6 +8,7 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
             $set_id= $row['reg_id'];
             $set_name= $row['reg_name'];
             $set_username= $row['reg_username'];
+            $set_password= $row['reg_pass'];
             $set_PhoneNo= $row['reg_phone'];
             $set_email= $row['reg_email'];
             $set_add= $row['reg_add'];
@@ -20,7 +21,7 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
             $set_traid= $row['reg_tra_id'];
             $set_accept= $row['reg_accept'];
             
-
+            echo $set_password;
             
     }
 }
@@ -67,7 +68,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         // Add 30 days to the current date
         $newdate = date("Y-m-d", strtotime($currentdate . " +$set_days days"));
         $id = $_GET['id'];
-        $sql = "INSERT INTO vendor(reg_id,v_name,v_username,v_email,v_phoneno,v_address,v_gender,v_comp,v_reg_end_time) VALUES ('$id','$set_name','$set_username','$set_email','$set_PhoneNo','$set_add','$set_Gender','$set_ComName','$newdate')";
+        $sql = "INSERT INTO vendor(reg_id,v_name,v_username,v_password,v_email,v_phoneno,v_address,v_gender,v_comp,v_reg_end_time) VALUES ('$id','$set_name','$set_username','$set_password','$set_email','$set_PhoneNo','$set_add','$set_Gender','$set_ComName','$newdate')";
         $result = mysqli_query($conn,$sql);      
         if($result==1)
         {
@@ -180,12 +181,12 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         <hr>
         <div class="form-group">
         <label >Select Days for activation</label>
-        <select class="form-control" name="days" >
+        <select class="form-control p-0 ps-1" name="days" >
               <option selected disabled ></option>
-				      <option value="30">1 Month</option>
-				      <option value="91">3 Month</option>
-                      <option value="182">6 Month</option>
-                      <option value="365">12 Month</option>
+				      <option class="pb-2" value="30">1 Month</option>
+				      <option class="pb-2" value="91">3 Month</option>
+                      <option class="pb-2" value="182">6 Month</option>
+                      <option class="pb-2" value="365">12 Month</option>
 
             </select>
         </div>

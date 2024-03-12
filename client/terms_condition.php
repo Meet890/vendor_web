@@ -22,7 +22,7 @@
 <body>
 <?php include 'header.php' ?>
     <center>
-    <h1 class="mt-5">Terms & Conditions</h1>
+    <h1 class="mt-5 pt-5">Terms & Conditions</h1>
 <table style="width:900px">
     <tr>
         <th>

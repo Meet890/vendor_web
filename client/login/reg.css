@@ -18,6 +18,10 @@ background-repeat: no-repeat;
 background-color: rgba(0,0,0, 1);
 
 }
+.cls{
+    height: 15px;
+    width:15px;
+}
 
 #main-container {
 width: 100%;
