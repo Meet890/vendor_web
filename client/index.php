@@ -110,13 +110,13 @@ else if(isset($_SESSION["username"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "wedding wear";
-            ?>" id="wedding wear" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "event clothes";
+            ?>" id="event clothes" class="a1">
                  <div class="card b-2   text-white">
                  <div class="imgholder">
                    <img src="../img/boutique.png" class="card-img img1 p-2" alt="...">
                  </div>
-                   <h4 class="titleh3">wedding wear</h4>
+                   <h4 class="titleh3">event clothes</h4>
                    <p class="title">Dress Your Dreams.</p>
                  </div>
               </a>
@@ -194,13 +194,13 @@ else if(isset($_SESSION["username"])){
               </a>
             </div> 
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "Catring";
+            <a href="profile_card_getdata.php?service=<?php echo "Catering";
             ?>" id="Catring" class="a1">
                   <div class="card text-white">
                   <div class="imgholder">
                    <img src="../img/banquet.png" class="card-img img1 p-2" alt="...">
                   </div>
-                   <h4 class="titleh3">Catring</h4>
+                   <h4 class="titleh3">Catering</h4>
                    <p class="title">More than just a gift.</p>
                  </div>
               </a>

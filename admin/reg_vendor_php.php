@@ -47,11 +47,11 @@ if(empty($username)){
 else if (!preg_match($validUserName,$username)) {
    $usernameErr="Only characters and digits are allowed";
 }else{
-   $pattern = "/\badmin\b/i";
+   $pattern = "/\badmin\b/i"; 
 
 // Use preg_match to check if the pattern is found in the file name
 if (preg_match($pattern, $username)) {
-   $usernameErr="Invalid name.. You cannot contain 'admin'.";
+   $usernameErr="Invalid Username.. You cannot contain 'admin'.";
 } else {
     $usernameErr=true;
 }
