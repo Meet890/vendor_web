@@ -125,7 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                              
                            
                             //  echo '<script>  alert("Invalid Password"); </script>';
-                            $login_err = "Invalid Password.";
+                            $login_err = "Invalid Password.";                                                                  
                          }
                      }else{
                         

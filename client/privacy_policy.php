@@ -22,7 +22,7 @@
 </head>
 <body>
 <?php include 'header.php' ?>
-   <center> <h1>Privacy Policy</h1>
+   <center> <h1 class="mt-5 pt-5">Privacy Policy</h1>
     <!--<p>This is the privacy policy for our website. We are committed to protecting your privacy and ensuring the security of your personal information.</p>
     <p>We collect and store certain information about you when you visit our website. This may include your IP address, browser user agent, and other data that you voluntarily provide to us.</p>
     <p>We use this information for various purposes, such as improving the functionality of our website, analyzing user trends, and providing personalized content and services.</p>
