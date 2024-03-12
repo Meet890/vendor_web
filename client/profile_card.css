@@ -21,6 +21,9 @@ body{
     width: 96px;
     height: 93px;
   }
+  .c{
+    height: 93px;
+  }
 .team .member{
     position: relative;
     padding: 20px;
@@ -47,7 +50,7 @@ body{
 .team .member span{
     display: block; 
     font-size: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     position: relative;
     font-weight:500;
     color: #0dbc47;
@@ -63,7 +66,7 @@ body{
     left: 0;
 } */
 .team .member p{
-    margin: 10px 0 0 0;
+    margin: 0px 0 0 0;
     font-size: 14px;
     color: rgb(150, 144, 144);
     font-weight: 700;
