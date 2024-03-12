@@ -134,7 +134,7 @@ $result = $conn->query($sql);
 
 										<!-- services-->
 										<div class="form-group" >
-											<label for="exampleFormControlSelect1">select service</label>
+											<label for="exampleFormControlSelect1">Select service</label>
 											<select class="form-control" id="exampleFormControlSelect1" name="v_profession">
 											 <option selected disabled value="">Choose...</option>
 				      						 <option <?php if($profession=='decoration' ){echo "SELECTED";}?> value="decoration">Decoration</option>
