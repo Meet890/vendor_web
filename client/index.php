@@ -45,7 +45,7 @@ else if(isset($_SESSION["username"])){
             <h1 class="heding">Services</h1>
         </div>
   <div class="container mt-2">
-    <div class="row">
+    <div class="row justify-content-center">
 
             <div class="col-md-4  col-sm-6  ">
             <a href="profile_card_getdata.php?service=<?php echo "decoration";
