@@ -18,7 +18,7 @@ while($row = $result->fetch_assoc()) {
 ?>
 <div class="logo-header">
 				<a href="index.php" class="logo">
-					Vendor Partners
+				Kachchhivent
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>

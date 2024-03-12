@@ -73,6 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     
                                     if(isset($_GET['id'])){
                                         $vid =$_GET['id'];
+                                        echo $vid;
                                         header ("location: ../profile.php?id=$vid");
                                     }else{
                                         header("location: ../index.php");

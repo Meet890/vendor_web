@@ -148,7 +148,7 @@ $result = $conn->query($sql);
 					                         <option <?php if($profession=='invitation card' ){echo "SELECTED";}?> value="invitation card">Invitation Card</option>
 											 <option <?php if($profession=='gifts' ){echo "SELECTED";}?> value="gifts">Gifts</option>
 											 <option <?php if($profession=='makeup artist' ){echo "SELECTED";}?> value="makeup artist">Makeup Artist</option>
-											 <option <?php if($profession=='event cloths' ){echo "SELECTED";}?> value="event cloths">Event Cloths</option>
+											 <option <?php if($profession=='event clothes' ){echo "SELECTED";}?> value="event clothes">Event Clothes</option>
 											 <option <?php if($profession=='bakery' ){echo "SELECTED";}?> value="bakery">Bakery</option>
 											 
 											</select>

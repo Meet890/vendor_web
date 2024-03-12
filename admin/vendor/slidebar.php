@@ -9,7 +9,7 @@
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
 								<?php echo $_SESSION["username"]; ?>
-									<span class="user-level">Administrator</span>
+									<span class="user-level">Vendor</span>
 									<span class="caret"></span>
 								</span>
 							</a>
