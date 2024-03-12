@@ -101,7 +101,7 @@ if (mysqli_num_rows($result) > 0) {
                 }
           }
             
-            header("Location: deletereport.php?id=".$id);
+            //header("Location: deletereport.php?id=".$id);
          
         
       }

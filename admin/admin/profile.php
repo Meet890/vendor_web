@@ -60,7 +60,7 @@ while($row = $result->fetch_assoc()) {
         //echo '<script>  alert("hello"); </script>';
     }
     else{
-        $img = "img/".$row["v_photo"];
+        $img = "../vendor/img/".$row["v_photo"];
         //echo $img;
         //echo '<script>  alert("1"); </script>';
     }
@@ -98,13 +98,7 @@ echo "0 results";
                 <h2>30</h2>
                 <p>Post</p>
             </div>
-            <div class="following">
-               <!-- <img src="rating.png" alt="Location Icon" class="star"> -->
-                <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>4.3</h2>
-                <p>1 Review</p>
-            </div>
+            
         </div>    
         <h2 class="mt-3"><?php echo $comp ?></h2>
         <div class="about">
@@ -140,7 +134,7 @@ echo "0 results";
       
       
        foreach ($rows as $row) : ?>
-              <img src="img/<?php echo $row['g_photo']; ?>" onclick="openModal('img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+              <img src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
               
           <?php endforeach; ?>
         </div>
