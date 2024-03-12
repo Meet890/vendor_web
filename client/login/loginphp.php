@@ -18,7 +18,10 @@ else{
 }
 // Include config file
 require_once "config.php";
+// $vid =$_GET['id'];
+// echo $vid;
 // $v_id=$_GET['id'];
+// echo $_SESSION["vid"] ;
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -70,14 +73,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["c_city"] = "$row[c_city]";
                                     $_SESSION["c_email"] = "$row[c_email]";  
                                     $_SESSION["loggedin"] = "true";  
+                                    // echo $_SESSION["vid"] ;
                                     
-                                    if(isset($_GET['id'])){
-                                        $vid =$_GET['id'];
-                                        echo $vid;
-                                        header ("location: ../profile.php?id=$vid");
-                                    }else{
-                                        header("location: ../index.php");
-                                    }
+                                       
+                                        
+                                      header ("location: ../profile.php");
+                                    
                                 }
                             }
                             // echo '<script>  alert("connected"); </script>';
