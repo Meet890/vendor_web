@@ -194,7 +194,7 @@ background-color: rgba(0,0,0, 1);
       </form>
     </div>
    </div>
-   <button type="button" class="btn-close bg-white m-2 background cencel col-1" aria-label="Close" onclick="redirect()"></button>
+   <button type="button" class="btn-close bg-white b background cencel col-1" aria-label="Close" onclick="redirect()"></button>
 
  </div>
   

@@ -35,7 +35,8 @@ $username=$email=$city=$name=$id="";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Form</title>
-  
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
     <link rel="stylesheet" href="update_client_profile.css">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
@@ -45,8 +46,9 @@ $username=$email=$city=$name=$id="";
     <div class="bg-img"></div>
     <div id="main-container">
         <div class="form-container">
+       
+          <div class="signup-form">
            
-            <div class="signup-form">
                 <div class="title">changes in client</div>
                 <form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <!-- <div class="field">
@@ -79,7 +81,19 @@ $username=$email=$city=$name=$id="";
 
                 
             </div>
-        </div>
-</div>
+            </div>
+            <div class="but">
+          <button type="button" class="btn-close bg-white mt-5 b background cencel" aria-label="Close" onclick="redirect()"></button>
+          </div>
+
+           
+            </div>
+
+<script>
+  function redirect()
+    {
+        window.location.href = "profile_client.php";
+    }
+  </script>
 </body>
 </html>
