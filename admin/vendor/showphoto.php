@@ -2,7 +2,7 @@
     <div class="row">
 <?php
       $i = 1;
-      $ID= $_SESSION["id"];
+      $ID= $_SESSION["v_id"];
       
         $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $ID ORDER BY g_id DESC")
 ?>

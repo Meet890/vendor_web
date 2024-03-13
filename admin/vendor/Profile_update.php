@@ -4,7 +4,7 @@
     $dbpass="";
     $dbname="vendor";
     $conn=mysqli_connect($dbservername,$dbuser,$dbpass,$dbname);
-    $id = $_SESSION["id"];
+    $id = $_SESSION["v_id"];
     $sql = "select * from vendor where v_id = '$id'";
     $result = mysqli_query($conn ,$sql);
     if($row = mysqli_fetch_assoc($result) )
@@ -20,7 +20,7 @@
 
  if(isset($_POST['edit']))
  {
-    $id=$_SESSION['id'];
+    $id=$_SESSION['v_id'];
     $vname=$_POST['v_name'];
 
     $email=$_POST['v_email'];

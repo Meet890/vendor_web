@@ -1,5 +1,5 @@
 <?php
-$ID= $_SESSION["id"];
+$ID= $_SESSION["v_id"];
       
 $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = $ID ");
 

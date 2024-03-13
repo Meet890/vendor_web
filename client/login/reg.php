@@ -10,7 +10,7 @@ require_once "registerphp.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registration form</title>
-  
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="reg.css">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
@@ -89,11 +89,15 @@ require_once "registerphp.php";
             </div>
 
         </div>
-
+        <button type="button" class="btn-close bg-white m-1 background " aria-label="Close" onclick="redirect()"></button>
         
     </div>
 
     <script>
+        function redirect()
+    {
+        window.location.href = "../../index.php";
+    }
         
 const loginForm = document.querySelector('.login-form')
 const signupForm = document.querySelector('.signup-form')

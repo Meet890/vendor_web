@@ -97,5 +97,7 @@ body{
     font-weight: 600;
 }
 .btns{
+    height: 100%;
+    width: 100%;
     background-color: #486c8a;
 }

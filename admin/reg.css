@@ -18,12 +18,12 @@
     background-color: rgba(0,0,0, 1);
     
     }
-    .b{
+    /* .b{
         padding: 0px;
         margin: 10px;
         height: 23px;
         width: 23px;
-    }
+    } */
     /* .but{
         margin-left: 40px;
     margin-bottom: 569px;
@@ -96,9 +96,9 @@
     
     
     
-    button {
+    /* button {
     font-size: 2rem;
-    }
+    } */
     
     form {
     display: flex;

@@ -10,7 +10,7 @@ if(isset($_SESSION["c_username"])){
 	header("location:../../client/index.php");
  
 }
-elseif(isset($_SESSION["username"])){
+elseif(isset($_SESSION["username"])&& isset($_SESSION["v_id"])){
 	header("location:../../admin/vendor/");
 }
 else{

@@ -42,7 +42,7 @@ if(isset($_POST["submit"])){
 		$newImageName .= '.' . $imageExtension;
   
 		move_uploaded_file($tmpName, 'img/' . $newImageName);
-		$v_id = $_SESSION["id"];
+		$v_id = $_SESSION["v_id"];
 		$query = "INSERT INTO gallery(v_id,g_photo) values ('$v_id','$newImageName') ";
 		
 		mysqli_query($conn, $query);
@@ -90,7 +90,7 @@ if(isset($_POST["submit2"])){
 		$newImageName .= '.' . $imageExtension;
   
 		move_uploaded_file($tmpName, 'img/' . $newImageName);
-		$v_id = $_SESSION["id"];
+		$v_id = $_SESSION["v_id"];
 		$query = "UPDATE vendor SET v_photo='$newImageName' WHERE v_id='$v_id'";
 		
 		mysqli_query($conn, $query);

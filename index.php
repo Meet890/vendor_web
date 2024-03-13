@@ -2,11 +2,11 @@
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
 
-if(isset($_SESSION["c_username"])){
+if(isset($_SESSION["c_username"])&& isset($_SESSION["c_id"])){
 	header("location:client/index.php");
  
 }
-elseif(isset($_SESSION["username"])){
+elseif(isset($_SESSION["username"]) && isset($_SESSION["v_id"])){
 	header("location:admin/vendor/");
 }
 elseif(isset($_SESSION["a_id"])){
