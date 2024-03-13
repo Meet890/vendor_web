@@ -65,8 +65,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "photographer";
-            ?>" id="photographer" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Photographer";
+            ?>" id="Photographer" class="a1">
                  <div class="card b-2 text-white">
                  <div class="imgholder">
                    <img src="../img/camera.png" class="card-img img1 p-2" alt="...">
@@ -77,8 +77,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "videographer";
-            ?>" id="vieographer" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Videographer";
+            ?>" id="Vieographer" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
                    <img src="../img/production.png" class="card-img img1 p-2" alt="...">
@@ -89,8 +89,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "Bakery";
-            ?>" id="bakery" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Cake";
+            ?>" id="Cake" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
                    <img src="../img/birthday-cake (1).png" class="card-img img1 p-2" alt="...">
@@ -101,8 +101,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "flowers";
-            ?>" id="flowers" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Flowers";
+            ?>" id="Flowers" class="a1">
                  <div class="card b-2  text-white">
                  <div class="imgholder"> 
                  <img src="../img/flower-shop.png" class="card-img img1 p-2" alt="...">
@@ -113,8 +113,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "event clothes";
-            ?>" id="event clothes" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Event Wear";
+            ?>" id="Event Wear" class="a1">
                  <div class="card b-2   text-white">
                  <div class="imgholder">
                    <img src="../img/boutique.png" class="card-img img1 p-2" alt="...">
@@ -125,8 +125,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "jewellery";
-            ?>" id="jewellery" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Jewellery";
+            ?>" id="Jewellery" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
                    <img src="../img/display.png" class="card-img img1 p-2" alt="...">
@@ -137,8 +137,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "invitation card";
-            ?>" id="invitation card" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Invitation Card";
+            ?>" id="Invitation Card" class="a1">
                  <div class="card b-2  text-white">
                   <div class="imgholder">
                    <img src="../img/wedding-invitation.png" class="card-img img1 p-2" alt="...">
@@ -149,8 +149,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "sound system";
-            ?>" id="sound" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Sound System";
+            ?>" id="Sound System" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
                    <img src="../img/sound-system.png" class="card-img img1 p-2" alt="...">
@@ -161,8 +161,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "makeup artist";
-            ?>" id="makeup artist" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Makeup Artist";
+            ?>" id="Makeup Artist" class="a1">
                  <div class="card  b-2 text-white">
                   <div class="imgholder">
                    <img src="../img/makeup.png" class="card-img img1 p-2" alt="...">
@@ -173,8 +173,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "venues";
-            ?>" id="venues" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Venues";
+            ?>" id="Venues" class="a1">
                  <div class="card text-white">
                   <div class="imgholder">
                    <img src="../img/venue.png" class="card-img img1 p-2" alt="...">
@@ -185,8 +185,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div>
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "gifts";
-            ?>" id="gifts" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Gifts";
+            ?>" id="Gifts" class="a1">
                   <div class="card text-white">
                   <div class="imgholder">
                    <img src="../img/presents.png" class="card-img img1 p-2" alt="...">
@@ -204,7 +204,7 @@ elseif(isset($_SESSION["a_id"])){
                    <img src="../img/banquet.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">Catering</h4>
-                   <p class="title">More than just a gift.</p>
+                   <p class="title">Good Food Good Mood.</p>
                  </div>
               </a>
             </div> 
