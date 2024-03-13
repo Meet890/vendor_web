@@ -151,7 +151,7 @@ if ($result->num_rows > 0) {
         </div>
     <div class="about center">
         <h3 class="mt-4">About us</h3>
-            <p><?php echo $about ?></p>
+            <pre><?php echo $about ?></pre>
             <span></span>
         </div>
         <div class="heading">
@@ -331,27 +331,6 @@ include("footer.php");
 
 </body>
 </html>
-<?php
 
-    require 'config.php';
-    
-    
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $discription=$_POST["r_discription"];
-        $rating= $_POST["r_star"];
-        echo $rating;
-        // $sql="insert into rating(r_discription,r_star) values($name,$rating)";
 
-        // if($conn->query($sql) === TRUE)
-        // {
-        //     echo"successfully";
-        // }
-        // else{
-        //     echo"error";
-        // }
-    }
-        mysqli_close($conn);
-    
 
-?>

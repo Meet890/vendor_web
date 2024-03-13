@@ -149,7 +149,7 @@ echo "0 results";
 </div>
         <div class="about center">
             <h3 class="mt-4">About us</h3>
-            <p><?php echo $about ?></p>
+            <pre><?php echo $about ?></pre>
             <span></span>
         </div>
         <div class="heading">

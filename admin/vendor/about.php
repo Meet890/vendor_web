@@ -74,7 +74,7 @@ if(!isset($_SESSION["username"])){
 			
                         <div class="form-group">
 												<label for="comment">About</label>
-												<textarea class="form-control" id="comment" rows="7" name="v_discription" ><?php echo $about; ?></textarea>
+												<textarea class="form-control" id="comment" rows="7" name="v_discription" style="white-space: pre-wrap;"><?php echo $about; ?></textarea>
 											  </div>
 
                         <div class="card-action">
