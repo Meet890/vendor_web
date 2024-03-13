@@ -119,8 +119,7 @@ if (mysqli_num_rows($result) > 0) {
         </div>   
       </div>
      
-
-
+   
       <?php
       }
     }
@@ -150,11 +149,7 @@ include("footer.php");
 <script src="js/bootstrap.bundle.min.js"></script> 
 
 
-<script>
-  function redirect(){
-    window.location.href = "redirect.php?id=<?php echo $id ?>";
-  }
-</script>
+
 
 </body>   
 

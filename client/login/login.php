@@ -1,6 +1,7 @@
 <?php
 require_once "loginphp.php";
 //require 'header2.php';
+echo $_SESSION["vid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
