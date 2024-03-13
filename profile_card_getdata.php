@@ -112,9 +112,9 @@ if (mysqli_num_rows($result) > 0) {
               </div>
          </div>
                 <div class="d-grid gap-2">
-
-                <button class="btn btn-secondary mt-2 btns" type="button" onclick=""><a href='redirect.php?id=<?php echo $id ?>' class="a4">More Info</a></button>
-
+                <a href='redirect.php?id=<?php echo $id ?>' class="a4">
+                <button class="btn btn-secondary mt-2 btns" type="button" onclick="">More Info</button>
+                </a>
                 </div>
         </div>   
       </div>
