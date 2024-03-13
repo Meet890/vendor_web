@@ -156,34 +156,29 @@ if(isset($_POST["submit2"])){
 					<!-- <h4 class="page-title mt-4 pro">Update Profile Photo :</h4> -->
                         
 						
-								<div class="col-12 ml-3 mb-3 mt-4">
+								<div class="col-12 ml-3 mb-3 mt-3">
 								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
 							      <label for="image">Image : </label>
 							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value="">
-							      <button type = "submit" name = "submit2">Submit</button>
+							      <button type = "submit" name = "submit2" class="btn btn-secondary btn-xs">Submit</button>
 							    </form>
 								</div>
-								</div>
+							
 	</div>
-	</div>
-	</div></div></div></div></div>
-								<div class="main-panel">
-				<div class="content">
-					<div class="container-fluid">
-					<div class="row">
-							<div class="col-md-12">
+								
+					
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Update Profile Photo :</div>
+										<div class="card-title">Add Gallery Photos :</div>
 									</div>
-						<h4 class="page-title mt-5 pro">Add new photo</h4>
+						
                         
-						<div class="row">
-								<div class="col-12">
+						<!-- <div class="row"> -->
+								<div class="col-12 ml-3 mb-3 mt-3">
 								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
 							      <label for="image">Image : </label>
-							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""> <br> <br>
-							      <button type = "submit" name = "submit">Submit</button>
+							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value="">
+							      <button type = "submit" name = "submit" class="btn btn-secondary btn-xs">Submit</button>
 							    </form>
 								</div>
 								<div class="col-12">
