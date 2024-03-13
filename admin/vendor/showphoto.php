@@ -9,17 +9,18 @@
 
       <?php foreach ($rows as $row) : ?>            
 <div class="col-md-4 col-sm-6 " >
-     <div class="card ">
+     <div class="card mt-2 ">
+        <center>
           <div class="imgholder justify-content-center">
            <img src="img/<?php echo $row["g_photo"]; ?>" class="card-img img1 p-2 " alt="...">
           </div>
 
           <div class="d-flex justify-content-center">
          <a href="deletephoto.php?id=<?php echo $row["g_id"] ;?>">
-          <button class="submit btn border" >Delete</button>
+          <button class="submit btn border mb-2" >Delete</button>
       </a>
           </div>
-
+      </center>
          </div>
 </div>
 
