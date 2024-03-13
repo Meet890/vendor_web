@@ -19,7 +19,16 @@
     
     
     }
-    
+    .but{
+        margin-left: -50px;
+    margin-bottom: 429px;
+    }
+    .b{
+        padding: 0px;
+        margin: 18px;
+        height: 20px;
+        width: 23px;
+    }
     #main-container {
     width: 100%;
     height: 100%;

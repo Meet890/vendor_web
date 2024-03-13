@@ -1,5 +1,7 @@
 <?php
 require_once "loginphp.php";
+error_reporting(0);
+
 //require 'header2.php';
 echo $_SESSION["vid"];
 ?>
@@ -66,15 +68,11 @@ echo $_SESSION["vid"];
                     <div>Don't have an Account?&nbsp;<a class="signup-switch" href="reg.php">Sign up</a></div>
                 </div>
             </div>
-
-
-
-
-            
-        </div>
-        
-        <button type="button" class="btn-close bg-white m-2 background cencel cls" aria-label="Close" onclick="redirect()"></button>
-                  
+            </div> 
+         <div class="">
+        <button type="button" class="btn-close bg-white b background cencel cls" aria-label="Close" onclick="redirect()"></button>
+        </div>  
+             
     </div>
     <script>
         var c;
