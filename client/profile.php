@@ -6,10 +6,7 @@ if(isset($_GET["id"])){
 	
 $id= $_GET["id"];
 }
-elseif(isset($_SESSION["vid"])){
-$id =$_SESSION['vid']; 
 
-}
 else {
     header("location:index.php");
 }
