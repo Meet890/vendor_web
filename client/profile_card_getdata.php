@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
-
+$_SESSION['VID']="";
 if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
 	header("location:login/login.php");
  
@@ -111,7 +111,7 @@ if (mysqli_num_rows($result) > 0) {
          </div>
                 <div class="d-grid gap-2">
 
-                <button class="btn btn-secondary mt-2 btns" type="button" onclick="redirect()"><a  class="a4">More Info</a></button>
+                <button class="btn btn-secondary mt-2 btns" type="button" onclick=""><a href='profile.php?id=<?php echo $id ?>' class="a4">More Info</a></button>
 
                 </div>
         </div>   

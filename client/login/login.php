@@ -1,7 +1,8 @@
 <?php
 require_once "loginphp.php";
 //require 'header2.php';
-echo $_SESSION["vid"];
+$VID= $_GET["id"];
+$_SESSION['VID']=$VID;
 ?>
 <!DOCTYPE html>
 <html lang="en">

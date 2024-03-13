@@ -73,11 +73,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["c_city"] = "$row[c_city]";
                                     $_SESSION["c_email"] = "$row[c_email]";  
                                     $_SESSION["loggedin"] = "true";  
-                                    // echo $_SESSION["vid"] ;
+                                    // echo $_SESSION["VID"] ;
                                     
-                                       
+                                    $VID=$_SESSION["VID"] ;
+                                    // echo $VID;
                                         
-                                      header ("location: ../profile.php");
+                                      header ("location: ../profile.php?id=$VID");
                                     
                                 }
                             }
