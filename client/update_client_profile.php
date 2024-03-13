@@ -34,7 +34,7 @@ $username=$email=$city=$name=$id="";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Update Form</title>
   
     <link rel="stylesheet" href="update_client_profile.css">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">

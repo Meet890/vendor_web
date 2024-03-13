@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" constant="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>Client</title>
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/bootstrap.bundle.js"></script> 

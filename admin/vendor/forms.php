@@ -70,7 +70,7 @@ $result = $conn->query($sql);
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Forms - Ready Bootstrap Dashboard</title>
+	<title>Vendor - Edit page</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -97,7 +97,7 @@ $result = $conn->query($sql);
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Create Profile</div>
+										<div class="card-title">Edit Profile</div>
 									</div>
 									<p class="text-success text-center"></p> <form method="post">
 
@@ -182,14 +182,14 @@ $result = $conn->query($sql);
 										
 											<!-- ig id -->
 											<div class="form-group">
-												<label for="email">Instagram Id link</label>
+												<label for="email">Instagram Id </label>
 												<input type="text" class="form-control" id="email"  name="v_iglink" value="<?php echo $ig; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
 											<!-- fb id -->
 											<div class="form-group">
-												<label for="email">Face book Id link</label>
+												<label for="email">Face book Id </label>
 												<input type="text" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>

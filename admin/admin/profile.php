@@ -8,7 +8,7 @@ require '../config.php';
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Admin Dashboard</title>
+	<title>Admin -Vendor profile</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -66,7 +66,7 @@ while($row = $result->fetch_assoc()) {
     }
 }
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp FROM vendor where v_id = $v_id ";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp,v_iglink,v_fblink FROM vendor where v_id = $v_id ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -80,6 +80,8 @@ while($row = $result->fetch_assoc()) {
     $phone=$row["v_phoneno"];
     $about=$row["v_discription"];
     $comp=$row["v_comp"];
+    $ig=$row["v_iglink"];
+        $fb=$row["v_fblink"];
 }
 } else {
 echo "0 results";
@@ -102,23 +104,37 @@ echo "0 results";
         </div>    
         <h2 class="mt-3"><?php echo $comp ?></h2>
         <div class="about">
-        <h4><?php echo $services ?><h4>
+        <h4><?php echo $name ?><h4>
         </div>
 
+        <div class="row justify-content-center">
+            <div class="col-6">
         <ul>
             <li>
-                <img src="assets/img/location.png" alt="Location Icon" class="png">
+                <img src="img/location.png" alt="Location Icon" class="png">
                 <h5 class="city"><?php echo $city ?></h5>
             </li>
-            <!-- <li>
-                <img src="email-icon.png" alt="Email Icon">
-                <p>john.doe@example.com</p>
-            </li> -->
             <li>
-                <img src="assets/img/calling.png" alt="Phone Icon" class="png">
+                <img src="img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
             </li>
+            
         </ul>
+        </div>
+        <div class="col-6">
+        <ul>
+            <li>
+                <img src="img/Facebook.png" alt="Phone Icon" class="png">
+                <h5 class="city"><?php echo $fb ?></h5>
+            </li>
+            
+            <li class="mt-1">
+                <img src="img/insta.jpg" alt="Location Icon" class="png">
+                <h5 class="call"><?php echo $ig ?></h5>
+            </li>   
+        </ul>
+    </div>
+        </div>
         <div class="about center">
             <h3 class="mt-4">About us</h3>
             <p><?php echo $about ?></p>

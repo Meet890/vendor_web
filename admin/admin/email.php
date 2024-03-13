@@ -62,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
                     $mail->Subject = 'Thanks for Reporting';
                     $mail->Body    = 'Thanks for contact us ,We are here for you ...  '.'</b>';
                     $mail->AltBody = '';
-                
+                    $mail->send();
                    
 
                 } catch (Exception $e) {
@@ -93,7 +93,7 @@ if (mysqli_num_rows($result) > 0) {
                     $mail->Subject = 'Client Report you';
                     $mail->Body    = 'Please follow this this...'.'</b>'.$dis;
                     $mail->AltBody = '';
-                
+                    $mail->send();
                    
 
                 } catch (Exception $e) {
@@ -101,7 +101,7 @@ if (mysqli_num_rows($result) > 0) {
                 }
           }
             
-            //header("Location: deletereport.php?id=".$id);
+            require "deletereport.php";
          
         
       }

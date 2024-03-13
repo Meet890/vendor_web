@@ -6,7 +6,7 @@ include('reg_vendor_php.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PHP Form Validation</title>
+  <title>Registration form</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--BS 5 css link-->
