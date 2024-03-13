@@ -189,7 +189,7 @@ $result = $conn->query($sql);
 
 											<!-- fb id -->
 											<div class="form-group">
-												<label for="email">Face book Id </label>
+												<label for="email">Facebook Id </label>
 												<input type="text" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
