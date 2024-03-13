@@ -199,8 +199,8 @@ elseif(isset($_SESSION["a_id"])){
               </a>
             </div> 
             <div class="col-md-4 col-sm-6 ">
-            <a href="profile_card_getdata.php?service=<?php echo "Catring";
-            ?>" id="Catring" class="a1">
+            <a href="profile_card_getdata.php?service=<?php echo "Catering";
+            ?>" id="Catering" class="a1">
                   <div class="card text-white">
                   <div class="imgholder">
                    <img src="img/banquet.png" class="card-img img1 p-2" alt="...">
