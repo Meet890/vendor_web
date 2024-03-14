@@ -108,7 +108,7 @@ while($row = $result->fetch_assoc()) {
     elseif(date('Y-m-d')==$_10){
         echo '<div class="alert alert-danger"> Dear vendor , Your subcription id over on '.$end.', Only 10 Days left  </div>';
     }
-    elseif('2024-08-29'==$end){
+    elseif(date('Y-m-d')==$end){
         // date('Y-m-d')  upar ni condition ma aa nakhvanu che ....
         echo '<div class="alert alert-danger"> Dear vendor , Your subcription id over Please renew subcription <button class="btn submit mx-2" onclick="">Renew</button> </div>';
     }

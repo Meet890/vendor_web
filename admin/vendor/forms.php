@@ -139,7 +139,7 @@ $result = $conn->query($sql);
 											 <option selected disabled value="">Choose...</option>
 				      						 <option <?php if($profession=='Decoration' ){echo "SELECTED";}?> value="decoration">Decoration</option>
 				                             <option <?php if($profession=='Sound System' ){echo "SELECTED";}?> value="Sound System">Sound system</option>
-				                             <option <?php if($profession=='Catring' ){echo "SELECTED";}?> value="Catring">Catring</option>
+				                             <option <?php if($profession=='Catering' ){echo "SELECTED";}?> value="Catering">Catering</option>
 				                             <option <?php if($profession=='Jewellery' ){echo "SELECTED";}?> value="Jewellery">Jewellery</option>
 				                             <option <?php if($profession=='Photographer' ){echo "SELECTED";}?> value="Photographer">Photographer</option>
 				                             <option <?php if($profession=='Videographer' ){echo "SELECTED";}?> value="Videographer">Videographer</option>
