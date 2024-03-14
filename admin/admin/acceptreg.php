@@ -21,7 +21,7 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
             $set_traid= $row['reg_tra_id'];
             $set_accept= $row['reg_accept'];
             
-            echo $set_password;
+           // echo $set_password;
             
     }
 }
