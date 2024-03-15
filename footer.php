@@ -47,11 +47,11 @@
                                       <!-- <p><a href="privacy_policy.php" class="a3">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_condition.php" class="a3">Terms & Conditions </a></p> -->
                                       
                                       
-						<ul class="social">
+						<!-- <ul class="social">
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 				</div>
