@@ -45,7 +45,7 @@ include('scannerphp.php');
         <tr>
             <td>
    
-         <h2>Priemium Plans</h2>
+         <h2>Premium Plans</h2>
          <br>
         <div class="col"> <h4>Pay 149 for 1 month.   </h4></div>
 
