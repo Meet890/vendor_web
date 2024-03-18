@@ -148,20 +148,20 @@ if ($result->num_rows > 0) {
         </div>
     <div class="about center">
         <h3 class="mt-4">About us</h3>
-            <pre><?php echo $about ?></pre>
+            <pre class="Info"><?php echo $about ?></pre>
             <span></span>
         </div>
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery mb-5">
+        <div class="gallery mb-5 ">
         <?php
             
               $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
         
         
          foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col-4" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="pa" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
 
                 
             <?php endforeach; ?>   

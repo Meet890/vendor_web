@@ -181,7 +181,7 @@ echo "0 results";
 </div>
         <div class="about center">
             <h3 class="mt-4">About us</h3>
-            <pre><?php echo $about ?></pre>
+            <pre class="Info"><?php echo $about ?></pre>
             <span></span>
         </div>
         <div class="heading">
@@ -194,7 +194,7 @@ echo "0 results";
       
       
        foreach ($rows as $row) : ?>
-              <img src="img/<?php echo $row['g_photo']; ?>"  class="col-4 "onclick="openModal('img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image">
+              <img src="img/<?php echo $row['g_photo']; ?>"  class="col-4 pa" onclick="openModal('img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image">
               
           <?php endforeach; ?>
         </div>
