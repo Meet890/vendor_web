@@ -34,7 +34,7 @@ require 'config.php';
                         </div>
                         <div class="card">
 									<div class="card-header">
-										<div class="card-title">registration table</div>
+										<div class="card-title">Registration Table</div>
 									</div>
 									<div class="card-body">
 										
@@ -45,10 +45,10 @@ require 'config.php';
 														<th>Report Id</th>
 														<th>Client Id</th>
 														<th>Vendor Id</th>
-														<th>Title of Report</th>
-														<th>Discription of Report</th>
+														<th>Title Of Report</th>
+														<th>Discription Of Report</th>
 														<th>Accept</th>
-														<th>delete</th>
+														<th>Delete</th>
 
 													</tr>
 												</thead>

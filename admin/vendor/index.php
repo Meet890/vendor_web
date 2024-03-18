@@ -180,7 +180,7 @@ echo "0 results";
     </div>
 </div>
         <div class="about center">
-            <h3 class="mt-4">About us</h3>
+            <h3 class="mt-4">About Us</h3>
             <pre class="Info"><?php echo $about ?></pre>
             <span></span>
         </div>

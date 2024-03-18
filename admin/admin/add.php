@@ -96,7 +96,7 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
 						</div>
                         <div class="card">
 									<div class="card-header">
-										<div class="card-title">Admin record table</div>
+										<div class="card-title">Admin Record Table</div>
 									</div>
 									<div class="card-body">
 										
@@ -104,11 +104,11 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
 											<table class="table table-bordered">
 												<thead>
 													<tr>
-														<th>id</th>
+														<th>Id</th>
 														
 														<th>Admin Username</th>
 														<th>Admin Password</th>
-														<th>delete</th>
+														<th>Delete</th>
 
 													</tr>
 												</thead>

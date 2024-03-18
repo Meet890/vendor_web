@@ -39,7 +39,7 @@ require 'config.php';
 						</div>
                         <div class="card">
 									<div class="card-header">
-										<div class="card-title">registration table</div>
+										<div class="card-title">Registration Table</div>
 									</div>
 									<div class="card-body">
 										
@@ -56,11 +56,11 @@ require 'config.php';
 														<th>Address</th>
 														<th>Gender</th>
 														<th>Company</th>
-														<th>Transaction id</th>
-														<th>Registered ?</th>
-														<th>accept </th>
+														<th>Transaction Id</th>
+														<th>Registered?</th>
+														<th>Accept </th>
 														
-														<th>delete</th>
+														<th>Delete</th>
 
 													</tr>
 												</thead>

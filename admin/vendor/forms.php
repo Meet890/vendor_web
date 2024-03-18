@@ -70,7 +70,7 @@ $result = $conn->query($sql);
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Vendor - Edit page</title>
+	<title>Vendor - Edit Page</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -107,7 +107,7 @@ $result = $conn->query($sql);
                								</p> </h4>
  										<!-- compony name -->
 										<div class="form-group">
-											<label for="Compony name">Compony name</label>
+											<label for="Compony name">Compony Name</label>
 											<input type="text" class="form-control" id="email" name="v_comp" value="<?php echo $comp_name; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
@@ -134,7 +134,7 @@ $result = $conn->query($sql);
 
 										<!-- services-->
 										<div class="form-group" >
-											<label for="exampleFormControlSelect1">Select service</label>
+											<label for="exampleFormControlSelect1">Select Service</label>
 											<select class="form-control" id="exampleFormControlSelect1" name="v_profession">
 											 <option selected disabled value="">Choose...</option>
 				      						 <option <?php if($profession=='Decoration' ){echo "SELECTED";}?> value="decoration">Decoration</option>
@@ -173,7 +173,7 @@ $result = $conn->query($sql);
 
 										<!-- phone no -->
 										<div class="form-group">
-											<label for="errorInput">Phone no.</label>
+											<label for="errorInput">Phone No.</label>
 											<input type="text" id="Phone no" value="<?php echo $phone; ?>" class="form-control" name="v_phoneno">
 											 <!-- <p class="err-msg"> 
                  								 <?php if($phoneErr!=1){ echo $phoneErr; } ?> 
