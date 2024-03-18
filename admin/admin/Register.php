@@ -57,7 +57,7 @@ require 'config.php';
 														<th>Gender</th>
 														<th>Company</th>
 														<th>Transaction id</th>
-														<th>accepted or not</th>
+														<th>Registered ?</th>
 														<th>accept </th>
 														
 														<th>delete</th>
@@ -86,6 +86,13 @@ require 'config.php';
 															  $comp = $row["reg_com"];
 															  $tra_id = $row['reg_tra_id'];
 															  $accept = $row['reg_accept'];
+															  if ($accept=="0"){
+																$accept ="No";
+															  }
+															  else if($accept=="1"){
+																$accept ="Yes";
+
+															  }
 															  
 														      ?>
 													<tr>
