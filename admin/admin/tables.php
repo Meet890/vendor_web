@@ -41,7 +41,7 @@ require 'config.php';
 									
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">client record table</div>
+										<div class="card-title">Client Record Table</div>
 									</div>
 									<div class="card-body">
 										
@@ -49,7 +49,7 @@ require 'config.php';
 											<table class="table table-bordered">
 												<thead>
 													<tr class="thh">
-														<th>id</th>
+														<th>Id</th>
 														<th>Client Name</th>
 														<th>Client Username</th>
 														<!-- <th>Client Password</th> -->
@@ -57,7 +57,7 @@ require 'config.php';
 														<th>Client City</th>
 														<th>Client Joined Time</th>
 														<!-- <th>Edit</th> -->
-														<th>delete</th>
+														<th>Delete</th>
 
 													</tr>
 												</thead>
@@ -120,7 +120,7 @@ require 'config.php';
 
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Vendor record table</div>
+										<div class="card-title">Vendor Record Table</div>
 									</div>
 									<div class="card-body">
 										
@@ -128,7 +128,7 @@ require 'config.php';
 											<table class="table table-bordered">
 											<thead>
 													<tr class="thh">
-														<th>id</th>
+														<th>Id</th>
 														<th>Vendor Name</th>
 														<th>Vendor Username</th>
 														<!-- <th>Vendor Password</th> -->
@@ -143,7 +143,7 @@ require 'config.php';
 														<th>Vendor Discription</th>
 														
 														<th>View</th>
-														<th>delete</th>
+														<th>Delete</th>
 
 													</tr>
 												</thead>

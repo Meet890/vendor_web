@@ -57,6 +57,7 @@ include('scannerphp.php');
     </td>
     <td>
     
+    
             <!-- <div class="col-6 col-lg-4 mx-auto"> -->
                 <div class="mt-2 mb-2">
 
