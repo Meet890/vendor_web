@@ -104,7 +104,7 @@ if ($result->num_rows > 0) {
               <p>post</p> -->
             </div>
             <div class="followers">
-                <h2>30</h2>
+                <h2><span id="imageCount"></span></h2>
                 <p>Post</p>
             </div>
             <!-- <div class="followers text-align-center">
@@ -154,18 +154,24 @@ if ($result->num_rows > 0) {
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery mb-5 ">
-        <?php
+        <div class="gallery mb-3" id="gallery">
             
-              $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
-        
-        
-         foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="pa" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+          <?php
 
-                
-            <?php endforeach; ?>   
-            </div>
+              $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
+                 foreach ($rows as $row) : ?>
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="pa" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                 <?php endforeach; ?>   
+        </div>
+          
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.getElementById("gallery");
+            var images = gallery.getElementsByTagName("img");
+            var imageCount = images.length;
+            document.getElementById("imageCount").textContent = imageCount;
+            });
+        </script>
             <div id="myModal" class="modal" onclick="closeModal()">
                   <!-- <span class="close" onclick="closeModal()">&times;</span> -->
             <img class="w-auto modal-content "  id="modalImg">

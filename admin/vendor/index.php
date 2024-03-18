@@ -120,6 +120,7 @@ while($row = $result->fetch_assoc()) {
     }
 }
 } else {
+    
 echo "0 results";
 }
 
@@ -144,7 +145,7 @@ echo "0 results";
                 <p>1 Review</p>
             </div> -->
             <div class="followers">
-                <h2>30</h2>
+                <h2><span id="imageCount"></span></h2>
                 <p>Post</p>
             </div>
         </div>    
@@ -187,7 +188,7 @@ echo "0 results";
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery mb-5">
+        <div class="gallery mb-5" id="gallery">
         <?php
             
             $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
@@ -214,8 +215,15 @@ echo "0 results";
 			</div>
 		</div>
 	</div>
-	
-
+	<!-- dynamic post -->
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.getElementById("gallery");
+            var images = gallery.getElementsByTagName("img");
+            var imageCount = images.length;
+            document.getElementById("imageCount").textContent = imageCount;
+            });
+        </script>
 <script src="assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <script src="assets/js/core/popper.min.js"></script>

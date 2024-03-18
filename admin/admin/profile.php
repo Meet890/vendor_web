@@ -97,7 +97,7 @@ echo "0 results";
               <p>post</p> -->
             </div>
             <div class="followers">
-                <h2>30</h2>
+                <h2><span id="imageCount"></span></h2>
                 <p>Post</p>
             </div>
             
@@ -137,13 +137,13 @@ echo "0 results";
         </div>
         <div class="about center">
             <h3 class="mt-4">About us</h3>
-            <pre><?php echo $about ?></pre>
+            <pre class="Info"><?php echo $about ?></pre>
             <span></span>
         </div>
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery">
+        <div class="gallery mb-5" id="gallery">
         <?php
             
             $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
@@ -170,7 +170,15 @@ echo "0 results";
 			</div>
 		</div>
 	</div>
-	
+	<!-- dynamic post -->
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.getElementById("gallery");
+            var images = gallery.getElementsByTagName("img");
+            var imageCount = images.length;
+            document.getElementById("imageCount").textContent = imageCount;
+            });
+        </script>
 
 <script src="assets/js/core/jquery.3.2.1.min.js"></script>
 <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
@@ -188,21 +196,7 @@ echo "0 results";
 <script src="assets/js/demo.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <script>
+ <script>
         function openModal(imageSrc) {
         var modal = document.getElementById("myModal");
         var modalImg = document.getElementById("modalImg");

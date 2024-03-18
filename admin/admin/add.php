@@ -88,7 +88,7 @@ $sql="INSERT INTO admin_tbl(a_username,a_password) VALUES ('$username', '$passwo
                                             <input type="text" id="username" name="username"><br><br>
                                             <label for="password">Password: </label><br>
                                             <input type="password" id="pass" name="pass">
-                                            <button type="submit" name ="submit">Submit</button>
+                                            <button type="submit" name ="submit" class="mt-4 btn btn-secondary btn-xs">Submit</button>
 
                                         </form>
                                     </div>
