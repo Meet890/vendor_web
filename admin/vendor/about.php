@@ -79,7 +79,7 @@ if(!isset($_SESSION["username"])){
 
                         <div class="card-action">
 											    <button class="btn btn-success" name="about">Submit</button>
-											    <button class="btn btn-danger">Cancel</button>
+											    <!-- <button class="btn btn-danger">Cancel</button> -->
 										    </div>
                   </div>
 </form> 

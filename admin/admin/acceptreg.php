@@ -180,7 +180,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         </div>
         <hr>
         <div class="form-group">
-        <label >Select Days For Activation</label>
+        <label >Select days for activation</label>
         <select class="form-control p-0 ps-1" name="days" >
               <option selected disabled ></option>
 				      <option class="pb-2" value="30">1 Month</option>
