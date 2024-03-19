@@ -130,6 +130,9 @@ li img {
     margin-top: 2em;
    
 }
+.followers{
+  text-align: center;
+}
 
 .gallery img {
     width: calc(33.33% - 10px);

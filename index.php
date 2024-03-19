@@ -44,9 +44,14 @@ elseif(isset($_SESSION["a_id"])){
 </center>
 
 <!-- card -->
-  <section class="event">
+<div class="title mt-5">
+     
+      <h1 class="heding" id="event"><br> </h1>
+    </div>
+  <section class="event mt-5">
 
     <div class="title mt-5">
+     
       <h1 class="heding" id="event">Services</h1>
     </div>
     <div class="container mt-2 justify-content-center">
