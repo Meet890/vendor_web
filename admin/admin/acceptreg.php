@@ -144,7 +144,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         
         <!--// Email//-->
         <div class="form-group">
-            <label >Email:</label>
+            <label >Email</label>
               <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $set_email;?>">
               
         </div>
@@ -180,7 +180,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         </div>
         <hr>
         <div class="form-group">
-        <label >Select Days for activation</label>
+        <label >Select days for activation</label>
         <select class="form-control p-0 ps-1" name="days" >
               <option selected disabled ></option>
 				      <option class="pb-2" value="30">1 Month</option>

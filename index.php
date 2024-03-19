@@ -91,7 +91,7 @@ elseif(isset($_SESSION["a_id"])){
                    <img src="img/production.png" class="card-img img1 p-2" alt="...">
                    </div>
                    <h4 class="titleh3">videographers</h4>
-                   <p class="title">Moments well Shared.</p>
+                   <p class="title">Moments well shared.</p>
                  </div>
               </a>
             </div>
@@ -103,7 +103,7 @@ elseif(isset($_SESSION["a_id"])){
                    <img src="img/birthday-cake (1).png" class="card-img img1 p-2" alt="...">
                    </div>
                    <h4 class="titleh3">Cake</h4>
-                   <p class="title">Sweetness Readfined.</p>
+                   <p class="title">Sweetness readfined.</p>
                  </div>
               </a>
             </div>
@@ -127,7 +127,7 @@ elseif(isset($_SESSION["a_id"])){
                    <img src="img/boutique.png" class="card-img img1 p-2" alt="...">
                  </div>
                    <h4 class="titleh3">event clothes</h4>
-                   <p class="title">Dress Your Dreams.</p>
+                   <p class="title">Dress your dreams.</p>
                  </div>
               </a>
             </div>
@@ -211,7 +211,7 @@ elseif(isset($_SESSION["a_id"])){
                    <img src="img/banquet.png" class="card-img img1 p-2" alt="...">
                   </div>
                    <h4 class="titleh3">catering</h4>
-                   <p class="title">Good Food, Good Mood.</p>
+                   <p class="title">Good food, Good mood.</p>
                  </div>
               </a>
             </div> 
