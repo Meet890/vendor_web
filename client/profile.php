@@ -104,7 +104,7 @@ if ($result->num_rows > 0) {
               <p>post</p> -->
             </div>
             <div class="followers">
-                <h2>30</h2>
+                <h2>06</h2>
                 <p>Post</p>
             </div>
             <!-- <div class="followers text-align-center">
