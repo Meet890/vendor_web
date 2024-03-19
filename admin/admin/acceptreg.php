@@ -117,7 +117,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
     
     <!--====registration form====-->
     <div class="registration-form">
-      <h4 class="text-center mt-2">Create a New Account</h4>
+      <h4 class="text-center mt-2">Create a new account</h4>
   <form action="" method="post">
 
 
@@ -130,21 +130,21 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
 
         <!--//last name//-->
         <div class="form-group">
-           <label >username</label>
+           <label >Username</label>
                <input type="text" class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
               
         </div>
 
         <!--//Phone no//-->
         <div class="form-group">
-            <label>Phone no</label>
+            <label>Phone No</label>
                 <input type="text" class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
                 
         </div>
         
         <!--// Email//-->
         <div class="form-group">
-            <label >Email:</label>
+            <label >Email</label>
               <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $set_email;?>">
               
         </div>
@@ -174,13 +174,13 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
                
         </div>
         <div class="form-group">
-           <label >Transection id</label>
+           <label >Transection Id</label>
                <input type="text" class="form-control" placeholder="Enter Trasection id" name="tra_id" value="<?php echo $set_traid;?>">
                
         </div>
         <hr>
         <div class="form-group">
-        <label >Select Days for activation</label>
+        <label >Select Days For Activation</label>
         <select class="form-control p-0 ps-1" name="days" >
               <option selected disabled ></option>
 				      <option class="pb-2" value="30">1 Month</option>
