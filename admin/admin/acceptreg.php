@@ -128,7 +128,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
               
         </div>
 
-        <!--//last name//-->
+        <!--//Username//-->
         <div class="form-group">
            <label >Username</label>
                <input type="text" class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
@@ -137,7 +137,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
 
         <!--//Phone no//-->
         <div class="form-group">
-            <label>Phone No</label>
+            <label>Phone no</label>
                 <input type="text" class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
                 
         </div>
@@ -169,12 +169,12 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
 
         <!--//compony name//-->
         <div class="form-group">
-           <label >Compony Name</label>
+           <label >Compony name</label>
                <input type="text" class="form-control" placeholder="Enter Compony Name" name="comp" value="<?php echo $set_ComName;?>">
                
         </div>
         <div class="form-group">
-           <label >Transection Id</label>
+           <label >Transection id</label>
                <input type="text" class="form-control" placeholder="Enter Trasection id" name="tra_id" value="<?php echo $set_traid;?>">
                
         </div>
