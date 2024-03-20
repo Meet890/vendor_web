@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forgot password</title>
+    <title>Submit OTP</title>
   
     <link rel="stylesheet" href="reg.css">    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="image">
                     
                 </div>
-                <div class="title">Forgot Password</div>
+                <div class="title">Submit OTP</div>
                 <?php
                   if(!empty($err)){
                          echo '<div class="alert alert-success ">' . $err . '</div>';
