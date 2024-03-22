@@ -174,7 +174,7 @@ if ($result->num_rows > 0) {
         </script>
             <div id="myModal" class="modal" onclick="closeModal()">
                   <!-- <span class="close" onclick="closeModal()">&times;</span> -->
-            <img class="w-auto modal-content "  id="modalImg">
+            <img class=" modal-content "  id="modalImg">
                 </div> 
 
         
