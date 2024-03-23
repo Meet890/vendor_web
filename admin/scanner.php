@@ -57,7 +57,7 @@ include('scannerphp.php');
     -->
     <!-- <label for="cars">Choose a car:</label> -->
     <select id="photoSelect" onchange="displaySelectedPhoto()">
-  <option value="">Select plan...</option>
+  <option value="0_month.png">Select plan...</option>
   <option value="1_month.jpg">Pay 149 for 1 month.</option>
   <option value="3_month.jpg">Pay 349 for 3 month</option>
   <option value="6_month.jpg">Pay 649 for 6 month</option>
@@ -86,8 +86,8 @@ function displaySelectedPhoto() {
             <!-- <div class="col-6 col-lg-4 mx-auto"> -->
                 <div class="mt-2 mb-2">
 
-                    <!-- <img src="qr.png" alt="qr code" class="qr"> -->
-                    <img id="photo" src="" alt="Chosee plan..." class="qr">
+                     <!-- <img src="qr.png" alt="qr code" class="qr"> -->
+                    <img id="photo" src="0_month.png" src="" alt="Chosee plan..." class="qr">
                 <!-- </div> -->
   
     </td>
