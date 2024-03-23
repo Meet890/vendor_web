@@ -46,14 +46,39 @@ include('scannerphp.php');
             <td>
    
          <h2>Premium Plans</h2>
-         <br>
+         <!-- <br>
         <div class="col"> <h4>Pay 149 for 1 month.   </h4></div>
 
         <div class="col"> <h4>  Pay 349 for 3 month</h4></div>
        
         <div class="col"> <h4>Pay 749 for 6 month </h4></div>
         <div class="col"> <h4>  Pay 1499 for 12 month</h4></div>
-   
+        
+    -->
+    <!-- <label for="cars">Choose a car:</label> -->
+    <select id="photoSelect" onchange="displaySelectedPhoto()">
+  <option value="">Select plan...</option>
+  <option value="1_month.jpg">Pay 149 for 1 month.</option>
+  <option value="3_month.jpg">Pay 349 for 3 month</option>
+  <option value="6_month.jpg">Pay 649 for 6 month</option>
+  <option value="12_month.jpg">Pay 1199 for 12 month</option>
+  <!-- Add more options as needed -->
+</select>
+
+<!-- <img id="photo" src="" alt="Selected Photo"> -->
+
+<script>
+function displaySelectedPhoto() {
+  var selectElement = document.getElementById("photoSelect");
+  var selectedValue = selectElement.value;
+  var photoElement = document.getElementById("photo");
+
+  // Update the src attribute of the image element with the selected photo URL
+  photoElement.src = selectedValue;
+}
+</script>
+
+
     </td>
     <td>
     
@@ -61,7 +86,8 @@ include('scannerphp.php');
             <!-- <div class="col-6 col-lg-4 mx-auto"> -->
                 <div class="mt-2 mb-2">
 
-                    <img src="qr.png" alt="qr code" class="qr">
+                    <!-- <img src="qr.png" alt="qr code" class="qr"> -->
+                    <img id="photo" src="" alt="Chosee plan..." class="qr">
                 <!-- </div> -->
   
     </td>
