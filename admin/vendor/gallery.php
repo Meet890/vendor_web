@@ -163,6 +163,11 @@ if(isset($_POST["submit2"])){
 							      <button type = "submit" name = "submit2" class="btn btn-secondary btn-xs">Submit</button>
 							    </form>
 								</div>
+								<div class="col-12">
+								<?php
+									include 'show_profile_photo.php';
+								?>
+								</div>
 							
 	</div>
 								
