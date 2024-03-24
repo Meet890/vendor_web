@@ -89,6 +89,8 @@ p {
   font-size: 15px;
   font-weight: 800;
   color: currentColor;
+  overflow-x: hidden;
+  font-family: math;
 }
 
 ul {
@@ -130,6 +132,9 @@ li img {
     margin-top: 2em;
    
 }
+/* .pre{
+  white-space: pre-wrap;
+} */
 .followers{
   text-align: center;
 }

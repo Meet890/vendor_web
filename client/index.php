@@ -42,7 +42,12 @@ elseif(isset($_SESSION["a_id"])){
 </center>
 
 <!-- card -->
+<div class="title mt-5">
+     
+      <h1 class="heding" id="event"><br> </h1>
+    </div>
 <section class="event" id="event">
+
 
         <div class="title mt-5" >
             <h1 class="heding" id="event">Services</h1>

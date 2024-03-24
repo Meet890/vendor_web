@@ -1,5 +1,5 @@
 *{
-  font-family: font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body{
@@ -50,6 +50,7 @@ margin-right: 0px;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 400;
+  font-family: auto;
 }
 .navbar-dark .navbar-brand{
 
@@ -58,6 +59,7 @@ margin-right: 0px;
   font-weight: 700;
   letter-spacing: 2px;
   color: #fdb524;
+ 
   
 }
 .navbar-dark .navbar-brand:focus,

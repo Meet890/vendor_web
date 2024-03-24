@@ -19,7 +19,9 @@ header {
     padding: 1em;
     text-align: center;
 }
-
+pre{
+  white-space: pre-wrap;
+}
 .pro_img{
      height: 170px;
      width: 175px;
@@ -84,6 +86,8 @@ h1, h2 {
   font-size: 15px;
   font-weight: 800;
   color: currentColor;
+  overflow-x: hidden;
+  font-family: math;
 }
 
 p {

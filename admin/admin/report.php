@@ -43,8 +43,8 @@ require 'config.php';
 												<thead>
 													<tr class="thh">
 														<th>Report Id</th>
-														<th>Client Id</th>
-														<th>Vendor Id</th>
+														<th>Client</th>
+														<th>Vendor</th>
 														<th>Title Of Report</th>
 														<th>Discription Of Report</th>
 														<th>Accept</th>
@@ -69,12 +69,21 @@ require 'config.php';
 															  $title =$row["report_title"];
 															  $dis = $row["report_dis"];
 															 
-															  
+															  $sql2 = "SELECT * FROM client where c_id='$c_id' ";
+																$result2 = mysqli_query($conn, $sql2);
+																$row2 = mysqli_fetch_assoc($result2);
+																$c_name = $row2["c_username"];
+
+
+																$sql3 = "SELECT * FROM vendor where v_id='$v_id' ";
+																$result3 = mysqli_query($conn, $sql3);
+																$row3 = mysqli_fetch_assoc($result3);
+																$v_name = $row3["v_username"];
 														      ?>
 													<tr>
 														<th scope="row"><?php echo $id ?></th>
-														<td> <?php echo $c_id;?> </td>
-														<td><?php echo $v_id  ?></td>
+														<td> <?php echo $c_id.'( '.$c_name.' )';?> </td>
+														<td><?php echo $v_id .'( '.$v_name.' )'; ?></td>
 														<td><?php echo $title ?></td>	
 														<td><?php echo $dis ?></td>
 														
