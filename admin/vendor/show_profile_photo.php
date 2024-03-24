@@ -46,7 +46,7 @@ if(isset($_SESSION["username"])){
      <div class="card mt-2 ">
         <center>
           <div class="imgholder justify-content-center">
-           <img src="img/<?php echo $img; ?>" class="card-img img1 p-2 " alt="...">
+           <img src="<?php echo $img; ?>" class="card-img img1 p-2 " alt="...">
           </div>
 
           <div class="d-flex justify-content-center">
