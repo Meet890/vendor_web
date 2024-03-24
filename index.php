@@ -51,8 +51,7 @@ elseif(isset($_SESSION["a_id"])){
   <section class="event mt-5">
 
     <div class="title mt-5">
-     
-      <h1 class="heding" id="event">Services</h1>
+       <h1 class="heding" id="event">Services</h1>
     </div>
     <div class="container mt-2 justify-content-center">
       <div class="row justify-content-center">
