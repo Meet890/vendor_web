@@ -50,7 +50,7 @@ if(isset($_SESSION["username"])){
           </div>
 
           <div class="d-flex justify-content-center">
-         <a href="delete_profile_photo.php?id=<?php echo $img;?>">
+         <a href="delete_profile_photo.php?id=<?php echo $_SESSION['v_id'];?>">
           <button class="submit btn border mb-2" >Delete</button>
       </a>
           </div>
