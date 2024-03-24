@@ -3,6 +3,8 @@ session_start();
 if(!isset($_SESSION["a_id"]) && $_SESSION["loggedin"] === true){
     header("location: ../login.php");
     exit;
+}elseif(!isset($_SESSION["a_id"]) && $_SESSION["loggedin"] === true){
+
 }
 ?>
 <div class="logo-header">

@@ -74,13 +74,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["c_email"] = "$row[c_email]";  
                                     $_SESSION["loggedin"] = "true";  
                                     // echo $_SESSION["VID"] ;
-                                    if(isset($_SESSION["VID"])){
+                                    
                                     $VID=$_SESSION["VID"] ;
                                     // echo $VID;
                                         
                                       header ("location: ../profile.php?id=$VID");
-                                    }
-                                    header ("location: ../index.php");
+                                    
+                                    
                                     
                                 }
                             }

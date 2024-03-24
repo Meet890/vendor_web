@@ -41,7 +41,7 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
       $c_id = $row["c_id"];
-      $v_id = $row["v_id"];
+     
       $dis = $row["report_dis"];
       $sql = "SELECT c_name,c_email FROM client where c_id = '$c_id'";
       $result = mysqli_query($conn, $sql);

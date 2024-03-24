@@ -2,7 +2,7 @@
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
 
-if(isset($_GET["id"])){
+if($_GET["id"]!=""){
 	
 $id= $_GET["id"];
 }
@@ -117,29 +117,32 @@ if ($result->num_rows > 0) {
         </div>
         <div class="row justify-content-center">
             <div class="col-6">
-        <ul>
+        <ul><?PHP if($city!="") {?>
             <li>
                 <img src="img/location.png" alt="Location Icon" class="png">
                 <h5 class="city"><?php echo $city ?></h5>
             </li>
+            <?PHP }if($phone!="") {?>
             <li>
                 <img src="img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
             </li>
-            
+            <?PHP }?>
         </ul>
         </div>
         <div class="col-6">
         <ul>
+            <?PHP if($fb!="") {?>
             <li>
                 <img src="img/Facebook.png" alt="Phone Icon" class="png">
                 <h5 class="city"><?php echo $fb ?></h5>
             </li>
-            
+            <?php }  if($ig!="") {?>
             <li class="mt-1">
                 <img src="img/insta.jpg" alt="Location Icon" class="png">
                 <h5 class="call"><?php echo $ig ?></h5>
             </li>   
+            <?php } ?>
         </ul>
     </div>
         </div>

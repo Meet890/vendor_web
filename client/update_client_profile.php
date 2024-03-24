@@ -16,7 +16,7 @@ $id= $_SESSION['c_id'];
    $symbolPassword = "/(?=.*?[#?!@$%^&*-])/";
    $minEightPassword = "/.{8,}/";
    $phoneNo="/^[0-9]{10}+$/";
-
+if(isset($_POST['update'])){
   //  First Name Validation
 if(empty($name)){
    $fnameErr="First Name is Required"; 
@@ -143,6 +143,7 @@ $username=$email=$city=$name=$id="";
     else{
       $emailErr="Invalid Email Domain Name";
     }
+   }
 ?> 
 
 <!DOCTYPE html>
@@ -181,19 +182,21 @@ $username=$email=$city=$name=$id="";
                     <div class="field email">
                         <input type="email" name="email" id="email" value="<?php echo $email; ?>" placeholder=" " required autocomplete="on">
                         <label for="email">Email</label>
-                        <p class="err-msg"> 
-                 <?php if($emailErr!=1){ echo $emailErr; } ?>
-                </p>
+                       
                         <!-- <i class="fa fa-envelope"></i> -->
-                    </div><br>
+                    </div>
+                    <p class="err-msg"> 
+                 <?php if($emailErr!=1){ echo $emailErr; } ?>
+                </p><br>
                     <div class="field email">
                         <input type="text" name="password" id="password" value="<?php echo $password; ?>" placeholder=" " required autocomplete="on">
                         <label for="email">Password</label>
-                        <p class="err-msg"> 
-                 <?php if($passErr!=1){ echo $passErr; } ?>
-                </p>
+                        
                         <!-- <i class="fa fa-envelope"></i> -->
                     </div>
+                    <p class="err-msg"> 
+                 <?php if($passErr!=1){ echo $passErr; } ?>
+                </p>
                     <!-- <div class="field">
                         <input type="username" name="username" id="username" value="<?php echo $username; ?>" placeholder=" " required autocomplete="on">
                         <label for="username">Username</label>
