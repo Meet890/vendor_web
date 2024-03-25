@@ -116,14 +116,15 @@ if(isset($_POST["submit2"])){
 	<style>
 		.img1{
 			align-self: center;
-		width: auto;
+		/* width: auto; */
 		height: 100%;
 		
 		}
 		.imgholder{
-			height: 240px;
+			height: 200px;
 			width: auto;
 			overflow: hidden;
+			
 			
 		}
 		.pro{

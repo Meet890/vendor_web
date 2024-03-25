@@ -12,7 +12,9 @@
      <div class="card mt-2 ">
         <center>
           <div class="imgholder justify-content-center">
+            <center>
            <img src="img/<?php echo $row["g_photo"]; ?>" class="card-img img1 p-2 " alt="...">
+      </center>
           </div>
 
           <div class="d-flex justify-content-center">

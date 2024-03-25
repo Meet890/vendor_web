@@ -166,8 +166,8 @@ li img {
   width: auto;
     margin: auto;
     display: block;
-    max-width: 80vh;
-    max-height: 80vh;
+    max-width: 100vh;
+    max-height: 100vh;
     margin-top: 100px;
 }
 
