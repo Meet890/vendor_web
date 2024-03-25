@@ -39,11 +39,12 @@ if(isset($_POST['update'])){
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-elseif( (strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com')) == True){
-   $emailErr="Invalid Domain name";
+elseif( (strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com'))  != false){
+   
+   $emailErr=true;
 }
 else{
-  $emailErr=true;
+   $emailErr="Invalid Domain name";
 }
     
 // password validation 
