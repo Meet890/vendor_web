@@ -18,49 +18,26 @@ $id= $_SESSION['c_id'];
    $phoneNo="/^[0-9]{10}+$/";
 if(isset($_POST['update'])){
   //  First Name Validation
-if(empty($name)){
-   $fnameErr="First Name is Required"; 
-}
-else if (!preg_match($validName,$name)) {
-   $nameErr="Digits are not allowed";
-}else{
-   $nameErr=true;
-}
+  function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+ }
+ 
 
-//  last Name Validation
-if(empty($username)){
-   $usernameErr="username is Required"; 
-}
-else if (!preg_match($validUserName,$username)) {
-   $usernameErr="Only characters and digits are allowed";
-}else{
-   $pattern = "/\badmin\b/i"; 
+  $email=$_POST["email"];
+  $email=test_input($_POST["email"]);
+  $password= $_POST["password"];
 
-// Use preg_match to check if the pattern is found in the file name
-if (preg_match($pattern, $username)) {
-   $usernameErr="Invalid Username.. You cannot contain 'admin'.";
-} else {
-    $usernameErr=true;
-}
-
-}
-
-//  phone no Validation
-if(empty($Phone_no)){
-   $phoneErr="Phone no is Required"; 
-}
-else if (!preg_match($phoneNo,$Phone_no)) {
-   $phoneErr="Enter 10 digit";
-}
-else{
-   $phoneErr=true;
-}
 
 //Email Address Validation
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-
+elseif( strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') == false){
+   $emailErr="Invalid Domain name";
+}
 else{
   $emailErr=true;
 }
@@ -76,43 +53,6 @@ else{
    $passErr=true;
 }
 
-// form validation for confirm password
-if($cpassword!=$password){
-   $cpassErr="Confirm Password doest Matched";
-}
-else{
-   $cpassErr=true;
-}
-
-// Address Validation
-
-if(empty($Address)){
-   $AddErr="Address is Required"; 
- } 
-else{
-   $AddErr=true;
- }
-
-//  Gender validation
-
-if(empty($v_gender)){
-   $GenErr="Gender is Required"; 
- } 
-else{
-   $GenErr=true;
- }
-
-  //  compony Name Validation
-if(empty($compony_name)){
-   $cnameErr="Compony Name is Required"; 
-}
-else if (!preg_match($validName,$compony_name)) {
-   $cnameErr="Digits are not allowed";
-}else{
-   $cnameErr=true;
-}
-if(strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') != false)
-{
   if( $emailErr==1 && $passErr==1)
 {
 $sql="select c_email,c_password from client where c_id='$id'";
@@ -125,8 +65,6 @@ $username=$email=$city=$name=$id="";
           $email=$row["c_email"];
           $password=$row["c_password"];
     }
-      if(isset($_POST['update'])){
-
         $email=$_POST["email"];
         $password= $_POST["password"];
 
@@ -137,11 +75,10 @@ $username=$email=$city=$name=$id="";
        {
          header("location:profile_client.php");
        }
-      }
     }
-    }
+    
     else{
-      $emailErr="Invalid Email Domain Name";
+      
     }
    }
 ?> 
@@ -167,7 +104,7 @@ $username=$email=$city=$name=$id="";
        
           <div class="signup-form">
            
-                <div class="title">changes in client</div>
+                <div class="title">Update your profile</div>
                 <form action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <!-- <div class="field">
                         <input type="text" id="name" name="name" value="<?php echo $name; ?>" placeholder=" " required>
@@ -211,9 +148,7 @@ $username=$email=$city=$name=$id="";
             <div class="but">
           <button type="button" class="btn-close bg-white mt-5 b background cencel" aria-label="Close" onclick="redirect()"></button>
           </div>
-
-           
-            </div>
+          </div>
 
 <script>
   function redirect()
