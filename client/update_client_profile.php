@@ -3,8 +3,12 @@ include("config.php");
 error_reporting(0);
 session_start();
 $id= $_SESSION['c_id'];
-
-   
+$sql="select c_email,c_password from client where c_id='$id'";
+$result = $conn->query($sql);
+while($row = $result->fetch_assoc()) {
+$a=$row['c_email'];
+$b=$row['c_password'];
+}
    //input fields are Validated with regular expression
    $validName="/^[a-zA-Z ]*$/";
    $validUserName="/^[A-Za-z0-9_]+$/";
@@ -35,7 +39,7 @@ if(isset($_POST['update'])){
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-elseif( strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') == false){
+elseif( strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') == True){
    $emailErr="Invalid Domain name";
 }
 else{
@@ -117,7 +121,7 @@ $username=$email=$city=$name=$id="";
                     </div> -->
 
                     <div class="field email">
-                        <input type="email" name="email" id="email" value="<?php echo $email; ?>" placeholder=" " required autocomplete="on">
+                        <input type="email" name="email" id="email" value="<?php echo $a; ?>" placeholder=" " required autocomplete="on">
                         <label for="email">Email</label>
                        
                         <!-- <i class="fa fa-envelope"></i> -->
@@ -126,7 +130,7 @@ $username=$email=$city=$name=$id="";
                  <?php if($emailErr!=1){ echo $emailErr; } ?>
                 </p><br>
                     <div class="field email">
-                        <input type="text" name="password" id="password" value="<?php echo $password; ?>" placeholder=" " required autocomplete="on">
+                        <input type="text" name="password" id="password" value="<?php echo $b; ?>" placeholder=" " required autocomplete="on">
                         <label for="email">Password</label>
                         
                         <!-- <i class="fa fa-envelope"></i> -->
