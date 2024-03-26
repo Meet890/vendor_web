@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="style.css">  
 </head>
 <style>
-    table, td, th{
-        border: 4px double black;
-        align-items: center;
-
-    }
+    
     h1{
         margin-top: 80px;
         margin-bottom: 20px;

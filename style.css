@@ -17,6 +17,15 @@ background-color: #f0f2f5;
     margin-left: -40px ;
 
   }
+  td{
+    padding: 10px;
+  }
+  table, td, th{
+    padding: 10px;
+    border: 4px double black;
+    align-items: center;
+
+}
 .v{
   margin-top: 75px;
   width: 90% ;
