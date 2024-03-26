@@ -36,7 +36,7 @@ elseif(!isset($_SESSION["a_username"])&& $_SESSION["loggedin"] = false){
 											
 									
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="../Logout.php"><i class="fa fa-power-off"></i> Logout</a>
+									<a class="dropdown-item" href="../Logout.php"><i class="fa fa-power-off"></i>Logout</a>
 								</ul>
 								<!-- /.dropdown-user -->
 							</li>
