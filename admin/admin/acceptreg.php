@@ -75,7 +75,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
             
           
             echo '<script>  alert("Added New vendor successfully!"); </script>'; 
-            header('Location: Register.php');
+            header('Location: emailaccept.php');
         }
 
 
@@ -88,7 +88,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
 
     }
     elseif(isset($_POST['cancle'])){
-        header("Location:register.php");
+        header("Location: emailreject.php");
 
     }
 }

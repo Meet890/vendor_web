@@ -88,7 +88,7 @@ require 'config.php';
 														<td><?php echo $dis ?></td>
 														
 														<td>
-														  <a href="email.php?id=<?php echo $id ;?>" class="tda">Accept</a>
+														  <a href="emailreport.php?id=<?php echo $id ;?>" class="tda">Accept</a>
 														</td>
 														<td>
 														  <a href="deletereport.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
