@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
 		echo
 		"
 		<script>
-		  alert('Image Size Is Too Large');
+		  alert('The size of the photos should be within 20 MB.');
 		</script>
 		";
 	  }
