@@ -46,7 +46,7 @@ if($result){
     $mail->send();
    
 
-    header('Location: Register.php');
+    // header('Location: login.php');
 
 } catch (Exception $e) {
     echo "Message could not be sent. Check your connection";
