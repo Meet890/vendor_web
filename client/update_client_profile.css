@@ -19,6 +19,9 @@
     
     
     }
+    p{
+        color: red;
+    }
     .but{
         margin-left: -50px;
     margin-bottom: 429px;

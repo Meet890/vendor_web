@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
 		echo
 		"
 		<script>
-		  alert('Image Size Is Too Large');
+		  alert('The size of the photos should be within 20 MB.');
 		</script>
 		";
 	  }
@@ -81,7 +81,7 @@ if(isset($_POST["submit2"])){
 		echo
 		"
 		<script>
-		  alert('Image Size Is Too Large');
+		  alert('The size of the photos should be within 20 MB.');
 		</script>
 		";
 	  }
@@ -116,14 +116,15 @@ if(isset($_POST["submit2"])){
 	<style>
 		.img1{
 			align-self: center;
-		width: auto;
+		/* width: auto; */
 		height: 100%;
 		
 		}
 		.imgholder{
-			height: 240px;
+			height: 200px;
 			width: auto;
 			overflow: hidden;
+			
 			
 		}
 		.pro{
@@ -162,6 +163,11 @@ if(isset($_POST["submit2"])){
 							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value="">
 							      <button type = "submit" name = "submit2" class="btn btn-secondary btn-xs">Submit</button>
 							    </form>
+								</div>
+								<div class="col-12">
+								<?php
+									include 'show_profile_photo.php';
+								?>
 								</div>
 							
 	</div>

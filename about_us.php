@@ -24,7 +24,7 @@
         <!-- <h5>Front-end Developer & <span>Designer</span></h5> -->
           <p>The client can easilly find his choise vendors.</p>
           <p>We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaborat innovation, and customer satisfaction. We are always looking for new ways to improve our vendor.</p>
-          <p>vendor management system is online platform which provides all kind of  vandor like photographer , decoraters,catering and many more vendors for you events. in vendor management system vendors can register in website
+          <p>vendor management system is online platform which provides all kind of  vandor like photographer,decoraters,catering and many more vendors for you events. in vendor management system vendors can register in website
 			    and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
           <p><a href="privacy_policy.php" class="a3">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_condition.php" class="a3">Terms & Conditions </a></p>
 

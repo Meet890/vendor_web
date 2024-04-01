@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms & Conditions</title>
-    <link rel="stylesheet" href="style.css">  
+   
     <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <link rel="stylesheet" href="style.css">  
 </head>
 <style>
-    table, td, th{
-        border: 4px double black;
-        align-items: center;
-
-    }
+    
     h1{
         margin-top: 80px;
         margin-bottom: 20px;

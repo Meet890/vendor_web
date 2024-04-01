@@ -91,7 +91,7 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
 
     }
     elseif(isset($_POST['cancle'])){
-        header("Location:register.php");
+        header("Location: emailreject.php");
 
     }
 }

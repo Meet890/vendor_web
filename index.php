@@ -51,8 +51,7 @@ elseif(isset($_SESSION["a_id"])){
   <section class="event mt-5">
 
     <div class="title mt-5">
-     
-      <h1 class="heding" id="event">Services</h1>
+       <h1 class="heding" id="event">Services</h1>
     </div>
     <div class="container mt-2 justify-content-center">
       <div class="row justify-content-center">
@@ -126,7 +125,7 @@ elseif(isset($_SESSION["a_id"])){
                  <div class="imgholder">
                    <img src="img/boutique.png" class="card-img img1 p-2" alt="...">
                  </div>
-                   <h4 class="titleh3">event clothes</h4>
+                   <h4 class="titleh3">Event Wear</h4>
                    <p class="title">Dress your dreams.</p>
                  </div>
               </a>

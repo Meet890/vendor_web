@@ -80,6 +80,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                         
                                       header ("location: ../profile.php?id=$VID");
                                     
+                                    
+                                    
                                 }
                             }
                             // echo '<script>  alert("connected"); </script>';

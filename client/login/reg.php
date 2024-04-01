@@ -31,7 +31,7 @@ require_once "registerphp.php";
                        
                     </div>
 
-                    <div class="field">
+                    <!-- <div class="field">
                     <label for="city" class="city">Select city near you</label>
                         <select name="select" id="" class="p-0 ps-1" >
                             
@@ -46,8 +46,12 @@ require_once "registerphp.php";
                             
                         </select>
                         
+                    </div> -->
+                    <div class="field email">
+                        <input type="text" name="select" id="City" placeholder=" " required autocomplete="on">
+                        <label for="City">City</label>
+                        
                     </div>
-
                     <div class="field email">
                         <input type="email" name="email" id="email" placeholder=" " required autocomplete="on">
                         <label for="email">Email</label>

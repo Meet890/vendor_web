@@ -41,6 +41,12 @@ if(!isset($_SESSION["username"])){
 	  <link rel="stylesheet" href="assets/css/ready.css">
 	  <link rel="stylesheet" href="assets/css/demo.css">
   </head>
+  <style>
+    .area{
+      /* width: 730px;
+      height: 300px; */
+    }
+  </style>
   <body>
     
   <div class="wrapper">
@@ -62,7 +68,7 @@ if(!isset($_SESSION["username"])){
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Create Profile</div>
+										<div class="card-title">Edit About us</div>
 									</div>
 									<p class="text-success text-center"></p> <form method="post">
 
@@ -73,8 +79,10 @@ if(!isset($_SESSION["username"])){
 
 			
                         <div class="form-group">
-												<label for="comment">About</label>
-												<textarea class="form-control" id="comment" rows="7" name="v_discription" style="white-space: pre-wrap;"><?php echo $about; ?></textarea>
+												<!-- <label for="comment">About</label> -->
+												<textarea class="form-control area" id="comment" rows="11" name="v_discription" style="white-space: pre-wrap;"><?php echo $about; ?></textarea>
+                        
+
 											  </div>
 
                         <div class="card-action">

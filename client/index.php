@@ -42,7 +42,12 @@ elseif(isset($_SESSION["a_id"])){
 </center>
 
 <!-- card -->
+<div class="title mt-5">
+     
+      <h1 class="heding" id="event"><br> </h1>
+    </div>
 <section class="event" id="event">
+
 
         <div class="title mt-5" >
             <h1 class="heding" id="event">Services</h1>
@@ -95,7 +100,7 @@ elseif(isset($_SESSION["a_id"])){
                   <div class="imgholder">
                    <img src="../img/birthday-cake (1).png" class="card-img img1 p-2" alt="...">
                    </div>
-                   <h4 class="titleh3">bakery</h4>
+                   <h4 class="titleh3">Cake</h4>
                    <p class="title">Sweetness Readfined.</p>
                  </div>
               </a>
@@ -119,7 +124,7 @@ elseif(isset($_SESSION["a_id"])){
                  <div class="imgholder">
                    <img src="../img/boutique.png" class="card-img img1 p-2" alt="...">
                  </div>
-                   <h4 class="titleh3">event clothes</h4>
+                   <h4 class="titleh3">Event Wear</h4>
                    <p class="title">Dress Your Dreams.</p>
                  </div>
               </a>
