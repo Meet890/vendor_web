@@ -33,7 +33,8 @@ if($idErr==true)
     
     if($result= mysqli_query($conn, $sql))
     {
-        header("location: login.php");
+        header("location: emailNewVendor.php");
+        // header("location: login.php");
     }
     else
     {
