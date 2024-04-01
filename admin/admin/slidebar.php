@@ -25,6 +25,13 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
 							</a>
 						</li>
 						<li class="nav-item">
+							<a href="renew.php">
+								<i class="la la-black-tie"></i>
+								<p>Renew account</p>
+								<!-- <span class="badge badge-count">50</span> -->
+							</a>
+						</li>
+						<li class="nav-item">
 							<a href="tables.php">
 								<i class="la la-th"></i>
 								<p>Record Tables</p>

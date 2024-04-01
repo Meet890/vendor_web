@@ -7,9 +7,9 @@ $otp_err=$err="";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require '../../PHPMailer/src/Exception.php';
-require '../../PHPMailer/src/PHPMailer.php';
-require '../../PHPMailer/src/SMTP.php';
+require '../PHPMailer/src/PHPMailer.php';
+require '../PHPMailer/src/Exception.php';
+require '../PHPMailer/src/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
     //Server settings
@@ -40,8 +40,8 @@ if($result){
     $mail->addAddress($email, $name);     //Add a recipient ..........................
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Your account is now activated';
-    $mail->Body    = 'You can login in our kachchhivent website..'.'</b>';
+    $mail->Subject = 'Hello '.$name;
+    $mail->Body    = "Your account is created ..please wait for varify your payment,It's took 1-3 Day to confirmation. ".'</b>'.'We are contack soon via email.';
     $mail->AltBody = '';
     $mail->send();
    

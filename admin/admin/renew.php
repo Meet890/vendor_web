@@ -31,13 +31,13 @@ require 'config.php';
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Add Vendor</h4>
+						<h4 class="page-title">Renew Vendor</h4>
 
 						
 						</div>
                         <div class="card">
 									<div class="card-header">
-										<div class="card-title">Registration Table</div>
+										<div class="card-title"></div>
 									</div>
 									<div class="card-body">
 										
@@ -66,7 +66,7 @@ require 'config.php';
 													<?php
 														
 
-														$sql = "SELECT * FROM registration order by reg_accept ";
+														$sql = "SELECT * FROM registration where reg_accept='3' order by reg_accept  ";
 														$result = mysqli_query($conn, $sql);
 
 														if (mysqli_num_rows($result) > 0) {
@@ -108,7 +108,7 @@ require 'config.php';
 														<td><?php echo $tra_id ?></td>
 														<td><?php echo $accept ?></td>
 														<td>
-														  <a href="acceptreg.php?id=<?php echo $id ;?>" class="tda">Accept</a>
+														  <a href="acceptrenew.php?id=<?php echo $id ;?>" class="tda">Accept</a>
 														</td>
 														<td>
 														  <a href="deletereg.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
