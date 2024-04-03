@@ -57,9 +57,6 @@ require 'config.php';
 														<th>Transaction Id</th>
 														<th>Registered?</th>
 														<th>Accept </th>
-														
-														<th>Delete</th>
-
 													</tr>
 												</thead>
 												<tbody>
@@ -117,9 +114,7 @@ require 'config.php';
 														<td>
 														  <a href="acceptrenew.php?id=<?php echo $id ;?>" class="tda">Accept</a>
 														</td>
-														<td>
-														  <a href="deletereg.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
-														</td>
+														
 													</tr>
 															
 															
