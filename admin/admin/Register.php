@@ -66,7 +66,7 @@ require 'config.php';
 													<?php
 														
 
-														$sql = "SELECT * FROM registration order by reg_accept ";
+														$sql = "SELECT * FROM registration where reg_accept!='3' order by reg_accept ";
 														$result = mysqli_query($conn, $sql);
 
 														if (mysqli_num_rows($result) > 0) {
