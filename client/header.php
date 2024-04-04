@@ -47,16 +47,16 @@
             <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Decoration";?>">Decoration</a></li>
             <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Photographer";?>">Photographers</a></li>
             <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Videographer";?>">Vediographers</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">Cake</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Cake";?>">Cake</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Flowers";?>">Flowers</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Event Wear";?>">Event Wear</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Jewellery";?>">Jewellery</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Invitation Card";?>">Invitation Cards</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Sound";?>">Sound</a></li>
+						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Sound System";?>">Sound</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Makeup Artist";?>">Makeup Artist</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Venues";?>">Venues</a></li>
 						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Gifts";?>">Gifts</a></li>
-            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Catring";?>">Catring</a></li>
+            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Catering";?>">Catering</a></li>
 
           </ul>
         </li>
