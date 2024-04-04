@@ -2,6 +2,8 @@
 require 'config.php';
 session_start();
 $otp_err=$err="";
+$email=$_SESSION['email_vendor'];
+$name =$_SESSION['name_vendor'];
 // $username = $_GET["username"];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -38,9 +40,9 @@ $mail = new PHPMailer(true);
     $mail->Body    = 'You can login in our kachchhivent website..'.'</b>';
     $mail->AltBody = '';
     $mail->send();
-   
+   echo "<br>".$name."<br>".$email;
 
-    header('Location: Register.php');
+    // header('Location: Register.php');
 
 } catch (Exception $e) {
     echo "Message could not be sent. Check your connection";

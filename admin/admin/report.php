@@ -33,9 +33,7 @@ require 'config.php';
 							
                         </div>
                         <div class="card">
-									<div class="card-header">
-										<div class="card-title">Registration Table</div>
-									</div>
+									
 									<div class="card-body">
 										
 										<div class="table-responsive">

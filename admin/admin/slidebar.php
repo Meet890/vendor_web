@@ -4,6 +4,7 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
     header("location: ../login.php");
     exit;
 }
+
 ?>
 <div class="scrollbar-inner sidebar-wrapper text-black">
 					
@@ -38,14 +39,6 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
 								<!-- <span class="badge badge-count">6</span> -->
 							</a>
 						</li>
-                       
-						<li class="nav-item">
-							<a href="add.php">
-								<i class="la la-user-plus"></i>
-								<p>Add New Admin</p>
-								<!-- <span class="badge badge-count">14</span> -->
-							</a>
-						</li>
 						<li class="nav-item">
 							<a href="report.php">
 								<i class="la la-keyboard-o"></i>
@@ -53,5 +46,13 @@ if(!isset($_SESSION["a_id"]) &&( $_SESSION["loggedin"] === true)){
 								<!-- <span class="badge badge-count">14</span> -->
 							</a>
 						</li>
+						<li class="nav-item">
+							<a href="add.php">
+								<i class="la la-user-plus"></i>
+								<p>Add New Admin</p>
+								<!-- <span class="badge badge-count">14</span> -->
+							</a>
+						</li>
+						
 					</ul>
 				</div>

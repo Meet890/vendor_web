@@ -1,13 +1,16 @@
 <?php 
 session_start();
-if(!isset($_SESSION["a_id"]) && $_SESSION["loggedin"] === true){
+if(!isset($_SESSION["a_id"]) && $_SESSION["loggedin"] == false){
     header("location: ../login.php");
     exit;
 }elseif(isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = true){
-	header("location:../../client/login/login.php");
+	header("location:../../client/");
 }
 elseif(!isset($_SESSION["a_username"])&& $_SESSION["loggedin"] = false){
-	header("location:../../index.php");
+	header("location:../login.php");
+}
+elseif(isset($_SESSION['v_id'])&& $_SESSION["loggedin"] = true){
+	header("location:../vendor/");
 }
 ?>
 <div class="logo-header">

@@ -41,12 +41,12 @@ if($result){
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Hello '.$name;
-    $mail->Body    = "Your account is renewed ..please wait for varify your payment,It's took 1-3 Day to confirmation. ".'</b>'.'We are contack soon via email.';
+    $mail->Body    = "Your account is registerd ..please wait for varify your payment,It's took 1-3 Day to confirmation. ".'</b>'.'We are contack soon via email.';
     $mail->AltBody = '';
     $mail->send();
    
 
-    // header('Location: login.php');
+     header('Location: login.php');
 
 } catch (Exception $e) {
     echo "Message could not be sent. Check your connection";
