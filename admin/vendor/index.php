@@ -91,6 +91,7 @@ while($row = $result->fetch_assoc()) {
     $ig=$row["v_iglink"];
     $fb=$row["v_fblink"];
     $end=$row["v_reg_end_time"];
+    $start =$row["v_reg_time"];
     //  echo $end;
     $today = date("Y-m-d");
     // echo $today;
@@ -103,17 +104,20 @@ while($row = $result->fetch_assoc()) {
     $over =  date( "Y-m-d");
     // echo $over;
     if(date('Y-m-d')==$_15){
-         echo '<div class="alert alert-danger "> Dear vendor , Your subcription id over on '.$end.', Only 15 Days left </div>';
+         echo '<div class="alert alert-danger "> Dear vendor , Your subcription is over on '.$end.', Only 15 Days left </div>';
+    }
+    elseif(){
+        echo '<div class="alert alert-danger"> Dear vendor , Your renew request is in process which will be done within 3 days ... </div>';
     }
     elseif(date('Y-m-d')==$_10){
-        echo '<div class="alert alert-danger"> Dear vendor , Your subcription id over on '.$end.', Only 10 Days left  </div>';
+        echo '<div class="alert alert-danger"> Dear vendor , Your subcription is over on '.$end.', Only 10 Days left  </div>';
     }
     elseif(date('Y-m-d')>=$end){
         // date('Y-m-d')  upar ni condition ma aa nakhvanu che ....
-        echo '<div class="alert alert-danger"> Dear vendor , Your subcription id over Please renew subcription <button class="btn submit mx-2" onclick="redirect()">Renew</button> </div>';
+        echo '<div class="alert alert-danger"> Dear vendor , Your subcription is over Please renew subcription <button class="btn submit mx-2" onclick="redirect()">Renew</button> </div>';
     }
     elseif(date('Y-m-d')<=$_3_2_1){
-        echo '<div class="alert alert-danger"> Dear vendor , Your subcription id over on '.$end.'  </div>';  
+        echo '<div class="alert alert-danger"> Dear vendor , Your subcription is over on '.$end.'  </div>';  
     }
     else{
 
