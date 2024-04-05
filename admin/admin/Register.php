@@ -111,7 +111,7 @@ require 'config.php';
 														  <a href="acceptreg.php?id=<?php echo $id ;?>" class="tda">Accept</a>
 														</td>
 														<td>
-														  <a href="emailreject.php?id=<?php echo $email ;?>" class="tdd">Delete</a>
+														  <a href="emailreject.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
 														</td>
 													</tr>
 															
