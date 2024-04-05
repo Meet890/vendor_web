@@ -74,7 +74,7 @@ while($row = $result->fetch_assoc()) {
     }
 }
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp,v_iglink,v_fblink ,v_reg_end_time FROM vendor where v_username = '$v_username'";
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno, v_discription, v_comp,v_iglink,v_fblink ,v_reg_end_time,v_reg_time FROM vendor where v_username = '$v_username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

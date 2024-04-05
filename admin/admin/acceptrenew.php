@@ -127,28 +127,28 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         <!--//first name//-->
         <div class="form-group">
            <label>Name</label>
-               <input type="text" class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_name;?>">
+               <input type="text" disabled class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_name;?>">
               
         </div>
 
         <!--//Username//-->
         <div class="form-group">
            <label >Username</label>
-               <input type="text" class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
+               <input type="text" disabled class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
               
         </div>
 
         <!--//Phone no//-->
         <div class="form-group">
             <label>Phone no</label>
-                <input type="text" class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
+                <input type="text" disabled class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
                 
         </div>
         
         <!--// Email//-->
         <div class="form-group">
             <label >Email</label>
-              <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $set_email;?>">
+              <input type="text" disabled class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $set_email;?>">
               
         </div>
         
@@ -159,33 +159,33 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         <!-- Address -->
         <div class="form-group">
         <label >Address</label>
-               <input type="text" class="form-control" placeholder="Enter Address" name="Address" value="<?php echo $set_add;?>">
+               <input type="text" disabled class="form-control" placeholder="Enter Address" name="Address" value="<?php echo $set_add;?>">
                
         </div>
 
         <!-- Gender -->
         <div class="form-group">
            <label >Gender</label>
-           <input type="text" class="form-control" placeholder="Enter gender" name="gender" value="<?php echo $set_Gender;?>">
+           <input type="text" disabled class="form-control" placeholder="Enter gender" name="gender" value="<?php echo $set_Gender;?>">
                
         </div>
 
         <!--//compony name//-->
         <div class="form-group">
            <label >Compony name</label>
-               <input type="text" class="form-control" placeholder="Enter Compony Name" name="comp" value="<?php echo $set_ComName;?>">
+               <input type="text" disabled class="form-control" placeholder="Enter Compony Name" name="comp" value="<?php echo $set_ComName;?>">
                
         </div>
         <div class="form-group">
            <label >Transection id</label>
-               <input type="text" class="form-control" placeholder="Enter Trasection id" name="tra_id" value="<?php echo $set_traid;?>">
+               <input type="text" disabled class="form-control" placeholder="Enter Trasection id" name="tra_id" value="<?php echo $set_traid;?>">
                
         </div>
         <hr>
         <div class="form-group">
         <label >Select days for activation</label>
         <select class="form-control p-0 ps-1" name="days" >
-              <option selected disabled ></option>
+              <option selected disabled > select Months </option>
 				      <option class="pb-2" value="30">1 Month</option>
 				      <option class="pb-2" value="91">3 Month</option>
                       <option class="pb-2" value="182">6 Month</option>
