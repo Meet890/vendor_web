@@ -35,6 +35,9 @@ $_SESSION["reg_id"]=$reg_id;
 
    
     
+$sql = "UPDATE vendor SET v_reg_time ='0'  WHERE reg_id='$reg_id' ";
+    
+if($result= mysqli_query($conn, $sql)){
     
     $sql = "UPDATE registration SET reg_tra_id ='$tra_id',reg_accept='3'  WHERE reg_id='$reg_id' ";
     
@@ -48,6 +51,7 @@ $_SESSION["reg_id"]=$reg_id;
         echo mysqli_error($conn);
     }
 }
+    }
 }
 else {
     echo "id error";
