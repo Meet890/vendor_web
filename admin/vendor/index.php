@@ -120,7 +120,8 @@ while($row = $result->fetch_assoc()) {
         echo '<div class="alert alert-danger"> Dear vendor , Your subcription is over on '.$end.'  </div>';  
     }
     else{
-
+        echo '<div class="text-blue alert bg-dark">  Dear vendor , Your subcription is over on '.$end.'  </div>';
+    
     }
 }
 } else {
