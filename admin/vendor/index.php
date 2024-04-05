@@ -106,7 +106,7 @@ while($row = $result->fetch_assoc()) {
     if(date('Y-m-d')==$_15){
          echo '<div class="alert alert-danger "> Dear vendor , Your subcription is over on '.$end.', Only 15 Days left </div>';
     }
-    elseif(){
+    elseif($start=="0000-00-00"){
         echo '<div class="alert alert-danger"> Dear vendor , Your renew request is in process which will be done within 3 days ... </div>';
     }
     elseif(date('Y-m-d')==$_10){
