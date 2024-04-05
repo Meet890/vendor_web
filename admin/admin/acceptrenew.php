@@ -59,30 +59,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             // echo $set_traid. "     "; 
             // echo $set_accept. "     "; 
            
-$sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_username', reg_phone='$set_PhoneNo', reg_email='$set_email', reg_add='$set_add' ,reg_gen='$set_Gender', reg_com='$set_ComName', reg_tra_id='$set_traid', reg_accept='1'  WHERE reg_id=$id  ";
-     $result = mysqli_query($conn,$sql);      
-     if($result==1)
-     {  $currentdate = date("Y-m-d");
+// $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_username', reg_phone='$set_PhoneNo', reg_email='$set_email', reg_add='$set_add' ,reg_gen='$set_Gender', reg_com='$set_ComName', reg_tra_id='$set_traid', reg_accept='1'  WHERE reg_id=$id  ";
+//      $result = mysqli_query($conn,$sql);      
+//      if($result==1)
+//      {  
+        $currentdate = date("Y-m-d");
 
         $set_days= $_POST['days'];
         // Add 30 days to the current date
         $newdate = date("Y-m-d", strtotime($currentdate . " +$set_days days"));
         $id = $_GET['id'];
-        $sql = "INSERT INTO vendor(reg_id,v_name,v_username,v_password,v_email,v_phoneno,v_address,v_gender,v_comp,v_reg_end_time) VALUES ('$id','$set_name','$set_username','$set_password','$set_email','$set_PhoneNo','$set_add','$set_Gender','$set_ComName','$newdate')";
+        $sql = "UPDATE vendor SET v_reg_end_time='$newdate' ,v_reg_time='$currentdate'  WHERE reg_id = $id ";
         $result = mysqli_query($conn,$sql);      
         if($result==1)
         {
-            $sql2 = "UPDATE registration SET reg_name='$set_name',reg_username='$set_username',reg_pass='$set_password',reg_email='$set_email',reg_phone='$set_PhoneNo',reg_add='$set_add',reg_gen='$set_Gender',reg_comp='$set_ComName' ";
+            $sql2 = "UPDATE registration SET reg_accept ='1' WHERE reg_id='$id'  ";
             $result2 = mysqli_query($conn,$sql2);     
             if($result2==2){
 
-            echo '<script>  alert("Added New vendor successfully!"); </script>'; 
+            echo '<script>  alert(" vendor Renewed.."); </script>'; 
             header('Location: Register.php');
             }
         }
 
 
-     }
+     
      
 
 
