@@ -55,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
            // echo $set_name . "     ";
            // echo $set_username. "     "; 
         
-$sql ="UPDATE  registration SET reg_accept='1'  WHERE reg_id = $id  ";
+$sql =" UPDATE  registration SET reg_name='$set_name', reg_username='$set_username', reg_phone='$set_PhoneNo', reg_email='$set_email', reg_add='$set_add' ,reg_gen='$set_Gender', reg_com='$set_ComName', reg_tra_id='$set_traid', reg_accept='1'  WHERE reg_id = $id ";
      $result = mysqli_query($conn,$sql);      
      if($result==1)
      {  $currentdate = date("Y-m-d");
