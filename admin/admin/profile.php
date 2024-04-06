@@ -109,29 +109,32 @@ echo "0 results";
 
         <div class="row justify-content-center">
             <div class="col-6">
-        <ul>
+        <ul><?PHP if($city!="") {?>
             <li>
                 <img src="img/location.png" alt="Location Icon" class="png">
-                <h5 class="city"><?php echo $city ?></h5>
+                <h5 class="city h"><?php echo $city ?></h5>
             </li>
+            <?PHP }if($phone!="") {?>
             <li>
                 <img src="img/calling.png" alt="Phone Icon" class="png">
-                <h5 class="call"><?php echo $phone ?></h5>
+                <h5 class="call h"><?php echo $phone ?></h5>
             </li>
-            
+            <?PHP }?>
         </ul>
         </div>
         <div class="col-6">
         <ul>
+            <?PHP if($fb!="") {?>
             <li>
                 <img src="img/Facebook.png" alt="Phone Icon" class="png">
-                <h5 class="city"><?php echo $fb ?></h5>
+                <h5 class="city h"><?php echo $fb ?></h5>
             </li>
-            
+            <?php }  if($ig!="") {?>
             <li class="mt-1">
                 <img src="img/insta.jpg" alt="Location Icon" class="png">
-                <h5 class="call"><?php echo $ig ?></h5>
+                <h5 class="call h"><?php echo $ig ?></h5>
             </li>   
+            <?php } ?>
         </ul>
     </div>
         </div>
@@ -144,14 +147,14 @@ echo "0 results";
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery mb-5" id="gallery">
-        <div class="row justify-content-center">
+        <div class="row ">
         <?php
             
             $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
      
       
        foreach ($rows as $row) : ?>
-              <img class="col-4 px-2" src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image ">
+              <img class="col-4 px-2 rounded" src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image ">
               
           <?php endforeach; ?>
         </div>
