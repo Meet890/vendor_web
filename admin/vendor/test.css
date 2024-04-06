@@ -141,12 +141,12 @@ li img {
 
 .gallery img {
     width: calc(33.33% - 10px);
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     height: 240px;
     width: 200px;
-    padding: inherit;
+    padding: 3px;
     margin-left: -1px;
 }
 .modal {
