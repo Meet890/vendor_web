@@ -144,16 +144,18 @@ echo "0 results";
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
         <div class="gallery mb-5" id="gallery">
+        <div class="row justify-content-center">
         <?php
             
             $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
-      
+     
       
        foreach ($rows as $row) : ?>
-              <img src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+              <img class="col-4 px-2" src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image ">
               
           <?php endforeach; ?>
         </div>
+         </div>
 
         <div id="myModal" class="modal" onclick="closeModal()">
             
