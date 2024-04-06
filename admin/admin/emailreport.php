@@ -74,37 +74,37 @@ if (mysqli_num_rows($result) > 0) {
         echo "Error: " .mysqli_error($conn);
       }
 
-    //   $sql = "SELECT v_name,v_email FROM vendor where v_id = '$v_id'";
-    //   $result = mysqli_query($conn, $sql);
-    //   if (mysqli_num_rows($result) > 0) {
+      $sql = "SELECT v_name,v_email FROM vendor where v_id = '$v_id'";
+      $result = mysqli_query($conn, $sql);
+      if (mysqli_num_rows($result) > 0) {
       
-    //       // output data of each row
-    //       while($row = mysqli_fetch_assoc($result)) {
-    //         $name =  "Dear ".$row["v_name"];
-    //         $email =$row['v_email'];
+          // output data of each row
+          while($row = mysqli_fetch_assoc($result)) {
+            $name =  "Dear ".$row["v_name"];
+            $email =$row['v_email'];
             
-    //         echo $email;
-    //         echo $name;
+            echo $email;
+            echo $name;
             
-    //             try {
-    //                 $mail->addAddress($email, $name);     //Add a recipient ..........................
-    //                 //Content
-    //                 $mail->isHTML(true);                                  //Set email format to HTML
-    //                 $mail->Subject = 'Client Report you';
-    //                 $mail->Body    = 'Please follow this this...'.'</b>'.$dis;
-    //                 $mail->AltBody = '';
-    //                 $mail->send();
+                try {
+                    $mail->addAddress($email, $name);     //Add a recipient ..........................
+                    //Content
+                    $mail->isHTML(true);                                  //Set email format to HTML
+                    $mail->Subject = 'Client Report you';
+                    $mail->Body    = 'Please follow this this...'.'</b>'.$dis;
+                    $mail->AltBody = '';
+                    $mail->send();
                    
 
-    //             } catch (Exception $e) {
-    //                 echo "Message could not be sent. Check your connection";
-    //             }
-    //       }
+                } catch (Exception $e) {
+                    echo "Message could not be sent. Check your connection";
+                }
+          }
             
             require "deletereport.php";
          
         
-      // }
+      }
 
       
 
