@@ -72,11 +72,13 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         $result = mysqli_query($conn,$sql);      
         if($result==1)
         {
-            
+          
+            $_SESSION['email_vendor']=$set_email;
+            $_SESSION['name_vendor']=$set_name;
 
             echo '<script>  alert("Added New vendor successfully!"); </script>'; 
-            header('Location: Register.php');
-            
+            header('Location: emailaccept.php');
+            }
         }
 
 

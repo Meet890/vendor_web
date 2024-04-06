@@ -81,7 +81,7 @@ while($row = $result->fetch_assoc()) {
     $about=$row["v_discription"];
     $comp=$row["v_comp"];
     $ig=$row["v_iglink"];
-        $fb=$row["v_fblink"];
+    $fb=$row["v_fblink"];
 }
 } else {
 echo "0 results";
