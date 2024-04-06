@@ -42,7 +42,7 @@ else if (!preg_match($validName,$name)) {
 
 //  last Name Validation
 if(empty($username)){
-   $usernameErr="username is Required"; 
+   $usernameErr="Username is Required"; 
 }
 else if (!preg_match($validUserName,$username)) {
    $usernameErr="Only characters and digits are allowed";
