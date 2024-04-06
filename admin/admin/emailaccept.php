@@ -2,8 +2,7 @@
 require 'config.php';
 session_start();
 $otp_err=$err="";
-$email=$_SESSION['email_vendor'];
-$name =$_SESSION['name_vendor'];
+
 // $username = $_GET["username"];
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -33,6 +32,17 @@ $mail = new PHPMailer(true);
    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
    try {
+    $id =$_GET['id'];
+    $sql = "SELECT reg_name,reg_email FROM registration where reg_id = '$id'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+    
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+          $name = "Dear ".$row["reg_name"];
+          $email = $row['reg_email'];
+
+      
     $mail->addAddress($email, $name);     //Add a recipient ..........................
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
@@ -42,7 +52,10 @@ $mail = new PHPMailer(true);
     $mail->send();
    echo "<br>".$name."<br>".$email;
 
-    // header('Location: Register.php');
+    header('Location: Register.php');
+        }
+    }
+
 
 } catch (Exception $e) {
     echo "Message could not be sent. Check your connection";

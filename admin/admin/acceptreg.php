@@ -12,9 +12,9 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
             $set_PhoneNo= $row['reg_phone'];
             $set_email= $row['reg_email'];
             $set_add= $row['reg_add'];
-            if($row['reg_gen']=='m'){
+            if($row['reg_gen']='m'){
             $set_Gender= "Male";
-            }else{
+            }elseif($row['reg_gen']=='f'){
                 $set_Gender="Female";  
             }
             $set_ComName= $row['reg_com'];
@@ -40,26 +40,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             $set_add= $_POST['Address'];
             if($_POST['gender']=='Male'){
                 $set_Gender= "m";
-                }else{
+                }elseif($_POST['gender']=='Female'){
                     $set_Gender="f";  
                 }
              
             $set_ComName= $_POST['comp'];
             $set_traid= $_POST['tra_id'];
             $set_accept= '1';
+            $_SESSION['email_vendor']=$set_email;
+            $_SESSION['name_vendor']=$set_name;
+            echo $_SESSION['name_vendor'];
+            echo $_SESSION['email_vendor'];
 
-            // echo $set_name . "     ";
-            // echo $set_username. "     "; 
-            // echo $set_pass. "     ";
-            // echo $set_PhoneNo. "     " ;
-            // echo $set_email. "     "; 
-            // echo $set_add. "     " ;
-            // echo $set_Gender. "     "; 
-            // echo $set_ComName. "     " ;
-            // echo $set_traid. "     "; 
-            // echo $set_accept. "     "; 
-           
-$sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_username', reg_phone='$set_PhoneNo', reg_email='$set_email', reg_add='$set_add' ,reg_gen='$set_Gender', reg_com='$set_ComName', reg_tra_id='$set_traid', reg_accept='1'  WHERE reg_id=$id  ";
+           // echo $set_name . "     ";
+           // echo $set_username. "     "; 
+        
+$sql ="UPDATE  registration SET reg_accept='1'  WHERE reg_id = $id  ";
      $result = mysqli_query($conn,$sql);      
      if($result==1)
      {  $currentdate = date("Y-m-d");
@@ -72,17 +68,15 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         $result = mysqli_query($conn,$sql);      
         if($result==1)
         {
-          
-            $_SESSION['email_vendor']=$set_email;
-            $_SESSION['name_vendor']=$set_name;
-
+            
+           
             echo '<script>  alert("Added New vendor successfully!"); </script>'; 
-            header('Location: emailaccept.php');
-            }
+           header('Location: emailaccept.php?id='.$id);
+            
         }
 
-
-     }
+    }
+   
      
 
 
@@ -127,28 +121,28 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         <!--//first name//-->
         <div class="form-group">
            <label>Name</label>
-               <input type="text" disabled class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_name;?>">
+               <input type="text"  class="form-control" placeholder="Enter Name" name="name" value="<?php echo $set_name;?>">
               
         </div>
 
         <!--//Username//-->
         <div class="form-group">
            <label >Username</label>
-               <input type="text" disabled class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
+               <input type="text"  class="form-control" placeholder="Enter username" name="username" value="<?php echo $set_username;?>">
               
         </div>
 
         <!--//Phone no//-->
         <div class="form-group">
             <label>Phone no</label>
-                <input type="text" disabled class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
+                <input type="text"  class="form-control" placeholder="Enter Phone no" name="Phone_no" value="<?php echo $set_PhoneNo;?>">
                 
         </div>
         
         <!--// Email//-->
         <div class="form-group">
             <label >Email</label>
-              <input type="text" disabled class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $set_email;?>">
+              <input type="text"  class="form-control" id="email" placeholder="Enter email" name="email" value="<?php echo $set_email;?>">
               
         </div>
         
@@ -159,26 +153,26 @@ $sql ="UPDATE  registration SET reg_name='$set_name', reg_username='$set_usernam
         <!-- Address -->
         <div class="form-group">
         <label >Address</label>
-               <input type="text" disabled class="form-control" placeholder="Enter Address" name="Address" value="<?php echo $set_add;?>">
+               <input type="text"  class="form-control" placeholder="Enter Address" name="Address" value="<?php echo $set_add;?>">
                
         </div>
 
         <!-- Gender -->
         <div class="form-group">
            <label >Gender</label>
-           <input type="text" disabled class="form-control" placeholder="Enter gender" name="gender" value="<?php echo $set_Gender;?>">
+           <input type="text"  class="form-control" placeholder="Enter gender" name="gender" value="<?php echo $set_Gender;?>">
                
         </div>
 
         <!--//compony name//-->
         <div class="form-group">
            <label >Compony name</label>
-               <input type="text" disabled class="form-control" placeholder="Enter Compony Name" name="comp" value="<?php echo $set_ComName;?>">
+               <input type="text"  class="form-control" placeholder="Enter Compony Name" name="comp" value="<?php echo $set_ComName;?>">
                
         </div>
         <div class="form-group">
            <label >Transection id</label>
-               <input type="text" disabled class="form-control" placeholder="Enter Trasection id" name="tra_id" value="<?php echo $set_traid;?>">
+               <input type="text"  class="form-control" placeholder="Enter Trasection id" name="tra_id" value="<?php echo $set_traid;?>">
                
         </div>
         <hr>
