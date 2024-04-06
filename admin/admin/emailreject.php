@@ -31,6 +31,14 @@ $mail = new PHPMailer(true);
    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
    try {
+    $id = $_GET['id'];
+$sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
+    $query = mysqli_query($conn, $sql);
+     if($query){
+        while ($row=mysqli_fetch_array($query)) { 
+            $email =$row['reg_email'];
+            $id =$row['reg_id'];
+            $name= $row['reg_name'];
     $mail->addAddress($email, $name);     //Add a recipient ..........................
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
@@ -39,9 +47,13 @@ $mail = new PHPMailer(true);
     $mail->AltBody = '';
     $mail->send();
    
-
-    header('Location: Register.php');
-
+    
+       $sql ="DELETE FROM registration WHERE reg_id='$id'";
+   $res =mysqli_query($conn , $sql );
+   if ($res == true) {
+       header("Location: register.php");
+   }
+        }}
 } catch (Exception $e) {
     echo "Message could not be sent. Check your connection";
 }

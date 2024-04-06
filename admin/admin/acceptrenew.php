@@ -33,20 +33,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     {
    
            
-            $set_name= $_POST['name'];
-            $set_username= $_POST['username'];
-            $set_PhoneNo= $_POST['Phone_no'];
-            $set_email= $_POST['email'];
-            $set_add= $_POST['Address'];
-            if($_POST['gender']=='Male'){
-                $set_Gender= "m";
-                }else{
-                    $set_Gender="f";  
-                }
+            // $set_name= $_POST['name'];
+            // $set_username= $_POST['username'];
+            // $set_PhoneNo= $_POST['Phone_no'];
+            // $set_email= $_POST['email'];
+            // $set_add= $_POST['Address'];
+            // if($_POST['gender']=='Male'){
+            //     $set_Gender= "m";
+            //     }else{
+            //         $set_Gender="f";  
+            //     }
              
-            $set_ComName= $_POST['comp'];
-            $set_traid= $_POST['tra_id'];
-            $set_accept= '1';
+            // $set_ComName= $_POST['comp'];
+            // $set_traid= $_POST['tra_id'];
+            // $set_accept= '1';
 
             // echo $set_name . "     ";
             // echo $set_username. "     "; 

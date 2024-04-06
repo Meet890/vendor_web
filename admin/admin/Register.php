@@ -7,7 +7,7 @@ require 'config.php';
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Admin Add new vwndor</title>
+	<title>Admin Add new vendor</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -111,7 +111,7 @@ require 'config.php';
 														  <a href="acceptreg.php?id=<?php echo $id ;?>" class="tda">Accept</a>
 														</td>
 														<td>
-														  <a href="emailreject.php?id=<?php echo $email ;?>" class="tdd">Delete</a>
+														  <a href="emailreject.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
 														</td>
 													</tr>
 															
@@ -207,7 +207,7 @@ require 'config.php';
 														<td><?php echo $accept ?></td>
 														
 														<td>
-														  <a href="deletereg.php?id=<?php echo $id ;?>" class="tdd">Delete</a>
+														  <a href="deletereg.php?id=<?php echo $id ;?>" class="tdd">Delete </a>
 														</td>
 													</tr>
 															
@@ -233,6 +233,7 @@ require 'config.php';
 			
 			</div>
 		</div>
+
 	</div>
 	
 	
