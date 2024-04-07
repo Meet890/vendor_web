@@ -249,7 +249,7 @@ include("footer.php");
         modal.style.display = "none";
         }
     </script>
-  <script>
+  <!-- <script>
         const stars = document.querySelectorAll(".star");
         const rating = document.getElementById("rating");
         const reviewText = document.getElementById("review");
@@ -330,7 +330,7 @@ include("footer.php");
 	    }
     }
 
-    </script>
+    </script> -->
 
 </body>
 </html>

@@ -146,15 +146,16 @@ echo "0 results";
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery mb-5" id="gallery">
-        <div class="row ">
+
+        <div class="gallery mb-3" id="gallery">
+        
         <?php
             
             $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
      
       
        foreach ($rows as $row) : ?>
-              <img class="col-4 px-2 rounded" src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image ">
+              <img class="pa" src="../vendor/img/<?php echo $row['g_photo']; ?>" onclick="openModal('../vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image ">
               
           <?php endforeach; ?>
         </div>
