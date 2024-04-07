@@ -91,7 +91,7 @@ if (mysqli_num_rows($result) > 0) {
                     //Content
                     $mail->isHTML(true);                                  //Set email format to HTML
                     $mail->Subject = 'Client Report you';
-                    $mail->Body    = 'Please follow this this...'.'</b>'.$dis;
+                    $mail->Body    = 'Please follow this...'.'</b>'.$dis;
                     $mail->AltBody = '';
                     $mail->send();
                    
