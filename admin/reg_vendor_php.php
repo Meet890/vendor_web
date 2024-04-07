@@ -32,7 +32,7 @@ if(isset($_POST['register']))
 
   //  First Name Validation
 if(empty($name)){
-   $fnameErr="First Name is Required"; 
+   $nameErr="Name is Required"; 
 }
 else if (!preg_match($validName,$name)) {
    $nameErr="Digits are not allowed";
@@ -70,7 +70,7 @@ else{
 }
 
 //Email Address Validation
-if(empty($email)){
+if($email==""){
   $emailErr="Email is Required"; 
 }
 else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
