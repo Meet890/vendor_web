@@ -43,7 +43,7 @@ $sql = "SELECT * FROM registration WHERE reg_id =$id  " ;
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = "Your applied registration is rejected";
-    $mail->Body    = "Your registered account has been cancelled , Your payment will be returned within 3 days..if you don't get payment then you contact admin".'</b>';
+    $mail->Body    = "Your registered account has been cancelled / deleted due some resons, Your pay that will be returned within 3 days.. Condition (if Your account is not accepted). if dont get payment contact admin ".'</b>';
     $mail->AltBody = '';
     $mail->send();
    

@@ -81,6 +81,13 @@ require 'config.php';
 															  $email = $row["reg_email"];
 															  $add = $row["reg_add"];
 															  $gender = $row["reg_gen"];
+															  if ($gender=="m"){
+																$gender ="Male";
+															  }
+															  else if($gender=="f"){
+																$gender ="Female";
+
+															  }
 															  $comp = $row["reg_com"];
 															  $tra_id = $row['reg_tra_id'];
 															  $accept = $row['reg_accept'];
@@ -179,6 +186,13 @@ require 'config.php';
 															  $email = $row["reg_email"];
 															  $add = $row["reg_add"];
 															  $gender = $row["reg_gen"];
+															  if ($gender=="m"){
+																$gender ="Male";
+															  }
+															  else if($gender=="f"){
+																$gender ="Female";
+
+															  }
 															  $comp = $row["reg_com"];
 															  $tra_id = $row['reg_tra_id'];
 															  $accept = $row['reg_accept'];

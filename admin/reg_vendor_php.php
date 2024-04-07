@@ -42,7 +42,7 @@ else if (!preg_match($validName,$name)) {
 
 //  last Name Validation
 if(empty($username)){
-   $usernameErr="username is Required"; 
+   $usernameErr="Username is Required"; 
 }
 else if (!preg_match($validUserName,$username)) {
    $usernameErr="Only characters and digits are allowed";
@@ -73,7 +73,9 @@ else{
 if(empty($email)){
   $emailErr="Email is Required"; 
 }
-
+else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+   $emailErr ="The email address is considered invalid.";
+}
 else{
   $emailErr=true;
 }
@@ -125,7 +127,7 @@ else if (!preg_match($validName,$compony_name)) {
    $cnameErr=true;
 }
  
-if(strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') != false)
+if(strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') || strpos($email,'@hotmail.com') != false)
 {
 // check all fields are valid or not
 if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )

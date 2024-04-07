@@ -158,33 +158,37 @@ echo "0 results";
         <div class="about">
         <h4><?php echo $name ?><h4>
         </div>
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center">
             <div class="col-6">
-        <ul>
+        <ul><?PHP if($city!="") {?>
             <li>
                 <img src="assets/img/location.png" alt="Location Icon" class="png">
                 <h5 class="city h"><?php echo $city ?></h5>
             </li>
+            <?PHP }if($phone!="") {?>
             <li>
                 <img src="assets/img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call h"><?php echo $phone ?></h5>
             </li>
+            <?PHP }?>
         </ul>
         </div>
         <div class="col-6">
         <ul>
+            <?PHP if($fb!="") {?>
             <li>
                 <img src="assets/img/Facebook.png" alt="Phone Icon" class="png">
                 <h5 class="city h"><?php echo $fb ?></h5>
             </li>
-            
-            <li>
+            <?php }  if($ig!="") {?>
+            <li class="mt-1">
                 <img src="assets/img/insta.jpg" alt="Location Icon" class="png">
                 <h5 class="call h"><?php echo $ig ?></h5>
             </li>   
+            <?php } ?>
         </ul>
     </div>
-</div>
+        </div>
         <div class="about center">
             <h3 class="mt-4">About Us</h3>
             <pre class="Info"><?php echo $about ?></pre>
