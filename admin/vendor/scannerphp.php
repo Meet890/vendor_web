@@ -35,7 +35,7 @@ $_SESSION["reg_id"]=$reg_id;
 
    
     
-$sql = "UPDATE vendor SET v_reg_time =null  WHERE reg_id='$reg_id' ";
+$sql = "UPDATE vendor SET v_reg_time ='0000-00-00'  WHERE reg_id='$reg_id' ";
     
 if($result= mysqli_query($conn, $sql)){
     
