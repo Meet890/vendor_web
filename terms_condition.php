@@ -43,7 +43,7 @@
              <h5> 3.Event Registration and Payment:</h5>
         </th>
         <td>
-            <p class="text-start">The terms may outline the process for event registration, including payment procedures, refund policies, and cancellation fees. Users may be required to provide accurate and up-to-date information during registration.</p>
+            <p class="text-start">The terms may outline the process for event registration, including payment procedures if vendor is registered then payment is not refundable. Users may be required to provide accurate and up-to-date information during registration.</p>
         </td>
     </tr>
     <tr>
@@ -96,5 +96,8 @@
 </center>
 <?php include 'footer.php' ?>
 
+
+<script src="js/bootstrap.min.js"></script>  
+<script src="js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
