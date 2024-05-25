@@ -14,7 +14,9 @@ body {
 .name{
 color: dimgray;
 }
-
+.pa{
+  padding: inherit;
+}
 header {
   background-color: #333;
   color: #fff;
@@ -91,9 +93,11 @@ p {
 
 }
 .Info {
-font-size: 15px;
-font-weight: 800;
-color: currentColor;
+  font-size: 15px;
+  font-weight: 800;
+  color: currentColor;
+  overflow-x: hidden;
+  font-family: math;
 }
 
 ul {
@@ -145,7 +149,7 @@ text-align: center;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   height: 240px;
-  width: 200px;
+  width: 235px;
   padding: inherit;
   margin-left: -1px;
 }

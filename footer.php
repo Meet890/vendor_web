@@ -75,7 +75,7 @@
 									<i class="fas fa-envelope"></i>
 								</div>
 								<div class="info">
-									<p><a href="mailto:kachchhivent@gmail.com">kachchhivent@gmail.com</a></p>
+									<p><a href="mailto:kachchhivent00@gmail.com">kachchhivent00@gmail.com</a></p>
 								</div>
 							</div>
 							

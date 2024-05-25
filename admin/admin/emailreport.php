@@ -16,15 +16,15 @@ $mail = new PHPMailer(true);
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'kachchhivent@gmail.com';                     //SMTP username
-    $mail->Password   = 'jotw vkrr nwqe awsx';                               //SMTP password
+    $mail->Username   = 'kachchhivent00@gmail.com';                     //SMTP username
+    $mail->Password   = 'fxgs hxrp ekrx buva';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('kachchhivent@gmail.com', 'kachchhivent');
+    $mail->setFrom('kachchhivent00@gmail.com', 'kachchhivent');
   
-    $mail->addReplyTo('kachchhivent@gmail.com', 'kachchhivent');
+    $mail->addReplyTo('kachchhivent00@gmail.com', 'kachchhivent');
 
     //Attachments
    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -91,7 +91,7 @@ if (mysqli_num_rows($result) > 0) {
                     //Content
                     $mail->isHTML(true);                                  //Set email format to HTML
                     $mail->Subject = 'Client Report you';
-                    $mail->Body    = 'Please follow this this...'.'</b>'.$dis;
+                    $mail->Body    = 'Please follow this...'.'</b>'.$dis;
                     $mail->AltBody = '';
                     $mail->send();
                    
