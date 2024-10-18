@@ -107,7 +107,7 @@ if (mysqli_num_rows($result) > 0) {
                 <span><?php echo $services ?></span>
                 <p><?php echo $city ?></p>
                 
-              </div>
+    </div>
          </div>
                 <div class="d-grid gap-2">
                 <a href='profile.php?id=<?php echo $id ?>' class="a4">
