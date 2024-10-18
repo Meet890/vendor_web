@@ -183,6 +183,7 @@ transition: transform .3s ease-out 0s;
 background: rgba(134, 130, 130, 0.1);
 content: '';
 pointer-events: none;
+border-radius: 9px;
 }
 .card::before {
 transform-origin: left top;

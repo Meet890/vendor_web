@@ -3,7 +3,7 @@
 
          $id = $_GET['id'];
         
-         echo $id;
+        //  echo $id;
         
         $sql ="DELETE FROM report WHERE report_id='$id'";
         $res =mysqli_query($conn , $sql );

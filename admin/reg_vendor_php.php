@@ -142,7 +142,7 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
    $address=  legal_input($Address);
    $gender=   legal_input($v_gender);
    $comname= legal_input($compony_name);
-   $sql = "INSERT INTO registration (reg_name, reg_username, reg_phone, reg_email, reg_pass, reg_add, reg_gen, reg_com)  VALUES ('$name','$username','$phoneNo','$email','$password','$address','$gender','$comname')";
+   $sql = "INSERT INTO registration (reg_id,reg_name, reg_username, reg_phone, reg_email, reg_pass, reg_add, reg_gen, reg_com)  VALUES (120,'$name','$username','$phoneNo','$email','$password','$address','$gender','$comname')";
    if(mysqli_query($conn, $sql)==true){
       // Redirect to login page
       $_SESSION["test_username"]=$username;
@@ -150,7 +150,7 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
      header("location: otp_reg.php?username=$username");
       // header("location: scanner.php");
   } else{
-      echo "Oops! Something went wrong. Please try again later.";
+      echo mysqli_error($conn) ;
   }
   
    // here you can write Sql Query to insert user data into database table
