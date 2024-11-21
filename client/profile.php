@@ -100,7 +100,6 @@ if ($result->num_rows > 0) {
               <!-- <h2>14</h2>
               <p>post</p> -->
             </div>
-<<<<<<< Updated upstream
             <div class="followers">
                 <h2><span id="imageCount"></span></h2>
                 <p>Post</p>
@@ -110,10 +109,6 @@ if ($result->num_rows > 0) {
                 <h4>00</h4>
                 <p class="p1">Post</p>
             </div> -->
-=======
-            <div></div>
-            
->>>>>>> Stashed changes
             
         </div>    
         <h2 class="mt-3"><?php echo $comp; ?></h2>
@@ -161,19 +156,7 @@ if ($result->num_rows > 0) {
         </div>
         <div class="gallery mb-3" id="gallery">
             
-<<<<<<< Updated upstream
           <?php
-=======
-              $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
-        
-        
-         foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="col p-0 image1" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
-                
-            <?php endforeach; ?>   
-            </div>
-          
->>>>>>> Stashed changes
 
               $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
                  foreach ($rows as $row) : ?>

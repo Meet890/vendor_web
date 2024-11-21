@@ -43,7 +43,8 @@ if($result= mysqli_query($conn, $sql)){
     
     if($result= mysqli_query($conn, $sql))
     {
-        header("location: emailRenewVendor.php");
+       // echo "$sql....";
+       header("location: emailRenewVendor.php");
         // header("location: login.php");
     }
     else

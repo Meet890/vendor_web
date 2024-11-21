@@ -41,7 +41,7 @@ if($result){
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Hello '.$name;
-    $mail->Body    = "Your account is registerd ..please wait for varify your payment,It's took 1-3 Day to confirmation. ".'</b>'.'We are contack soon via email.';
+    $mail->Body    = "Your account is registerd ..please wait for varify your payment,It's took 1-3 Day to confirmation. ".'</b>'.'We are contact soon via Email.';
     $mail->AltBody = '';
     $mail->send();
    

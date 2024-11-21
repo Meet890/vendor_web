@@ -39,7 +39,7 @@ if($result){
     while ($row=mysqli_fetch_assoc($result)) {
         $email = $row['reg_email'];
         $name  = $row['reg_name'];
-    
+        echo "Email is $email....$name";
     $mail->addAddress($email, $name);     //Add a recipient ..........................
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML

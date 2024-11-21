@@ -23,10 +23,11 @@ include('scannerphp.php');
             text-align: center;
             border-collapse: collapse;
         }
-        h1{
-             /* margin-top: 80px;
-             margin-bottom: 20px; */
-        }
+        /* h1{
+             margin-top: 80px;
+             margin-bottom: 20px; 
+        } 
+        */
         .qr{
             height: 384px;
             width: 355px;
