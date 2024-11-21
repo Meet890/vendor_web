@@ -25,8 +25,8 @@ include 'scannerphp.php';
             border-collapse: collapse;
         }
         h1{
-             /* margin-top: 80px;
-             margin-bottom: 20px; */
+             /* margin-top: 80px; */
+             margin-bottom: 20px; 
         }
         .qr{
             height: 384px;
