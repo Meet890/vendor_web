@@ -86,15 +86,15 @@ require 'config.php';
 														<th scope="row"><?php echo $id ?></th>
 														<td><?php echo $name  ?></td>
 														<td><?php echo $username  ?></td>
-														<!-- <td><?php echo $password  ?></td> -->
+														<td><?php echo $password  ?></td>
 														<td><?php echo $email  ?></td>
 														<td><?php echo $city  ?></td>
 														<td><?php echo $time  ?></td>	
-														<!-- <td>
-														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
-														</td> -->
 														<td>
-														  <a href = 'delete.php?id=<?php echo $id ;?>?client' class="tdd">Delete
+														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
+														</td>
+														<td>
+														  <a href = 'deletec.php?id=<?php echo $id ;?>?client' class="tdd">Delete
 														</td>
 													</tr>
 															

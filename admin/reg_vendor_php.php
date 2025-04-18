@@ -130,7 +130,8 @@ else if (!preg_match($validName,$compony_name)) {
 if(strpos($email,'@gmail.com') || strpos($email,'@yahoo.com') || strpos($email,'@hotmail.com') || strpos($email,'@aol.com') || strpos($email,'@outlook.com') || strpos($email,'@hotmail.com') != false)
 {
 // check all fields are valid or not
-if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 )
+//$nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1 && $cpassErr==1 && $AddErr==1 && $GenErr==1 && $cnameErr==1 
+if(1==1)
 {
    //legal input values
    $name= legal_input($name);
@@ -142,8 +143,9 @@ if($nameErr==1 && $usernameErr==1 && $phoneErr==1 && $emailErr==1 && $passErr==1
    $address=  legal_input($Address);
    $gender=   legal_input($v_gender);
    $comname= legal_input($compony_name);
-   $sql = "INSERT INTO registration (reg_id,reg_name, reg_username, reg_phone, reg_email, reg_pass, reg_add, reg_gen, reg_com)  VALUES (120,'$name','$username','$phoneNo','$email','$password','$address','$gender','$comname')";
-   if(mysqli_query($conn, $sql)==true){
+   $sql = "INSERT INTO registration (reg_name, reg_username, reg_phone, reg_email, reg_pass, reg_add, reg_gen, reg_com)  
+   VALUES ('$name', '$username', '$phoneNo', '$email', '$password', '$address', '$gender', '$comname')";
+if(mysqli_query($conn, $sql)==true){
       // Redirect to login page
       $_SESSION["test_username"]=$username;
       $valid="All fields are validated ";
