@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark hed fixed-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark hed fixed-top shadow">
   <div class="container">
     <a class="navbar-brand" href="index.php">
       <!-- <img src="client/img/logo.png" class="logo"> -->

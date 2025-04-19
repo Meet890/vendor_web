@@ -7,7 +7,7 @@
     rel="stylesheet"
     />
     
-<section class="deneb_cta">
+<section class="deneb_cta ">
 	<div class="container mar">
 		<div class="cta_wrapper">
 			<div class="row align-items-center">
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 </section>
-<footer class="deneb_footer">
+<footer class="deneb_footer bg-dark">
 	<div class="widget_wrapper" >
 		<div class="container">
 			<div class="row">
