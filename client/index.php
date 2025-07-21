@@ -38,7 +38,7 @@ elseif(isset($_SESSION["a_id"])){
 <?php include 'header.php' ?>
  
 <center>
-<img src ="../img/w.png" class="v">
+<img src ="../img/W.png" class="v">
 </center>
 
 <!-- card -->

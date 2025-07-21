@@ -4,7 +4,7 @@
 $live_dbhost = 'sql105.infinityfree.com';
 $live_dbuser = 'if0_38777883';
 $live_dbpass = 'Meetrn7890';
-$live_dbname = 'vendor';
+$live_dbname = 'if0_38777883_vendor';
 
 try {
     $conn = @mysqli_connect($live_dbhost, $live_dbuser, $live_dbpass, $live_dbname);
