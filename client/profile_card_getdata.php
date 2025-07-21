@@ -48,20 +48,7 @@ else if(isset($_SESSION["username"])){
 
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vendor";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if($conn){
-    echo"<br>";
-}
-else{
-  die("Connection failed: " . mysqli_connect_error());
-}
+require_once 'config.php';
 $service = $_GET["service"];
 date_default_timezone_set("Asia/Kolkata");
 $date =date("Y-m-d");

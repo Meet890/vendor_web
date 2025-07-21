@@ -6,11 +6,10 @@ $live_dbuser = 'if0_38777883';
 $live_dbpass = 'Meetrn7890';
 $live_dbname = 'vendor';
 
-try {
-    $conn = @mysqli_connect($live_dbhost, $live_dbuser, $live_dbpass, $live_dbname);
-} catch (Exception $e) {
-    // If live connection fails, try localhost (development)
-if (1 == 1) {
+$conn = @mysqli_connect($live_dbhost, $live_dbuser, $live_dbpass, $live_dbname);
+
+// If live connection fails, try localhost (development)
+if (!$conn) {
     $local_dbhost = 'localhost';
     $local_dbuser = 'root';
     $local_dbpass = '';
@@ -26,8 +25,5 @@ if (1 == 1) {
 } else {
     // echo "Connected to live database.";
 }
-}
-
-
 
 ?>

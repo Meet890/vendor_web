@@ -1,12 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "vendor");
-session_start();
- // Check connection
- if($conn === false){
-	 die("ERROR: Could not connect. "
-		 . mysqli_connect_error());
- }
+require_once 'config.php';
 
 // by default, error messages are empty
 $valid=$nameErr=$usernameErr=$phoneErr=$emailErr=$passErr=$cpassErr=$AddErr=$GenErr=$cnameErr='';

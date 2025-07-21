@@ -19,7 +19,7 @@
 <!--navbar-->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark hed fixed-top px-4">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark hed fixed-top px-4">
  
     <a class="navbar-brand" href="index.php">
     <span class="text-warning">kachchhi</span>vent</a>

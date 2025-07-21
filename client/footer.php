@@ -7,7 +7,7 @@
     rel="stylesheet"
     />
     
-<footer class="deneb_footer">
+<footer class="  bg-dark deneb_footer">
 	<div class="widget_wrapper" >
 		<div class="container">
 			<div class="row">

@@ -39,7 +39,7 @@ elseif(isset($_SESSION["a_id"])){
 
 
 <center>
-<img src ="img/w.png" class="v">
+<img src ="img/W.png" class="v">
 </center>
 
 <!-- card -->
