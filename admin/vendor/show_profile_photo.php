@@ -10,20 +10,7 @@ if(isset($_SESSION["username"])){
     else{
         $v_username = $_GET['username'];
     }
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "vendor";
-    
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if($conn){
-    echo"<br>";
-    }
-    else{
-    die("Connection failed: " . mysqli_connect_error());
-    }
+    require 'config.php';
     //   $i = 1;
     //   $ID= $_SESSION["v_id"];
       

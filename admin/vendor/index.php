@@ -46,20 +46,7 @@ $v_username = $_SESSION["username"];
 else{
     $v_username = $_GET['username'];
 }
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vendor";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if($conn){
-echo"<br>";
-}
-else{
-die("Connection failed: " . mysqli_connect_error());
-}
+require 'config.php';
 $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_username ='$v_username' ");
 
 while($row = $result->fetch_assoc()) {

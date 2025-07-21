@@ -16,7 +16,7 @@
     <title>Home page</title>
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    \
+    
     <!--extranal css file-->
     
     <link href="style.css" rel="stylesheet">
