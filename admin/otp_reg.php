@@ -25,8 +25,8 @@ $sql ="SELECT reg_email, reg_name FROM registration WHERE reg_username= '$userna
        
 $email =  $row['reg_email'];
 $name =   "Dear".$row['reg_name'] ;
-// echo $email;
-// echo $name;
+echo $email;
+echo $name;
 $_SESSION["otp"] =( rand(100000,999999));
 echo $_SESSION["otp"];
 //Import PHPMailer classes into the global namespace
@@ -59,7 +59,12 @@ try {
     $mail->AltBody = '';
 
    if($mail->send()){
-    header("Location: submitregotp.php");
+    // this for normal payments
+    // header("Location: submitregotp.php");
+
+
+    // now i add rozerpay in this website
+    header("Location: vendor/razorpay-sample-project/index.php");
    }
     
 } catch (Exception $e) {
