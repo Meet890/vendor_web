@@ -2,18 +2,27 @@
     <div class="row">
 <?php
       $i = 1;
-      $ID= $_SESSION["id"];
+      $ID= $_SESSION["v_id"];
       
         $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $ID ORDER BY g_id DESC")
 ?>
 
-      <?php foreach ($rows as $row) : ?>
+      <?php foreach ($rows as $row) : ?>            
 <div class="col-md-4 col-sm-6 " >
-     <div class="card text-white ">
+     <div class="card mt-2 ">
+        <center>
           <div class="imgholder justify-content-center">
+            <center>
            <img src="img/<?php echo $row["g_photo"]; ?>" class="card-img img1 p-2 " alt="...">
+      </center>
           </div>
-          
+
+          <div class="d-flex justify-content-center">
+         <a href="deletephoto.php?id=<?php echo $row["g_id"] ;?>">
+          <button class="submit btn border mb-2" >Delete</button>
+      </a>
+          </div>
+      </center>
          </div>
 </div>
 

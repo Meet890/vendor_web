@@ -9,8 +9,8 @@ require_once "registerphp.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-  
+    <title>registration form</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="reg.css">    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
@@ -28,12 +28,12 @@ require_once "registerphp.php";
                         <input type="text" id="name" name="name" placeholder=" " required>
                         <label for="name">Name</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        <!-- <i class="fa fa-user"></i> -->
+                       
                     </div>
 
-                    <div class="field">
+                    <!-- <div class="field">
                     <label for="city" class="city">Select city near you</label>
-                        <select name="select" id="" >
+                        <select name="select" id="" class="p-0 ps-1" >
                             
                             <option value="Bhuj">Bhuj</option>
                             <option value="Gandhidham">Gandhidham</option>
@@ -46,18 +46,21 @@ require_once "registerphp.php";
                             
                         </select>
                         
-                        <!-- <i class="fa fa-envelope"></i> -->
+                    </div> -->
+                    <div class="field email">
+                        <input type="text" name="select" id="City" placeholder=" " required autocomplete="on">
+                        <label for="City">City</label>
+                        
                     </div>
-
                     <div class="field email">
                         <input type="email" name="email" id="email" placeholder=" " required autocomplete="on">
                         <label for="email">Email</label>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                        
                     </div>
                     <div class="field">
                         <input type="username" name="username" id="username" placeholder=" " required autocomplete="on">
                         <label for="username">Username</label>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                        
                     </div>
 
                     <div class="field">
@@ -65,7 +68,7 @@ require_once "registerphp.php";
                         <input type="password" name="password" id="password" required placeholder=" " autocomplete="off">
                         <label for="password">Password</label>
                         
-                        <!-- <i class="fa fa-lock"></i> -->
+
                     </div>
 
                     <div class="field">
@@ -74,11 +77,11 @@ require_once "registerphp.php";
                         
                         <label for="confirm-pass">Confirm Password</label>
                        
-                        <!-- <i class="fa fa-lock"></i> -->
+
                     </div>
 
                     <section>
-                        <label for="agree"><input type="checkbox" name="checkbox" id="agree">I agree to all&nbsp;<a href="#">Terms &
+                        <label for="agree"><input type="checkbox" name="checkbox" id="agree">I agree to all&nbsp;<a href="../../terms_condition.php">Terms &
                                 Conditions</a></label>
                     </section>
                     <button class="signup-btn">Register</button>
@@ -88,9 +91,17 @@ require_once "registerphp.php";
                     <span>Already Registered?&nbsp;<a class="login-switch" href="login.php">Login</a></span>
                 </div>
             </div>
+
         </div>
+        <button type="button" class="btn-close bg-white m-1 background " aria-label="Close" onclick="redirect()"></button>
+        
     </div>
+
     <script>
+        function redirect()
+    {
+        window.location.href = "../../index.php";
+    }
         
 const loginForm = document.querySelector('.login-form')
 const signupForm = document.querySelector('.signup-form')

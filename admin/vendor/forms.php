@@ -1,14 +1,76 @@
 <?php
+
+require 'config.php';
 require '../session.php';
-if(!isset($_SESSION["username"])){
-	header("location:../login.php");
+
+error_reporting(0);
+$username = $_SESSION["username"];
+
+$sql="select * from vendor where v_username='$username'";
+$result = $conn->query($sql);
+
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+         // $id =$row["v_id"];
+          $comp_name= $row["v_comp"];
+		  $username= $row["v_username"];
+		  $pass=$row["v_password"];
+		  $phone= $row["v_phoneno"];
+		  $email=$row["v_email"];
+		  $photo=$row["v_photo"];
+          $city=$row["v_address"];
+		  $profession=$row["v_profession"];
+		  $gender=$row["v_gender"];
+		  $ig=$row["v_iglink"];
+		  $fb=$row["v_fblink"];
+
+        }
+		
+           
+  if(isset($_POST['reg_user']))
+  {
+  	$compony_name =  $_POST['v_comp'];
+	if($_POST['v_profession']=="")
+	{
+		$pro ="Enter Service";
+		
+	}else{
+		$profession = $_POST['v_profession'];
+		$username=$_POST['v_username'];
+		$pass=$_POST['v_password'];
+  		$email = $_POST['v_email'];
+  		$address = $_POST['v_address'];
+ 		$m_no = $_POST['v_phoneno'];
+ 		$photo=$_POST['v_photo'];
+    	$IG = $_POST['v_iglink'];
+ 		$FB = $_POST['v_fblink'];
+ 	
+ 	
+ 
+   
+	$sql = "UPDATE vendor SET v_comp = '$compony_name', v_username= '$username',v_password='$pass', v_profession= '$profession' , v_email= '$email' , v_address= '$address' , v_phoneno= '$m_no' , v_photo= '$photo' , v_iglink= '$IG' , v_fblink= '$FB' WHERE v_username='$username'";
+  
+   $result = mysqli_query($conn, $sql);
+  if (isset($result)) {
+    header("location:index.php");
+
+  }
+ else{
+	 echo "ERROR: Hush! Sorry $sql. "
+		 . mysqli_error($conn);
+   }
 }
-?>
+
+}
+
+// mysqli_close($conn);
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Forms - Ready Bootstrap Dashboard</title>
+	<title>Vendor - Edit Page</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -35,129 +97,105 @@ if(!isset($_SESSION["username"])){
 							<div class="col-md-12">
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Create Profile</div>
+										<div class="card-title">Edit Profile</div>
 									</div>
 									<p class="text-success text-center"></p> <form method="post">
 
 									<div class="card-body">
-
+										<h4><p class="danger">
+                								<?php if($pro!=1){ echo $pro; }?>
+               								</p> </h4>
  										<!-- compony name -->
 										<div class="form-group">
-											<label for="Compony name">Compony name</label>
-											<input type="text" class="form-control" id="email" placeholder="Enter Compony name" name="v_name">
+											<label for="Compony name">Compony Name</label>
+											<input type="text" class="form-control" id="email" name="v_comp" value="<?php echo $comp_name; ?>" placeholder=" " required>
+											<!-- <p class="err-msg">
+                							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
+                                            </p> -->
+										</div>
+                                        <!-- user name -->
+										<div class="form-group">
+											<label for="user name">Username</label>
+											<input type="text" class="form-control" id="username" name="v_username" value="<?php echo $username; ?>" placeholder=" " required>
+											<!-- <p class="err-msg">
+                							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
+                                            </p> -->
+										</div>
+										
+										<!-- password -->
+										<div class="form-group">
+											<label for="pass">Password</label>
+											<input type="text" class="form-control" id="username" name="v_password" value="<?php echo $pass; ?>" placeholder=" " required>
 											<!-- <p class="err-msg">
                 							  <?php if($fnameErr!=1){ echo $fnameErr; }?>
                                             </p> -->
 										</div>
 
+
 										<!-- services-->
 										<div class="form-group" >
-											<label for="exampleFormControlSelect1">select service</label>
-											<select class="form-control" id="exampleFormControlSelect1" name="v_services">
+											<label for="exampleFormControlSelect1">Select Service</label>
+											<select class="form-control" id="exampleFormControlSelect1" name="v_profession">
 											 <option selected disabled value="">Choose...</option>
-				      						 <option value="Decoration">Decoration</option>
-				                             <option value="Sound system">Sound system</option>
-				                             <option value="Catering">Catering</option>
-				                             <option value="Bakery">Bakery</option>
-				                             <option value="Photographer">Photographer</option>
-				                             <option value="Videographer">Videographer</option>
-				                             <option value="Flowers">Flowers</option>
-					                         <option value="Venue">Venue</option>
-					                         <option value="Invitation">Invitation Card</option>
+				      						 <option <?php if($profession=='Decoration' ){echo "SELECTED";}?> value="decoration">Decoration</option>
+				                             <option <?php if($profession=='Sound System' ){echo "SELECTED";}?> value="Sound System">Sound system</option>
+				                             <option <?php if($profession=='Catering' ){echo "SELECTED";}?> value="Catering">Catering</option>
+				                             <option <?php if($profession=='Jewellery' ){echo "SELECTED";}?> value="Jewellery">Jewellery</option>
+				                             <option <?php if($profession=='Photographer' ){echo "SELECTED";}?> value="Photographer">Photographer</option>
+				                             <option <?php if($profession=='Videographer' ){echo "SELECTED";}?> value="Videographer">Videographer</option>
+				                             <option <?php if($profession=='Flowers' ){echo "SELECTED";}?> value="Flowers">Flowers</option>
+					                         <option <?php if($profession=='Venues' ){echo "SELECTED";}?> value="Venues">Venue</option>
+					                         <option <?php if($profession=='Invitation Card' ){echo "SELECTED";}?> value="Invitation Card">Invitation Card</option>
+											 <option <?php if($profession=='Gifts' ){echo "SELECTED";}?> value="Gifts">Gifts</option>
+											 <option <?php if($profession=='Makeup Artist' ){echo "SELECTED";}?> value="Makeup Artist">Makeup Artist</option>
+											 <option <?php if($profession=='Event Wear' ){echo "SELECTED";}?> value="Event Wear">Event Wear</option>
+											 <option <?php if($profession=='Cake' ){echo "SELECTED";}?> value="Cake">Cake</option>
+											 
 											</select>
+											
 										</div>
 									
 										<!-- email -->
 										<div class="form-group">
 											<label for="email">Email Address</label>
-											<input type="email" class="form-control" id="v_email" placeholder="Enter Email" name="p_email">
+											<input type="email" class="form-control" id="v_email" value="<?php echo $email; ?>" name="v_email">
 											<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 										</div>
-										<!-- <div class="form-group">
-											<label for="password">Password</label>
-											<input type="password" class="form-control" id="password" placeholder="Password">
-										</div> -->
-										<!-- <div class="form-group form-inline">
-											<label for="inlineinput" class="col-md-3 col-form-label">Inline Input</label>
-											<div class="col-md-9 p-0">
-												<input type="text" class="form-control input-full" id="inlineinput" placeholder="Enter Input">
-											</div>
-										</div> -->
 
 										<!-- address -->
 										<div class="form-group ">
 											<label for="successInput">Address</label>
-											<input type="text" id="Address" value="" class="form-control" name="v_address">
-											<!-- <p class="err-msg">
+											<input type="text" id="Address" value="<?php echo $city; ?>" class="form-control" name="v_address">
+											 <p class="err-msg">
                 								<?php if($AddErr!=1){ echo $AddErr; }?>
-               								</p> -->
+               								</p> 
 										</div>
 
 										<!-- phone no -->
 										<div class="form-group">
-											<label for="errorInput">Phone no.</label>
-											<input type="text" id="Phone no" value="" class="form-control" name="v_phoneno">
+											<label for="errorInput">Phone No.</label>
+											<input type="text" id="Phone no" value="<?php echo $phone; ?>" class="form-control" name="v_phoneno">
 											 <!-- <p class="err-msg"> 
                  								 <?php if($phoneErr!=1){ echo $phoneErr; } ?> 
                 							</p> -->
 										</div>
-
-										<!-- gender -->
-										<div class="form-check">
-											<label>Gender</label><br/>
-											<label class="form-radio-label">
-												<input class="form-radio-input" type="radio" name="v_gender" value="m"  checked="">
-												<span class="form-radio-sign">Male</span>
-											</label>
-											<label class="form-radio-label ml-3">
-												<input class="form-radio-input" type="radio" name="v_gender" value="f">
-												<span class="form-radio-sign">Female</span>
-											</label>
-											<!-- 
-												
-						
-											 -->
-										</div>
 										
-											<!-- profile photo -->
-											<div class="form-group">
-												<label for="exampleFormControlFile1">Choose profile photo</label>
-												<input type="file" class="form-control-file" id="exampleFormControlFile1" name="v_photo">
-											</div>
-
-											<!-- about -->
-											<div class="form-group">
-												<label for="comment">About us</label>
-												<textarea class="form-control" id="comment" rows="5" name="v_about">
-
-												</textarea>
-											</div>
-
 											<!-- ig id -->
 											<div class="form-group">
-												<label for="email">Instagram Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Instagram id" name="v_iglink">
+												<label for="email">Instagram Id </label>
+												<input type="text" class="form-control" id="email"  name="v_iglink" value="<?php echo $ig; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
 											</div>
 
 											<!-- fb id -->
 											<div class="form-group">
-												<label for="email">Face book Id link</label>
-												<input type="email" class="form-control" id="email" placeholder="Enter Facebook id" name="v_fblink">
+												<label for="email">Facebook Id </label>
+												<input type="text" class="form-control" id="email"  name="v_fblink" value="<?php echo $fb; ?>">
 												<!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-											</div>
-
-
-											<div class="form-check">
-												<label class="form-check-label">
-													<input class="form-check-input" type="checkbox" value="">
-													<span class="form-check-sign">Agree with terms and conditions</span>
-												</label>
 											</div>
 										</div>
 										<div class="card-action">
 											<button class="btn btn-success" name="reg_user">Submit</button>
-											<button class="btn btn-danger">Cancel</button>
 										</div>
 									</div>
 								</div>
@@ -178,54 +216,3 @@ if(!isset($_SESSION["username"])){
 <script src="assets/js/ready.min.js"></script>
 </html>
 
-<?php
- 
-
- $conn = mysqli_connect("localhost", "root", "", "vendor");
-  
- // Check connection
- if($conn === false){
-	 die("ERROR: Could not connect. "
-		 . mysqli_connect_error());
- }
-
- if(isset($_POST['reg_user']))
- {
- $compony_name =  $_POST['v_name'];
- $servicse = $_POST['v_services'];
- $email = $_POST['v_email'];
- $address = $_POST['v_address'];
- $m_no = $_POST['v_phoneno'];
- $gender= $_POST['v_gender'];
- $photo=$_POST['v_photo'];
-//  $about=$_POST['p_about'];
- $IG = $_POST['v_iglink'];
- $FB = $_POST['v_fblink'];
-//  echo $compony_name;
-//  echo $servicse;
-//  echo $email;
-//  $services = $_POST['p_ser_places'];
-//  $profession = $_POST['p_profession'];
- 
-//  $experience = $_POST['p_experience'];
-  
- // Performing insert query execution
- // here our table name is college
- $sql = "INSERT INTO vendor(p_compony_name, p_services, p_email, p_address, p_phoneno, p_gender, p_photo, p_about,p_IG_id,p_FB_id)  VALUES ('$compony_name','$servicse','$email','$address','$m_no','$gender','$photo','$about','$IG','$FB')";
-  
- $result = mysqli_query($conn, $sql);
- if ($result) {
-    echo "";
-
-	 //echo nl2br("\n$name\n $username\n "
-		// . "$pass\n $address\n $gender \n $email\n $services\n $profession\n $m_no\n $experience");
-   } 
- else{
-	 echo "ERROR: Hush! Sorry $sql. "
-		 . mysqli_error($conn);
-   }
-}
-  
- // Close connection
- mysqli_close($conn);
- ?>

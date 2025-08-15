@@ -8,12 +8,16 @@ require 'config.php';
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>Admin Dashboard</title>
+	<title>Admin - Records</title>
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="assets/css/ready.css">
 	<link rel="stylesheet" href="assets/css/demo.css">
+	<link rel="stylesheet" href="tables.css">
+	<style>
+		
+     </style>		
 </head>
 <body>
 	<div class="wrapper">
@@ -37,22 +41,23 @@ require 'config.php';
 									
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">client record table</div>
+										<div class="card-title">Client Record Table</div>
 									</div>
 									<div class="card-body">
 										
 										<div class="table-responsive">
 											<table class="table table-bordered">
 												<thead>
-													<tr>
-														<th>id</th>
+													<tr class="thh">
+														<th>Id</th>
 														<th>Client Name</th>
 														<th>Client Username</th>
-														<th>Client Password</th>
+														<!-- <th>Client Password</th> -->
 														<th>Client Email</th>
 														<th>Client City</th>
 														<th>Client Joined Time</th>
-														<th>Edit or delete</th>
+														<!-- <th>Edit</th> -->
+														<th>Delete</th>
 
 													</tr>
 												</thead>
@@ -77,7 +82,6 @@ require 'config.php';
 
 															
 														      ?>
-
 													<tr>
 														<th scope="row"><?php echo $id ?></th>
 														<td><?php echo $name  ?></td>
@@ -87,12 +91,11 @@ require 'config.php';
 														<td><?php echo $city  ?></td>
 														<td><?php echo $time  ?></td>	
 														<td>
-														<div class="icon-big text-center">
-														<i class="la la-edit" class="m-4">Edit</i>
-														
-														</div>
-														
-														</td>	
+														  <a href = 'update_client.php?id=<?php echo $id ?>'>Edit
+														</td>
+														<td>
+														  <a href = 'deletec.php?id=<?php echo $id ;?>?client' class="tdd">Delete
+														</td>
 													</tr>
 															
 															
@@ -117,30 +120,30 @@ require 'config.php';
 
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title">Vendor record table</div>
+										<div class="card-title">Vendor Record Table</div>
 									</div>
 									<div class="card-body">
 										
 										<div class="table-responsive">
 											<table class="table table-bordered">
 											<thead>
-													<tr>
-														<th>id</th>
+													<tr class="thh">
+														<th>Id</th>
 														<th>Vendor Name</th>
 														<th>Vendor Username</th>
-														<th>Vendor Password</th>
+														<!-- <th>Vendor Password</th> -->
 														<th>Vendor Email</th>
 														<th>Vendor City</th>
 														<th>Vendor Gender</th>
-														<th>Vendor Service places</th>
+														<!-- <th>Vendor Service places</th> -->
 														<th>Vendor Profession</th>
 														<th>Instagram Link</th>
 														<th>Facebook Link</th>
-														<th>Whatsapp Link</th>
-														<th>Vendor Joined Time</th>
-
-
-														<th>Edit or delete</th>
+														
+														<th>Vendor Discription</th>
+														
+														<th>View</th>
+														<th>Delete</th>
 
 													</tr>
 												</thead>
@@ -155,19 +158,20 @@ require 'config.php';
 														
 														    // output data of each row
 														    while($row = mysqli_fetch_assoc($result)) {
+																$table= "vendor";
 															  $id=$row["v_id"];
 														      $name= $row["v_name"];
 														      $username= $row["v_username"];
-															  $password=$row["v_password"];
+															//   $password=$row["v_password"];
 														      $email=$row["v_email"];
 														      $city=$row["v_address"];
 															  $gender=$row["v_gender"];
-															  $serplc=$row["v_ser_places"];
+															//   $serplc=$row["v_ser_places"];
 															  $profession=$row["v_profession"];
 															 
 															  $ig=$row["v_iglink"];
 															  $fb=$row["v_fblink"];
-															  $wa=$row["v_walink"];
+															
 															  $dis=$row["v_discription"];
 														      
 
@@ -178,23 +182,24 @@ require 'config.php';
 														<th scope="row"><?php echo $id ?></th>
 														<td><?php echo $name  ?></td>
 														<td><?php echo $username  ?></td>
-														<td><?php echo $password  ?></td>
+														<!-- <td><?php echo $password  ?></td> -->
 														<td><?php echo $email  ?></td>
 														<td><?php echo $city  ?></td>
 														<td><?php echo $gender  ?></td>
-														<td><?php echo $serplc  ?></td>
+														<!-- <td><?php echo $serplc  ?></td> -->
 														<td><?php echo $profession  ?></td>	
-														
 														<td><?php echo $ig  ?></td>
 														<td><?php echo $fb  ?></td>
-														<td><?php echo $wa  ?></td>
-														<td><?php echo $dis  ?></td>												
-														<td>
-														<div class="icon-big text-center">
-														<i class="la la-edit" class="m-4"> Edit	</i>													
-														</div>
 														
-														</td>	
+														<td><?php echo $dis  ?></td>												
+														
+														<td class="tda">
+														  <a href = 'profile.php?id=<?php echo $id;?>'onclick='return
+														  checkdelete()' class="tda">View Profile
+														</td>
+														<td class="tdd">
+														  <a href = 'deletev.php?id=<?php echo $id?>?table=<?php echo $table; ?>' class="tdd">Delete
+														</td>
 													</tr>
 															
 															

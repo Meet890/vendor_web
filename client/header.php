@@ -1,79 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" constant="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client</title>
+  
+
+  <link rel="stylesheet" href="style.css">
+
+ <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" constant="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <!--BS 5 css link-->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-  
-    <script src="./js/bootstrap.bundle.js"></script> 
+    
     <!--extranal css file-->
     
+    <link href="style.css" rel="stylesheet">
+    
+  <!--extranal css file-->
+
 </head>
+
 <body>
-<!--navbar-->
+  <!--navbar-->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> PARTNERS
-  </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark hed fixed-top px-4">
+
+    <a class="navbar-brand" href="index.php">
+      <span class="text-warning">kachchhi</span>vent</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" href="../client/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#event">Services</a>
+          <a class="nav-link" href="index.php#event">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#footer">About us</a>
+          <a class="nav-link" href="about_us.php">About us</a>
         </li>
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
             vendor
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "decorator";?>">Decorators</a></li>
-            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "photographer";?>">photographers</a></li>
-            <li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "videographer";?>">vediographers</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "Bakery";?>">cake</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "flowers";?>">flowers</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "wedding wear";?>">wedding wear</a></li>
-						<li><a class="dropdown-item"  href="profile_card_getdata.php?service=<?php echo "jewellery";?>">jewellery</a></li>
-						<li><a class="dropdown-item"  href="#">invitation cards</a></li>
-						<li><a class="dropdown-item"  href="#">sound</a></li>
-						<li><a class="dropdown-item"  href="#">planners</a></li>
-						<li><a class="dropdown-item"  href="#">makeup artist</a></li>
-						<li><a class="dropdown-item"  href="#">venues</a></li>
-						<li><a class="dropdown-item"  href="#">gifts</a></li>
+            <li><a class="dropdown-item"
+                href="profile_card_getdata.php?service=<?php echo "Decoration"; ?>">Decoration</a></li>
+            <li><a class="dropdown-item"
+                href="profile_card_getdata.php?service=<?php echo "Photographer"; ?>">Photographers</a></li>
+            <li><a class="dropdown-item"
+                href="profile_card_getdata.php?service=<?php echo "Videographer"; ?>">Vediographers</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Cake"; ?>">Cake</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Flowers"; ?>">Flowers</a>
+            </li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Event Wear"; ?>">Event
+                Wear</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Jewellery"; ?>">Jewellery</a>
+            </li>
+            <li><a class="dropdown-item"
+                href="profile_card_getdata.php?service=<?php echo "Invitation Card"; ?>">Invitation Cards</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Sound System"; ?>">Sound</a>
+            </li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Makeup Artist"; ?>">Makeup
+                Artist</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Venues"; ?>">Venues</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Gifts"; ?>">Gifts</a></li>
+            <li><a class="dropdown-item" href="profile_card_getdata.php?service=<?php echo "Catering"; ?>">Catering</a>
+            </li>
+
           </ul>
-        </li>
-       
-        <li>
-        <div class="dropdown text-end ms-2">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle show" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../img/img1.jpeg" alt="mdo" width="32" height="32" class="rounded-circle">
-          </a>
-          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(-111px, 34px, 0px);" data-popper-placement="bottom-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="login/Logout.php">Sign out</a></li>
-          </ul>
-        </div>
         </li>
 
-        </ul>
-      </div>
-  </div>
-</nav>
-<script src="../js/bootstrap.min.js"></script>  
-<script src="../js/bootstrap.bundle.js"></script>  
+        <li>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 profile-menu">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="profile-pic">
+                  <img src="../user.png" alt="Profile Picture">
+                </div>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="profile_client.php">Profile</a></li>
+                <li><a class="dropdown-item" href="login/Logout.php">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

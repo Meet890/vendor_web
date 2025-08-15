@@ -3,16 +3,25 @@
 // Initialize the session
 session_start();
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["c_username"]) &&( $_SESSION["loggedin"] === true)){
-    header("location: index.php");
-    exit;
+// session_start();
+// Check if the user is logged in, if not then redirect him to login page
+
+if(isset($_SESSION["c_username"])){
+	header("location:../../client/index.php");
+ 
 }
-else if(isset($_SESSION["username"])){
-  header("location:../../admin/vendor/index.php");
+elseif(isset($_SESSION["username"])&& isset($_SESSION["v_id"])){
+	header("location:../../admin/vendor/");
+}
+else{
+
 }
 // Include config file
 require_once "config.php";
-
+// $vid =$_GET['id'];
+// echo $vid;
+// $v_id=$_GET['id'];
+// echo $_SESSION["vid"] ;
 // Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
@@ -49,10 +58,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $password);
                     
                     if(mysqli_stmt_fetch($stmt)){
-                        if( $_POST["password"]= $password){
+                        if( $_POST["password"]== $password){
                             // Password is correct, so start a new session
                             
-                              $sql = "SELECT * FROM client where c_username = '$uname'" ;
+                              $sql = "SELECT * FROM client where c_username = '$username'" ;
                               $result = mysqli_query($conn, $sql);
 
                               if ($result) {
@@ -64,27 +73,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     $_SESSION["c_city"] = "$row[c_city]";
                                     $_SESSION["c_email"] = "$row[c_email]";  
                                     $_SESSION["loggedin"] = "true";  
-                                    ?>
-                                    <script type="text/javascript">
-                                        alert ="session is created";
-                                        </script>
-                                    <?php
-
+                                    // echo $_SESSION["VID"] ;
+                                    
+                                    $VID=$_SESSION["VID"] ;
+                                    // echo $VID;
+                                        
+                                      header ("location: ../profile.php?id=$VID");
+                                    
+                                    
+                                    
                                 }
                             }
-                            echo '<script>  alert("connected"); </script>';
-                            header("location: ../index.php");
+                            // echo '<script>  alert("connected"); </script>';
+                            
+                            
+                            
                         } else{
                             // Password is not valid, display a generic error message
-                            $_SESSION["password"] =$password;
-                            echo $_SESSION["password"];
-                            echo '<script>  alert("varify pass"); </script>';
+                            $login_err = "Invalid password.";
+                           // echo '<script>  alert("Password"); </script>';
                         }
                     }
                 } else{
                     // Username doesn't exist, display a generic error message
                     $login_err = "Invalid username or password.";
-                    echo '<script>  alert("no rows"); </script>';
+                   //echo '<script>  alert("no rows"); </script>';
                 }
             }
         }

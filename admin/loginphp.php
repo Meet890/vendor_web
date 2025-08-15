@@ -7,6 +7,7 @@ if(isset($_SESSION["v_username"]) &&( $_SESSION["loggedin"] === true)){
     header("location: vendor/");
     exit;
 }
+
 // Include config file
 require_once "config.php";
 
@@ -21,16 +22,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $username = trim($_POST["username"]);
     }
-    // Check if password is empty
+// Check if password is empty
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";
     } else{
         $password = trim($_POST["password"]);
+        $pass= $_POST["password"];
     }
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
         $sql = "SELECT v_id, v_username, v_password FROM vendor WHERE v_username = ?";
+
         if($stmt = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s",$param_username);
@@ -46,63 +49,121 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     mysqli_stmt_bind_result($stmt, $id, $username, $c_password);
                     
                     if(mysqli_stmt_fetch($stmt)){
-                        if($password = $c_password){
+                       $pass= $_POST["password"];
+                      // echo $pass;
+                        if($pass == $c_password){
+                            echo $password;
+                            echo $c_password;
+                            
                             // Password is correct, so start a new session
                             session_start();
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
+                            $_SESSION["v_id"] = $id;
                             $_SESSION["username"] = $username;
                            
                             echo '<script>  alert("connected"); </script>';
                             header("location: vendor/index.php");
-                        } else{
+                        }else{
                             // Password is not valid, display a generic error message
                           
-                            echo '<script>  alert("varify pass"); </script>';
+                            // echo '<script>  alert("Invalid password"); </script>';
+                            $login_err = "Invalid Password.";
                         }
                     }
-                } else{
-                    // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username or password.";
-                    
+                    else{
+                        // Password is not valid, display a generic error message
+                      
+                        // echo '<script>  alert("Username is invalid"); </script>';
+                        $login_err = "Invalid Username";
+                    }
                 }
-            }
+                else{
+                   // Prepare a select statement
+         $sql = "SELECT * FROM admin_tbl WHERE a_username = ?";
+
+         if($stmt = mysqli_prepare($conn, $sql)){
+             // Bind variables to the prepared statement as parameters
+             mysqli_stmt_bind_param($stmt, "s",$param_username);
+             // Set parameters
+             $param_username = $username;
+             // Attempt to execute the prepared statement
+             if(mysqli_stmt_execute($stmt)){
+                 // Store result
+                 mysqli_stmt_store_result($stmt);
+                 // Check if username exists, if yes then verify password
+                 if(mysqli_stmt_num_rows($stmt) == 1){
+                     // Bind result variables
+                     mysqli_stmt_bind_result($stmt, $id, $username, $c_password);
+                     
+                     if(mysqli_stmt_fetch($stmt)){
+                        $username2 = $_POST["username"];
+                        $sql2 = "SELECT a_password FROM admin_tbl WHERE a_username = '$username2'";
+                        $result = mysqli_query($conn, $sql2);
+                            if ($row = mysqli_fetch_assoc($result)){
+                        
+                             // Password is correct, so start a new session
+                             
+                    
+                                if($password==$row["a_password"]){
+                            // echo $c_password;
+                            // echo $password;
+                            // echo $row["a_password"];
+                            // Store data in session variables
+                             $_SESSION["loggedin"] = true;
+                             $_SESSION["a_id"] = $id;
+                             $_SESSION["a_username"] = $username;
+                            
+                             echo '<script>  alert("connected"); </script>';
+                             header("location: admin/index.php");
+                                }else{
+                                    // echo '<script>  alert("Password is invalid"); </script>';
+                                    $login_err = "Invalid Password.";
+                                }
+
+                         }else{
+                             
+                           
+                            //  echo '<script>  alert("Invalid Password"); </script>';
+                            $login_err = "Invalid Password.";                                                                  
+                         }
+                     }else{
+                        
+                      
+                        echo '<script>  alert("Invalid Username."); </script>';
+                    }
+                 }else{
+                    
+                  
+                    // echo '<script>  alert("Invalid Username"); </script>';
+                    $login_err = "Invalid Username.";
+                }
+         }else{
+           
+          
+            echo '<script>  alert("Please try again after few minutes"); </script>';
+        }
+     }else{
+        
+      
+        echo '<script>  alert("Please try again after few minutes"); </script>';
+    }
+     
+                }
+        }else{
+            
+          
+            echo '<script>  alert("Please try again after few minutes"); </script>';
         }
     }
-}
-
-
- if(isset($_POST['submit'])){
-
-  $uname = trim($_POST['username']);
-  $pass  = trim($_POST['password']);
-
-  $sql = "SELECT * FROM client where c_username = '$uname'" ;
-  $result = mysqli_query($conn, $sql);
-  
-  if ($result) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        $_SESSION["c_id"] = "$row[c_id]";
-        $_SESSION["c_username"] = "$row[c_username]";
-        $_SESSION["c_name"] = "$row[c_name]";
-        $_SESSION["c_city"] = "$row[c_city]";
-        $_SESSION["c_email"] = "$row[c_email]";  
-        $_SESSION["loggedin"] = "true";  
-        ?>
-        <script type="text/javascript">
-            alert ="session is created";
-            </script>
-        <?php
-        header("Location: index.php");
-    }
-}
     else{
-        echo "no user found";
-        $login_err = "No account found for that username.";
-
+         
     }
+}
+
+
+
+    
 }
 
 ?>

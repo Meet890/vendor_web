@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
-
+$_SESSION['VID']="";
 if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
 	header("location:login/login.php");
  
@@ -26,6 +26,7 @@ else if(isset($_SESSION["username"])){
     <script src="../js/bootstrap.min.js"></script>
     <!--extranal css file-->
     <link href="profile_card.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <?php 
@@ -42,26 +43,17 @@ else if(isset($_SESSION["username"])){
 
      <form method="post" action="test.php">
 
-     <div class="row">
+     <div class="row ">
      
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "vendor";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if($conn){
-    echo"<br>";
-}
-else{
-  die("Connection failed: " . mysqli_connect_error());
-}
+require_once 'config.php';
 $service = $_GET["service"];
-$sql = "SELECT v_name, v_username, v_photo, v_profession, v_ser_places, v_id FROM vendor where v_profession = '$service'";
+date_default_timezone_set("Asia/Kolkata");
+$date =date("Y-m-d");
+// echo $date;
+$sql = "SELECT v_name, v_username, v_photo, v_profession, v_address, v_id,v_reg_end_time FROM vendor where v_profession = '$service'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -69,13 +61,25 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
       
+      if($date <  $row['v_reg_end_time']){
+      // echo  $row['v_reg_end_time'];
+      
       $name= $row["v_name"];
 
       $username= $row["v_username"];
       $image = $row["v_photo"];
       $services=$row["v_profession"];
-      $city=$row["v_ser_places"];
+      $city=$row["v_address"];
       $id=$row["v_id"];
+      if($row['v_photo']==""){
+        $img ="../user2.png";
+        //echo '<script>  alert("hello"); </script>';
+      }
+      else{
+        $img = "../admin/vendor/img/".$row["v_photo"];
+        //echo $img;
+        //echo '<script>  alert("1"); </script>';
+      }
 
       ?>
 
@@ -83,19 +87,19 @@ if (mysqli_num_rows($result) > 0) {
       <div class="member">
         <div class="member2 d-flex align-item-start">
              <div class="teampic">
-                <img src="<?php echo $image ?>" class="img-fluid" alt="team1">
+                <img src="<?php echo $img ?>" class="circle" alt="team1">
              </div>
              <div class="member-info">
                 <h4><?php echo $name ?></h4>
                 <span><?php echo $services ?></span>
                 <p><?php echo $city ?></p>
                 
-              </div>
+    </div>
          </div>
                 <div class="d-grid gap-2">
-
-                <button class="btn btn-secondary mt-2" type="button" onclick=""><a href='profile.php?username=<?php echo $username ?>'>More Info</a></button>
-
+                <a href='profile.php?id=<?php echo $id ?>' class="a4">
+                <button class="btn btn-secondary mt-2 btns" type="button" onclick="">More Info</button>
+                </a>
                 </div>
         </div>   
       </div>
@@ -103,11 +107,12 @@ if (mysqli_num_rows($result) > 0) {
 
 
       <?php
+      }
     }
 
   } else {
 
-    echo "0 results";
+    echo "No vendor available";
   }
   
   mysqli_close($conn);
@@ -119,7 +124,7 @@ if (mysqli_num_rows($result) > 0) {
 
 <?php 
 
-include("../footer.php");
+include("footer.php");
 
 
 ?>
@@ -128,11 +133,13 @@ include("../footer.php");
 
 <script src="/js/bootstrap.min.js"></script>
 
+
 <script>
-  function redirect($test){
-    
+  function redirect(){
+    window.location.href = "redirect.php?id=<?php echo $id ?>";
   }
 </script>
+
 
 </body>   
 

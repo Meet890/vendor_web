@@ -1,6 +1,6 @@
 <?php
 require_once "loginphp.php";
-include "../header2.php";
+// include "../header2.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,17 +12,30 @@ include "../header2.php";
   
     <link rel="stylesheet" href="reg.css">    
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body, html {
+
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-image: url("ss.png");
+background-size: fill;
+background-position: center;
+background-repeat: no-repeat;
+background-color: rgba(0,0,0, 1);
+height: 100vh;
+}
+    </style>
 </head>
 
 <body>
-    <div class="bg-img"></div>
+    
     <div id="main-container">
         <div class="form-container">
             <div class="login-form">
                 <div class="image">
                     
                 </div>
-                <div class="title">LOGIN</div>
+                <div class="title">LOGIN AS VENDOR</div>
                 <?php
                   if(!empty($login_err)){
                          echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -33,7 +46,7 @@ include "../header2.php";
                         <input type="Username" id="Username" name="username" placeholder=" " value="" required autocomplete="on">
                         <label for="Username">Username</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                        
                     </div>
 
                     <div class="field">
@@ -41,8 +54,10 @@ include "../header2.php";
                         <input type="password" id="pass" name="password" required placeholder=" " autocomplete="on">
                         <label for="create-pass">Password</label>
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        <!-- <i class="fa fa-lock"></i> -->
+                        
+                        
                     </div>
+                    <div style="text-align:left;">Forgot Password ?&nbsp;<a class="signup-switch" href="forgotpass.php">Click here</a></div>
                         <br>
                    
 
@@ -66,6 +81,7 @@ include "../header2.php";
 
             
         </div>
+        <button type="button" class="btn-close bg-white m-2 background cencel" aria-label="Close" onclick="redirect()"></button>
     </div>
     <script>
         var c;
@@ -84,6 +100,10 @@ include "../header2.php";
             c=1;
             
         }
+    }
+    function redirect()
+    {
+        window.location.href = "../index.php";
     }
         </script>
         

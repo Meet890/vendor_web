@@ -1,6 +1,10 @@
 <?php
 require_once "loginphp.php";
+error_reporting(0);
 
+//require 'header2.php';
+$VID= $_GET["id"];
+$_SESSION['VID']=$VID;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +13,7 @@ require_once "loginphp.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-  
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="reg.css">    
 
 </head>
@@ -17,23 +21,27 @@ require_once "loginphp.php";
 <body>
     <div class="bg-img"></div>
     <div id="main-container">
-        <div class="form-container">
+        <div class="form-container d-flex align-items-center   ">
+        
+
             <div class="login-form">
                 <div class="image">
                     
                 </div>
-                <div class="title">LOGIN</div>
+                <div class="title">LOGIN AS CLIENT</div>
                 <?php
+                 //echo $_GET['id'];
                   if(!empty($login_err)){
-                         echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                         echo '<div class="alert alert-danger mb-0">' . $login_err . '</div>';
                      }
+                     
                 ?>
                 <form class="form" action=<?php echo $_SERVER['PHP_SELF']; ?> method="post">
                     <div class="field">
                         <input type="Username" id="Username" name="username" placeholder=" " required autocomplete="on">
                         <label for="Username">Username</label>
                         <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                        <!-- <i class="fa fa-envelope"></i> -->
+                       
                     </div>
 
                     <div class="field">
@@ -41,8 +49,9 @@ require_once "loginphp.php";
                         <input type="password" id="pass" name="password" required placeholder=" " autocomplete="on">
                         <label for="create-pass">Password</label>
                         <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                        <!-- <i class="fa fa-lock"></i> -->
+                        
                     </div>
+                    <div style="text-align:left;">Forgot Password ?&nbsp;<a class="signup-switch" href="forgotpass.php">Click here</a></div>
                         <br>
                    
 
@@ -60,12 +69,11 @@ require_once "loginphp.php";
                     <div>Don't have an Account?&nbsp;<a class="signup-switch" href="reg.php">Sign up</a></div>
                 </div>
             </div>
-
-
-
-
-            
-        </div>
+            </div> 
+         <div class="">
+        <button type="button" class="btn-close bg-white b background cencel cls" aria-label="Close" onclick="redirect()"></button>
+        </div>  
+             
     </div>
     <script>
         var c;
@@ -85,7 +93,14 @@ require_once "loginphp.php";
             
         }
     }
+
+    function redirect()
+    {
+        window.location.href = "../../index.php";
+    }
         </script>
 
+<script src="../../js/bootstrap.min.js"></script> 
+<script src="../../js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>

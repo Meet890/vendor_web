@@ -9,39 +9,111 @@ include('scannerphp.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <title>Document</title>
+    <title>Scan</title>
     <style>
         *{
             align-items: center;
-  justify-content: center;
+            justify-content: center;
         }
+        body{
+            background-color: #f0f2f5;
+        }
+        table, td, th{
+            border: 4px solid black;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        /* h1{
+             margin-top: 80px;
+             margin-bottom: 20px; 
+        } 
+        */
+        .qr{
+            height: 384px;
+            width: 355px;
+        }
+    </style>
     </style>
 </head>
 <body>
+    <center>
+        <div class="mb-3">
+        <h1>Get Membership</h1>
+        </div>
+<table style="width:750px">
     <div class="container mb-10">
-        <h3>Pay 150 for 1 month.   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pay 350 for 3 month</h3>
+    <div class="row">
+        <tr>
+            <td>
+   
+         <h2>Premium Plans</h2>
+         <!-- <br>
+        <div class="col"> <h4>Pay 149 for 1 month.   </h4></div>
+
+        <div class="col"> <h4>  Pay 349 for 3 month</h4></div>
        
-        <h3>Pay 750 for 6 month &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Pay 1500 for 12 month</h3>
-     
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-10 mx-auto">
-                <div class="card ">
-                <div class="w-100 h-auto">
-                    <img src="qr.png" alt="qr code" class="img-fluid  rounded">
-                </div>
+        <div class="col"> <h4>Pay 749 for 6 month </h4></div>
+        <div class="col"> <h4>  Pay 1499 for 12 month</h4></div>
+        
+    -->
+    <!-- <label for="cars">Choose a car:</label> -->
+    <select id="photoSelect" onchange="displaySelectedPhoto()">
+  <option value="0_month.png">Select plan...</option>
+  <option value="1_month.jpg">Pay 149 for 1 month.</option>
+  <option value="3_month.jpg">Pay 349 for 3 month</option>
+  <option value="6_month.jpg">Pay 649 for 6 month</option>
+  <option value="12_month.jpg">Pay 1199 for 12 month</option>
+  <!-- Add more options as needed -->
+</select>
+
+<!-- <img id="photo" src="" alt="Selected Photo"> -->
+
+<script>
+function displaySelectedPhoto() {
+  var selectElement = document.getElementById("photoSelect");
+  var selectedValue = selectElement.value;
+  var photoElement = document.getElementById("photo");
+
+  // Update the src attribute of the image element with the selected photo URL
+  photoElement.src = selectedValue;
+}
+</script>
+
+
+    </td>
+    <td>
+    
+    
+            <!-- <div class="col-6 col-lg-4 mx-auto"> -->
+                <div class="mt-2 mb-2">
+
+                     <!-- <img src="qr.png" alt="qr code" class="qr"> -->
+                    <img id="photo" src="0_month.png" src="" alt="Chosee plan..." class="qr">
+                <!-- </div> -->
+  
+    </td>
+    </tr>
+    <tr><td colspan="2">
+      
                 <form action="scannerphp.php" method="post">
+                    <div class="mt-3">
                     <label for="tra-id">Enter Transection id :</label>
                     
 
                     <input type="number" min="100000000000" max="999999999999" name="tra_id" id="tra_id" class="rounded w-5">
-                    <br>
+                    <button class=" bg-dark text-white btn" name="submit">Submit</button>
+                  
                        <p class="err-msg"> 
                          <?php if($idErr != 1){ echo $idErr ; } ?>
                       </p>
-                    <button class=" bg-dark text-white  btn" name="submit">Submit</button>
+                    
+                    </div>
                 </form>
+               
+    </td>
                 </div>
             </div>
+          
         </div>
     </div>
 </body>

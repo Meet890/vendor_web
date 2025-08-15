@@ -2,13 +2,24 @@
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
 
+if($_GET["id"]!=""){
+	
+$id= $_GET["id"];
+}
+
+else {
+    header("location:index.php");
+}
+
 if(!isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = "false"){
+    $_SESSION['vid']= $id;
 	header("location:login/login.php");
  
 }
 else if(isset($_SESSION["username"])){
   header("location:.././admin/vendor/index.php");
 }
+      
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -16,30 +27,41 @@ else if(isset($_SESSION["username"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link href="test.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="assets/css/ready.css">
+	<link rel="stylesheet" href="assets/css/demo.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="test.css" rel="stylesheet">
 </head>
 <body>
+<?php 
+    include("header.php");
+
+?>
     <?php
+//    $id= $_GET["id"]; 
+    
+    require_once 'config.php';
 
-    $v_username = $_GET["username"];
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "vendor";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if($conn){
-    echo"<br>";
-}
-else{
-  die("Connection failed: " . mysqli_connect_error());
-}
 
-$sql = "SELECT v_id, v_name, v_username, v_profession, v_ser_places, v_phoneno,v_discription FROM vendor where v_username = '$v_username'";
-$result = $conn->query($sql);
+    $result = mysqli_query($conn, "SELECT v_photo FROM vendor WHERE v_id = '$id' ");
+
+    while($row = $result->fetch_assoc()) {
+        if($row['v_photo']==""){
+            $img ="../user2.png";
+            //echo '<script>  alert("hello"); </script>';
+        }
+        else{
+            $img = "../admin/vendor/img/".$row["v_photo"];
+            //echo $img;
+            //echo '<script>  alert("1"); </script>';
+        }
+    }
+
+
+
+$sql = "SELECT v_id, v_name, v_username, v_profession, v_address, v_phoneno,v_discription, v_comp,v_iglink,v_fblink FROM vendor where v_id = '$id'";$result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
@@ -48,115 +70,162 @@ if ($result->num_rows > 0) {
         $name= $row["v_name"];
         $username= $row["v_username"];
         $services=$row["v_profession"];
-        $city=$row["v_ser_places"];
+        $city=$row["v_address"];
         $phone=$row["v_phoneno"];
         $about=$row["v_discription"];
+        $comp=$row["v_comp"];
+        $ig=$row["v_iglink"];
+        $fb=$row["v_fblink"];
     }
   } else {
   echo "0 results";
 }
 
-
     ?>
 
     <section>
-        <img src="img/f1.jpg" alt="User Profile Picture" class="pro_img">
+        <img src="<?php echo  $img; ?>" alt="User Profile Picture" class="pro_img">
         <div class="detail">
             <div class="post">
               <!-- <h2>14</h2>
               <p>post</p> -->
             </div>
             <div class="followers">
-                <h2>30</h2>
+                <h2><span id="imageCount"></span></h2>
                 <p>Post</p>
             </div>
-            <div class="following">
-               <!-- <img src="rating.png" alt="Location Icon" class="star"> -->
-                <h2><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                </svg>4.3</h2>
-                <p>1 Review</p>
-            </div>
+            <!-- <div class="followers text-align-center">
+                
+                <h4>00</h4>
+                <p class="p1">Post</p>
+            </div> -->
+            
         </div>    
-        <h2 class="mt-3"><?php echo $name ?></h2>
+        <h2 class="mt-3"><?php echo $comp; ?></h2>
         <div class="about">
-        <h4><?php echo $services ?><h4>
+        <h4 class="name"><?php echo $name; ?><h4>
         </div>
-
-        <ul>
+        <div class="row justify-content-center">
+            <div class="col-6">
+        <ul><?PHP if($city!="") {?>
             <li>
                 <img src="img/location.png" alt="Location Icon" class="png">
                 <h5 class="city"><?php echo $city ?></h5>
             </li>
-            <!-- <li>
-                <img src="email-icon.png" alt="Email Icon">
-                <p>john.doe@example.com</p>
-            </li> -->
+            <?PHP }if($phone!="") {?>
             <li>
                 <img src="img/calling.png" alt="Phone Icon" class="png">
                 <h5 class="call"><?php echo $phone ?></h5>
             </li>
+            <?PHP }?>
         </ul>
-        <div class="about center">
-            <h3 class="mt-4">About us</h3>
-            <p><?php echo $about ?></p>
+        </div>
+        <div class="col-6">
+        <ul>
+            <?PHP if($fb!="") {?>
+            <li>
+                <img src="img/Facebook.png" alt="Phone Icon" class="png">
+                <h5 class="city"><?php echo $fb ?></h5>
+            </li>
+            <?php }  if($ig!="") {?>
+            <li class="mt-1">
+                <img src="img/insta.jpg" alt="Location Icon" class="png">
+                <h5 class="call"><?php echo $ig ?></h5>
+            </li>   
+            <?php } ?>
+        </ul>
+    </div>
+        </div>
+    <div class="about center">
+        <h3 class="mt-4">About us</h3>
+            <pre class="Info"><?php echo $about ?></pre>
             <span></span>
         </div>
         <div class="heading">
             <h3 class="mt-4 about">Photo Albums</h3>
         </div>
-        <div class="gallery">
-        <?php
+        <div class="gallery mb-3" id="gallery">
             
-              $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
-        
-        
-         foreach ($rows as $row) : ?>
-                <img src="../admin/vendor/img/65cf8b638c496.jpg"> onclick="openModal('../admin/vendor/img/<?php echo $rows['g_photo']; ?>')" alt="Gallery Image 2">
-                
-            <?php endforeach; ?>   
-            <!-- <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f1.jpg" onclick="openModal('img/f1.jpg')" alt="Gallery Image 1">
-            <img src="img/f2.jpg" onclick="openModal('img/f2.jpg')" alt="Gallery Image 2">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/unnamed.jpg" onclick="openModal('img/unnamed.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3">
-            <img src="img/f3.jpg" onclick="openModal('img/f3.jpg')" alt="Gallery Image 3"> -->
-            <!-- Add more images as needed -->
-            </div>
+          <?php
 
-        <div id="myModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modalImg">
+              $rows = mysqli_query($conn, "SELECT * FROM gallery WHERE v_id = $id ");
+                 foreach ($rows as $row) : ?>
+                <img src="../admin/vendor/img/<?php echo $row['g_photo']; ?>" class="pa" onclick="openModal('../admin/vendor/img/<?php echo $row['g_photo']; ?>')" alt="Gallery Image 2">
+                 <?php endforeach; ?>   
         </div>
+          
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            var gallery = document.getElementById("gallery");
+            var images = gallery.getElementsByTagName("img");
+            var imageCount = images.length;
+            document.getElementById("imageCount").textContent = imageCount;
+            });
+        </script>
+            <div id="myModal" class="modal" onclick="closeModal()">
+                  <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+            <img class=" modal-content "  id="modalImg">
+                </div> 
+
+        
+
 
 
         <!-- rateinggg -->
-
-
-        <div class="container">
-        <h1>Give your reating..</h1>
-        <div class="rating">
-            <span id="rating" name="r_star">0</span>/5
-        </div>
-        <div class="stars" id="stars" name="">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-        <p>Share your review:</p>
-        <textarea id="review"
-                  placeholder="Write your review here" name="r_discription">
-          </textarea>
-        <button id="submit" name="submit">Submit</button>
-        <div class="reviews" id="reviews">
-        </div>
+<hr>
+<div class="row justify-content-center">
+        <div class="col-6 p-0">
+        <div class="container3 justify-content-center">
+        <h1>Report this profile</h1>
+        <form action="">
+        
+        <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                report
+            </button>
+        
     </div>
-
+    </form>
+        <form action="report.php?id=<?php echo $id; ?>" method="post"> 
+            <!-- Button trigger modal -->
+            
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content px-3 py-1 m-4">
+                            <div class="row">
+                                <div class="col-9">
+                            <h5 class="modal-title" id="staticBackdropLabel">report <?php echo $username;?></h5></div><div class="col-1">
+                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button></div>
+                            
+                        
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="dis" class="form-label">Discription</label>
+                                <textarea class="form-control" id="dis" rows="3" name="dis"></textarea>
+                            </div>
+                        
+                        
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="mt-1 btn btn-primary rounded" name="Submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        
+    </div>
+    </div>
     </section>
+    <?php 
+
+include("footer.php");
+
+?>
     <script>
         function openModal(imageSrc) {
         var modal = document.getElementById("myModal");
@@ -170,7 +239,7 @@ if ($result->num_rows > 0) {
         modal.style.display = "none";
         }
     </script>
-    <script>
+  <!-- <script>
         const stars = document.querySelectorAll(".star");
         const rating = document.getElementById("rating");
         const reviewText = document.getElementById("review");
@@ -192,7 +261,7 @@ if ($result->num_rows > 0) {
 		// Add the appropriate class to 
 		// each star based on the selected star's value
 		stars.forEach((s, index) => {
-			if (index < value) {
+			if (index <= value) {
 				s.classList.add(getStarColorClass(value));
 			}
 		});
@@ -251,32 +320,10 @@ if ($result->num_rows > 0) {
 	    }
     }
 
-    </script>
-
+    </script> -->
 
 </body>
 </html>
-<?php
 
-    require 'config.php';
-    
-    
-    if($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $discription=$_POST["r_discription"];
-        $rating= $_POST["r_star"];
-        echo $rating;
-        // $sql="insert into rating(r_discription,r_star) values($name,$rating)";
 
-        // if($conn->query($sql) === TRUE)
-        // {
-        //     echo"successfully";
-        // }
-        // else{
-        //     echo"error";
-        // }
-    }
-        mysqli_close($conn);
-    
 
-?>

@@ -2,9 +2,6 @@
 require 'config.php';
 
 require '../session.php';
-if(!isset($_SESSION["username"])){
-	header("location:../login.php");
-}
 
 
 
@@ -36,7 +33,7 @@ if(isset($_POST["submit"])){
 		echo
 		"
 		<script>
-		  alert('Image Size Is Too Large');
+		  alert('The size of the photos should be within 20 MB.');
 		</script>
 		";
 	  }
@@ -45,16 +42,61 @@ if(isset($_POST["submit"])){
 		$newImageName .= '.' . $imageExtension;
   
 		move_uploaded_file($tmpName, 'img/' . $newImageName);
-		$v_id = $_SESSION["id"];
+		$v_id = $_SESSION["v_id"];
 		$query = "INSERT INTO gallery(v_id,g_photo) values ('$v_id','$newImageName') ";
-		// $query = "INSERT INTO gallary VALUES('', '$newImageName')";
+		
 		mysqli_query($conn, $query);
 		echo
 		"
+		
+		";
+	  }
+	}
+  }
+  
+if(isset($_POST["submit2"])){
+	
+	if($_FILES["image"]["error"] == 4){
+	  echo
+	  "<script> alert('Image Does Not Exist'); </script>"
+	  ;
+	}
+	else{
+	  $fileName = $_FILES["image"]["name"];
+	  $fileSize = $_FILES["image"]["size"];
+	  $tmpName = $_FILES["image"]["tmp_name"];
+  
+	  $validImageExtension = ['jpg', 'jpeg', 'png'];
+	  $imageExtension = explode('.', $fileName);
+	  $imageExtension = strtolower(end($imageExtension));
+	  if ( !in_array($imageExtension, $validImageExtension) ){
+		echo
+		"
 		<script>
-		  alert('Successfully Added');
-		  
+		  alert('Invalid Image Extension');
 		</script>
+		";
+	  }
+	  else if($fileSize > 20000000){
+		echo
+		"
+		<script>
+		  alert('The size of the photos should be within 20 MB.');
+		</script>
+		";
+	  }
+	  else{
+		$newImageName = uniqid();
+		$newImageName .= '.' . $imageExtension;
+  
+		move_uploaded_file($tmpName, 'img/' . $newImageName);
+		$v_id = $_SESSION["v_id"];
+		$query = "UPDATE vendor SET v_photo='$newImageName' WHERE v_id='$v_id'";
+		
+		mysqli_query($conn, $query);
+		echo
+		"
+		
 		";
 	  }
 	}
@@ -74,15 +116,20 @@ if(isset($_POST["submit"])){
 	<style>
 		.img1{
 			align-self: center;
-		width: auto;
+		/* width: auto; */
 		height: 100%;
 		
 		}
 		.imgholder{
-			height: 240px;
+			height: 200px;
 			width: auto;
 			overflow: hidden;
 			
+			
+		}
+		.pro{
+			margin-left: 23px;
+    		font-weight: 700;
 		}
 	</style>
 </head>
@@ -101,14 +148,43 @@ if(isset($_POST["submit"])){
 			<div class="main-panel">
 				<div class="content">
 					<div class="container-fluid">
-						<h4 class="page-title">Add new photo</h4>
+					<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">Update Profile Photo :</div>
+									</div>
+					<!-- <h4 class="page-title mt-4 pro">Update Profile Photo :</h4> -->
                         
-						<div class="row">
-								<div class="col-12">
+						
+								<div class="col-12 ml-3 mb-3 mt-3">
 								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
 							      <label for="image">Image : </label>
-							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value=""> <br> <br>
-							      <button type = "submit" name = "submit">Submit</button>
+							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value="">
+							      <button type = "submit" name = "submit2" class="btn btn-secondary btn-xs">Submit</button>
+							    </form>
+								</div>
+								<div class="col-12">
+								<?php
+									include 'show_profile_photo.php';
+								?>
+								</div>
+							
+	</div>
+								
+					
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title">Add Gallery Photos :</div>
+									</div>
+						
+                        
+						<!-- <div class="row"> -->
+								<div class="col-12 ml-3 mb-3 mt-3">
+								<form class="" action="" method="post" autocomplete="off" enctype="multipart/form-data">
+							      <label for="image">Image : </label>
+							      <input type="file" name="image" id = "image" accept=".jpg, .jpeg, .png" value="">
+							      <button type = "submit" name = "submit" class="btn btn-secondary btn-xs">Submit</button>
 							    </form>
 								</div>
 								<div class="col-12">
@@ -128,7 +204,7 @@ if(isset($_POST["submit"])){
 	
 </body>
 <script src="assets/js/core/jquery.3.2.1.min.js"></script>
-<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<!-- <script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script> -->
 <script src="assets/js/core/popper.min.js"></script>
 <script src="assets/js/core/bootstrap.min.js"></script>
 <!-- <script src="assets/js/plugin/chartist/chartist.min.js"></script> -->
@@ -137,8 +213,8 @@ if(isset($_POST["submit"])){
 <script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 <!-- <script src="assets/js/plugin/jquery-mapael/jquery.mapael.min.js"></script> -->
 <!-- <script src="assets/js/plugin/jquery-mapael/maps/world_countries.min.js"></script> -->
-<script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+<!-- <script src="assets/js/plugin/chart-circle/circles.min.js"></script> -->
 <!-- <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script> -->
-<script src="assets/js/ready.min.js"></script>
-<script src="assets/js/demo.js"></script>
+<!-- <script src="assets/js/ready.min.js"></script> -->
+<!-- <script src="assets/js/demo.js"></script> -->
 </html>

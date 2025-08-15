@@ -1,6 +1,21 @@
+<?php 
+session_start();
+if(!isset($_SESSION["a_id"]) && $_SESSION["loggedin"] == false){
+    header("location: ../login.php");
+    exit;
+}elseif(isset($_SESSION["c_username"])&& $_SESSION["loggedin"] = true){
+	header("location:../../client/");
+}
+elseif(!isset($_SESSION["a_username"])&& $_SESSION["loggedin"] = false){
+	header("location:../login.php");
+}
+elseif(isset($_SESSION['v_id'])&& $_SESSION["loggedin"] = true){
+	header("location:../vendor/");
+}
+?>
 <div class="logo-header">
 				<a href="index.php" class="logo">
-					Vendor Partners
+					Kachchhivent
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -14,17 +29,17 @@
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						
 						<li class="nav-item dropdown">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profile.jpg" alt="user-img" width="36" class="img-circle"><span >Hizrian</span></span> </a>
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="assets/img/profileimg.png" alt="user-img" width="36" class="img-circle"><span ><?php echo $_SESSION['a_username'];?></span></span> </a>
 							<ul class="dropdown-menu dropdown-user">
 								<li>
 									<div class="user-box">
-										<div class="u-img"><img src="assets/img/profile.jpg" alt="user"></div>
+										<div class="u-img"><img src="assets/img/profileimg.png" alt="user"></div>
 										<div class="u-text">
-											<h4>Hizrian</h4>
+											<h4><?php echo $_SESSION['a_username'];?></h4>
 											
 									
 									<div class="dropdown-divider"></div>
-									<a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
+									<a class="dropdown-item" href="../Logout.php"><i class="fa fa-power-off"></i>Logout</a>
 								</ul>
 								<!-- /.dropdown-user -->
 							</li>

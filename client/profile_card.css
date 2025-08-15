@@ -3,9 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #f0f2f5;
+}
+.a1{
+    text-decoration: none;
+    color: aliceblue;
+}
 .mar{
     margin-top: 120px;
 }
+.hed {
+    background-color: #486c8a;
+  } 
+  .circle{
+    border-radius: 50%;
+    width: 96px;
+    height: 93px;
+  }
+  .c{
+    height: 93px;
+  }
 .team .member{
     position: relative;
     padding: 20px;
@@ -32,11 +50,12 @@
 .team .member span{
     display: block; 
     font-size: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
     position: relative;
     font-weight:500;
+    color: #0dbc47;
 }
-.team .member span::after{
+/* .team .member span::after{
     content: "";
     position: absolute;
     display: block;
@@ -45,9 +64,9 @@
     background: black;
     bottom: 0;
     left: 0;
-}
+} */
 .team .member p{
-    margin: 10px 0 0 0;
+    margin: 0px 0 0 0;
     font-size: 14px;
     color: rgb(150, 144, 144);
     font-weight: 700;
@@ -72,4 +91,13 @@
     font-style: normal;
 }
 
-
+.a4{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btns{
+    height: 100%;
+    width: 100%;
+    background-color: #486c8a;
+}

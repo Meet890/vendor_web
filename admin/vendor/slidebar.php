@@ -3,13 +3,13 @@
 				<div class="scrollbar-inner sidebar-wrapper">
 					<div class="user">
 						<div class="photo">
-							<img src="assets/img/profile.jpg">
+							<img src="<?php echo  $img; ?>"/>
 						</div>
 						<div class="info">
 							<a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
 								<?php echo $_SESSION["username"]; ?>
-									<span class="user-level">Administrator</span>
+									<span class="user-level">Vendor</span>
 									<span class="caret"></span>
 								</span>
 							</a>
@@ -18,12 +18,12 @@
 							<div class="collapse in" id="collapseExample" aria-expanded="true" >
 								<ul class="nav">
 									<li>
-										<a href="profile.php">
-											<span class="link-collapse">My Profile</span>
+										<a href="index.php">
+											<span class="link-collapse">Show My Profile</span>
 										</a>
 									</li>
 									<li>
-										<a href="Profile_edit_form.php">
+										<a href="forms.php">
 											<span class="link-collapse">Edit Profile</span>
 										</a>
 									</li>
@@ -32,13 +32,13 @@
 						</div>
 					</div>
 					<ul class="nav">
-						<li class="nav-item ">
+						<!-- <li class="nav-item ">
 							<a href="index.php">
 								<i class="la la-dashboard"></i>
 								<p>Dashboard</p>
 								<span class="badge badge-count"></span>
 							</a>
-						</li>
+						</li> -->
 						<!-- <li class="nav-item">
 							<a href="components.php">
 								<i class="la la-table"></i>
@@ -56,7 +56,7 @@
 						<li class="nav-item">
 							<a href="about.php">
 								<i class="la la-th"></i>
-								<p>about</p>
+								<p>Edit discription</p>
 								
 							</a>
 						</li>
@@ -64,7 +64,7 @@
                         <li class="nav-item">
 							<a href="gallery.php">
 								<i class="la la-table"></i>
-								<p>gallery</p>
+								<p>Edit gallery & profile image</p>
 								<span class="badge badge-count"></span>
 							</a>
 						</li>

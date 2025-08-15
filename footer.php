@@ -7,26 +7,26 @@
     rel="stylesheet"
     />
     
-<section class="deneb_cta">
+<section class="deneb_cta ">
 	<div class="container mar">
 		<div class="cta_wrapper">
 			<div class="row align-items-center">
 				<div class="col-lg-7">
 					<div class="cta_content">
 						<h3>Registration as a vendor </h3>
-						<p>We help vendor to grow up his business. We provide the pletform for a vendor for grow his business.</p>
+						<p>We help to vendor for grow up his business. We provide the platform for a vendor for grow his business.</p>
 					</div>
 				</div>
 				<div class="col-lg-5">
 					<div class="button_box">
-						<a href="vendor/reg_vendor.php" class="btn btn-dark">Registration</a>
+						<a href="admin/reg_vendor.php" class="btn btn-dark">Registration</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<footer class="deneb_footer">
+<footer class="deneb_footer bg-dark">
 	<div class="widget_wrapper" >
 		<div class="container">
 			<div class="row">
@@ -34,22 +34,29 @@
 					<div class="widget widegt_about">
 						<div class="widget_title">
 						<div class="container mb-2 p-0 justify-content-center ">
-						<a class="navbar-brand" href="index.php"><span class="text-warning">VENDOR</span> <span class="text-light">PARTNERS</span>
+						<a class="navbar-brand brand" href="index.php">
+						<span class="text-warning">kachchhi</span>vent
  						 </a>
-						</div>
+						</div><br>
 						<p> The client can easilly find his choise vendors.</p>
-            <p class="mb-5 fw-bold">We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
-				                      innovation, and customer satisfaction. We are always looking for new ways to improve our vendor.</p>
-						<ul class="social">
+            <p>We are provide vendor to customer, but we have never lost sight of our core values. We believe in collaboration,
+				                      innovation, and customer satisfaction. We are always looking for new ways to improve our vendor...<a href="about_us.php" class="a2">Read more</a></p>
+            <!-- <p>vendor management system is online platform which provides all kind of  vandor like photographer , decoraters,<br> catering and many more vendors for you events. in vendor management system vendors can register in website
+			<br> and provide their details on it which we are showing on our website.any person can find vanders from this system according their requirements</p>						  
+									   -->
+                                      <!-- <p><a href="privacy_policy.php" class="a3">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="terms_condition.php" class="a3">Terms & Conditions </a></p> -->
+                                      
+                                      
+						<!-- <ul class="social">
 							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12 ms-auto ps-5">
-					<div class="widget widget_contact">
+				<div class="col-lg-6 col-md-6 col-sm-12 ms-auto ps-5">
+					<div class="widget widget_contact m">
 						<div class="widget_title">
 							<h4>Contact Us</h4>
 						</div>
@@ -68,17 +75,10 @@
 									<i class="fas fa-envelope"></i>
 								</div>
 								<div class="info">
-									<p><a href="mailto:info@deneb.com">vendorpartners@gmail.com</a></p>
+									<p><a href="mailto:kachchhivent00@gmail.com">kachchhivent00@gmail.com</a></p>
 								</div>
 							</div>
-							<div class="single_info">
-								<div class="icon">
-									<i class="fas fa-map-marker-alt"></i>
-								</div>
-								<div class="info">
-									<p>SGJ College, Mandvi<span>Kachchh</span></p>
-								</div>
-							</div>
+							
 							
 						</div>
 					</div>
